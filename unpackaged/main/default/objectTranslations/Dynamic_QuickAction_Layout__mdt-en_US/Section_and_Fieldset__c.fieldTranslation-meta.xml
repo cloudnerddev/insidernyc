@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Section and Fieldset --></label>
+        <name>Section_and_Fieldset__c</name>
+    </CustomFieldTranslation>

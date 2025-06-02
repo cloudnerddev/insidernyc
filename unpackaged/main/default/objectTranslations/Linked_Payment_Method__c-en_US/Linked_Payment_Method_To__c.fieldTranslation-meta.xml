@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- This payment method will initially be synced to the payment method selected here. Then they will be synced up whenever either payment method is updated. --></help>
+        <label><!-- Linked Payment Method To --></label>
+        <name>Linked_Payment_Method_To__c</name>
+        <relationshipLabel><!-- Linked Payment Methods (To) --></relationshipLabel>
+    </CustomFieldTranslation>

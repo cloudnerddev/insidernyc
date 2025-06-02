@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Charged_but_Not_Yet_in_Quickbooks</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>Summary__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Date_Entered_in_Quickbooks__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Total_Price__c</columns>
+    <columns>If_Marked_Up_Real_Price__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Charged__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Date_Entered_in_Quickbooks__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Charged but Not Yet in Quickbooks</label>
+</ListView>

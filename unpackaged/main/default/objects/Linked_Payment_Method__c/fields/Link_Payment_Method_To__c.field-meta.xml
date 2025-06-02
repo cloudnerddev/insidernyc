@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Link_Payment_Method_To__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is just used to initially do the cloning</description>
+    <label>Link Payment Method To</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Linked Payment Methods</relationshipLabel>
+    <relationshipName>Linked_Payment_Methods</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

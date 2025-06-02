@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Linked_Payment_Method_To__c</fullName>
+    <deleteConstraint>Cascade</deleteConstraint>
+    <inlineHelpText>This payment method will initially be synced to the payment method selected here. Then they will be synced up whenever either payment method is updated.</inlineHelpText>
+    <label>Linked Payment Method To</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>$Source.Id</field>
+            <operation>notEqual</operation>
+            <valueField>$Source.Linked_Payment_Method_From__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Payment_Method__c</referenceTo>
+    <relationshipLabel>Linked Payment Methods (To)</relationshipLabel>
+    <relationshipName>Linked_Payment_Methods_To</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

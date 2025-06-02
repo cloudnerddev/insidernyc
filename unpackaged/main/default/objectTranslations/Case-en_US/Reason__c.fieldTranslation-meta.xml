@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Logbook Reason --></label>
+        <name>Reason__c</name>
+        <picklistValues>
+            <masterLabel>Alerts</masterLabel>
+            <translation><!-- Alerts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Available</masterLabel>
+            <translation><!-- Available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Booking Platform/Just Called</masterLabel>
+            <translation><!-- Booking Platform/Just Called --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closing Logbook</masterLabel>
+            <translation><!-- Closing Logbook --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ClouDNA Holding</masterLabel>
+            <translation><!-- ClouDNA Holding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Confirmed Request - Contact</masterLabel>
+            <translation><!-- Confirmed Request - Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Confirmed Request - Other</masterLabel>
+            <translation><!-- Confirmed Request - Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact</masterLabel>
+            <translation><!-- Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact Denied</masterLabel>
+            <translation><!-- Contact Denied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact Ghosted</masterLabel>
+            <translation><!-- Contact Ghosted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coronavirus</masterLabel>
+            <translation><!-- Coronavirus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doesn’t Exist</masterLabel>
+            <translation><!-- Doesn’t Exist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Held</masterLabel>
+            <translation><!-- Held --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never Tried For</masterLabel>
+            <translation><!-- Never Tried For --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Contact</masterLabel>
+            <translation><!-- No Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No One Used - Cancelled</masterLabel>
+            <translation><!-- No One Used - Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No One Used - Insider Filled</masterLabel>
+            <translation><!-- No One Used - Insider Filled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Request</masterLabel>
+            <translation><!-- Pending Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Private Event/Buyout</masterLabel>
+            <translation><!-- Private Event/Buyout --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taken</masterLabel>
+            <translation><!-- Taken --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

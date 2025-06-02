@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Hate</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Hates</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Airline and Flight Hates</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Car Rental Hates</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Client Hates</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Cocktail Hates</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Dining Hates</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Entertainment Hates</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Food Hates</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Hotel Hates</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Household/Utility Accounts</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Other Hates</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Wine Hates</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Clone and Link Hate --></label>
+        <name>Clone_and_Link_Hate</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Link Hate --></label>
+        <name>Link_Hate</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Airline Hates --></label>
+        <name>Airline_and_Flight_Hates</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Car Rental Hates --></label>
+        <name>Car_Rental_Hates</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Client Hates --></label>
+        <name>Client_Hates</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Cocktail Hates --></label>
+        <name>Cocktail_Hates</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Dining Hate --></label>
+        <name>Dining_Hate</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Entertainment Hates --></label>
+        <name>Entertainment_Hates</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Food Hates --></label>
+        <name>Food_Hates</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Hotel Hates --></label>
+        <name>Hotel_Hates</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Household/Utility Accounts --></label>
+        <name>Household_Utility_Accounts</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Personal Wellness and Other Hates --></label>
+        <name>Other_Hates</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Wine Hates --></label>
+        <name>Wine_Hates</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You are not authorized to clone records --></errorMessage>
+        <name>preventClone</name>
+    </validationRules>
+</CustomObjectTranslation>

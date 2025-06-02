@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_84060085</developerName>
+        <masterLabel>Vendor Location</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Case$Vendor__c.BillingCity</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>New York</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Brooklyn</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Queens</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Staten Island</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Bronx</sourceValue>
+            </sourceValues>
+            <value>NYC</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Speonk</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>East Hampton</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>West Hampton Beach</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Westhampton Beach</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Quogue</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>East Quogue</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Hampton Bays</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Southampton</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Water Mill</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Bridgehampton</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sagaponack</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sag Harbor</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Wainscott</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Amagansett</sourceValue>
+            </sourceValues>
+            <value>Hamptons</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Case$Subject</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Case$Reference_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>5/25/2020</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$Reference_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>9/7/2020</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$Status</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Month</dateGranularity>
+        <field>Case$Reference_Date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_84060085</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case$Vendor__c.BillingCity</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Dru Homework due 11.07.20</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Logbooks_with_all_Vendor_Details__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Case$Cancellation_Date_and_Time__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,4 @@
+<apex:page >
+<base target="_top"/>
+     <apex:enhancedList type="Activity" height="600" rowsPerPage="50" id="Activities" customizable="true" />
+</apex:page>

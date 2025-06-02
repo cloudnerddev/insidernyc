@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- This would be last resort to put in related notes that don&apos;t have a field --></help>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </CustomFieldTranslation>

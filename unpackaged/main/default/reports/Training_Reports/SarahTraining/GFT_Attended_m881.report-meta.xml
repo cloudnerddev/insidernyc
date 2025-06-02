@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Grease__c$Account__c</field>
+    </columns>
+    <columns>
+        <field>Grease__c.Team_Members_Attended__r$Team_Member__c</field>
+    </columns>
+    <columns>
+        <field>Grease__c$Date__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Grease__c.Team_Members_Attended__r$Team_Member__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>&quot; &quot;</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Copy of GFT &amp; Attended</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Greases_Facetime_Trials_w_wo_Team_Member_Attended__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Grease__c.Team_Members_Attended__r$Team_Member__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Grease__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

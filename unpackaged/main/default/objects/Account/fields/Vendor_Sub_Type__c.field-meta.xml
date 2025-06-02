@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendor_Sub_Type__c</fullName>
+    <label>Vendor Sub-Type - OLD</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>24 hours</fullName>
+                <default>false</default>
+                <label>24 hours</label>
+            </value>
+            <value>
+                <fullName>Accountant</fullName>
+                <default>false</default>
+                <label>Accountant</label>
+            </value>
+            <value>
+                <fullName>Acupuncturist</fullName>
+                <default>false</default>
+                <label>Acupuncturist</label>
+            </value>
+            <value>
+                <fullName>Airport</fullName>
+                <default>false</default>
+                <label>Airport</label>
+            </value>
+            <value>
+                <fullName>Airport Escort</fullName>
+                <default>false</default>
+                <label>Airport Escort</label>
+            </value>
+            <value>
+                <fullName>All-Inclusive</fullName>
+                <default>false</default>
+                <label>All-Inclusive</label>
+            </value>
+            <value>
+                <fullName>Alternative Medicine</fullName>
+                <default>false</default>
+                <label>Alternative Medicine</label>
+            </value>
+            <value>
+                <fullName>Appliance Repair</fullName>
+                <default>false</default>
+                <label>Appliance Repair</label>
+            </value>
+            <value>
+                <fullName>Appraiser</fullName>
+                <default>false</default>
+                <label>Appraiser</label>
+            </value>
+            <value>
+                <fullName>Art Mover</fullName>
+                <default>false</default>
+                <label>Art Mover</label>
+            </value>
+            <value>
+                <fullName>Art Tour</fullName>
+                <default>false</default>
+                <label>Art Tour</label>
+            </value>
+            <value>
+                <fullName>Audio/Visual</fullName>
+                <default>false</default>
+                <label>Audio/Visual</label>
+            </value>
+            <value>
+                <fullName>Auto Body Shop</fullName>
+                <default>false</default>
+                <label>Auto Body Shop</label>
+            </value>
+            <value>
+                <fullName>Baby</fullName>
+                <default>false</default>
+                <label>Baby</label>
+            </value>
+            <value>
+                <fullName>Baby/Kids Store</fullName>
+                <default>false</default>
+                <label>Baby/Kids Store</label>
+            </value>
+            <value>
+                <fullName>Baby Gear Rentals</fullName>
+                <default>false</default>
+                <label>Baby Gear Rentals</label>
+            </value>
+            <value>
+                <fullName>Baby Proofing</fullName>
+                <default>false</default>
+                <label>Baby Proofing</label>
+            </value>
+            <value>
+                <fullName>Babysitter</fullName>
+                <default>false</default>
+                <label>Babysitter</label>
+            </value>
+            <value>
+                <fullName>Bag/Shoe Repair</fullName>
+                <default>false</default>
+                <label>Bag/Shoe Repair</label>
+            </value>
+            <value>
+                <fullName>Bag Repair</fullName>
+                <default>false</default>
+                <label>Bag Repair</label>
+            </value>
+            <value>
+                <fullName>Bakery</fullName>
+                <default>false</default>
+                <label>Bakery</label>
+            </value>
+            <value>
+                <fullName>Balloon Vendor</fullName>
+                <default>false</default>
+                <label>Balloon Vendor</label>
+            </value>
+            <value>
+                <fullName>Band</fullName>
+                <default>false</default>
+                <label>Band</label>
+            </value>
+            <value>
+                <fullName>Band / String Quartet / Singer</fullName>
+                <default>false</default>
+                <label>Band / String Quartet / Singer</label>
+            </value>
+            <value>
+                <fullName>Bed &amp; Breakfast</fullName>
+                <default>false</default>
+                <label>Bed &amp; Breakfast</label>
+            </value>
+            <value>
+                <fullName>Bike Tour</fullName>
+                <default>false</default>
+                <label>Bike Tour</label>
+            </value>
+            <value>
+                <fullName>Boat Captain</fullName>
+                <default>false</default>
+                <label>Boat Captain</label>
+            </value>
+            <value>
+                <fullName>Cake Maker/Bakery</fullName>
+                <default>false</default>
+                <label>Cake Maker/Bakery</label>
+            </value>
+            <value>
+                <fullName>Car Dealership</fullName>
+                <default>false</default>
+                <label>Car Dealership</label>
+            </value>
+            <value>
+                <fullName>Caretaker</fullName>
+                <default>false</default>
+                <label>Caretaker</label>
+            </value>
+            <value>
+                <fullName>Car Rental</fullName>
+                <default>false</default>
+                <label>Car Rental</label>
+            </value>
+            <value>
+                <fullName>Car service</fullName>
+                <default>false</default>
+                <label>Car service</label>
+            </value>
+            <value>
+                <fullName>Caterer</fullName>
+                <default>false</default>
+                <label>Caterer</label>
+            </value>
+            <value>
+                <fullName>Chauffeur/Driver</fullName>
+                <default>false</default>
+                <label>Chauffeur/Driver</label>
+            </value>
+            <value>
+                <fullName>Chef</fullName>
+                <default>false</default>
+                <label>Chef</label>
+            </value>
+            <value>
+                <fullName>Chocolates</fullName>
+                <default>false</default>
+                <label>Chocolates</label>
+            </value>
+            <value>
+                <fullName>Cleaning Service</fullName>
+                <default>false</default>
+                <label>Cleaning Service</label>
+            </value>
+            <value>
+                <fullName>Coastline Recommends</fullName>
+                <default>false</default>
+                <label>Coastline Recommends</label>
+            </value>
+            <value>
+                <fullName>Contractor</fullName>
+                <default>false</default>
+                <label>Contractor</label>
+            </value>
+            <value>
+                <fullName>Cooking/Baking Class</fullName>
+                <default>false</default>
+                <label>Cooking/Baking Class</label>
+            </value>
+            <value>
+                <fullName>Cosmetics/Beauty</fullName>
+                <default>false</default>
+                <label>Cosmetics/Beauty</label>
+            </value>
+            <value>
+                <fullName>Crib Rental</fullName>
+                <default>false</default>
+                <label>Crib Rental</label>
+            </value>
+            <value>
+                <fullName>Custom Clothing/Shoes</fullName>
+                <default>false</default>
+                <label>Custom Clothing/Shoes</label>
+            </value>
+            <value>
+                <fullName>Custom Dessert</fullName>
+                <default>false</default>
+                <label>Custom Dessert</label>
+            </value>
+            <value>
+                <fullName>Dancers</fullName>
+                <default>false</default>
+                <label>Dancers</label>
+            </value>
+            <value>
+                <fullName>Daycare / Boarding</fullName>
+                <default>false</default>
+                <label>Daycare / Boarding</label>
+            </value>
+            <value>
+                <fullName>Dentist</fullName>
+                <default>false</default>
+                <label>Dentist</label>
+            </value>
+            <value>
+                <fullName>Dermatologist</fullName>
+                <default>false</default>
+                <label>Dermatologist</label>
+            </value>
+            <value>
+                <fullName>Disney / Universal / Orlando Tours</fullName>
+                <default>false</default>
+                <label>Disney / Universal / Orlando Tours</label>
+            </value>
+            <value>
+                <fullName>DJ</fullName>
+                <default>false</default>
+                <label>DJ</label>
+            </value>
+            <value>
+                <fullName>DMC/On-Site</fullName>
+                <default>false</default>
+                <label>DMC/On-Site</label>
+            </value>
+            <value>
+                <fullName>Dog Daycare / Dog Boarding</fullName>
+                <default>false</default>
+                <label>Dog Daycare / Dog Boarding</label>
+            </value>
+            <value>
+                <fullName>Dog Groomer</fullName>
+                <default>false</default>
+                <label>Dog Groomer</label>
+            </value>
+            <value>
+                <fullName>Dog Trainer</fullName>
+                <default>false</default>
+                <label>Dog Trainer</label>
+            </value>
+            <value>
+                <fullName>Dog Walker</fullName>
+                <default>false</default>
+                <label>Dog Walker</label>
+            </value>
+            <value>
+                <fullName>Donuts</fullName>
+                <default>false</default>
+                <label>Donuts</label>
+            </value>
+            <value>
+                <fullName>Engraver / Embroidery</fullName>
+                <default>false</default>
+                <label>Engraver / Embroidery</label>
+            </value>
+            <value>
+                <fullName>Event Venue</fullName>
+                <default>false</default>
+                <label>Event Venue</label>
+            </value>
+            <value>
+                <fullName>Face Painting</fullName>
+                <default>false</default>
+                <label>Face Painting</label>
+            </value>
+            <value>
+                <fullName>Fishing Charter</fullName>
+                <default>false</default>
+                <label>Fishing Charter</label>
+            </value>
+            <value>
+                <fullName>Florist</fullName>
+                <default>false</default>
+                <label>Florist</label>
+            </value>
+            <value>
+                <fullName>Food Tour</fullName>
+                <default>false</default>
+                <label>Food Tour</label>
+            </value>
+            <value>
+                <fullName>Furniture Rental</fullName>
+                <default>false</default>
+                <label>Furniture Rental</label>
+            </value>
+            <value>
+                <fullName>Gifts</fullName>
+                <default>false</default>
+                <label>Gifts</label>
+            </value>
+            <value>
+                <fullName>Gluten Free Bakery</fullName>
+                <default>false</default>
+                <label>Gluten Free Bakery</label>
+            </value>
+            <value>
+                <fullName>Golf (miniature)</fullName>
+                <default>false</default>
+                <label>Golf (miniature)</label>
+            </value>
+            <value>
+                <fullName>Golf Course</fullName>
+                <default>false</default>
+                <label>Golf Course</label>
+            </value>
+            <value>
+                <fullName>Golf Instructor/Lessons</fullName>
+                <default>false</default>
+                <label>Golf Instructor/Lessons</label>
+            </value>
+            <value>
+                <fullName>Golf Store</fullName>
+                <default>false</default>
+                <label>Golf Store</label>
+            </value>
+            <value>
+                <fullName>Grade School</fullName>
+                <default>false</default>
+                <label>Grade School</label>
+            </value>
+            <value>
+                <fullName>Gym / Workout Studio / Sports Facility</fullName>
+                <default>false</default>
+                <label>Gym / Workout Studio / Sports Facility</label>
+            </value>
+            <value>
+                <fullName>Hair Colorist</fullName>
+                <default>false</default>
+                <label>Hair Colorist</label>
+            </value>
+            <value>
+                <fullName>Hair Stylist / Barber</fullName>
+                <default>false</default>
+                <label>Hair Stylist / Barber</label>
+            </value>
+            <value>
+                <fullName>Hamptons</fullName>
+                <default>false</default>
+                <label>Hamptons</label>
+            </value>
+            <value>
+                <fullName>Handyman</fullName>
+                <default>false</default>
+                <label>Handyman</label>
+            </value>
+            <value>
+                <fullName>Helicopter Charter</fullName>
+                <default>false</default>
+                <label>Helicopter Charter</label>
+            </value>
+            <value>
+                <fullName>Home Healthcare</fullName>
+                <default>false</default>
+                <label>Home Healthcare</label>
+            </value>
+            <value>
+                <fullName>Household Staffing Agency</fullName>
+                <default>false</default>
+                <label>Household Staffing Agency</label>
+            </value>
+            <value>
+                <fullName>Interior Designer</fullName>
+                <default>false</default>
+                <label>Interior Designer</label>
+            </value>
+            <value>
+                <fullName>Internist/GP</fullName>
+                <default>false</default>
+                <label>Internist/GP</label>
+            </value>
+            <value>
+                <fullName>Invitations/Stationary Supplier</fullName>
+                <default>false</default>
+                <label>Invitations/Stationary Supplier</label>
+            </value>
+            <value>
+                <fullName>Jeweler</fullName>
+                <default>false</default>
+                <label>Jeweler</label>
+            </value>
+            <value>
+                <fullName>Kids Birthday Party Venues</fullName>
+                <default>false</default>
+                <label>Kids Birthday Party Venues</label>
+            </value>
+            <value>
+                <fullName>Limousine/Sprinter service</fullName>
+                <default>false</default>
+                <label>Limousine/Sprinter service</label>
+            </value>
+            <value>
+                <fullName>Luggage Shipping</fullName>
+                <default>false</default>
+                <label>Luggage Shipping</label>
+            </value>
+            <value>
+                <fullName>Magician</fullName>
+                <default>false</default>
+                <label>Magician</label>
+            </value>
+            <value>
+                <fullName>Makeup Artist</fullName>
+                <default>false</default>
+                <label>Makeup Artist</label>
+            </value>
+            <value>
+                <fullName>Manicure/Pedicure</fullName>
+                <default>false</default>
+                <label>Manicure/Pedicure</label>
+            </value>
+            <value>
+                <fullName>Massage Therapist</fullName>
+                <default>false</default>
+                <label>Massage Therapist</label>
+            </value>
+            <value>
+                <fullName>Memorabilia</fullName>
+                <default>false</default>
+                <label>Memorabilia</label>
+            </value>
+            <value>
+                <fullName>Men's Clothing/Shoe Store</fullName>
+                <default>false</default>
+                <label>Men's Clothing/Shoe Store</label>
+            </value>
+            <value>
+                <fullName>Mentalist</fullName>
+                <default>false</default>
+                <label>Mentalist</label>
+            </value>
+            <value>
+                <fullName>Mixologist</fullName>
+                <default>false</default>
+                <label>Mixologist</label>
+            </value>
+            <value>
+                <fullName>Movers</fullName>
+                <default>false</default>
+                <label>Movers</label>
+            </value>
+            <value>
+                <fullName>Museum</fullName>
+                <default>false</default>
+                <label>Museum</label>
+            </value>
+            <value>
+                <fullName>Music Lessons</fullName>
+                <default>false</default>
+                <label>Music Lessons</label>
+            </value>
+            <value>
+                <fullName>Nanny</fullName>
+                <default>false</default>
+                <label>Nanny</label>
+            </value>
+            <value>
+                <fullName>Nightnurse</fullName>
+                <default>false</default>
+                <label>Nightnurse</label>
+            </value>
+            <value>
+                <fullName>Nurse</fullName>
+                <default>false</default>
+                <label>Nurse</label>
+            </value>
+            <value>
+                <fullName>Nut Free Facility</fullName>
+                <default>false</default>
+                <label>Nut Free Facility</label>
+            </value>
+            <value>
+                <fullName>Nutritionist</fullName>
+                <default>false</default>
+                <label>Nutritionist</label>
+            </value>
+            <value>
+                <fullName>Oral Surgeon</fullName>
+                <default>false</default>
+                <label>Oral Surgeon</label>
+            </value>
+            <value>
+                <fullName>Organizer</fullName>
+                <default>false</default>
+                <label>Organizer</label>
+            </value>
+            <value>
+                <fullName>Painter</fullName>
+                <default>false</default>
+                <label>Painter</label>
+            </value>
+            <value>
+                <fullName>Painter / Wallpaper</fullName>
+                <default>false</default>
+                <label>Painter / Wallpaper</label>
+            </value>
+            <value>
+                <fullName>Party Favors / Supplies</fullName>
+                <default>false</default>
+                <label>Party Favors / Supplies</label>
+            </value>
+            <value>
+                <fullName>Party Rental Company</fullName>
+                <default>false</default>
+                <label>Party Rental Company</label>
+            </value>
+            <value>
+                <fullName>Party Rentals (Furniture, Tents, Glassware, Games)</fullName>
+                <default>false</default>
+                <label>Party Rentals (Furniture, Tents, Glassware, Games)</label>
+            </value>
+            <value>
+                <fullName>Passport / Visa Expediter</fullName>
+                <default>false</default>
+                <label>Passport / Visa Expediter</label>
+            </value>
+            <value>
+                <fullName>Personal Shopper/Stylist</fullName>
+                <default>false</default>
+                <label>Personal Shopper/Stylist</label>
+            </value>
+            <value>
+                <fullName>Personal Trainer</fullName>
+                <default>false</default>
+                <label>Personal Trainer</label>
+            </value>
+            <value>
+                <fullName>Pet Store</fullName>
+                <default>false</default>
+                <label>Pet Store</label>
+            </value>
+            <value>
+                <fullName>Photographer</fullName>
+                <default>false</default>
+                <label>Photographer</label>
+            </value>
+            <value>
+                <fullName>Photo Services / Framer / Albums</fullName>
+                <default>false</default>
+                <label>Photo Services / Framer / Albums</label>
+            </value>
+            <value>
+                <fullName>Physical Therapist</fullName>
+                <default>false</default>
+                <label>Physical Therapist</label>
+            </value>
+            <value>
+                <fullName>Podiatrist</fullName>
+                <default>false</default>
+                <label>Podiatrist</label>
+            </value>
+            <value>
+                <fullName>Pre- School</fullName>
+                <default>false</default>
+                <label>Pre- School</label>
+            </value>
+            <value>
+                <fullName>Printer</fullName>
+                <default>false</default>
+                <label>Printer</label>
+            </value>
+            <value>
+                <fullName>Private investigator</fullName>
+                <default>false</default>
+                <label>Private investigator</label>
+            </value>
+            <value>
+                <fullName>Private Jet Charter</fullName>
+                <default>false</default>
+                <label>Private Jet Charter</label>
+            </value>
+            <value>
+                <fullName>Psychiatrist</fullName>
+                <default>false</default>
+                <label>Psychiatrist</label>
+            </value>
+            <value>
+                <fullName>Realtor</fullName>
+                <default>false</default>
+                <label>Realtor</label>
+            </value>
+            <value>
+                <fullName>Seaplane Charter</fullName>
+                <default>false</default>
+                <label>Seaplane Charter</label>
+            </value>
+            <value>
+                <fullName>Security</fullName>
+                <default>false</default>
+                <label>Security</label>
+            </value>
+            <value>
+                <fullName>Self Defense Instructor/Class (it’s currently spelled Defence with a C)</fullName>
+                <default>false</default>
+                <label>Self Defense Instructor/Class</label>
+            </value>
+            <value>
+                <fullName>Selling / Donating Furniture</fullName>
+                <default>false</default>
+                <label>Selling / Donating Furniture</label>
+            </value>
+            <value>
+                <fullName>Servers/Bartenders</fullName>
+                <default>false</default>
+                <label>Servers/Bartenders</label>
+            </value>
+            <value>
+                <fullName>Shoe Repair</fullName>
+                <default>false</default>
+                <label>Shoe Repair</label>
+            </value>
+            <value>
+                <fullName>Short Term /Furnished Apartment Rentals</fullName>
+                <default>false</default>
+                <label>Short Term /Furnished Apartment Rentals</label>
+            </value>
+            <value>
+                <fullName>Ski Instructor</fullName>
+                <default>false</default>
+                <label>Ski Instructor</label>
+            </value>
+            <value>
+                <fullName>Sleep Training Coach</fullName>
+                <default>false</default>
+                <label>Sleep Training Coach</label>
+            </value>
+            <value>
+                <fullName>Sommelier</fullName>
+                <default>false</default>
+                <label>Sommelier</label>
+            </value>
+            <value>
+                <fullName>Spa</fullName>
+                <default>false</default>
+                <label>Spa</label>
+            </value>
+            <value>
+                <fullName>Speech writer</fullName>
+                <default>false</default>
+                <label>Speech writer</label>
+            </value>
+            <value>
+                <fullName>Speed Reading Instructor</fullName>
+                <default>false</default>
+                <label>Speed Reading Instructor</label>
+            </value>
+            <value>
+                <fullName>Spray Tan</fullName>
+                <default>false</default>
+                <label>Spray Tan</label>
+            </value>
+            <value>
+                <fullName>Stadium</fullName>
+                <default>false</default>
+                <label>Stadium</label>
+            </value>
+            <value>
+                <fullName>Staffing Agency-Servers/Bartenders/Chefs</fullName>
+                <default>false</default>
+                <label>Staffing Agency-Servers/Bartenders/Chefs</label>
+            </value>
+            <value>
+                <fullName>Stroller Cleaner</fullName>
+                <default>false</default>
+                <label>Stroller Cleaner</label>
+            </value>
+            <value>
+                <fullName>Swimming Instructor/Lessons</fullName>
+                <default>false</default>
+                <label>Swimming Instructor/Lessons</label>
+            </value>
+            <value>
+                <fullName>Swimming Lessons</fullName>
+                <default>false</default>
+                <label>Swimming Lessons</label>
+            </value>
+            <value>
+                <fullName>Tailor</fullName>
+                <default>false</default>
+                <label>Tailor</label>
+            </value>
+            <value>
+                <fullName>Tarot Reader</fullName>
+                <default>false</default>
+                <label>Tarot Reader</label>
+            </value>
+            <value>
+                <fullName>Tattoo Artist</fullName>
+                <default>false</default>
+                <label>Tattoo Artist</label>
+            </value>
+            <value>
+                <fullName>Tattoo Removal</fullName>
+                <default>false</default>
+                <label>Tattoo Removal</label>
+            </value>
+            <value>
+                <fullName>Taxidermist</fullName>
+                <default>false</default>
+                <label>Taxidermist</label>
+            </value>
+            <value>
+                <fullName>Team Building Activities</fullName>
+                <default>false</default>
+                <label>Team Building Activities</label>
+            </value>
+            <value>
+                <fullName>Teen</fullName>
+                <default>false</default>
+                <label>Teen</label>
+            </value>
+            <value>
+                <fullName>Tennis Instructor/lessons</fullName>
+                <default>false</default>
+                <label>Tennis Instructor/lessons</label>
+            </value>
+            <value>
+                <fullName>Therapist (Emotional)</fullName>
+                <default>false</default>
+                <label>Therapist (Emotional)</label>
+            </value>
+            <value>
+                <fullName>Therapist (Mental Health)</fullName>
+                <default>false</default>
+                <label>Therapist (Mental Health)</label>
+            </value>
+            <value>
+                <fullName>Toddler</fullName>
+                <default>false</default>
+                <label>Toddler</label>
+            </value>
+            <value>
+                <fullName>Toy Store</fullName>
+                <default>false</default>
+                <label>Toy Store</label>
+            </value>
+            <value>
+                <fullName>Traffic Ticket Lawyer</fullName>
+                <default>false</default>
+                <label>Traffic Ticket Lawyer</label>
+            </value>
+            <value>
+                <fullName>Trainer</fullName>
+                <default>false</default>
+                <label>Trainer</label>
+            </value>
+            <value>
+                <fullName>Travel Doctor</fullName>
+                <default>false</default>
+                <label>Travel Doctor</label>
+            </value>
+            <value>
+                <fullName>Travel Security</fullName>
+                <default>false</default>
+                <label>Travel Security</label>
+            </value>
+            <value>
+                <fullName>Tutor</fullName>
+                <default>false</default>
+                <label>Tutor</label>
+            </value>
+            <value>
+                <fullName>Unique culinary / wine experience</fullName>
+                <default>false</default>
+                <label>Unique culinary / wine experience</label>
+            </value>
+            <value>
+                <fullName>Veterinarian</fullName>
+                <default>false</default>
+                <label>Veterinarian</label>
+            </value>
+            <value>
+                <fullName>Videographer</fullName>
+                <default>false</default>
+                <label>Videographer</label>
+            </value>
+            <value>
+                <fullName>Villa Rental</fullName>
+                <default>false</default>
+                <label>Villa Rental</label>
+            </value>
+            <value>
+                <fullName>Window Cleaner</fullName>
+                <default>false</default>
+                <label>Window Cleaner</label>
+            </value>
+            <value>
+                <fullName>Winery</fullName>
+                <default>false</default>
+                <label>Winery</label>
+            </value>
+            <value>
+                <fullName>Wine Storage</fullName>
+                <default>false</default>
+                <label>Wine Storage</label>
+            </value>
+            <value>
+                <fullName>Woman's Clothing/Shoe Store</fullName>
+                <default>false</default>
+                <label>Women's Clothing/Shoe Store</label>
+            </value>
+            <value>
+                <fullName>Yoga_Instructor</fullName>
+                <default>false</default>
+                <label>Yoga Instructor</label>
+            </value>
+            <value>
+                <fullName>Zoo</fullName>
+                <default>false</default>
+                <label>Zoo</label>
+            </value>
+            <value>
+                <fullName>Boarder</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Boarder</label>
+            </value>
+            <value>
+                <fullName>Doctor</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Doctor</label>
+            </value>
+            <value>
+                <fullName>Golf</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Golf</label>
+            </value>
+            <value>
+                <fullName>Gym</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Gym</label>
+            </value>
+            <value>
+                <fullName>Spa/Salon/Wellness</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Spa/Salon/Wellness</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

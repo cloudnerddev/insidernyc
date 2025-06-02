@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Client Account</layout>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Insider Internal Information --></label>
+            <section>Insider Internal Information</section>
+        </sections>
+        <sections>
+            <label><!-- MOVE TO ACCOUNT CONTACT --></label>
+            <section>MOVE TO ACCOUNT CONTACT</section>
+        </sections>
+        <sections>
+            <label><!-- MOVE TO ATTRIBUTE --></label>
+            <section>MOVE TO ATTRIBUTE</section>
+        </sections>
+        <sections>
+            <label><!-- Membership and Billing Information --></label>
+            <section>Membership and Billing Information</section>
+        </sections>
+        <sections>
+            <label><!-- Questionnaire Details --></label>
+            <section>Questionnaire Details</section>
+        </sections>
+        <sections>
+            <label><!-- SMS Conversations --></label>
+            <section>SMS Conversations</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Person Account Layout</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Insider Internal Information --></label>
+            <section>Insider Internal Information</section>
+        </sections>
+        <sections>
+            <label><!-- Membership and Billing Information --></label>
+            <section>Membership and Billing Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Vendor Account - Generic</layout>
+        <sections>
+            <label><!-- Account System Information --></label>
+            <section>Account System Information</section>
+        </sections>
+        <sections>
+            <label><!-- Commission Details --></label>
+            <section>Commission Details</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Hours of Operation --></label>
+            <section>Hours of Operation</section>
+        </sections>
+        <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label><!-- Reconfirmation --></label>
+            <section>Reconfirmation</section>
+        </sections>
+        <sections>
+            <label><!-- SMS Conversation --></label>
+            <section>SMS Conversation</section>
+        </sections>
+        <sections>
+            <label><!-- Vendor Information --></label>
+            <section>Vendor Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Vendor Account - Restaurant</layout>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Reconfirmation --></label>
+            <section>Reconfirmation</section>
+        </sections>
+        <sections>
+            <label><!-- SMS Conversation --></label>
+            <section>SMS Conversation</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label><!-- Vendor Information --></label>
+            <section>Vendor Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Closed --></label>
+        <name>Closed</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Commission Details --></label>
+        <name>Commission_Details</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Contact Information --></label>
+        <name>Contact_Information</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Contacts at Insider --></label>
+        <name>Contacts_at_Insider</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Don&apos;t Use --></label>
+        <name>Don_t_Use</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Grease Total --></label>
+        <name>Grease_Total</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Overhours Details --></label>
+        <name>Overhours_Details</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Private/Semi-Private Dining/Events --></label>
+        <name>Private_Dining_Events</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Reservation Details --></label>
+        <name>Reservation_Details</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Reviewed --></label>
+        <name>Reviewed</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Used for prospects and client records --></description>
+        <label><!-- Client Account --></label>
+        <name>Client_Account</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used for vendor records --></description>
+        <label><!-- Vendor Account - Restaurant --></label>
+        <name>Vendor_Account</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Vendor Account - Generic --></label>
+        <name>Vendor_Account_Generic</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- You cannot edit a Frozen account. --></errorMessage>
+        <name>Cannot_Edit_Frozen_Account</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot edit a Past Client account. --></errorMessage>
+        <name>Cannot_Edit_Past_Client_Account</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Account_Usage_Last_Month --></label>
+        <name>Account_Usage_Last_Month</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Account_Usage_Last_Month_Excl_zeros --></label>
+        <name>Account_Usage_Last_Month_Excl_zeros</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Account_Usage_This_Month --></label>
+        <name>Account_Usage_This_Month</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Account_Usage_This_Month_Excl_zeros --></label>
+        <name>Account_Usage_This_Month_Excl_zeros</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Account_Usage_This_Year --></label>
+        <name>Account_Usage_This_Year</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Account_Usage_This_Year_Excl_zeros --></label>
+        <name>Account_Usage_This_Year_Excl_zeros</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_SMS --></label>
+        <name>Send_Single_SMS</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Upcoming_Reminders --></label>
+        <name>Upcoming_Reminders</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Tasks_Accounts --></label>
+        <name>activities__Create_Tasks_Accounts</name>
+    </webLinks>
+</CustomObjectTranslation>

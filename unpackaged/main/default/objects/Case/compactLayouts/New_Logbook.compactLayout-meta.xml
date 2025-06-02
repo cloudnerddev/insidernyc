@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Logbook</fullName>
+    <fields>Summary__c</fields>
+    <fields>Status</fields>
+    <fields>ContactId</fields>
+    <fields>AccountId</fields>
+    <fields>OwnerId</fields>
+    <fields>Logbook_Flag__c</fields>
+    <label>New Logbook</label>
+</CompactLayout>

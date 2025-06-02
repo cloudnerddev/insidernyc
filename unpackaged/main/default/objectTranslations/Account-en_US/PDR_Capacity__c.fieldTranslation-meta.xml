@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- PDR Capacity --></label>
+        <name>PDR_Capacity__c</name>
+        <picklistValues>
+            <masterLabel>Seated: 15 and under</masterLabel>
+            <translation><!-- Seated: 15 and under --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seated: 16-25</masterLabel>
+            <translation><!-- Seated: 16-25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seated: 26-50</masterLabel>
+            <translation><!-- Seated: 26-50 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seated: 51-100</masterLabel>
+            <translation><!-- Seated: 51-100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seated: more than 100</masterLabel>
+            <translation><!-- Seated: more than 100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standing: 10-30</masterLabel>
+            <translation><!-- Standing: 10-30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standing: 31-50</masterLabel>
+            <translation><!-- Standing: 31-50 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standing: 51-100</masterLabel>
+            <translation><!-- Standing: 51-100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standing: more than 100</masterLabel>
+            <translation><!-- Standing: more than 100 --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Name as it appears on passport --></label>
+        <name>Name_as_it_appears_on_passport__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Transportation Type --></label>
+        <name>Transportation_Type__c</name>
+        <picklistValues>
+            <masterLabel>Employee Errand</masterLabel>
+            <translation><!-- Employee Errand --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Messenger Service</masterLabel>
+            <translation><!-- Messenger Service --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

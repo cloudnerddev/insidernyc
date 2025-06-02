@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Insider_Team_Is_My_Team__c</fullName>
+    <formula>(CONTAINS($User.My_Teams_Active__c, Insider_Team__r.Insider_Team__c)
+||
+CONTAINS($User.My_Teams_Inactive__c, Insider_Team__r.Insider_Team__c))
+&amp;&amp;
+!ISBLANK(Insider_Team__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Account Insider Team Is My Team</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

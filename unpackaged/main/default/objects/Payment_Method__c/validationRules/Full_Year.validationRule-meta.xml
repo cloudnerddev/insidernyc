@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Full_Year</fullName>
+    <active>true</active>
+    <errorConditionFormula>!ISBLANK(Expiration_Year__c) &amp;&amp;
+LEN(Expiration_Year__c) &lt;&gt; 4</errorConditionFormula>
+    <errorDisplayField>Expiration_Year__c</errorDisplayField>
+    <errorMessage>Please enter the full year. E.g., 2025, not 25.</errorMessage>
+</ValidationRule>

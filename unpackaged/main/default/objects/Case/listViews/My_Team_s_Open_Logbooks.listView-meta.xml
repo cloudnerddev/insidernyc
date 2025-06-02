@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Team_s_Open_Logbooks</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Reference_Date__c</columns>
+    <columns>CASES.RECORDTYPE</columns>
+    <columns>Insider_Team__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Logbook_Insider_Team_Is_My_Team__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>CASES.CLOSED</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>My Team's Open Logbooks</label>
+</ListView>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Linked_Address_To__c</fullName>
+    <deleteConstraint>Cascade</deleteConstraint>
+    <inlineHelpText>This address will initially be synced to the address selected here. Then they will be synced up whenever either address is updated.</inlineHelpText>
+    <label>Linked Address To</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>$Source.Id</field>
+            <operation>notEqual</operation>
+            <valueField>$Source.Linked_Address_From__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Address__c</referenceTo>
+    <relationshipLabel>Linked Addresses</relationshipLabel>
+    <relationshipName>Linked_Addresses_To</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

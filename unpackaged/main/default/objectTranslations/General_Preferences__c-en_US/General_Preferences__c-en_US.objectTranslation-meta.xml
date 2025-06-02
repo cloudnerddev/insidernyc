@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>General Preference</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>General Preferences</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Airline and Flight Preferences</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Car Rental Preferences</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Client Preferences</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Cocktail Preferences</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Dining Preferences</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Entertainment Preferences</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Food Preferences</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Hotel Preference</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Household/Utility Accounts</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Other Preferences</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Wine Preferences</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Clone and Link General Preference --></label>
+        <name>Clone_and_Link_General_Preference</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Link General Preference --></label>
+        <name>Link_General_Preference</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Airline Preferences --></label>
+        <name>Airline_and_Flight_Preferences</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Car Rental Preferences --></label>
+        <name>Car_Rental_Preferences</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Client Preferences --></label>
+        <name>Client_Preferences</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Cocktail Preferences --></label>
+        <name>Cocktail_Preferences</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Dining Preference --></label>
+        <name>Dining_Preference</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Entertainment Preferences --></label>
+        <name>Entertainment_Preferences</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Food Preferences --></label>
+        <name>Food_Preferences</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Hotel Preferences --></label>
+        <name>Hotel_Preferences</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Household/Utility Accounts --></label>
+        <name>Household_Utility_Accounts</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Personal Wellness and Other Preferences --></label>
+        <name>Other_Preferences</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Wine Preferences --></label>
+        <name>Wine_Preferences</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You are not authorized to clone records --></errorMessage>
+        <name>preventClone</name>
+    </validationRules>
+</CustomObjectTranslation>

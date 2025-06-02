@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Delivery Method --></label>
+        <name>Delivery_Method__c</name>
+        <picklistValues>
+            <masterLabel>Bikeable</masterLabel>
+            <translation><!-- Bikeable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Car</masterLabel>
+            <translation><!-- Car --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

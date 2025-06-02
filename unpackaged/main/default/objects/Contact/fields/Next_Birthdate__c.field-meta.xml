@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Next_Birthdate__c</fullName>
+    <formula>IF ( MONTH (Birthdate__c)=2 &amp;&amp; DAY (Birthdate__c)=29,
+
+    IF ((DATE (YEAR(TODAY()),1,1) + 59)  &gt; TODAY(),
+
+         (DATE (YEAR(TODAY()),1,1)) + 59,
+
+         (DATE (YEAR(TODAY())+1,1,1)) + 59),
+
+    IF (DATE (YEAR(TODAY()),MONTH(Birthdate__c),DAY(Birthdate__c)) &gt; TODAY(),
+
+         DATE (YEAR(TODAY()),MONTH(Birthdate__c),DAY(Birthdate__c)),
+
+         DATE (YEAR(TODAY())+1,MONTH(Birthdate__c),DAY(Birthdate__c))
+
+       )
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Next Birthdate</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

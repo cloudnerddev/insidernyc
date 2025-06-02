@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Linked Hate From --></label>
+        <name>Linked_Hate_From__c</name>
+        <relationshipLabel><!-- Linked Hates (From) --></relationshipLabel>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- General Business email that might not be used for reservations and bookings. --></help>
+        <label><!-- Email - General Business --></label>
+        <name>Email_General_Business__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Allergies/Medical Conditions/Dietary Restrictions --></help>
+        <label><!-- Allergies/Medical Cond./Dietary Res. --></label>
+        <name>Allergies_Medical_Conditions__c</name>
+    </CustomFieldTranslation>

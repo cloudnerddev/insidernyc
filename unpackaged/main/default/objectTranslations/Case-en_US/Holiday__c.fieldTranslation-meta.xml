@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Holiday_DNU --></label>
+        <name>Holiday__c</name>
+        <picklistValues>
+            <masterLabel>December Festive</masterLabel>
+            <translation><!-- December Festive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>July 4th</masterLabel>
+            <translation><!-- July 4th --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Labor Day</masterLabel>
+            <translation><!-- Labor Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Memorial Day</masterLabel>
+            <translation><!-- Memorial Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Superbowl</masterLabel>
+            <translation><!-- Superbowl --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

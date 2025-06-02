@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- House or Villa Name --></label>
+        <name>House_or_Villa_Name__c</name>
+        <relationshipLabel><!-- House or Villa Logbooks --></relationshipLabel>
+    </CustomFieldTranslation>

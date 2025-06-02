@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset xsi:nil="true"/>
+    <measures>
+        <field>lens_3.A</field>
+        <isDerived>false</isDerived>
+        <label>Current Year</label>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_3.B</field>
+        <isDerived>false</isDerived>
+        <label>Previous Year</label>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <type>Asset</type>
+    <waveVisualization>aa</waveVisualization>
+</WaveXmd>

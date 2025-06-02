@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Private_Semi_Private_Dining_Capacity__c</fullName>
+    <encryptionScheme>None</encryptionScheme>
+    <inlineHelpText>Ex. Private Room: 12 seated, 20 standing</inlineHelpText>
+    <label>Private/Semi Private Dining Capacity</label>
+    <length>100000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

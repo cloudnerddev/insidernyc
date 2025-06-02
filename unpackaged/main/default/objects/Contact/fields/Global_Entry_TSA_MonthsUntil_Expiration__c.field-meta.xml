@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Global_Entry_TSA_MonthsUntil_Expiration__c</fullName>
+    <externalId>false</externalId>
+    <formula>Global_Entry_TSA_Days_Until_Expiration__c / 30</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Global Entry/TSA -MonthsUntil Expiration</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

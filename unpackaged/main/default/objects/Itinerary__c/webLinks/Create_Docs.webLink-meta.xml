@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Docs</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Create Docs</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/apex/ItineraryTemplate?id={!Itinerary__c.Id}</url>
+</WebLink>

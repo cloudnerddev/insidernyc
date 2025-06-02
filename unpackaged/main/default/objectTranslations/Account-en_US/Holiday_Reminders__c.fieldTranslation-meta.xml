@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Holiday Reminders --></label>
+        <name>Holiday_Reminders__c</name>
+        <picklistValues>
+            <masterLabel>Mother's Day</masterLabel>
+            <translation><!-- Mother&apos;s Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Valentine's Day</masterLabel>
+            <translation><!-- Valentine&apos;s Day --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

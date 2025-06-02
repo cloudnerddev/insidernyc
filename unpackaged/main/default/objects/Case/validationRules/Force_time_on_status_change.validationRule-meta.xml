@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Force_time_on_status_change</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISCHANGED(Status), ISBLANK(Enter_Time__c), $User.CommunityNickname != 'CDNA')</errorConditionFormula>
+    <errorDisplayField>Enter_Time__c</errorDisplayField>
+    <errorMessage>Please enter time in order to change the status.</errorMessage>
+</ValidationRule>

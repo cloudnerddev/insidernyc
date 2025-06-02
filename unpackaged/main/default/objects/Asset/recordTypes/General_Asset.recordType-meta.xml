@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>General_Asset</fullName>
+    <active>true</active>
+    <description>Assets and Memberships that don't fit into the other categories.</description>
+    <label>General Asset</label>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

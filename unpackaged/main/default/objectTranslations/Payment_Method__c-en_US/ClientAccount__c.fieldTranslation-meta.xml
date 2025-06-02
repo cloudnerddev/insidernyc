@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Client Account --></label>
+        <name>ClientAccount__c</name>
+        <relationshipLabel><!-- Payment Methods --></relationshipLabel>
+    </CustomFieldTranslation>

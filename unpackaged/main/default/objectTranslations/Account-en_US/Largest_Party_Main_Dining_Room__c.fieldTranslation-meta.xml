@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- This is the max amount of people that can be seated in the main dining room before needing to switch to a private dining room. --></help>
+        <label><!-- Largest Party - Main Dining Room --></label>
+        <name>Largest_Party_Main_Dining_Room__c</name>
+    </CustomFieldTranslation>

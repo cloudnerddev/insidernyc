@@ -1,0 +1,56 @@
+<messaging:emailTemplate subject="Train Booking Confirmation" recipientType="Contact" relatedToType="Case">
+<messaging:HTMLEmailBody >
+
+<span style='font-size:10.0pt;font-family:"Century Gothic"'>
+<br/>
+Hi,<br/><br/>
+
+Please see below for your confirmation:<br/><br/>
+
+Your Request:&nbsp;<apex:outputField value="{!relatedTo.RecordType.Name}"/><br/>
+Confirmation For:&nbsp;<apex:outputField value="{!relatedTo.Person_Using__r.FirstName}"/>&nbsp;<apex:outputField value="{!relatedTo.Person_Using__r.LastName}"/><br/>
+<!-- Person Using:&nbsp;<apex:outputField value="{!relatedTo.Person_Using__r.FirstName}"/>&nbsp;<apex:outputField value="{!relatedTo.Person_Using__r.LastName}"/><br/> -->
+<apex:outputPanel rendered="{!relatedto.Vendor__c != ''}">Vendor Name:&nbsp;<apex:outputField value="{!relatedto.Vendor__r.Name}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Vendor_Phone__c != ''}">Vendor Telephone:&nbsp;<apex:outputField value="{!relatedto.Vendor_Phone_Formatted__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Departure_City__c != ''}">Departure City:&nbsp;<apex:outputField value="{!relatedTo.Departure_City__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Date_of_Departure__c != null}">Date of Departure:&nbsp;<apex:outputField value="{!relatedTo.Day_of_Departure__c}"/>,&nbsp;<apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!relatedTo.Date_of_Departure__c}"/></apex:outputText><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Departure_Time__c != null}">Departure Time:&nbsp;<apex:outputField value="{!relatedTo.Departure_Time__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Train_Line_Number__c != ''}">Train Line and Number:&nbsp;<apex:outputField value="{!relatedTo.Train_Line_Number__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Number_of_Tickets__c != null}">Number of Tickets:&nbsp;<apex:outputField value="{!relatedTo.Number_of_Tickets__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Seat__c != ''}">Seat(s):&nbsp;<apex:outputField value="{!relatedTo.Seat__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Ticket__c != ''}">Ticket #:&nbsp;<apex:outputField value="{!relatedTo.Ticket__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Destination_City__c != ''}">Destination City:&nbsp;<apex:outputField value="{!relatedTo.Destination_City__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Destination_Arrival_Date__c != null}">Destination Arrival Date:&nbsp;<apex:outputField value="{!relatedTo.Day_of_Destination_Arrival__c}"/>,&nbsp;<apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!relatedto.Destination_Arrival_Date__c}"/></apex:outputText><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Destination_Arrival_Time__c != null}">Destination Arrival Time:&nbsp;<apex:outputField value="{!relatedto.Destination_Arrival_Time__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Price_per_Ticket__c != null}">Price per Ticket:&nbsp;<apex:outputText value="{0, Number, Currency}"><apex:param value="{!relatedto.Price_per_Ticket__c}"/></apex:outputText><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Total_Price__c != null}">Total Price:&nbsp;<apex:outputText value="{0, Number, Currency}"><apex:param value="{!relatedto.Total_Price__c}"/></apex:outputText><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Refundable__c != ''}">Refundable or Non Refundable:&nbsp;<apex:outputField value="{!relatedTo.Refundable__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Membership_Number__c != ''}">Membership Number:&nbsp;<apex:outputField value="{!relatedTo.Membership_Number__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Membership_Status__c != ''}">Membership Status:&nbsp;<apex:outputField value="{!relatedTo.Membership_Status__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Special_Requests_Notes__c!= ''}"><b>Special Instructions:&nbsp;<apex:outputField value="{!relatedto.Special_Requests_Notes__c}"/></b><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Cancellation_Policy__c != ''}"><b>Cancellation Policy:&nbsp;<apex:outputField value="{!relatedto.Cancellation_Policy__c}"/><br/></b></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Confirmed_With__c != ''}">Confirmed With and Confirmation Date:&nbsp;<apex:outputField value="{!relatedto.Confirmed_With__c}"/>, <apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!relatedto.Confirmation_Date_for_Email__c}"/></apex:outputText><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Reconfirmed_With__c != ''}">Reconfirmed with and Reconfirmation Date:&nbsp;<apex:outputField value="{!relatedto.Reconfirmed_With__c}"/>, <apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!relatedto.Reconfirmation_Date_for_Email__c}"/></apex:outputText><br/></apex:outputPanel>
+<br/>
+Should you need to alter or cancel your booking please contact Insider. If it is after business hours, kindly notify the INsider Team at 800.840.1143 or <a href="mailto:24@insidernyc.com">24@insidernyc.com</a>.<br/><br/>
+
+Thank You!
+</span>
+<br/><br/>
+<span style='font-size:10.0pt;color:#9f9f9f;font-family:"Arial Unicode MS"'>
+<b>{!$User.FirstName} {!$User.LastName}</b><br/>
+<apex:image url="https://insidernyc--c.na158.content.force.com/servlet/servlet.ImageServer?id=0150b000002NUy9&oid=00D0b000000R4TA&lastMod=1555333577000"/><br/>
+T: 212.685.4113<br/>
+<a href="mailto:{!$User.Email}">{!$User.Email}</a><br/>
+24 hr: 800.840.1143 | <a href="mailto:24@insidernyc.com">24@insidernyc.com</a><br/>
+<a href="www.insidernyc.com">www.insidernyc.com</a><br/>
+Follow us: @INsider_nyc
+</span>
+<br/><br/>
+<div style="background-color:#677eb0;">
+<center>
+<!-- <apex:image url="http://static1.squarespace.com/static/53d7f470e4b04f8fcf6fe4b8/t/59135d421b10e3b98b9c65ff/1544409204447/}" height="60"/> -->
+</center>
+</div>
+</messaging:HTMLEmailBody>
+</messaging:emailTemplate>

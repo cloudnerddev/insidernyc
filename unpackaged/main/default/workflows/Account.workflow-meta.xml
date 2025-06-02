@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Set_Account_Frozen_Past_Client_Date</fullName>
+        <field>Account_Frozen_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Set Account Frozen/Past Client Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Account_Status_Modified_Date</fullName>
+        <field>Account_Status_Modified_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Set Account Status Modified Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Owner_to_Claude</fullName>
+        <field>OwnerId</field>
+        <lookupValue>insider@cloudna.io</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Set Owner to Claude</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Unfrozen_Date</fullName>
+        <field>Account_Unfrozen_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Set Unfrozen Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Account Frozen%2FPast Client</fullName>
+        <actions>
+            <name>Set_Account_Frozen_Past_Client_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Account.Account_Status__c</field>
+            <operation>equals</operation>
+            <value>Frozen</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Account_Status__c</field>
+            <operation>equals</operation>
+            <value>Past Client</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Account Status Changed</fullName>
+        <actions>
+            <name>Set_Account_Status_Modified_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISCHANGED(Account_Status__c) || ISNEW()</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Account UnFrozen%2FReClient</fullName>
+        <actions>
+            <name>Set_Unfrozen_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Account_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Frozen</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Account_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Past Client</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Owner to Claude</fullName>
+        <actions>
+            <name>Set_Owner_to_Claude</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.OwnerId</field>
+            <operation>notEqual</operation>
+            <value>CLAUDE DNA</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Please remember to add bulleting for the email --></help>
+        <label><!-- Package/Pass Details --></label>
+        <name>Package_Pass_Details__c</name>
+    </CustomFieldTranslation>

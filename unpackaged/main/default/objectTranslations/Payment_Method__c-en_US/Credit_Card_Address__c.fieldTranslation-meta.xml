@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Credit Card Address --></label>
+        <name>Credit_Card_Address__c</name>
+        <relationshipLabel><!-- Payment Methods --></relationshipLabel>
+    </CustomFieldTranslation>

@@ -1,0 +1,1641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Logbook</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Logbooks</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Amenity Order</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation Details --></label>
+            <section>Confirmation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commissions --></label>
+            <section>Employee Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Order Details --></label>
+            <section>Order Details</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Appointment/Service Booking</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation Details --></label>
+            <section>Confirmation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commission --></label>
+            <section>Employee Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Golf Booking --></label>
+            <section>Golf Booking</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Request Details --></label>
+            <section>Request Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Car Rental</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Car Rental Details --></label>
+            <section>Car Rental Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation Details --></label>
+            <section>Confirmation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commission --></label>
+            <section>Employee Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Car Service</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Car Service Details --></label>
+            <section>Car Service Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation Details --></label>
+            <section>Confirmation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commission --></label>
+            <section>Employee Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Charter</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Charter Details --></label>
+            <section>Charter Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation Details --></label>
+            <section>Confirmation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Departure/Arrival --></label>
+            <section>Departure/Arrival</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commission --></label>
+            <section>Employee Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Dining Reservation</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation Details --></label>
+            <section>Confirmation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commission --></label>
+            <section>Employee Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Reservation Details --></label>
+            <section>Reservation Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Errand</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation Details --></label>
+            <section>Confirmation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commission --></label>
+            <section>Employee Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Request Details --></label>
+            <section>Request Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Event Booking</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation Details --></label>
+            <section>Confirmation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commission --></label>
+            <section>Employee Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Event Booking Details --></label>
+            <section>Event Booking Details</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Event Tickets</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation Details --></label>
+            <section>Confirmation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commission --></label>
+            <section>Employee Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Event Details --></label>
+            <section>Event Details</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Ticket Vendor --></label>
+            <section>Ticket Vendor</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Flight Booking</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation Details --></label>
+            <section>Confirmation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commission --></label>
+            <section>Employee Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Request Details --></label>
+            <section>Request Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Floral Booking</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation Details --></label>
+            <section>Confirmation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commission --></label>
+            <section>Employee Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Floral Booking Details --></label>
+            <section>Floral Booking Details</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>General Initial Request</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Gift</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commission --></label>
+            <section>Employee Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Request Details --></label>
+            <section>Request Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Hotel Booking</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation Details --></label>
+            <section>Confirmation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commission --></label>
+            <section>Employee Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Hotel Details --></label>
+            <section>Hotel Details</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Reservation Details --></label>
+            <section>Reservation Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>House</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation Details --></label>
+            <section>Confirmation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Research --></label>
+            <section>Research</section>
+        </sections>
+        <sections>
+            <label><!-- Reservation Details --></label>
+            <section>Reservation Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>House/Villa Booking</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation Details --></label>
+            <section>Confirmation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commission --></label>
+            <section>Employee Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Reservation Details --></label>
+            <section>Reservation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Vendor Details --></label>
+            <section>Vendor Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Internal</layout>
+        <sections>
+            <label><!-- Logbook Details --></label>
+            <section>Logbook Details</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Messenger Service</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation Details --></label>
+            <section>Confirmation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commission --></label>
+            <section>Employee Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Pickup/Delivery Details --></label>
+            <section>Pickup/Delivery Details</section>
+        </sections>
+        <sections>
+            <label><!-- Service Details --></label>
+            <section>Service Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Nightclub/Lounge/Drinks Reservation</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation Details --></label>
+            <section>Confirmation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commission --></label>
+            <section>Employee Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Reservtion Details --></label>
+            <section>Reservtion Details</section>
+        </sections>
+        <sections>
+            <label><!-- Venue Information --></label>
+            <section>Venue Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Package Log</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation Details --></label>
+            <section>Confirmation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commission --></label>
+            <section>Employee Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Request Information --></label>
+            <section>Request Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Research/Suggestions</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Request Details --></label>
+            <section>Request Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Tour Booking</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation Details --></label>
+            <section>Confirmation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commission --></label>
+            <section>Employee Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Request Information --></label>
+            <section>Request Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Train Booking</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation Details --></label>
+            <section>Confirmation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Departure/Arrival Details --></label>
+            <section>Departure/Arrival Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commission --></label>
+            <section>Employee Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Train Information --></label>
+            <section>Train Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Travel Planning</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commission --></label>
+            <section>Employee Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Request Details --></label>
+            <section>Request Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Travel Planning/Trip Booking</layout>
+        <sections>
+            <label><!-- Additional Costs --></label>
+            <section>Additional Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Details --></label>
+            <section>Cancellation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Commissions --></label>
+            <section>Commissions</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation Details --></label>
+            <section>Confirmation Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Commission --></label>
+            <section>Employee Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Itinerary --></label>
+            <section>Itinerary</section>
+        </sections>
+        <sections>
+            <label><!-- Other Information --></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Trip Details --></label>
+            <section>Trip Details</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Check Request --></label>
+        <name>Check_Request</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create Child Dining Reservation --></label>
+        <name>Create_Child_Dining_Reservation</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create Itinerary --></label>
+        <name>Create_Itinerary</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Custom Clone --></label>
+        <name>Custom_Clone</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Dates --></label>
+        <name>Dates</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Link Grease/Facetime/Trial --></label>
+        <name>Link_Grease_Facetime_Trial</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Related Logbook --></label>
+        <name>New_Related_Logbook</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Refund --></label>
+        <name>Refund</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Reviewed --></label>
+        <name>Reviewed</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Reviewed By --></label>
+        <name>Reviewed_By</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Aggregate Billable Time --></label>
+        <name>RollUp_Batch</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Send Email --></label>
+        <name>Send_Email</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Send LogBook Doc --></label>
+        <name>Send_LogBook_Doc</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Status and Time Log Updates --></label>
+        <name>Status_and_Time_Log_Updates</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Status and Time Log Updates --></label>
+        <name>Status_and_Time_Log_Updates_with_Type</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Thread ID for Email --></label>
+        <name>Thread_ID_for_Email</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Wire Request --></label>
+        <name>Wire_Request</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Amenity Order --></label>
+        <name>Amenity_Order</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Car Rental --></label>
+        <name>Car_Rental</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Car Service --></label>
+        <name>Car_Service</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Charter --></label>
+        <name>Charter</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- DMC / On Site Trip Booking --></label>
+        <name>DMC_On_Site_trip_booking</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Dining Reservation --></label>
+        <name>DiningReservation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Errand --></label>
+        <name>Errand</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Event Booking --></label>
+        <name>Event_Booking</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Event Tickets --></label>
+        <name>Event_Tickets</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Flight Booking --></label>
+        <name>Flight_Booking_Single_Person</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Floral Booking --></label>
+        <name>Floral_Booking</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- General Initial Request --></label>
+        <name>General_Initial_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Hotel Booking --></label>
+        <name>Hotel_Booking</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- House --></label>
+        <name>House</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- House/Villa Booking --></label>
+        <name>House_Villa_Booking</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Internal --></label>
+        <name>Internal</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Messenger Service --></label>
+        <name>Messenger_Service</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- New --></label>
+        <name>New</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Nightclub/Lounge/Drinks Reservation --></label>
+        <name>Nightclub_Lounge_Reservation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Package Log --></label>
+        <name>Package_Log</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Research/Suggestions --></label>
+        <name>Research</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Appointment/Service Booking --></label>
+        <name>Service_Booking</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Tour Booking --></label>
+        <name>Tour_Booking</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Train Booking --></label>
+        <name>Train_Booking</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Travel Planning --></label>
+        <name>Travel_Planning</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Travel Planning/Trip Booking --></label>
+        <name>Trip_Booking</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Additional Payment Notes required --></errorMessage>
+        <name>Additional_Payment_Notes_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot create/edit a logbook or related data for a Frozen account. --></errorMessage>
+        <name>Cannot_CreateEdit_Frozen_Account_Logbook</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot create/edit a logbook or related data for a Past Client account. --></errorMessage>
+        <name>Cannot_CreateEdit_PastCl_Account_Logbook</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Expired Credit Card. Please reach out to the Client to get updated payment information. --></errorMessage>
+        <name>Chargeback_Credit_Card_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Contact Required --></errorMessage>
+        <name>Contact_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out Billable/Expense and Payment Method prior to closing. --></errorMessage>
+        <name>ForceBillablePaymentMethod</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter time prior to closing this case. --></errorMessage>
+        <name>Force_time_on_case_closure</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter time in order to change the status. --></errorMessage>
+        <name>Force_time_on_status_change</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a Foreign Currency Amount --></errorMessage>
+        <name>Foreign_Commissions_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a Foreign Currency Amount --></errorMessage>
+        <name>Foreign_Total_Price_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Reason is required. --></errorMessage>
+        <name>Reason_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Team Member Name Required --></errorMessage>
+        <name>Team_Member_Name_for_Reimbursement_Req</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You may not clone this record --></errorMessage>
+        <name>preventClone</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not authorized to clone records --></errorMessage>
+        <name>preventClone2</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please wait to close this logbook until after you have completed the setup flow. --></errorMessage>
+        <name>preventClosingInFlow</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Dining_Reservation --></label>
+        <name>Conga_Composer_Dining_Reservation</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Dining_Reservation_PDF --></label>
+        <name>Conga_Composer_Dining_Reservation_PDF</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Tasks_Cases --></label>
+        <name>activities__Create_Tasks_Cases</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Link_General_Preference_To__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Link General Preference To</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Linked General Preferences</relationshipLabel>
+    <relationshipName>Linked_General_Preferences</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sports_Played__c</fullName>
+    <label>Sports Played</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Abseiling</fullName>
+                <default>false</default>
+                <label>Abseiling</label>
+            </value>
+            <value>
+                <fullName>Aerobics</fullName>
+                <default>false</default>
+                <label>Aerobics</label>
+            </value>
+            <value>
+                <fullName>Aikido</fullName>
+                <default>false</default>
+                <label>Aikido</label>
+            </value>
+            <value>
+                <fullName>Archery</fullName>
+                <default>false</default>
+                <label>Archery</label>
+            </value>
+            <value>
+                <fullName>Artistic gymnastics</fullName>
+                <default>false</default>
+                <label>Artistic gymnastics</label>
+            </value>
+            <value>
+                <fullName>Badminton</fullName>
+                <default>false</default>
+                <label>Badminton</label>
+            </value>
+            <value>
+                <fullName>BASE jumping</fullName>
+                <default>false</default>
+                <label>BASE jumping</label>
+            </value>
+            <value>
+                <fullName>Baseball</fullName>
+                <default>false</default>
+                <label>Baseball</label>
+            </value>
+            <value>
+                <fullName>Basketball</fullName>
+                <default>false</default>
+                <label>Basketball</label>
+            </value>
+            <value>
+                <fullName>Baton twirling</fullName>
+                <default>false</default>
+                <label>Baton twirling</label>
+            </value>
+            <value>
+                <fullName>Bobsleigh</fullName>
+                <default>false</default>
+                <label>Bobsleigh</label>
+            </value>
+            <value>
+                <fullName>Bodyboarding</fullName>
+                <default>false</default>
+                <label>Bodyboarding</label>
+            </value>
+            <value>
+                <fullName>Bodybuilding</fullName>
+                <default>false</default>
+                <label>Bodybuilding</label>
+            </value>
+            <value>
+                <fullName>Bouldering</fullName>
+                <default>false</default>
+                <label>Bouldering</label>
+            </value>
+            <value>
+                <fullName>Bowling</fullName>
+                <default>false</default>
+                <label>Bowling</label>
+            </value>
+            <value>
+                <fullName>Boxing</fullName>
+                <default>false</default>
+                <label>Boxing</label>
+            </value>
+            <value>
+                <fullName>Canoeing</fullName>
+                <default>false</default>
+                <label>Canoeing</label>
+            </value>
+            <value>
+                <fullName>Climbing</fullName>
+                <default>false</default>
+                <label>Climbing</label>
+            </value>
+            <value>
+                <fullName>Cricket</fullName>
+                <default>false</default>
+                <label>Cricket</label>
+            </value>
+            <value>
+                <fullName>Cross-country cycling</fullName>
+                <default>false</default>
+                <label>Cross-country cycling</label>
+            </value>
+            <value>
+                <fullName>Cross-country equestrianism</fullName>
+                <default>false</default>
+                <label>Cross-country equestrianism</label>
+            </value>
+            <value>
+                <fullName>Cross-country running</fullName>
+                <default>false</default>
+                <label>Cross-country running</label>
+            </value>
+            <value>
+                <fullName>Cross-country skiing</fullName>
+                <default>false</default>
+                <label>Cross-country skiing</label>
+            </value>
+            <value>
+                <fullName>Curling</fullName>
+                <default>false</default>
+                <label>Curling</label>
+            </value>
+            <value>
+                <fullName>Cycling</fullName>
+                <default>false</default>
+                <label>Cycling</label>
+            </value>
+            <value>
+                <fullName>Discus throw</fullName>
+                <default>false</default>
+                <label>Discus throw</label>
+            </value>
+            <value>
+                <fullName>Diving</fullName>
+                <default>false</default>
+                <label>Diving</label>
+            </value>
+            <value>
+                <fullName>Dodgeball</fullName>
+                <default>false</default>
+                <label>Dodgeball</label>
+            </value>
+            <value>
+                <fullName>Equestrianism</fullName>
+                <default>false</default>
+                <label>Equestrianism</label>
+            </value>
+            <value>
+                <fullName>Fencing</fullName>
+                <default>false</default>
+                <label>Fencing</label>
+            </value>
+            <value>
+                <fullName>Figure skating</fullName>
+                <default>false</default>
+                <label>Figure skating</label>
+            </value>
+            <value>
+                <fullName>Football</fullName>
+                <default>false</default>
+                <label>Football</label>
+            </value>
+            <value>
+                <fullName>Freediving</fullName>
+                <default>false</default>
+                <label>Freediving</label>
+            </value>
+            <value>
+                <fullName>Gliding</fullName>
+                <default>false</default>
+                <label>Gliding</label>
+            </value>
+            <value>
+                <fullName>Golf</fullName>
+                <default>false</default>
+                <label>Golf</label>
+            </value>
+            <value>
+                <fullName>Handball</fullName>
+                <default>false</default>
+                <label>Handball</label>
+            </value>
+            <value>
+                <fullName>Hiking</fullName>
+                <default>false</default>
+                <label>Hiking</label>
+            </value>
+            <value>
+                <fullName>Hockey</fullName>
+                <default>false</default>
+                <label>Hockey</label>
+            </value>
+            <value>
+                <fullName>Horse racing</fullName>
+                <default>false</default>
+                <label>Horse racing</label>
+            </value>
+            <value>
+                <fullName>Horseball</fullName>
+                <default>false</default>
+                <label>Horseball</label>
+            </value>
+            <value>
+                <fullName>Hurling</fullName>
+                <default>false</default>
+                <label>Hurling</label>
+            </value>
+            <value>
+                <fullName>Ice hockey</fullName>
+                <default>false</default>
+                <label>Ice hockey</label>
+            </value>
+            <value>
+                <fullName>Judo</fullName>
+                <default>false</default>
+                <label>Judo</label>
+            </value>
+            <value>
+                <fullName>Karate</fullName>
+                <default>false</default>
+                <label>Karate</label>
+            </value>
+            <value>
+                <fullName>Kayaking</fullName>
+                <default>false</default>
+                <label>Kayaking</label>
+            </value>
+            <value>
+                <fullName>Kendo</fullName>
+                <default>false</default>
+                <label>Kendo</label>
+            </value>
+            <value>
+                <fullName>Kickball</fullName>
+                <default>false</default>
+                <label>Kickball</label>
+            </value>
+            <value>
+                <fullName>Kickboxing</fullName>
+                <default>false</default>
+                <label>Kickboxing</label>
+            </value>
+            <value>
+                <fullName>Kiteboarding</fullName>
+                <default>false</default>
+                <label>Kiteboarding</label>
+            </value>
+            <value>
+                <fullName>Kitesurfing</fullName>
+                <default>false</default>
+                <label>Kitesurfing</label>
+            </value>
+            <value>
+                <fullName>Kung fu</fullName>
+                <default>false</default>
+                <label>Kung fu</label>
+            </value>
+            <value>
+                <fullName>Lacrosse</fullName>
+                <default>false</default>
+                <label>Lacrosse</label>
+            </value>
+            <value>
+                <fullName>Long jump</fullName>
+                <default>false</default>
+                <label>Long jump</label>
+            </value>
+            <value>
+                <fullName>Marathon</fullName>
+                <default>false</default>
+                <label>Marathon</label>
+            </value>
+            <value>
+                <fullName>Mixed martial arts</fullName>
+                <default>false</default>
+                <label>Mixed martial arts</label>
+            </value>
+            <value>
+                <fullName>Mountaineering</fullName>
+                <default>false</default>
+                <label>Mountaineering</label>
+            </value>
+            <value>
+                <fullName>Muay Thai</fullName>
+                <default>false</default>
+                <label>Muay Thai</label>
+            </value>
+            <value>
+                <fullName>Olympic swimming</fullName>
+                <default>false</default>
+                <label>Olympic swimming</label>
+            </value>
+            <value>
+                <fullName>Paddle</fullName>
+                <default>false</default>
+                <label>Paddle</label>
+            </value>
+            <value>
+                <fullName>Paddleboarding</fullName>
+                <default>false</default>
+                <label>Paddleboarding</label>
+            </value>
+            <value>
+                <fullName>Parachuting</fullName>
+                <default>false</default>
+                <label>Parachuting</label>
+            </value>
+            <value>
+                <fullName>Paragliding</fullName>
+                <default>false</default>
+                <label>Paragliding</label>
+            </value>
+            <value>
+                <fullName>Parasailing</fullName>
+                <default>false</default>
+                <label>Parasailing</label>
+            </value>
+            <value>
+                <fullName>Pole vault</fullName>
+                <default>false</default>
+                <label>Pole vault</label>
+            </value>
+            <value>
+                <fullName>Polo</fullName>
+                <default>false</default>
+                <label>Polo</label>
+            </value>
+            <value>
+                <fullName>Powerlifting</fullName>
+                <default>false</default>
+                <label>Powerlifting</label>
+            </value>
+            <value>
+                <fullName>Racewalking</fullName>
+                <default>false</default>
+                <label>Racewalking</label>
+            </value>
+            <value>
+                <fullName>Racquetball</fullName>
+                <default>false</default>
+                <label>Racquetball</label>
+            </value>
+            <value>
+                <fullName>Rafting</fullName>
+                <default>false</default>
+                <label>Rafting</label>
+            </value>
+            <value>
+                <fullName>Rhythmic gymnastics</fullName>
+                <default>false</default>
+                <label>Rhythmic gymnastics</label>
+            </value>
+            <value>
+                <fullName>Rinkball</fullName>
+                <default>false</default>
+                <label>Rinkball</label>
+            </value>
+            <value>
+                <fullName>Rounders</fullName>
+                <default>false</default>
+                <label>Rounders</label>
+            </value>
+            <value>
+                <fullName>Rowing</fullName>
+                <default>false</default>
+                <label>Rowing</label>
+            </value>
+            <value>
+                <fullName>Rugby</fullName>
+                <default>false</default>
+                <label>Rugby</label>
+            </value>
+            <value>
+                <fullName>Scuba diving</fullName>
+                <default>false</default>
+                <label>Scuba diving</label>
+            </value>
+            <value>
+                <fullName>Skateboarding</fullName>
+                <default>false</default>
+                <label>Skateboarding</label>
+            </value>
+            <value>
+                <fullName>Skeleton</fullName>
+                <default>false</default>
+                <label>Skeleton</label>
+            </value>
+            <value>
+                <fullName>Skibobbing</fullName>
+                <default>false</default>
+                <label>Skibobbing</label>
+            </value>
+            <value>
+                <fullName>Skydiving</fullName>
+                <default>false</default>
+                <label>Skydiving</label>
+            </value>
+            <value>
+                <fullName>Skysurfing</fullName>
+                <default>false</default>
+                <label>Skysurfing</label>
+            </value>
+            <value>
+                <fullName>Snorkeling</fullName>
+                <default>false</default>
+                <label>Snorkeling</label>
+            </value>
+            <value>
+                <fullName>Snowboarding</fullName>
+                <default>false</default>
+                <label>Snowboarding</label>
+            </value>
+            <value>
+                <fullName>Soccer</fullName>
+                <default>false</default>
+                <label>Soccer</label>
+            </value>
+            <value>
+                <fullName>Softball</fullName>
+                <default>false</default>
+                <label>Softball</label>
+            </value>
+            <value>
+                <fullName>Sprint</fullName>
+                <default>false</default>
+                <label>Sprint</label>
+            </value>
+            <value>
+                <fullName>Squash</fullName>
+                <default>false</default>
+                <label>Squash</label>
+            </value>
+            <value>
+                <fullName>Sumo</fullName>
+                <default>false</default>
+                <label>Sumo</label>
+            </value>
+            <value>
+                <fullName>Surfing</fullName>
+                <default>false</default>
+                <label>Surfing</label>
+            </value>
+            <value>
+                <fullName>Sword-fighting</fullName>
+                <default>false</default>
+                <label>Sword-fighting</label>
+            </value>
+            <value>
+                <fullName>Synchronized swimming</fullName>
+                <default>false</default>
+                <label>Synchronized swimming</label>
+            </value>
+            <value>
+                <fullName>Table tennis</fullName>
+                <default>false</default>
+                <label>Table tennis</label>
+            </value>
+            <value>
+                <fullName>Tennis</fullName>
+                <default>false</default>
+                <label>Tennis</label>
+            </value>
+            <value>
+                <fullName>Trail running</fullName>
+                <default>false</default>
+                <label>Trail running</label>
+            </value>
+            <value>
+                <fullName>Trampolining</fullName>
+                <default>false</default>
+                <label>Trampolining</label>
+            </value>
+            <value>
+                <fullName>Tumbling</fullName>
+                <default>false</default>
+                <label>Tumbling</label>
+            </value>
+            <value>
+                <fullName>Ultimate</fullName>
+                <default>false</default>
+                <label>Ultimate</label>
+            </value>
+            <value>
+                <fullName>Unicycling basketball</fullName>
+                <default>false</default>
+                <label>Unicycling basketball</label>
+            </value>
+            <value>
+                <fullName>Unicycling handball</fullName>
+                <default>false</default>
+                <label>Unicycling handball</label>
+            </value>
+            <value>
+                <fullName>Unicycling hockey</fullName>
+                <default>false</default>
+                <label>Unicycling hockey</label>
+            </value>
+            <value>
+                <fullName>Volleyball</fullName>
+                <default>false</default>
+                <label>Volleyball</label>
+            </value>
+            <value>
+                <fullName>Wakeboarding</fullName>
+                <default>false</default>
+                <label>Wakeboarding</label>
+            </value>
+            <value>
+                <fullName>Walking</fullName>
+                <default>false</default>
+                <label>Walking</label>
+            </value>
+            <value>
+                <fullName>Water polo</fullName>
+                <default>false</default>
+                <label>Water polo</label>
+            </value>
+            <value>
+                <fullName>Weightlifting</fullName>
+                <default>false</default>
+                <label>Weightlifting</label>
+            </value>
+            <value>
+                <fullName>Windsurfing</fullName>
+                <default>false</default>
+                <label>Windsurfing</label>
+            </value>
+            <value>
+                <fullName>Wrestling</fullName>
+                <default>false</default>
+                <label>Wrestling</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

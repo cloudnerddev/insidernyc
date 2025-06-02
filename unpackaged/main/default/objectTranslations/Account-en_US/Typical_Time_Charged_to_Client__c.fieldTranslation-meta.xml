@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Based off of REZ list --></help>
+        <label><!-- Typical Time Charged to Client --></label>
+        <name>Typical_Time_Charged_to_Client__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Chargeback_Credit_Card_Validation</fullName>
+    <active>true</active>
+    <description>Triggers when a Chargeback Payment Method is added to the Logbook record that is expired.</description>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(Chargeback_Credit_Card__c)), 
+    DATE(
+        VALUE(Chargeback_Credit_Card__r.Expiration_Year__c), 
+        CASE(
+            TEXT(Chargeback_Credit_Card__r.Expiration_Month__c),
+            "01 - January", 1,
+            "02 - February", 2,
+            "03 - March", 3,
+            "04 - April", 4,
+            "05 - May", 5,
+            "06 - June", 6,
+            "07 - July", 7,
+            "08 - August", 8,
+            "09 - September", 9,
+            "10 - October", 10,
+            "11 - November", 11,
+            "12 - December", 12,
+            1
+        ),
+        1
+    ) &lt; TODAY()
+)</errorConditionFormula>
+    <errorDisplayField>Chargeback_Credit_Card__c</errorDisplayField>
+    <errorMessage>Expired Credit Card. Please reach out to the Client to get updated payment information.</errorMessage>
+</ValidationRule>

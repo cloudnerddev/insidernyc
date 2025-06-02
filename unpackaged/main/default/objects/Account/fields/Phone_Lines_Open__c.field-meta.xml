@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_Lines_Open__c</fullName>
+    <label>Phone Lines Open</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Before 7am EST</fullName>
+                <default>false</default>
+                <label>Before 7am EST</label>
+            </value>
+            <value>
+                <fullName>7am EST</fullName>
+                <default>false</default>
+                <label>7am EST</label>
+            </value>
+            <value>
+                <fullName>8am EST</fullName>
+                <default>false</default>
+                <label>8am EST</label>
+            </value>
+            <value>
+                <fullName>9am EST</fullName>
+                <default>false</default>
+                <label>9am EST</label>
+            </value>
+            <value>
+                <fullName>10am EST</fullName>
+                <default>false</default>
+                <label>10am EST</label>
+            </value>
+            <value>
+                <fullName>11am EST</fullName>
+                <default>false</default>
+                <label>11am EST</label>
+            </value>
+            <value>
+                <fullName>12 noon EST</fullName>
+                <default>false</default>
+                <label>12 noon EST</label>
+            </value>
+            <value>
+                <fullName>1pm EST</fullName>
+                <default>false</default>
+                <label>1pm EST</label>
+            </value>
+            <value>
+                <fullName>after 1pm EST</fullName>
+                <default>false</default>
+                <label>after 1pm EST</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

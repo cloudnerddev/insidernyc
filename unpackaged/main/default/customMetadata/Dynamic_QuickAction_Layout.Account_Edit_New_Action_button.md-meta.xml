@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Account Edit/New Action button</label>
+    <protected>false</protected>
+    <values>
+        <field>Record_Type__c</field>
+        <value xsi:type="xsd:string">Client_Account,Vendor_Account</value>
+    </values>
+    <values>
+        <field>Section_and_Fieldset__c</field>
+        <value xsi:type="xsd:string">Additional Vendor Information : Additional_Address_Information,Insider Vendor Contact detail : Insider_Vendor_Information, Insider Internal Vendor Information: Insider_Internal_Vendor_Information, Commission Detail : Commission_Details, Vendor Type Specific Information : Dependent,Address Information : Additional_Information, Additional Address Information : Additional_Address_Information, Account System Information :	Account_System_Information</value>
+    </values>
+    <values>
+        <field>object__c</field>
+        <value xsi:type="xsd:string">Account</value>
+    </values>
+</CustomMetadata>

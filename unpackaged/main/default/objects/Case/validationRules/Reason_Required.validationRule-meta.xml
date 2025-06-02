@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_Required</fullName>
+    <active>false</active>
+    <errorConditionFormula>(ISCHANGED(Status) || ISNEW())
+&amp;&amp; !ISPICKVAL(Status, 'New')
+&amp;&amp; ISBLANK(TEXT(Reason__c)) &amp;&amp;
+$User.CommunityNickname != 'CDNA'</errorConditionFormula>
+    <errorDisplayField>Reason__c</errorDisplayField>
+    <errorMessage>Reason is required.</errorMessage>
+</ValidationRule>

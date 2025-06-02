@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Insider</letterhead>
+    <name>HTMLErrand</name>
+    <style>freeForm</style>
+    <subject>Errand Confirmation</subject>
+    <textOnly>Hi,
+
+Please see below for your confirmation:
+
+Delivery Location: {!Case.Delivery_Location__c}
+Contact Person at Delivery: {!Case.Contact_Person_at_Delivery__c}
+Confirmed With: {!Case.Confirmed_With__c}
+Method of Shipment and Tracking Information (if any): {!Case.Method_of_Shipment__c} - {!Case.Tracking_Information__c}
+
+Should you need to alter or cancel your reservation after business hours, kindly notify the INsider Team at 800.840.1143 or 24@insidernyc.com.
+
+Please note that any no show of a reservation will incur a fee.
+
+Thank You!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

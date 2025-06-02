@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Case$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Case$Subject</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case$Number_in_Party__c</field>
+    </columns>
+    <columns>
+        <field>Case$Time_real__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Case$Account</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Rachel Kahn</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$Status</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Beyond Control,Cancelled,Didn&apos;t Get</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$Vendor__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>4 Charles</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Rachel 4 Charles</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Logbooks_with_all_Vendor_Details__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Case$Reference_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

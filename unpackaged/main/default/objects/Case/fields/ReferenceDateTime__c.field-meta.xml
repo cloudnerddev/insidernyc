@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReferenceDateTime__c</fullName>
+    <formula>/*DATETIMEVALUE(TEXT(YEAR(Reference_Date__c)) &amp; "-" &amp; TEXT(MONTH(Reference_Date__c)) &amp; "-" &amp; TEXT(DAY(Reference_Date__c)) &amp; " " &amp; TEXT(HOUR(Time_Real__c)) &amp; ":" &amp; TEXT(MINUTE(Time_real__c)) &amp; ":00") */
+
+DATETIMEVALUE( TEXT(Reference_Date__c - (5/24))&amp;' '&amp; LEFT(TEXT(SortTime__c), 8) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>ReferenceDateTime</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

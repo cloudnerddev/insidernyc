@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Phone number the Vendor uses to accept and communicate regarding bookings via Text Message. This isn’t the same as a reservation contacts personal cell --></help>
+        <label><!-- Reservation Text --></label>
+        <name>Reservation_Text__c</name>
+    </CustomFieldTranslation>

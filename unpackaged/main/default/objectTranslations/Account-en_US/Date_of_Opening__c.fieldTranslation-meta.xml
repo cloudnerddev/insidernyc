@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- This is the date this vendor opened up their business. --></help>
+        <label><!-- Date of Opening --></label>
+        <name>Date_of_Opening__c</name>
+    </CustomFieldTranslation>

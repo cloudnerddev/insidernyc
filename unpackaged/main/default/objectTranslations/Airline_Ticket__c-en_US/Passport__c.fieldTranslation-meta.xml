@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Passport --></label>
+        <lookupFilter>
+            <errorMessage><!-- Passport does not exist --></errorMessage>
+            <informationalMessage><!-- Only passports for the contact chosen appear --></informationalMessage>
+        </lookupFilter>
+        <name>Passport__c</name>
+        <relationshipLabel><!-- Airline Tickets --></relationshipLabel>
+    </CustomFieldTranslation>

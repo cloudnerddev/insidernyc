@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>High_Maintenance__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Use this if a customer is sensitive.</inlineHelpText>
+    <label>HM</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Monthly_Invoices_Required__c</fullName>
+    <label>Monthly Invoices Required</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Mandatory</fullName>
+                <default>false</default>
+                <label>Mandatory</label>
+            </value>
+            <value>
+                <fullName>Upon request</fullName>
+                <default>false</default>
+                <label>Upon request</label>
+            </value>
+            <value>
+                <fullName>Never</fullName>
+                <default>false</default>
+                <label>Never</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

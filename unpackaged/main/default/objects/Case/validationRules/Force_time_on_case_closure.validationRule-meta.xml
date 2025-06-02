@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Force_time_on_case_closure</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL(Status, "Closed"), ISBLANK(Case_Time_Logged__c), ISBLANK( Enter_Time__c ), $User.CommunityNickname != 'CDNA')</errorConditionFormula>
+    <errorDisplayField>Case_Time_Logged__c</errorDisplayField>
+    <errorMessage>Please enter time prior to closing this case.</errorMessage>
+</ValidationRule>

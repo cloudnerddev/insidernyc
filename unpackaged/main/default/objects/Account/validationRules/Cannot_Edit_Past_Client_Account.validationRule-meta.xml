@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Edit_Past_Client_Account</fullName>
+    <active>false</active>
+    <errorConditionFormula>!ISCHANGED(Account_Status__c) &amp;&amp;
+ISPICKVAL(Account_Status__c, 'Past Client') &amp;&amp;
+!ISNEW() &amp;&amp;
+$User.CommunityNickname != 'CDNA' &amp;&amp;
+$User.Edit_Locked_Accounts_Logbooks__c = FALSE</errorConditionFormula>
+    <errorMessage>You cannot edit a Past Client account.</errorMessage>
+</ValidationRule>

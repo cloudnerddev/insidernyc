@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Fill out this field to replace logbook field --></help>
+        <label><!-- Refundable --></label>
+        <name>Refundable__c</name>
+        <picklistValues>
+            <masterLabel>Non-Refundable</masterLabel>
+            <translation><!-- Non-Refundable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refundable</masterLabel>
+            <translation><!-- Refundable --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

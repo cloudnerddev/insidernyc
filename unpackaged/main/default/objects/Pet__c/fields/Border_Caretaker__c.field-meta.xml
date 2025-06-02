@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Border_Caretaker__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Border/Caretaker</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Pets (Border/Caretaker)</relationshipLabel>
+    <relationshipName>Pets3</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

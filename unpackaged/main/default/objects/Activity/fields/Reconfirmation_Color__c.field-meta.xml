@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reconfirmation_Color__c</fullName>
+    <externalId>false</externalId>
+    <formula>IMAGE( 
+CASE(Reconfirmation_Status__c, 
+"To be reconfirmed", "/resource/1658869323000/yellowsquare", 
+"Reconfirmed", "/resource/1658869342000/greysquare", 
+""),
+"", 30, 30)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Reconfirmation Color</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

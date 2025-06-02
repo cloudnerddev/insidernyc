@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Final_Billable__c</fullName>
+    <formula>IF(
+ISPICKVAL( Payment_Method__c, "Client Paying Directly"), Total_Expenses__c,
+IF(
+ISPICKVAL( Charge_Type__c , "Billable"),
+Total_Price__c + Total_Expenses__c, Total_Expenses__c
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>If the customer is paying directly, this is the total expense amount, otherwise it's total price + total expenses</inlineHelpText>
+    <label>Total Billable Item Cost</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- State where the logbook occurred. E.g., Enter &quot;FL&quot; for flower deliveries in Florida. Pre-populated from the Vendor if there is a State on the Vendor or when Vendor is updated. --></help>
+        <label><!-- Logbook State --></label>
+        <name>Logbook_State__c</name>
+    </CustomFieldTranslation>

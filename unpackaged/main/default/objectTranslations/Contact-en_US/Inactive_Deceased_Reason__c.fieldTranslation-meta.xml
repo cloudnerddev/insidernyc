@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Please explain why this contact is inactive, when they left firm or when they died --></help>
+        <label><!-- Inactive/Deceased Reason --></label>
+        <name>Inactive_Deceased_Reason__c</name>
+    </CustomFieldTranslation>

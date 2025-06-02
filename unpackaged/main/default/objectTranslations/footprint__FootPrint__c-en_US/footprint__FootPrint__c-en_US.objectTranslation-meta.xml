@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Foot_Print Layout</layout>
+        <sections>
+            <label><!-- Analysis details --></label>
+            <section>Analysis details</section>
+        </sections>
+        <sections>
+            <label><!-- Analytics --></label>
+            <section>Analytics</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- You cannot edit This field --></errorMessage>
+        <name>footprint__FP_BlockEdit</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Footprint_report --></label>
+        <name>footprint__Footprint_report</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Launch_Metadata_analysis --></label>
+        <name>footprint__Launch_Metadata_analysis</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Launch_analysis --></label>
+        <name>footprint__Launch_analysis</name>
+    </webLinks>
+</CustomObjectTranslation>

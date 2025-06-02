@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Set_Name</fullName>
+        <field>Name</field>
+        <formula>IF(OR(RecordType.Name == 'Cocktail Preferences',RecordType.Name == 'Food Preferences',RecordType.Name == 'Wine Preferences'), 
+
+LEFT(RecordType.Name &amp; " - " &amp; IF(INCLUDES(Type__c, "Cocktail"), "Cocktail", IF(INCLUDES(Type__c, "Wine - RED"), "Wine - RED	", IF(INCLUDES(Type__c, "Wine - WHITE"), "Wine - WHITE", IF(INCLUDES(Type__c, "Wine - other"), "Wine - other", IF(INCLUDES(Type__c, "Food - HATE"), "Food - HATE", IF(INCLUDES(Type__c, "Food - LOVE"), "Food - LOVE", "")))))) &amp; ' ' &amp; TEXT(Sub_Type__c),80),
+
+LEFT( RecordType.Name &amp; " - " &amp;  Preferred_Vendor__r.Name, 80 ))</formula>
+        <name>Set Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Notes_Summary</fullName>
+        <field>Notes_Summary__c</field>
+        <formula>IF(LEN(Notes__c) &lt;= 255, LEFT(Notes__c, 255), LEFT(Notes__c, 252)  &amp; '...')</formula>
+        <name>Set Notes Summary</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Set Notes Summary</fullName>
+        <actions>
+            <name>Set_Notes_Summary</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>true</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Preferences Name</fullName>
+        <actions>
+            <name>Set_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(
+NOT(ISBLANK(Preferred_Vendor__c)),
+ Autoname_Override__c = False)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

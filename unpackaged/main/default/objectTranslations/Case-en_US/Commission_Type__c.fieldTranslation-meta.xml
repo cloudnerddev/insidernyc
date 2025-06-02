@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Commission Type --></label>
+        <name>Commission_Type__c</name>
+        <picklistValues>
+            <masterLabel>Canceled but Commissionable</masterLabel>
+            <translation><!-- Canceled but Commissionable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coastline</masterLabel>
+            <translation><!-- Coastline --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct</masterLabel>
+            <translation><!-- Direct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mark Up</masterLabel>
+            <translation><!-- Mark Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Commissionable</masterLabel>
+            <translation><!-- Not Commissionable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tablet</masterLabel>
+            <translation><!-- Tablet --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Holiday__c</fullName>
+    <label>Holiday_DNU</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>December Festive</fullName>
+                <default>false</default>
+                <label>December Festive</label>
+            </value>
+            <value>
+                <fullName>Superbowl</fullName>
+                <default>false</default>
+                <label>Superbowl</label>
+            </value>
+            <value>
+                <fullName>Memorial Day</fullName>
+                <default>false</default>
+                <label>Memorial Day</label>
+            </value>
+            <value>
+                <fullName>July 4th</fullName>
+                <default>false</default>
+                <label>July 4th</label>
+            </value>
+            <value>
+                <fullName>Labor Day</fullName>
+                <default>false</default>
+                <label>Labor Day</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

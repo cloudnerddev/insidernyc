@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- How Far In Advance To Take Reservations --></label>
+        <name>How_Far_In_Advance_To_Take_Reservations__c</name>
+    </CustomFieldTranslation>

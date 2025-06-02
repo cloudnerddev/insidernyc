@@ -1,0 +1,23 @@
+<apex:page standardController="Lead" extensions="activities.ActivityHubExtension" recordSetVar="accounts">
+  <script>
+        window.onload = function(e) {
+           var recordIds = '{!selected}';
+           var type = 'WhoId';
+           if(recordIds!='')
+           {
+              Redirect(recordIds,type);
+           }
+           else
+           {
+             alert('Please select a record.');
+             window.history.back();
+           }
+            };
+      </script>
+ <apex:form >
+ <apex:actionFunction action="{!Redirect}" name="Redirect" rerender="none">
+   <apex:param name="recordIds" assignTo="{!recordIds}" value=""/>
+   <apex:param name="type" assignTo="{!type}" value=""/>
+ </apex:actionFunction>
+  </apex:form>
+</apex:page>

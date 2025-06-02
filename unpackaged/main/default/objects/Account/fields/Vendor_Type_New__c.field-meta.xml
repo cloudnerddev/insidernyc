@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendor_Type_New__c</fullName>
+    <label>Vendor Type - OLD</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Airline</fullName>
+                <default>false</default>
+                <label>Airline</label>
+            </value>
+            <value>
+                <fullName>Art</fullName>
+                <default>false</default>
+                <label>Art</label>
+            </value>
+            <value>
+                <fullName>Baby</fullName>
+                <default>false</default>
+                <label>Baby</label>
+            </value>
+            <value>
+                <fullName>Beverage Retail</fullName>
+                <default>false</default>
+                <label>Beverage Retail</label>
+            </value>
+            <value>
+                <fullName>Caretakers</fullName>
+                <default>false</default>
+                <label>Caretakers</label>
+            </value>
+            <value>
+                <fullName>Car Service</fullName>
+                <default>false</default>
+                <label>Car Service</label>
+            </value>
+            <value>
+                <fullName>Commerce</fullName>
+                <default>false</default>
+                <label>Commerce</label>
+            </value>
+            <value>
+                <fullName>DMC</fullName>
+                <default>false</default>
+                <label>DMC</label>
+            </value>
+            <value>
+                <fullName>Doctors</fullName>
+                <default>false</default>
+                <label>Doctors</label>
+            </value>
+            <value>
+                <fullName>Education</fullName>
+                <default>false</default>
+                <label>Education</label>
+            </value>
+            <value>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+                <label>Entertainment</label>
+            </value>
+            <value>
+                <fullName>Events/Party</fullName>
+                <default>false</default>
+                <label>Events/Party</label>
+            </value>
+            <value>
+                <fullName>Events/Party Entertainment</fullName>
+                <default>false</default>
+                <label>Events/Party Entertainment</label>
+            </value>
+            <value>
+                <fullName>Fashion Retail</fullName>
+                <default>false</default>
+                <label>Fashion Retail</label>
+            </value>
+            <value>
+                <fullName>Fashion Stylist</fullName>
+                <default>false</default>
+                <label>Fashion Stylist</label>
+            </value>
+            <value>
+                <fullName>Floral</fullName>
+                <default>false</default>
+                <label>Floral</label>
+            </value>
+            <value>
+                <fullName>Food Retail</fullName>
+                <default>false</default>
+                <label>Food Retail</label>
+            </value>
+            <value>
+                <fullName>Grade School</fullName>
+                <default>false</default>
+                <label>Grade School</label>
+            </value>
+            <value>
+                <fullName>Hair Stylist</fullName>
+                <default>false</default>
+                <label>Hair Stylist</label>
+            </value>
+            <value>
+                <fullName>Home Retail</fullName>
+                <default>false</default>
+                <label>Home Retail</label>
+            </value>
+            <value>
+                <fullName>Household</fullName>
+                <default>false</default>
+                <label>Household</label>
+            </value>
+            <value>
+                <fullName>Household Staffing</fullName>
+                <default>false</default>
+                <label>Household Staffing</label>
+            </value>
+            <value>
+                <fullName>Instructors</fullName>
+                <default>false</default>
+                <label>Instructors</label>
+            </value>
+            <value>
+                <fullName>Lawyer</fullName>
+                <default>false</default>
+                <label>Lawyer</label>
+            </value>
+            <value>
+                <fullName>Legal Counsel/Attorney</fullName>
+                <default>false</default>
+                <label>Legal Counsel/Attorney</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Pre- School</fullName>
+                <default>false</default>
+                <label>Pre- School</label>
+            </value>
+            <value>
+                <fullName>Rentals</fullName>
+                <default>false</default>
+                <label>Rentals</label>
+            </value>
+            <value>
+                <fullName>Security</fullName>
+                <default>false</default>
+                <label>Security</label>
+            </value>
+            <value>
+                <fullName>Spa/Health/Wellness</fullName>
+                <default>false</default>
+                <label>Spa/Health/Wellness</label>
+            </value>
+            <value>
+                <fullName>Sports</fullName>
+                <default>false</default>
+                <label>Sports</label>
+            </value>
+            <value>
+                <fullName>Staffing</fullName>
+                <default>false</default>
+                <label>Staffing</label>
+            </value>
+            <value>
+                <fullName>Theater</fullName>
+                <default>false</default>
+                <label>Theater</label>
+            </value>
+            <value>
+                <fullName>Therapist (emotional)</fullName>
+                <default>false</default>
+                <label>Therapist (emotional)</label>
+            </value>
+            <value>
+                <fullName>Therapist (massage/physical)</fullName>
+                <default>false</default>
+                <label>Therapist (massage/physical)</label>
+            </value>
+            <value>
+                <fullName>Ticket Brokers</fullName>
+                <default>false</default>
+                <label>Ticket Brokers</label>
+            </value>
+            <value>
+                <fullName>Toddler</fullName>
+                <default>false</default>
+                <label>Toddler</label>
+            </value>
+            <value>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+                <label>Transportation</label>
+            </value>
+            <value>
+                <fullName>Travel &amp; Tours</fullName>
+                <default>false</default>
+                <label>Travel &amp; Tours</label>
+            </value>
+            <value>
+                <fullName>Tutors</fullName>
+                <default>false</default>
+                <label>Tutors</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

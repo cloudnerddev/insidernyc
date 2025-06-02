@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Ex. Private Room: $5,000 --></help>
+        <label><!-- Standard F&amp;B Min --></label>
+        <name>Standard_F_B_Min__c</name>
+    </CustomFieldTranslation>

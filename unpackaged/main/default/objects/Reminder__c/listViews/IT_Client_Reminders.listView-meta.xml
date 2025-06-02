@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IT_Client_Reminders</fullName>
+    <columns>Contact__c</columns>
+    <columns>Title__c</columns>
+    <columns>Account_Name__c</columns>
+    <columns>Insider_Team__c</columns>
+    <columns>NAME</columns>
+    <columns>Reminder_Date__c</columns>
+    <columns>Description__c</columns>
+    <columns>Assigned_to__c</columns>
+    <columns>Date_Reminded__c</columns>
+    <columns>Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>Birthday,Child's Birthday,Spouse's Birthday,Parent's Birthday,Client’s Birthday,Other Birthday,Anniversary,Insurance Expiration,Passport Expiration,Other</value>
+    </filters>
+    <filters>
+        <field>Do_Not_Remind__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Reminder_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>Contact_Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>Account_Name__c</field>
+        <operation>equals</operation>
+        <value>IT Family Office</value>
+    </filters>
+    <label>IT Client Reminders</label>
+</ListView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Ex. Private Room: 12 seated, 20 standing --></help>
+        <label><!-- Private/Semi Private Dining Capacity --></label>
+        <name>Private_Semi_Private_Dining_Capacity__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Card__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Credit Card</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Payment_Method__c.Active__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <infoMessage>only ACTIVE cards are filtered</infoMessage>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Payment_Method__c</referenceTo>
+    <relationshipLabel>Logbooks</relationshipLabel>
+    <relationshipName>Logbooks</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Anniversary</masterLabel>
+            <translation><!-- Anniversary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Birthday</masterLabel>
+            <translation><!-- Birthday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Child's Birthday</masterLabel>
+            <translation><!-- Child&apos;s Birthday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client’s Birthday</masterLabel>
+            <translation><!-- Client’s Birthday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance Expiration</masterLabel>
+            <translation><!-- Insurance Expiration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Birthday</masterLabel>
+            <translation><!-- Other Birthday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parent's Birthday</masterLabel>
+            <translation><!-- Parent&apos;s Birthday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Passport Expiration</masterLabel>
+            <translation><!-- Passport Expiration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spouse's Birthday</masterLabel>
+            <translation><!-- Spouse&apos;s Birthday --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Method_of_Shipment__c</fullName>
+    <label>Method of Shipment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FedEx</fullName>
+                <default>false</default>
+                <label>FedEx</label>
+            </value>
+            <value>
+                <fullName>UPS</fullName>
+                <default>false</default>
+                <label>UPS</label>
+            </value>
+            <value>
+                <fullName>DHL</fullName>
+                <default>false</default>
+                <label>DHL</label>
+            </value>
+            <value>
+                <fullName>Messenger</fullName>
+                <default>false</default>
+                <label>Messenger</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Insider Team Member</fullName>
+                <default>false</default>
+                <label>Insider Team Member</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

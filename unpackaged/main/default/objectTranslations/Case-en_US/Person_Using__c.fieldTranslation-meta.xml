@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Person Using --></label>
+        <name>Person_Using__c</name>
+        <relationshipLabel><!-- Logbooks (Person Using) --></relationshipLabel>
+    </CustomFieldTranslation>

@@ -1,0 +1,71 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font size="2" face="Arial,Sans-Serif">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</font><p class="MsoNormal"><font size="2" face="Arial,Sans-Serif"><span lang="EN">Hi, <br></span></font></p><p class="MsoNormal"><font size="2" face="Arial,Sans-Serif"><span lang="EN"><br></span></font></p><p class="MsoNormal"><font size="2" face="Arial,Sans-Serif"><span lang="EN">Please see below for your confirmation:</span></font></p><p class="MsoNormal"><font size="2" face="Arial,Sans-Serif"><span lang="EN"><br></span></font></p><p class="MsoNormal"><font size="2" face="Arial,Sans-Serif"><span lang="EN">House/Villa Name: {!Case.Villa_House_Details__c}<br></span></font></p><p class="MsoNormal"><font size="2" face="Arial,Sans-Serif"><span lang="EN">Address: {!Case.Rental_Address__c}<br></span></font></p><p class="MsoNormal"><font size="2" face="Arial,Sans-Serif"><span lang="EN">On-Site Contact Information: {!Case.On_Site_Contact__c},{!Case.00N0b00000Bao6Q} <br></span></font></p><p class="MsoNormal"><font size="2" face="Arial,Sans-Serif"><span lang="EN">Check-In Date &amp; Time: {!Case.Check_In_Date__c} {!Case.Check_In_Time__c}</span></font><br><font size="2" face="Arial,Sans-Serif"><span lang="EN"><font size="2" face="Arial,Sans-Serif"><span lang="EN">Check-Out Date &amp; Time: {!Case.Check_Out_Date__c} {!Case.Check_Out_Time__c}</span></font></span></font></p><p class="MsoNormal"><font size="2" face="Arial,Sans-Serif"><span lang="EN">Rate per Night: {!Case.00N0b00000Bao6V}</span></font></p><p class="MsoNormal"><font size="2" face="Arial,Sans-Serif"><span lang="EN">Total Stay: {!Case.Total_Price__c} <br></span></font></p><p class="MsoNormal"><font size="2" face="Arial,Sans-Serif"><span lang="EN">Method of Payment: {!Case.Payment_Method__c}</span></font></p><p class="MsoNormal"><font size="2" face="Arial,Sans-Serif"><span lang="EN">Cancellation Policy: {!Case.Cancellation_Policy__c}<br></span></font></p><p class="MsoNormal"><font size="2" face="Arial,Sans-Serif"><span lang="EN">Confirmed With: {!Case.Confirmed_With__c}<br></span></font></p><p class="MsoNormal"><font size="2" face="Arial,Sans-Serif"><span lang="EN"><span lang="EN">Special Requests/Notes: {!Case.Special_Requests_Notes__c}<br></span></span></font></p><p class="MsoNormal"><font size="2" face="Arial,Sans-Serif"><span lang="EN"><span lang="EN"><br></span></span></font></p><p class="MsoNormal"><font size="2" face="Arial,Sans-Serif"><span lang="EN">Should you need to alter or cancel your reservation after business hours, kindly notify the INsider Team at 800.840.1143 or 24@insidernyc.com. <br></span></font></p><p class="MsoNormal"><font size="2" face="Arial,Sans-Serif"><span lang="EN"><br></span></font></p><p class="MsoNormal"><font size="2" face="Arial,Sans-Serif"><span lang="EN">Please note that any no show of a reservation will incur a fee. <br></span></font></p><p class="MsoNormal"><font size="2" face="Arial,Sans-Serif"><span lang="EN"><br></span></font></p><p class="MsoNormal"><font size="2" face="Arial,Sans-Serif"><span lang="EN">Thank You!<br></span></font></p><style><font size="2" face="Arial,Sans-Serif">&lt;font size="2" face="Arial,Sans-Serif"&gt;&amp;lt;font size="2" face="Arial,Sans-Serif"&amp;gt;&amp;amp;lt;font size="2" face="Arial,Sans-Serif"&amp;amp;gt;&amp;amp;amp;lt;font size="2" face="Arial,Sans-Serif"&amp;amp;amp;gt;&amp;amp;amp;amp;lt;font face="Arial,Sans-Serif"&amp;amp;amp;amp;gt;
+&amp;amp;amp;amp;amp;lt;!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:Arial;
+	mso-ansi-language:EN;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:11.0pt;
+	mso-ansi-font-size:11.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	mso-ansi-language:EN;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	line-height:115%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+--&amp;amp;amp;amp;amp;gt;
+&amp;amp;amp;amp;lt;/font&amp;amp;amp;amp;gt;&amp;amp;amp;lt;/font&amp;amp;amp;gt;&amp;amp;lt;/font&amp;amp;gt;&amp;lt;/font&amp;gt;&lt;/font&gt;</font></style>]]></td>
+</tr>
+</table>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SortTime__c</fullName>
+    <formula>IF(
+Record_Type_Name__c == 'Appointment/Service Booking' ||
+Record_Type_Name__c == 'Dining Reservation' ||
+Record_Type_Name__c == 'Event Booking' ||
+Record_Type_Name__c == 'Event Tickets' ||
+Record_Type_Name__c == 'Nightclub/Lounge/Drinks Reservation'||
+Record_Type_Name__c == 'House',
+IF(NOT(ISNULL(Time_real__c)), Time_real__c,
+IF(
+AND(
+ISNULL(Time_real__c),
+ISNULL(Time__c)
+), TIMEVALUE("00:00:00.000"),
+IF(
+ISNULL(Time__c),
+Time_real__c,
+IF(
+AND(
+RIGHT(Time__c, 2) = "PM",
+LEFT(Time__c, 2) != "12"
+),
+TIMEVALUE(
+TEXT(VALUE(LEFT(Time__c, LEN(Time__c)-6))+12) &amp; ":" &amp; Right(Left(Time__c, LEN(Time__c)-3),2) &amp; ":00.000"),
+IF(
+OR(LEFT(Time__c, 2) = "10",LEFT(Time__c, 2) = "11",LEFT(Time__c, 2) = "12"),
+TIMEVALUE(LEFT(Time__c, LEN(Time__c)-6) &amp; ":" &amp; Right(Left(Time__c, LEN(Time__c)-3),2) &amp; ":00.000"), TIMEVALUE("0" &amp; LEFT(Time__c, LEN(Time__c)-6) &amp; ":" &amp; Right(Left(Time__c, LEN(Time__c)-3),2) &amp; ":00.000"))
+)
+)
+)
+), 
+IF(
+Record_Type_Name__c == 'Car Rental' ||
+Record_Type_Name__c == 'Car Service' ,
+IF(ISNULL(Pickup_Time__c),TIMEVALUE("00:00:0.0"),Pickup_Time__c),
+IF(
+Record_Type_Name__c == 'Charter' ||
+Record_Type_Name__c == 'Train Booking',
+IF(ISNULL(Departure_Time__c),TIMEVALUE("00:00:0.0"),Departure_Time__c),
+IF(
+Record_Type_Name__c == 'Hotel Booking' ||
+Record_Type_Name__c == 'House/Villa Booking',
+IF(
+NOT(ISNULL(Internal_ETA__c)), Internal_ETA__c,
+IF(
+ISNULL(Check_In_Time__c), TIMEVALUE("00:00:0.0"), Check_In_Time__c
+)), 
+IF(
+Record_Type_Name__c == 'Tour Booking',
+IF(ISNULL(Time_of_Booking__c),TIMEVALUE("00:00:0.0"),Time_of_Booking__c),
+TIMEVALUE("00:00:0.0")
+)
+)
+)
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SortTime</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Time</type>
+</CustomField>

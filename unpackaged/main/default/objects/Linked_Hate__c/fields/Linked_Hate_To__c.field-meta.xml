@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Linked_Hate_To__c</fullName>
+    <deleteConstraint>Cascade</deleteConstraint>
+    <label>Linked Hate To</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>$Source.Id</field>
+            <operation>notEqual</operation>
+            <valueField>$Source.Linked_Hate_From__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Hates__c</referenceTo>
+    <relationshipLabel>Linked Hates (Linked Hate To)</relationshipLabel>
+    <relationshipName>Linked_Hates_To</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

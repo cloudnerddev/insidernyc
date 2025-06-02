@@ -1,0 +1,47 @@
+<messaging:emailTemplate subject="Floral Order Confirmation" recipientType="Contact" relatedToType="Case">
+<messaging:HTMLEmailBody >
+
+<span style='font-size:10.0pt;font-family:"Century Gothic"'>
+<br/>
+Hi,<br/><br/>
+
+Please see below for your confirmation:<br/><br/>
+
+Your Request:&nbsp;<apex:outputField value="{!relatedTo.RecordType.Name}"/><br/>
+Confirmation For:&nbsp;<apex:outputField value="{!relatedTo.Person_Using__r.FirstName}"/>&nbsp;<apex:outputField value="{!relatedTo.Person_Using__r.LastName}"/><br/>
+<!-- Person Using:&nbsp;<apex:outputField value="{!relatedTo.Person_Using__r.FirstName}"/>&nbsp;<apex:outputField value="{!relatedTo.Person_Using__r.LastName}"/><br/> -->
+<apex:outputPanel rendered="{!relatedto.Vendor__c != ''}">Vendor Name:&nbsp;<apex:outputField value="{!relatedto.Vendor__r.Name}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Vendor_Phone__c != ''}">Vendor Telephone:&nbsp;<apex:outputField value="{!relatedto.Vendor_Phone_Formatted__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Delivery_Date__c != null}">Delivery Date:&nbsp;<apex:outputField value="{!relatedTo.Delivery_Day__c}"/>,&nbsp;<apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!relatedto.Delivery_Date__c}"/></apex:outputText><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Recipient_Name__c != ''}">Recipient:&nbsp;<apex:outputField value="{!relatedto.Recipient_Name__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Recipient_s_Address__c != ''}">Recipient Address:&nbsp;<apex:outputField value="{!relatedto.Recipient_s_Address__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Recipient_s_Phone__c != ''}">Recipient Phone:&nbsp;<apex:outputField value="{!relatedto.Recipient_s_Phone_Formatted__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Note_Card__c != ''}">Note on Card:&nbsp;<apex:outputField value="{!relatedto.Note_Card__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Total_Price__c != null}">Price:&nbsp;<apex:outputText value="{0, Number, Currency}"><apex:param value="{!relatedto.Total_Price__c}"/></apex:outputText><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Special_Requests_Notes__c!= ''}"><b>Special Instructions:&nbsp;<apex:outputField value="{!relatedto.Special_Requests_Notes__c}"/></b><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Cancellation_Policy__c != ''}"><b>Cancellation Policy:&nbsp;<apex:outputField value="{!relatedto.Cancellation_Policy__c}"/><br/></b></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Confirmed_With__c != ''}">Confirmed With and Confirmation Date:&nbsp;<apex:outputField value="{!relatedto.Confirmed_With__c}"/>, <apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!relatedto.Confirmation_Date_for_Email__c}"/></apex:outputText><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Reconfirmed_With__c != ''}">Reconfirmed with and Reconfirmation Date:&nbsp;<apex:outputField value="{!relatedto.Reconfirmed_With__c}"/>, <apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!relatedto.Reconfirmation_Date_for_Email__c}"/></apex:outputText><br/></apex:outputPanel>
+<br/>
+Should you need to alter or cancel your order please contact Insider. If it is after business hours, kindly notify the INsider Team at 800.840.1143 or <a href="mailto:24@insidernyc.com">24@insidernyc.com</a>.<br/><br/>
+
+Thank You!
+</span>
+<br/><br/>
+<span style='font-size:10.0pt;color:#9f9f9f;font-family:"Arial Unicode MS"'>
+<b>{!$User.FirstName} {!$User.LastName}</b><br/>
+<apex:image url="https://insidernyc--c.na158.content.force.com/servlet/servlet.ImageServer?id=0150b000002NUy9&oid=00D0b000000R4TA&lastMod=1555333577000"/><br/>
+T: 212.685.4113<br/>
+<a href="mailto:{!$User.Email}">{!$User.Email}</a><br/>
+24 hr: 800.840.1143 | <a href="mailto:24@insidernyc.com">24@insidernyc.com</a><br/>
+<a href="www.insidernyc.com">www.insidernyc.com</a><br/>
+Follow us: @INsider_nyc
+</span>
+<br/><br/>
+<div style="background-color:#677eb0;">
+<center>
+<!-- <apex:image url="http://static1.squarespace.com/static/53d7f470e4b04f8fcf6fe4b8/t/59135d421b10e3b98b9c65ff/1544409204447/}" height="60"/> -->
+</center>
+</div>
+</messaging:HTMLEmailBody>
+</messaging:emailTemplate>

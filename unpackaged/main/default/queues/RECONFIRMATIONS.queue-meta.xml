@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>RECONFIRMATIONS</name>
+    <queueMembers>
+        <users>
+            <user>caroline@insidernyc.com</user>
+            <user>carly@insidernyc.com</user>
+            <user>insider@cloudna.io</user>
+            <user>courtney@insidernyc.com</user>
+            <user>daniela@insidernyc.com</user>
+            <user>drew@insidernyc.com</user>
+            <user>emma@insidernyc.com</user>
+            <user>heather@insidernyc.com</user>
+            <user>hunter@insidernyc.com</user>
+            <user>integration@00d0b000000r4taea0.com</user>
+            <user>jaime@insidernyc.com</user>
+            <user>jill@insidernyc.com</user>
+            <user>jordyn@insidernyc.com</user>
+            <user>katie@insidernyc.com</user>
+            <user>lauren@insidernyc.com</user>
+            <user>lilly@insidernyc.com</user>
+            <user>lindsi2@insidernyc.com</user>
+            <user>melinda@insidernyc.com</user>
+            <user>ooo@insider.com</user>
+            <user>sarah@insidernyc.com</user>
+            <user>insightssecurity@00d0b000000r4taea0.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Case$Contact</field>
+    </columns>
+    <columns>
+        <field>Case$Requested_By_Someone_Else__c</field>
+    </columns>
+    <columns>
+        <field>Case$Person_Using__c</field>
+    </columns>
+    <columns>
+        <field>Case$Subject</field>
+    </columns>
+    <columns>
+        <field>Case$RecordType</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Time_Logs__r$Billable_Time__c</field>
+    </columns>
+    <columns>
+        <field>Case.Time_Logs__r$Comments__c</field>
+    </columns>
+    <description>Client Usage Report - Van Der Poel and Jacobs</description>
+    <filter>
+        <criteriaItems>
+            <column>Case$Account</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Van Der Poel and Jacobs</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$Account</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Insider,LLC</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case$Account</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Client Usage Report - Van Der Poel and J</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Logbooks_with_Time_Logs__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Case.Time_Logs__r$Date_Logged__c</dateColumn>
+        <endDate>2019-09-14</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2019-08-15</startDate>
+    </timeFrameFilter>
+</Report>

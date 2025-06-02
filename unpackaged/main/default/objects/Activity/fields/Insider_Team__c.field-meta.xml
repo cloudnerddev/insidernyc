@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Insider_Team__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Insider Team</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Insider_Team__c.Active__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <infoMessage>only ACTIVE Insider Teams are filtered</infoMessage>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Insider_Team__c</referenceTo>
+    <relationshipLabel>Activities</relationshipLabel>
+    <relationshipName>Activities</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Airline Picklist --></label>
+        <name>Airline__c</name>
+        <picklistValues>
+            <masterLabel>Air Canada</masterLabel>
+            <translation><!-- Air Canada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Air France</masterLabel>
+            <translation><!-- Air France --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alaska Airlines</masterLabel>
+            <translation><!-- Alaska Airlines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alitalia</masterLabel>
+            <translation><!-- Alitalia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Allegiant Air</masterLabel>
+            <translation><!-- Allegiant Air --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>American Airlines</masterLabel>
+            <translation><!-- American Airlines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>British Airways</masterLabel>
+            <translation><!-- British Airways --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delta Air Lines</masterLabel>
+            <translation><!-- Delta Air Lines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>El Al</masterLabel>
+            <translation><!-- El Al --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Emirates</masterLabel>
+            <translation><!-- Emirates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Etihad Airways</masterLabel>
+            <translation><!-- Etihad Airways --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Frontier Airlines</masterLabel>
+            <translation><!-- Frontier Airlines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hawaiian Airlines</masterLabel>
+            <translation><!-- Hawaiian Airlines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JetBlue</masterLabel>
+            <translation><!-- JetBlue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KLM</masterLabel>
+            <translation><!-- KLM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>La Compagnie</masterLabel>
+            <translation><!-- La Compagnie --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scandinavian Airlines (SAS)</masterLabel>
+            <translation><!-- Scandinavian Airlines (SAS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Singapore Airlines</masterLabel>
+            <translation><!-- Singapore Airlines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South African Airlines</masterLabel>
+            <translation><!-- South African Airlines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Southwest Airlines</masterLabel>
+            <translation><!-- Southwest Airlines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spirit Airlines</masterLabel>
+            <translation><!-- Spirit Airlines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United Airlines</masterLabel>
+            <translation><!-- United Airlines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virgin Atlantic</masterLabel>
+            <translation><!-- Virgin Atlantic --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

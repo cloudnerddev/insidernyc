@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Flight_Summary__c</fullName>
+    <externalId>false</externalId>
+    <formula>Departure_City__c &amp; " to  " &amp; Arrival_City__c &amp; " leaving " &amp; TEXT(Month(DATEVALUE(Departure_Date__c))) &amp; "/" &amp;TEXT(DAY(DATEVALUE(Departure_Date__c))) &amp; "/" &amp; TEXT(YEAR(DATEVALUE(Departure_Date__c)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Flight Summary</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,5 @@
+Hi!
+
+Please follow up with this client to let them know that their payment method is set to expire on {!Payment_Method__c.Expiration_Date__c}.
+
+The expiring payment method can be found here: {!Payment_Method__c.Link}

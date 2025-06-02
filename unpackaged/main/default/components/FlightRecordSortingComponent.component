@@ -1,0 +1,37 @@
+<apex:component access="global" controller="FlightRecordsSortingController">
+    <apex:attribute name="caseId" type="Id" description="Id of the contact" assignTo="{!recordId}"/>
+    <apex:variable var="flightIndex" value="{!1}" />
+
+        <body>
+            <div class="slds-scope slds-box">
+                <div style="width: 100%;">
+                    <table id="myTable">
+                        <tbody>
+                            <apex:repeat var="flight" value="{!relatedFlightRecords}">
+                                <tr>
+                                    <th width="5%" valign="top">Flight {!flightIndex}:&nbsp;</th>
+                                    <td styleClass="departure-date" valign="top" width="70%">
+                                        We have confirmed your {!flight.Airline__r.Name} flight from {!flight.Departure_City__c} ({!flight.Departure_Airport__c}) on &nbsp;
+                                        <apex:outputText value="{0, date,EEEE MMMM d, yyyy}">
+                                            <apex:param value="{!flight.Departure_Date__c}" />
+                                        </apex:outputText> 
+                                        at &nbsp;<apex:outputText value="{0, date,h:mm a}">
+                                        <apex:param value="{!flight.DepartureTimeForEmail__c}" />
+                                        </apex:outputText> The flight is scheduled to arrive into {!flight.Arrival_City__c} ({!flight.Arrival_Airport__c}) on &nbsp;
+                                        <apex:outputText value="{0, date,EEEE MMMM d, yyyy}">
+                                            <apex:param value="{!flight.Arrival_Date__c}" />
+                                        </apex:outputText>
+                                        at &nbsp;<apex:outputText value="{0, date,h:mm a}">
+                                        <apex:param value="{!flight.ArrivalDateforEmail__c}" />
+                                        </apex:outputText>.
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <apex:variable var="flightIndex" value="{!flightIndex + 1}" />
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </body>
+</apex:component>

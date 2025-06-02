@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>preventClone</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+$User.Email = "bari@insidernyc.com",
+$User.Email = "caroline@insidernyc.com"
+),
+ISCLONE() = TRUE 
+)</errorConditionFormula>
+    <errorMessage>You are not authorized to clone records</errorMessage>
+</ValidationRule>

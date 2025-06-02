@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Roll up of all Billable Time from all Time Log records for this parent Travel Planning Logbook and all related Logbooks. --></help>
+        <label><!-- Total Billable Time --></label>
+        <name>Total_Billable_Time__c</name>
+    </CustomFieldTranslation>

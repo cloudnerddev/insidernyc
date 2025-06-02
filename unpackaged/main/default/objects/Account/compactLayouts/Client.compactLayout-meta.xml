@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client</fullName>
+    <fields>Name</fields>
+    <fields>Primary_Contact__c</fields>
+    <fields>Hours_Status__c</fields>
+    <fields>Hours_per_Month__c</fields>
+    <fields>Time_Logged_MTD_hours__c</fields>
+    <fields>Billable_Time_Logged_MTD_hours__c</fields>
+    <fields>Time_Overhours__c</fields>
+    <fields>RecordTypeId</fields>
+    <label>Client</label>
+</CompactLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Flight</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Flights</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Flight Booking Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Clone Flight and Airline Tickets --></label>
+        <name>Clone_Flight_and_Airline_Tickets</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Airline Ticket --></label>
+        <name>New_Airline_Ticket</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You are not authorized to clone records --></errorMessage>
+        <name>preventClone</name>
+    </validationRules>
+</CustomObjectTranslation>

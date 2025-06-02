@@ -1,0 +1,109 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="FieldSetController">
+    <aura:attribute name="objectApiName" type="String"/>
+    <aura:attribute name="fields" type="FieldSetMember[]"/>  
+    <aura:attribute name="fieldSetName" type="String"/> 
+    <aura:attribute name="iconName" type="String"/>
+    <aura:attribute name="title" type="String"/> 
+    <aura:attribute name="mode" type="String"/> 
+    <aura:attribute name="inputModeBool" type="Boolean" default="false"/> 
+    <aura:attribute name="ignoreSecurity" type="String"/> 
+    <aura:attribute name="buttonOverlay" type="String"/> 
+    <aura:attribute name="inputButtonOverlayBool" type="Boolean" default="false"/> 
+    <aura:attribute name="buttonOverlayAuditField" type="String"/> 
+    <aura:attribute name="inputReasonBool" type="Boolean" default="false"/> 
+    <aura:attribute name="reasonAuditField" type="String"/> 
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:if isTrue="{!v.inputButtonOverlayBool == true? true: false}">
+        <aura:if isTrue="{!v.inputReasonBool == true? true: false}">
+            <lightning:card title="{!v.title}" iconName="{!v.iconName}" class="slds-p-around--none">
+                    <lightning:textarea aura:id="inputReason"
+                                        name="reason"
+                                        label="Reason"
+                                        maxlength="255"
+                                        required="true"
+                                        messageWhenTooLong="You have exceeded the limit of 255 characters!"
+                                        messageWhenValueMissing="This field is required."
+                                        />
+                <center>
+                    <lightning:button variant="neutral" 
+                                      name="Overlay Button" 
+                                      label="View" 
+                                      onclick="{!c.overlayToggle}">View</lightning:button>
+                </center>
+            </lightning:card>
+        </aura:if>
+        
+        <aura:if isTrue="{!v.inputReasonBool == false? true: false}">
+            <lightning:button variant="neutral" 
+                              name="Overlay Button" 
+                              label="{!v.title}" 
+                              onclick="{!c.overlayToggle}"/>
+        </aura:if>
+    </aura:if>
+
+    <aura:if isTrue="{!v.inputButtonOverlayBool == false? true: false}">
+        <lightning:card title="{!v.title}" iconName="{!v.iconName}" class="slds-p-around--none">
+            <lightning:recordEditForm aura:id="recordViewForm" 
+                                      recordId="{!v.recordId}"
+                                      objectApiName="{!v.objectApiName}"
+                                      onsubmit="{!c.fireRefreshView}"
+                                      class="slds-p-around--small">
+                <lightning:messages />
+                <aura:iteration items="{!v.fields}" var="field">   
+                    <aura:if isTrue="{!field.renderField}">
+                        <aura:if isTrue="{!v.inputModeBool == true? true: false}">
+                            <lightning:inputField fieldName="{!field.fieldPath}"/>
+                        </aura:if>
+                        <aura:if isTrue="{!v.inputModeBool != true? true: false}">
+                            <lightning:layout >
+                                <aura:if isTrue="{!v.ignoreSecurity == 'No'? true: false}">
+                                    <lightning:layoutitem size="10">
+                                        <lightning:outputField fieldName="{!field.fieldPath}"/>
+                                    </lightning:layoutitem>
+                                </aura:if>
+                                <aura:if isTrue="{!v.ignoreSecurity == 'Yes'? true: false}">
+                                    <lightning:layoutitem size="10">
+                                        <ui:outputText class="label inputLabel uiLabel-left form-element__label uiLabel" value="{!field.label}"/><br/>
+                                        <ui:outputText class="slds-text-body--regular  slds-truncate" value="{!field.val}"/>
+                                    </lightning:layoutitem>
+                                </aura:if>
+                                
+                                <!--REPLACE WITH EDIT BUTTON BECAUSE IF IGNORESECURITY IS TRUE, BLANK ROWS ARE ADDED FOR HIDDEN FIELDS-->
+                                <!--aura:if isTrue="{!v.mode == 'View with Edit'? true: false}"> 
+                                <lightning:layoutitem size="2">
+                                    <lightning:buttonIcon iconName="utility:edit" variant="bare"
+                                                          alternativeText="edit"
+                                                          onclick="{!c.handleToggle}"/>
+                                </lightning:layoutitem>
+                            </aura:if-->
+                            </lightning:layout>
+                        </aura:if>
+                    </aura:if>
+                </aura:iteration>
+                <div class="slds-align--absolute-center slds-p-top--small">
+                    <span class="{!and(v.mode == 'View with Edit', v.inputModeBool)? '':'slds-hide'}">
+                        <lightning:button variant="neutral" class="slds-m-horizontal--xx-small"
+                                          name="Cancel" 
+                                          label="Cancel"
+                                          onclick="{!c.handleToggle}"/>
+                    </span>
+                    <span class="{!v.inputModeBool == true? '': 'slds-hide'}">
+                        <lightning:button variant="brand" class="slds-m-horizontal--xx-small"
+                                          type="submit" name="update" 
+                                          label="{!empty(v.recordId)?'Create':'Update'}"
+                                          onclick="{!c.refresher}"/>
+                    </span>
+                    <!--EDIT BUTTON-->
+                    <aura:if isTrue="{!and(v.mode == 'View with Edit', v.inputModeBool == false)? true: false}">
+                        <lightning:button variant="neutral" 
+                                          name="Edit" 
+                                          label="Edit"
+                                          onclick="{!c.handleToggle}"/>
+                    </aura:if>
+                </div>
+            </lightning:recordEditForm>
+        </lightning:card>
+    </aura:if>
+</aura:component>

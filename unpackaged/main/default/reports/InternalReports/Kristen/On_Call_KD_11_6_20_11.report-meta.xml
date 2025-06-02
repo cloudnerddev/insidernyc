@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Case.Time_Logs__r$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Case$Subject</field>
+    </columns>
+    <columns>
+        <field>Case.Time_Logs__r$Comments__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Time_Logs__r$Billable_Time__c</field>
+    </columns>
+    <columns>
+        <field>Case.Time_Logs__r$Multiplier__c</field>
+    </columns>
+    <columns>
+        <field>Case.Time_Logs__r$Name</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Case.Time_Logs__r$CreatedDate</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>11/20/2020 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Time_Logs__r$Insider_Team_Member__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Katie Couri</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Time_Logs__r$CreatedDate</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessThan</operator>
+            <value>11/23/2020 12:00 AM</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case.Time_Logs__r$Insider_Team_Member__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case$CaseNumber</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>On-Call KD 11.6.20 - 11</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Logbooks_with_Time_Logs__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Case$Cancellation_Date_and_Time__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

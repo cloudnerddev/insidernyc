@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Time Log Multiplier Reason --></label>
+        <name>Multiplier_Reason__c</name>
+        <picklistValues>
+            <masterLabel>After 10 PM / Before 9 AM</masterLabel>
+            <translation><!-- After 10 PM / Before 9 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closing Logbook</masterLabel>
+            <translation><!-- Closing Logbook --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commission Earned/Not Charging Time</masterLabel>
+            <translation><!-- Commission Earned/Not Charging Time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Holiday</masterLabel>
+            <translation><!-- Holiday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Holiday Weekend</masterLabel>
+            <translation><!-- Holiday Weekend --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Last Minute Request</masterLabel>
+            <translation><!-- Last Minute Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Left Office During Business Hours</masterLabel>
+            <translation><!-- Left Office During Business Hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requested After 6pm Before 10pm</masterLabel>
+            <translation><!-- Requested After 6pm Before 10pm --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekend Errand</masterLabel>
+            <translation><!-- Weekend Errand --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekend Non-Errand</masterLabel>
+            <translation><!-- Weekend Non-Errand --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

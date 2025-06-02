@@ -1,0 +1,27 @@
+<template>
+
+    <template lwc:if={showSpinner}>
+        <lightning-spinner variant="brand" alternative-text="Loading" size="medium"></lightning-spinner>
+    </template>
+
+    <template lwc:if={showTemplateBtn}>
+        <lightning-dual-listbox 
+            name="logBooks"
+            label="Select Logbook(s)"
+            source-label="Available"
+            selected-label="Selected"
+            options={subjectList}
+            onchange={handleChange}>
+        </lightning-dual-listbox>
+
+        <div style="margin-top: 20px">
+            <div style=" display: flex; flex-direction: row;">
+                <lightning-button variant="brand" label="Email Template" onclick={handleEmailTemplate} stretch disabled={disableTemplateBtn}>
+                </lightning-button>
+            </div>
+        </div>
+    </template>
+    <template lwc:else>
+        <b>There is no child records.</b>
+    </template>
+</template>

@@ -1,0 +1,5 @@
+Hi!
+
+Please follow up with this client to let them know that their global entry is set to expire on {!Contact.Global_Entry_TSA_Expiry__c}.
+
+Contact can be found here: {!Contact.Link}

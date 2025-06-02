@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Package_Pass</fullName>
+    <active>true</active>
+    <label>Package/Pass</label>
+    <picklistValues>
+        <picklist>Currency__c</picklist>
+        <values>
+            <fullName>CAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EURO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GBP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USD</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

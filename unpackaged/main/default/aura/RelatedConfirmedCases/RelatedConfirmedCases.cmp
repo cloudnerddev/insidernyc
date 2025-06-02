@@ -1,0 +1,42 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="CasesController">
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="cases" type="List" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <lightning:workspaceAPI aura:id="workspace" />
+
+    <!-- Use a data table from the Lightning Design System: https://www.lightningdesignsystem.com/components/data-tables/ -->
+    <table class="slds-table slds-table_bordered slds-table_striped slds-table_cell-buffer slds-table_fixed-layout">
+        <thead>
+            <tr class="slds-text-heading_label">
+                <th scope="col"><div class="slds-truncate" title="Logbook Number">Logbook Number</div></th>
+                <th scope="col"><div class="slds-truncate" title="Subject">Subject</div></th>
+                <th scope="col"><div class="slds-truncate" title="Status">Status</div></th>
+                <th scope="col"><div class="slds-truncate" title="Record Type">Record Type</div></th>
+                <th scope="col"><div class="slds-truncate" title="Confirmation Date">Confirmation Date</div></th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Use the Apex model and controller to fetch server side data -->
+            <aura:iteration items="{!v.cases}" var="case">
+                <tr>                
+                    <th scope="row">
+                        <a onclick="{!c.openTabWithSubtab}" data-caseid="{!case.Id}" data-accountid="{!case.AccountId}">{!case.CaseNumber}</a>
+                    </th>
+                    <td>
+                        {!case.Subject}
+                    </td>
+                    <td>
+                        {!case.Status}
+                    </td>
+                    <td>
+                        {!case.RecordType.Name}
+                    </td>
+                    <td>
+                        <lightning:formattedDateTime value="{!case.Confirmation_Date__c}" year="numeric" month="numeric" day="numeric" hour="2-digit"
+                                 minute="2-digit" hour12="true"/>
+                    </td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+</aura:component>

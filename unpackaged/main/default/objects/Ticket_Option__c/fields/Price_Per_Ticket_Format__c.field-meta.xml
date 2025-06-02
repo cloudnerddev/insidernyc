@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_Per_Ticket_Format__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(OR(ISPICKVAL(Currency__c, 'USD'),ISPICKVAL(Currency__c, 'CAD'),ISBLANK(TEXT(Currency__c))) , '$', IF(ISPICKVAL(Currency__c, 'EURO'),'€',IF(ISPICKVAL(Currency__c, 'GBP'),'£',''))) 
+
+&amp;
+
+IF(FIND(".", TEXT(Markup_Price_Per_Ticket__c),1)&gt;1, 
+IF(CONTAINS(RIGHT(TEXT(ROUND(Markup_Price_Per_Ticket__c, 2)), 2),"."), Text(round( Markup_Price_Per_Ticket__c,2)) &amp; "0", TEXT(Markup_Price_Per_Ticket__c)), 
+TEXT(Markup_Price_Per_Ticket__c)&amp;".00")
+
+&amp; IF(ISBLANK(TEXT(Currency__c)),'',IF(ISPICKVAL(Currency__c, 'Other'),' '&amp;Other_Currency__c,' '&amp;TEXT(Currency__c)))
+
+&amp; ' per ticket.'</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Price Per Ticket Format</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Within 30 Minutes of Requested Time --></label>
+        <name>Within_30_Minutes_of_Requested_Time__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,150 @@
+<messaging:emailTemplate subject="Dining Reservation Confirmation" recipientType="Contact" relatedToType="Case">
+<messaging:HTMLEmailBody >
+<style>
+div.a {
+  line-height: normal;
+}
+div.c 
+  p {
+    display: block !improtant;
+    margin: 0px !important;
+    border: 0px !important;
+    padding: 0px !important;
+    font-family: "Century Gothic"'
+    font-size: 10.0pt;
+}
+
+</style>
+<div class="c">
+<span style='font-size:10.0pt;font-family:"Century Gothic"'>
+<br/>
+Hi,<br/><br/>
+
+Please see formal confirmation below noting guest information, special instructions and cancellation policy. Please note that this reservation will appear in your resy account. If for any reason you do not see it, please alert the Insider team. Please also note if your reservation is outside it is weather dependent per the restaurant’s discretion.<br/><br/>
+</span>
+<span style='font-size:10.0pt;font-family:"Century Gothic"'>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td width="20%">Your Request:&nbsp;</td>
+<td width="80%">Dining Reservation</td>
+</tr>
+<tr>
+<td width="20%">Confirmation For:&nbsp;</td>
+<td width="80%"><apex:outputField value="{!relatedTo.Person_Using__r.FirstName}"/>&nbsp;<apex:outputField value="{!relatedTo.Person_Using__r.LastName}"/></td>
+</tr>
+
+<apex:outputPanel rendered="{!relatedTo.Date__c != null}">
+<tr>
+<td width="20%">Date:&nbsp;</td>
+<td width="80%"><apex:outputField value="{!relatedTo.Day_of_Week_Date__c}"/>,<apex:outputText value="{0, date, MMMM d',' yyyy}"><apex:param value="{!relatedTo.Date__c}"/></apex:outputText></td>
+</tr>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!relatedTo.Vendor__c != ''}">
+<tr>
+<td width="20%">Vendor Name:&nbsp;</td>
+<td width="80%"><apex:outputField value="{!relatedTo.Vendor__r.Name}"/></td>
+</tr>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!relatedTo.Time__c != null}">
+<tr>
+<td width="20%">Confirmed Time:&nbsp;</td>
+<td width="80%"><apex:outputField value="{!relatedTo.Time__c}"/></td>
+</tr>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!relatedTo.Number_in_Party__c != null}">
+<tr>
+<td width="20%">Number in Party:&nbsp;</td>
+<td width="80%"><apex:outputField value="{!relatedTo.Number_in_Party__c}"/></td>
+</tr>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!relatedTo.Vendor__c != ''}">
+<tr>
+<td width="20%">Address:&nbsp;</td>
+<td width="80%"><apex:outputField value="{!relatedTo.Vendor_Address__c}"/></td>
+</tr>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!relatedTo.Vendor_Cross_Streets__c != ''}">
+<tr>
+<td width="20%">Cross Streets:&nbsp;</td>
+<td width="80%"><apex:outputField value="{!relatedTo.Vendor_Cross_Streets__c}"/></td>
+</tr>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!relatedTo.Vendor_Phone__c != ''}">
+<tr>
+<td width="20%">Vendor Telephone:&nbsp;</td>
+<td width="80%"><apex:outputField value="{!relatedTo.Vendor_Phone_Formatted__c}"/></td>
+</tr>
+</apex:outputPanel>
+<apex:outputPanel rendered="{!relatedTo.Guest_Information_Special_rich__c != ''}">
+<tr>
+<td width="20%"> <span style='font-size:10.0pt;font-family:"Century Gothic"'> <b>Guest Information:&nbsp;</b> </span></td>
+<td width="80%"> <span style='font-size:10.0pt;font-family:"Century Gothic"'> <b><apex:outputText escape="false" value="{!relatedTo.Guest_Information_Special_rich__c}"/></b></span></td>
+</tr>
+</apex:outputPanel>
+<span style='font-size:10.0pt;font-family:"Century Gothic"'></span>
+
+<apex:outputPanel rendered="{!relatedTo.Special_Requests_Notes_rich__c!= ''}">
+<tr>
+<td width="20%"><b>Special Instructions:&nbsp;</b></td>
+<td width="80%"><b><apex:outputText escape="false" value="{!relatedTo.Special_Requests_Notes_rich__c}"/></b></td>
+</tr>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!relatedTo.Cancellation_Policy__c != ''}">
+<tr>
+<td width="20%"><b>Cancellation Policy:&nbsp;</b></td>
+<td width="80%"><b><apex:outputField value="{!relatedTo.Cancellation_Policy__c}"/></b></td>
+</tr>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!relatedTo.Confirmed_With__c != ''}">
+<tr>
+<td width="20%">Confirmed With and Confirmation Date:&nbsp;</td>
+<td width="80%"><apex:outputField value="{!relatedTo.Confirmed_With__c}"/>, <apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!relatedTo.Confirmation_Date_for_Email__c}"/></apex:outputText></td>
+</tr>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!relatedTo.Reconfirmed_With__c != ''}">
+<tr>
+<td width="20%">Reconfirmed with and Reconfirmation Date:&nbsp;</td>
+<td width="80%"><apex:outputField value="{!relatedTo.Reconfirmed_With__c}"/>, <apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!relatedTo.Reconfirmation_Date_for_Email__c}"/></apex:outputText></td>
+</tr>
+</apex:outputPanel>
+
+</table>
+</span>
+<br/>
+<apex:outputPanel rendered="{!relatedTo.Resy_Language__c == True}">Please note this will appear in your resy account.  If for any reason you do not see it, please alert the Insider team.<br/><br/> </apex:outputPanel>
+
+<span style='font-size:10.0pt;font-family:"Century Gothic"'>
+Please note that any no show of a reservation will incur a fee.<br/><br/>
+
+Should you need to alter or cancel your reservation please contact Insider. If it is after business hours and you need to make a change or have an emergency regarding the reservation, kindly notify the INsider Team at 800.840.1143 or <a href="mailto:24@insidernyc.com">24@insidernyc.com</a>.<br/><br/>
+
+Thank You!
+</span>
+<br/><br/>
+<span style='font-size:10.0pt;color:#9f9f9f;font-family:"Arial Unicode MS"'>
+<b>{!$User.FirstName} {!$User.LastName}</b><br/>
+<apex:image url="https://insidernyc--c.na158.content.force.com/servlet/servlet.ImageServer?id=0150b000002NUy9&oid=00D0b000000R4TA&lastMod=1555333577000"/><br/>
+T: 212.685.4113<br/>
+<a href="mailto:{!$User.Email}">{!$User.Email}</a><br/>
+24 hr: 800.840.1143 | <a href="mailto:24@insidernyc.com">24@insidernyc.com</a><br/>
+<a href="www.insidernyc.com">www.insidernyc.com</a><br/>
+Follow us: @INsider_nyc
+</span>
+<br/><br/>
+</div>
+<div style="background-color:#677eb0;">
+<center>
+<!--<apex:image url="http://static1.squarespace.com/static/53d7f470e4b04f8fcf6fe4b8/t/59135d421b10e3b98b9c65ff/1544409204447/}" height="60"/>-->
+</center>
+</div>
+</messaging:HTMLEmailBody>
+</messaging:emailTemplate>

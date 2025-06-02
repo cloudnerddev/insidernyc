@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Cases.Time_Logs__r$Date_Logged__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Cases.Time_Logs__r$Billable_Time__c</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$RecordType</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$Subject</field>
+    </columns>
+    <columns>
+        <field>Account.Cases.Time_Logs__r$Comments__c</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$Research__c</field>
+    </columns>
+    <description>You need to Save AS and Adjust to the client it should be for and save in your team folders.</description>
+    <filter>
+        <criteriaItems>
+            <column>Account$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Sanchez Account</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Cases.Time_Logs__r$Contact__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Cases$CaseNumber</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Client Usage Report Sanchez June 2019</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_Logbooks_and_Time_Logs__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account.Cases.Time_Logs__r$Date_Logged__c</dateColumn>
+        <endDate>2019-06-30</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2019-06-01</startDate>
+    </timeFrameFilter>
+</Report>

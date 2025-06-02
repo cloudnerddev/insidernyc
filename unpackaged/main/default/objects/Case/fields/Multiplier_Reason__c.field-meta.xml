@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Multiplier_Reason__c</fullName>
+    <label>Time Log Multiplier Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Left Office During Business Hours</fullName>
+                <default>false</default>
+                <label>Left Office During Business Hours</label>
+            </value>
+            <value>
+                <fullName>Requested After 6pm Before 10pm</fullName>
+                <default>false</default>
+                <label>Requested After 6pm Before 10pm</label>
+            </value>
+            <value>
+                <fullName>Weekend Non-Errand</fullName>
+                <default>false</default>
+                <label>Weekend Non-Errand</label>
+            </value>
+            <value>
+                <fullName>After 10 PM / Before 9 AM</fullName>
+                <default>false</default>
+                <label>After 10 PM / Before 9 AM</label>
+            </value>
+            <value>
+                <fullName>Weekend Errand</fullName>
+                <default>false</default>
+                <label>Weekend Errand</label>
+            </value>
+            <value>
+                <fullName>Holiday</fullName>
+                <default>false</default>
+                <label>Holiday</label>
+            </value>
+            <value>
+                <fullName>Holiday Weekend</fullName>
+                <default>false</default>
+                <label>Holiday Weekend</label>
+            </value>
+            <value>
+                <fullName>Commission Earned/Not Charging Time</fullName>
+                <default>false</default>
+                <label>Commission Earned/Not Charging Time</label>
+            </value>
+            <value>
+                <fullName>Closing Logbook</fullName>
+                <default>false</default>
+                <label>Closing Logbook</label>
+            </value>
+            <value>
+                <fullName>Last Minute Request</fullName>
+                <default>false</default>
+                <label>Last Minute Request</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Time for Closing Logbook</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Time for Closing Logbook</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

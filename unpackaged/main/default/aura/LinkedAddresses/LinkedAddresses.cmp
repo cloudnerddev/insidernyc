@@ -1,0 +1,36 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="LinkedAddressController">
+    <aura:attribute name="recordId" type="Id" />
+    <!--aura:attribute name="linkedAddresses" type="List" /-->
+    <aura:attribute name="linkedAddressList" type="LinkedAddressController.LinkedAddressWrapper[]" />   
+    
+    <lightning:workspaceAPI aura:id="workspace" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+
+    <!-- Use a data table from the Lightning Design System: https://www.lightningdesignsystem.com/components/data-tables/ -->
+    <table class="slds-table slds-table_bordered slds-table_striped slds-table_cell-buffer slds-table_fixed-layout">
+        <thead>
+            <tr class="slds-text-heading_label">
+                <th scope="col" width="15%"><div class="slds-truncate" title="Linked Address #">Linked Address #</div></th>
+                <th scope="col" width="70%"><div class="slds-truncate" title="Address">Address</div></th>
+                <th scope="col" width="15%"><div class="slds-truncate" title="Sync Level">Sync Level</div></th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Use the Apex model and controller to fetch server side data -->
+            <aura:iteration items="{!v.linkedAddressList}" var="linkRec">
+                <tr>                
+                    <td>
+                        <a onclick="{!c.openTabWithSubtab}" data-openid="{!linkRec.rec.Id}" data-focusid="{!linkRec.rec.Id}">{!linkRec.rec.Name}</a>
+                    </td>
+                    <td>
+                        <a onclick="{!c.openTabWithSubtab}" data-openid="{!linkRec.addressId}" data-focusid="{!linkRec.contactId}">{!linkRec.address}</a>
+                    </td>
+                    <td>
+                        {!linkRec.syncLevel}
+                    </td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+</aura:component>

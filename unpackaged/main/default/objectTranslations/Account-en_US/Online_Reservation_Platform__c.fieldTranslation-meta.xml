@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Online Reservation Platform --></label>
+        <name>Online_Reservation_Platform__c</name>
+        <picklistValues>
+            <masterLabel>Opentable</masterLabel>
+            <translation><!-- Opentable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reserve</masterLabel>
+            <translation><!-- Reserve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resy</masterLabel>
+            <translation><!-- Resy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seven Rooms</masterLabel>
+            <translation><!-- Seven Rooms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tock</masterLabel>
+            <translation><!-- Tock --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

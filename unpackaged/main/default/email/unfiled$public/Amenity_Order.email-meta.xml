@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Insider</letterhead>
+    <name>HTMLAmenity Order</name>
+    <style>freeForm</style>
+    <subject>Amenity Order</subject>
+    <textOnly>Hi,
+
+Please see below for your confirmation:
+
+Vendor Name: {!Case.Vendor__c}
+Description: {!Case.Description}
+Price: {!Case.Price__c}
+Recipient Name: {!Case.Recipient_Name__c}
+Recipient Address &amp; Telephone: {!Case.Recipient_Address__c}, {!Case.Recipient_Phone__c}
+Note Card: {!Case.Note_Card__c}
+Vendor Telephone: {!Case.Vendor_Phone__c}
+Confirmed with: {!Case.Confirmed_With__c}
+Special Instructions: {!Case.Special_Requests_Notes__c}
+Method of Shipment &amp; Tracking Information: {!Case.Method_of_Shipment__c} - {!Case.Tracking_Information__c}
+
+Should you need to alter or cancel your reservation after business hours, kindly notify the INsider Team at 800.840.1143 or 24@insidernyc.com.
+
+Please note that any no show of a reservation will incur a fee.
+
+Thank You!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

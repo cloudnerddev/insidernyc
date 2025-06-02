@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Special Occasion --></label>
+        <name>Special_Occasion__c</name>
+        <picklistValues>
+            <masterLabel>Anniversary</masterLabel>
+            <translation><!-- Anniversary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Art Basel</masterLabel>
+            <translation><!-- Art Basel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assistant’s Day</masterLabel>
+            <translation><!-- Assistant’s Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Birthday</masterLabel>
+            <translation><!-- Birthday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Christmas / December Festive</masterLabel>
+            <translation><!-- Christmas / December Festive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cinco de Mayo</masterLabel>
+            <translation><!-- Cinco de Mayo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Easter</masterLabel>
+            <translation><!-- Easter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Father's Day</masterLabel>
+            <translation><!-- Father&apos;s Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Formula 1</masterLabel>
+            <translation><!-- Formula 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hanukkah</masterLabel>
+            <translation><!-- Hanukkah --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Holiday Party</masterLabel>
+            <translation><!-- Holiday Party --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>International Women’s Day</masterLabel>
+            <translation><!-- International Women’s Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>July 4th</masterLabel>
+            <translation><!-- July 4th --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kentucky Derby</masterLabel>
+            <translation><!-- Kentucky Derby --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Labor Day</masterLabel>
+            <translation><!-- Labor Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MLK Weekend</masterLabel>
+            <translation><!-- MLK Weekend --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Masters</masterLabel>
+            <translation><!-- Masters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Memorial Day</masterLabel>
+            <translation><!-- Memorial Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mother’s Day</masterLabel>
+            <translation><!-- Mother’s Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NYFW</masterLabel>
+            <translation><!-- NYFW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Year’s Eve</masterLabel>
+            <translation><!-- New Year’s Eve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parent's Weekend</masterLabel>
+            <translation><!-- Parent&apos;s Weekend --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Passover</masterLabel>
+            <translation><!-- Passover --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Presidents' Day</masterLabel>
+            <translation><!-- Presidents&apos; Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purim</masterLabel>
+            <translation><!-- Purim --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spring Break</masterLabel>
+            <translation><!-- Spring Break --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Superbowl</masterLabel>
+            <translation><!-- Superbowl --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thanksgiving</masterLabel>
+            <translation><!-- Thanksgiving --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US Open Tennis</masterLabel>
+            <translation><!-- US Open Tennis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Valentines Day</masterLabel>
+            <translation><!-- Valentines Day --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

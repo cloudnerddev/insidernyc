@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Foreign_Total_Price_Required</fullName>
+    <active>false</active>
+    <errorConditionFormula>!ISBLANK(TEXT(Currency__c)) &amp;&amp; 
+!ISPICKVAL(Currency__c, 'USD') &amp;&amp;
+ISBLANK(Foreign_Currency_Amount__c) &amp;&amp;
+!ISCHANGED(Enter_Time__c) &amp;&amp; !ISCHANGED(Total_Time_Logged__c)&amp;&amp; !ISCHANGED(Hierarchical_Time_Logged__c)</errorConditionFormula>
+    <errorDisplayField>Foreign_Currency_Amount__c</errorDisplayField>
+    <errorMessage>Please enter a Foreign Currency Amount</errorMessage>
+</ValidationRule>

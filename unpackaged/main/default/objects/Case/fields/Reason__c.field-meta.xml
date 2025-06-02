@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason__c</fullName>
+    <label>Logbook Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alerts</fullName>
+                <default>false</default>
+                <label>Alerts</label>
+            </value>
+            <value>
+                <fullName>Available</fullName>
+                <default>false</default>
+                <label>Available</label>
+            </value>
+            <value>
+                <fullName>Booking Platform/Just Called</fullName>
+                <default>false</default>
+                <label>Booking Platform/Just Called</label>
+            </value>
+            <value>
+                <fullName>Closing Logbook</fullName>
+                <default>false</default>
+                <label>Closing Logbook</label>
+            </value>
+            <value>
+                <fullName>ClouDNA Holding</fullName>
+                <default>false</default>
+                <label>ClouDNA Holding</label>
+            </value>
+            <value>
+                <fullName>Confirmed Request - Contact</fullName>
+                <default>false</default>
+                <label>Confirmed Request - Contact</label>
+            </value>
+            <value>
+                <fullName>Confirmed Request - Other</fullName>
+                <default>false</default>
+                <label>Confirmed Request - Other</label>
+            </value>
+            <value>
+                <fullName>Contact</fullName>
+                <default>false</default>
+                <label>Contact</label>
+            </value>
+            <value>
+                <fullName>Contact Denied</fullName>
+                <default>false</default>
+                <label>Contact Denied</label>
+            </value>
+            <value>
+                <fullName>Contact Ghosted</fullName>
+                <default>false</default>
+                <label>Contact Ghosted</label>
+            </value>
+            <value>
+                <fullName>Coronavirus</fullName>
+                <default>false</default>
+                <label>Coronavirus</label>
+            </value>
+            <value>
+                <fullName>Doesn’t Exist</fullName>
+                <default>false</default>
+                <label>Doesn’t Exist</label>
+            </value>
+            <value>
+                <fullName>Held</fullName>
+                <default>false</default>
+                <label>Held</label>
+            </value>
+            <value>
+                <fullName>Never Tried For</fullName>
+                <default>false</default>
+                <label>Never Tried For</label>
+            </value>
+            <value>
+                <fullName>No Contact</fullName>
+                <default>false</default>
+                <label>No Contact</label>
+            </value>
+            <value>
+                <fullName>No One Used - Cancelled</fullName>
+                <default>false</default>
+                <label>No One Used - Cancelled</label>
+            </value>
+            <value>
+                <fullName>No One Used - Insider Filled</fullName>
+                <default>false</default>
+                <label>No One Used - Insider Filled</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Pending Request</fullName>
+                <default>false</default>
+                <label>Pending Request</label>
+            </value>
+            <value>
+                <fullName>Private Event/Buyout</fullName>
+                <default>false</default>
+                <label>Private Event/Buyout</label>
+            </value>
+            <value>
+                <fullName>Taken</fullName>
+                <default>false</default>
+                <label>Taken</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Didn't Get</controllingFieldValue>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <controllingFieldValue>No Show</controllingFieldValue>
+            <controllingFieldValue>Beyond Control</controllingFieldValue>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <controllingFieldValue>House</controllingFieldValue>
+            <valueName>ClouDNA Holding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Didn't Get</controllingFieldValue>
+            <valueName>Contact Denied</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Didn't Get</controllingFieldValue>
+            <valueName>Contact Ghosted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Didn't Get</controllingFieldValue>
+            <valueName>Never Tried For</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Didn't Get</controllingFieldValue>
+            <valueName>No Contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <controllingFieldValue>No Show</controllingFieldValue>
+            <valueName>Alerts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <controllingFieldValue>No Show</controllingFieldValue>
+            <valueName>Booking Platform/Just Called</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Closing Logbook</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <controllingFieldValue>No Show</controllingFieldValue>
+            <valueName>Contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Beyond Control</controllingFieldValue>
+            <valueName>Coronavirus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Beyond Control</controllingFieldValue>
+            <valueName>Doesn’t Exist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Beyond Control</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Beyond Control</controllingFieldValue>
+            <valueName>Private Event/Buyout</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Confirmed Request - Contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Confirmed Request - Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Pending Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>House</controllingFieldValue>
+            <valueName>Available</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>House</controllingFieldValue>
+            <valueName>Held</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>House</controllingFieldValue>
+            <valueName>No One Used - Cancelled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>House</controllingFieldValue>
+            <valueName>No One Used - Insider Filled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>House</controllingFieldValue>
+            <valueName>Taken</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

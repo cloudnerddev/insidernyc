@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Sports Played --></label>
+        <name>Sports_Played__c</name>
+        <picklistValues>
+            <masterLabel>Abseiling</masterLabel>
+            <translation><!-- Abseiling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aerobics</masterLabel>
+            <translation><!-- Aerobics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aikido</masterLabel>
+            <translation><!-- Aikido --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Archery</masterLabel>
+            <translation><!-- Archery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Artistic gymnastics</masterLabel>
+            <translation><!-- Artistic gymnastics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BASE jumping</masterLabel>
+            <translation><!-- BASE jumping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Badminton</masterLabel>
+            <translation><!-- Badminton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Baseball</masterLabel>
+            <translation><!-- Baseball --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Basketball</masterLabel>
+            <translation><!-- Basketball --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Baton twirling</masterLabel>
+            <translation><!-- Baton twirling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bobsleigh</masterLabel>
+            <translation><!-- Bobsleigh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bodyboarding</masterLabel>
+            <translation><!-- Bodyboarding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bodybuilding</masterLabel>
+            <translation><!-- Bodybuilding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bouldering</masterLabel>
+            <translation><!-- Bouldering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bowling</masterLabel>
+            <translation><!-- Bowling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Boxing</masterLabel>
+            <translation><!-- Boxing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Canoeing</masterLabel>
+            <translation><!-- Canoeing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Climbing</masterLabel>
+            <translation><!-- Climbing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cricket</masterLabel>
+            <translation><!-- Cricket --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cross-country cycling</masterLabel>
+            <translation><!-- Cross-country cycling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cross-country equestrianism</masterLabel>
+            <translation><!-- Cross-country equestrianism --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cross-country running</masterLabel>
+            <translation><!-- Cross-country running --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cross-country skiing</masterLabel>
+            <translation><!-- Cross-country skiing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Curling</masterLabel>
+            <translation><!-- Curling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cycling</masterLabel>
+            <translation><!-- Cycling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discus throw</masterLabel>
+            <translation><!-- Discus throw --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Diving</masterLabel>
+            <translation><!-- Diving --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dodgeball</masterLabel>
+            <translation><!-- Dodgeball --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equestrianism</masterLabel>
+            <translation><!-- Equestrianism --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fencing</masterLabel>
+            <translation><!-- Fencing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Figure skating</masterLabel>
+            <translation><!-- Figure skating --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Football</masterLabel>
+            <translation><!-- Football --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Freediving</masterLabel>
+            <translation><!-- Freediving --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gliding</masterLabel>
+            <translation><!-- Gliding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Golf</masterLabel>
+            <translation><!-- Golf --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Handball</masterLabel>
+            <translation><!-- Handball --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hiking</masterLabel>
+            <translation><!-- Hiking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hockey</masterLabel>
+            <translation><!-- Hockey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Horse racing</masterLabel>
+            <translation><!-- Horse racing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Horseball</masterLabel>
+            <translation><!-- Horseball --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hurling</masterLabel>
+            <translation><!-- Hurling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ice hockey</masterLabel>
+            <translation><!-- Ice hockey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Judo</masterLabel>
+            <translation><!-- Judo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Karate</masterLabel>
+            <translation><!-- Karate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kayaking</masterLabel>
+            <translation><!-- Kayaking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kendo</masterLabel>
+            <translation><!-- Kendo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kickball</masterLabel>
+            <translation><!-- Kickball --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kickboxing</masterLabel>
+            <translation><!-- Kickboxing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kiteboarding</masterLabel>
+            <translation><!-- Kiteboarding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kitesurfing</masterLabel>
+            <translation><!-- Kitesurfing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kung fu</masterLabel>
+            <translation><!-- Kung fu --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lacrosse</masterLabel>
+            <translation><!-- Lacrosse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Long jump</masterLabel>
+            <translation><!-- Long jump --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marathon</masterLabel>
+            <translation><!-- Marathon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mixed martial arts</masterLabel>
+            <translation><!-- Mixed martial arts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mountaineering</masterLabel>
+            <translation><!-- Mountaineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Muay Thai</masterLabel>
+            <translation><!-- Muay Thai --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Olympic swimming</masterLabel>
+            <translation><!-- Olympic swimming --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paddle</masterLabel>
+            <translation><!-- Paddle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paddleboarding</masterLabel>
+            <translation><!-- Paddleboarding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parachuting</masterLabel>
+            <translation><!-- Parachuting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paragliding</masterLabel>
+            <translation><!-- Paragliding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parasailing</masterLabel>
+            <translation><!-- Parasailing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pole vault</masterLabel>
+            <translation><!-- Pole vault --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Polo</masterLabel>
+            <translation><!-- Polo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Powerlifting</masterLabel>
+            <translation><!-- Powerlifting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Racewalking</masterLabel>
+            <translation><!-- Racewalking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Racquetball</masterLabel>
+            <translation><!-- Racquetball --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rafting</masterLabel>
+            <translation><!-- Rafting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rhythmic gymnastics</masterLabel>
+            <translation><!-- Rhythmic gymnastics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rinkball</masterLabel>
+            <translation><!-- Rinkball --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rounders</masterLabel>
+            <translation><!-- Rounders --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rowing</masterLabel>
+            <translation><!-- Rowing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rugby</masterLabel>
+            <translation><!-- Rugby --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scuba diving</masterLabel>
+            <translation><!-- Scuba diving --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Skateboarding</masterLabel>
+            <translation><!-- Skateboarding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Skeleton</masterLabel>
+            <translation><!-- Skeleton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Skibobbing</masterLabel>
+            <translation><!-- Skibobbing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Skydiving</masterLabel>
+            <translation><!-- Skydiving --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Skysurfing</masterLabel>
+            <translation><!-- Skysurfing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Snorkeling</masterLabel>
+            <translation><!-- Snorkeling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Snowboarding</masterLabel>
+            <translation><!-- Snowboarding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Soccer</masterLabel>
+            <translation><!-- Soccer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Softball</masterLabel>
+            <translation><!-- Softball --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sprint</masterLabel>
+            <translation><!-- Sprint --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Squash</masterLabel>
+            <translation><!-- Squash --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sumo</masterLabel>
+            <translation><!-- Sumo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surfing</masterLabel>
+            <translation><!-- Surfing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sword-fighting</masterLabel>
+            <translation><!-- Sword-fighting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Synchronized swimming</masterLabel>
+            <translation><!-- Synchronized swimming --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Table tennis</masterLabel>
+            <translation><!-- Table tennis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennis</masterLabel>
+            <translation><!-- Tennis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trail running</masterLabel>
+            <translation><!-- Trail running --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trampolining</masterLabel>
+            <translation><!-- Trampolining --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tumbling</masterLabel>
+            <translation><!-- Tumbling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ultimate</masterLabel>
+            <translation><!-- Ultimate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unicycling basketball</masterLabel>
+            <translation><!-- Unicycling basketball --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unicycling handball</masterLabel>
+            <translation><!-- Unicycling handball --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unicycling hockey</masterLabel>
+            <translation><!-- Unicycling hockey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Volleyball</masterLabel>
+            <translation><!-- Volleyball --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wakeboarding</masterLabel>
+            <translation><!-- Wakeboarding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Walking</masterLabel>
+            <translation><!-- Walking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Water polo</masterLabel>
+            <translation><!-- Water polo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weightlifting</masterLabel>
+            <translation><!-- Weightlifting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Windsurfing</masterLabel>
+            <translation><!-- Windsurfing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrestling</masterLabel>
+            <translation><!-- Wrestling --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

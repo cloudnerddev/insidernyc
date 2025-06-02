@@ -1,0 +1,5 @@
+Hi!
+
+Please follow up with this client to let them know that their passport is set to expire on {!Passport__c.Expire_Date__c}.
+
+The expiring passport can be found here: {!Passport__c.Link}

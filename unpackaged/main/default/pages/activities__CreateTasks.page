@@ -1,0 +1,33 @@
+<apex:page standardController="Task" extensions="activities.CreateTasksController">
+<apex:slds />
+ <apex:sectionHeader title="Task" subtitle="New Task" help="/help/doc/user_ed.jsp?loc=help&target=creating_tasks.htm&section=Activities"/>
+ <div class="slds-scope">
+ <apex:form >
+ <div style="background-color:#ffffff;">
+ 
+     <apex:pageMessages ></apex:pageMessages>
+     <apex:pageBlock title=""  mode="edit" >
+         <apex:pageBlockSection columns="2" title="Task Information"  >        
+                 <apex:repeat value="{!$ObjectType.Task.FieldSets.activities__CreateTasks}" var="f">               
+                    
+                    <apex:inputField value="{!newTask[f]}"  rendered="{!IF(OR( f = 'Description', f = 'WhoId', AND(f = 'WhatId', $CurrentPage.Parameters.SelectedObject != 'Contact')), false, true)}"/>
+                </apex:repeat>
+         </apex:pageBlockSection>
+         <apex:pageBlockSection columns="1" title="Description Information" >
+             <apex:inputField value="{!newTask.Description}" styleclass="slds-textarea" style="width:500px;height:100px"/>
+             <apex:pageblocksectionItem >
+                 <apex:inputCheckbox value="{!sendNotification}" styleclass="slds-checkbox" title="Send Notification Email"/>
+                 <label class="slds-checkbox__label" >Send Notification Email</label>
+             </apex:pageblocksectionItem>         
+         </apex:pageBlockSection>    
+         
+                         <div class="slds-align--absolute-center" >
+                                        <apex:commandButton action="{!insertTasks}" value="Save"  styleClass="slds-button slds-button--neutral"/>
+                                        <apex:commandButton action="{!cancel}" value="Cancel"  styleClass="slds-button slds-button--neutral"/></div>
+                
+                           
+     </apex:pageBlock>
+     </div>
+ </apex:form>
+ </div>
+</apex:page>

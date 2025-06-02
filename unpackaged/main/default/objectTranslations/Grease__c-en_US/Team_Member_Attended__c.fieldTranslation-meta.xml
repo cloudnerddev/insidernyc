@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- OLD-Team Member Attended --></label>
+        <name>Team_Member_Attended__c</name>
+        <relationshipLabel><!-- Greases/Facetime/Trials (OLD-Team Member Attended) --></relationshipLabel>
+    </CustomFieldTranslation>

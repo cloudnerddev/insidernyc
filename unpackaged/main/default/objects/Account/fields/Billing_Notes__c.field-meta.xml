@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Notes__c</fullName>
+    <encryptionScheme>ProbabilisticEncryption</encryptionScheme>
+    <inlineHelpText>Please use this section for any specific membership and billing info that you need to add.</inlineHelpText>
+    <label>Membership and Billing Notes</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

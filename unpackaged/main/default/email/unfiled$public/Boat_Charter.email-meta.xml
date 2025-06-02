@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Insider</letterhead>
+    <name>HTMLBoat Charter</name>
+    <style>freeForm</style>
+    <subject>Boat Charter Confirmation</subject>
+    <textOnly>Hi,
+
+Please see below for your confirmation:
+
+Name of Boat/Yacht: {!Case.Name_of_Boat_Yacht__c}
+Company: {!Case.Vendor__c}
+Company Telephone: {!Case.Vendor_Phone__c}
+Departure Time: {!Case.Departure_Time__c}
+Departure Address: {!Case.00N0b00000BanJx}
+Type of Vessel: {!Case.Type_of_Vessel__c}
+# of Passengers: {!Case.Number_of_Passengers__c}
+Details of charter: SHOULD THIS BE DESCRIPTION
+Stops (if any):  {!Case.Itinerary_Stops__c}
+Return Time: DO WE NEED TO ADD THIS TO PAGE LAYOUT?
+Return Address: DO WE NEED TO ADD THIS TO PAGE LAYOUT?
+Guest name &amp; contact info: DO WE NEED TO ADD THIS TO PAGE LAYOUT?
+Confirmed With: {!Case.Confirmed_With__c}
+Method of Payment: {!Case.Method_of_Shipment__c}
+Price: {!Case.Price__c}
+Cancellation Policy: {!Case.00N0b000005VOTU}
+Notes/Special Requests: {!Case.Special_Requests_Notes__c}
+
+Should you need to alter or cancel your reservation after business hours, kindly notify the INsider Team at 800.840.1143 or 24@insidernyc.com.
+
+Please note that any no show of a reservation will incur a fee.
+
+Thank You!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

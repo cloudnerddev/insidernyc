@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inactive_Reason_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>(ISCHANGED(Active__c) || ISNEW()) &amp;&amp;
+Active__c = FALSE &amp;&amp;
+ISBLANK(Inactive_Reason__c)</errorConditionFormula>
+    <errorDisplayField>Inactive_Reason__c</errorDisplayField>
+    <errorMessage>Please fill out an Inactive Reason</errorMessage>
+</ValidationRule>

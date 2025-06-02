@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Phone Lines Open --></label>
+        <name>Phone_Lines_Open__c</name>
+        <picklistValues>
+            <masterLabel>10am EST</masterLabel>
+            <translation><!-- 10am EST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11am EST</masterLabel>
+            <translation><!-- 11am EST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12 noon EST</masterLabel>
+            <translation><!-- 12 noon EST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1pm EST</masterLabel>
+            <translation><!-- 1pm EST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7am EST</masterLabel>
+            <translation><!-- 7am EST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8am EST</masterLabel>
+            <translation><!-- 8am EST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9am EST</masterLabel>
+            <translation><!-- 9am EST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Before 7am EST</masterLabel>
+            <translation><!-- Before 7am EST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>after 1pm EST</masterLabel>
+            <translation><!-- after 1pm EST --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

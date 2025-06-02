@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reservation_Text__c</fullName>
+    <encryptionScheme>None</encryptionScheme>
+    <inlineHelpText>Phone number the Vendor uses to accept and communicate regarding bookings via Text Message. This isn’t the same as a reservation contacts personal cell</inlineHelpText>
+    <label>Reservation Text</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Phone</type>
+</CustomField>

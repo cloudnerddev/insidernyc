@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recipient_s_Phone_Formatted__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(LEN(Recipient_s_Phone__c) = 10,
+"(" &amp; LEFT(Recipient_s_Phone__c, 3) &amp; ") " &amp; RIGHT(LEFT(Recipient_s_Phone__c, 6), 3) &amp; "-" &amp; RIGHT(Recipient_s_Phone__c, 4), Recipient_s_Phone__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Recipient's Phone Formatted</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

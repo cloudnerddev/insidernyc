@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Activities</fullName>
+        <default>false</default>
+        <label>Activities</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Airplane</fullName>
+        <default>false</default>
+        <label>Airplane</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Boat</fullName>
+        <default>false</default>
+        <label>Boat</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Event</fullName>
+        <default>false</default>
+        <label>Event</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Feature Request</fullName>
+        <default>false</default>
+        <label>Feature Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Floral</fullName>
+        <default>false</default>
+        <label>Floral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Gift</fullName>
+        <default>false</default>
+        <label>Gift</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Linked</fullName>
+        <default>false</default>
+        <label>Linked</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting</fullName>
+        <default>false</default>
+        <label>Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Not Linked</fullName>
+        <default>false</default>
+        <label>Not Linked</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone Call</fullName>
+        <default>false</default>
+        <label>Phone Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pick</fullName>
+        <default>false</default>
+        <label>Pick</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Private Room</fullName>
+        <default>false</default>
+        <label>Private Room</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Problem</fullName>
+        <default>false</default>
+        <label>Problem</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Question</fullName>
+        <default>false</default>
+        <label>Question</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Restaurant</fullName>
+        <default>false</default>
+        <label>Restaurant</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Text</fullName>
+        <default>false</default>
+        <label>Text</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Travel</fullName>
+        <default>false</default>
+        <label>Travel</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Travel Planning</fullName>
+        <default>false</default>
+        <label>Travel Planning</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Trip Booking</fullName>
+        <default>false</default>
+        <label>Trip Booking</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ticket</fullName>
+        <default>false</default>
+        <label>Ticket</label>
+    </standardValue>
+</StandardValueSet>

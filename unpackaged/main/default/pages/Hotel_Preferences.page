@@ -1,0 +1,65 @@
+<apex:page standardController="Contact" lightningStylesheets="true" tabstyle="General_Preferences__c">
+    <style>
+        table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        }
+        tr.border td {
+        border-bottom: 1pt solid;
+        border-bottom-color: #dddbda;
+        border-top: 1pt solid;
+        border-top-color: #dddbda;
+        }
+    </style>
+    <apex:form >
+        <!--center>
+            <apex:commandbutton styleClass="slds-button slds-button_neutral" value="New" action="{!URLFOR($Action.General_Preferences__c.New)}"/> 
+        </center-->
+        <table width="100%">
+            <tr class="border" bgcolor="#fafaf9">
+                <td width="5%">
+                    ACTION
+                </td>
+                <td width="18%">
+                    PREFERRED VENDOR
+                </td>
+                <td width="18%">
+                    ROOM PREFERENCE
+                </td>
+                <td width="18%">
+                    VACATION LOCALE PREFERENCE
+                </td>
+                <td width="18%">
+                    STATUS
+                </td>
+                <td width="18%">
+                    NOTES
+                </td>
+            </tr>
+            <apex:repeat var="gp" value="{!Contact.Client_PreferencesContact__r}">
+                <apex:outputPanel rendered="{!IF(gp.recordtype.name = 'Hotel Preferences',true,false)}">
+                    <tr class="border"> 
+                        <td width="5%">
+                            <apex:outputLink value="/{!gp.Id}">View</apex:outputLink>
+                        </td>
+                        <td width="18%">
+                            <apex:outputLink value="/{!gp.Id}"> {!gp.Preferred_Vendor__r.Name}</apex:outputLink>
+                        </td>
+                        <td width="18%">
+                            {!gp.Room_Preference__c}
+                        </td>
+                        <td width="18%">
+                            {!gp.Vacation_Locale_Preference__c}
+                        </td>
+                        <td width="18%">
+                            {!gp.Status__c}
+                        </td>
+                        <td width="18%">
+                            {!gp.Notes_Summary__c}
+                        </td>
+                    </tr>
+                </apex:outputPanel>
+            </apex:repeat>
+        </table>
+    </apex:form>
+</apex:page>

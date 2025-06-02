@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>Linked_General_Preference_From__c</field>
+        <formula>General_Preferences__c.Id</formula>
+    </fieldOverrides>
+    <label>Clone and Link General Preference</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Link_General_Preference_To__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <targetObject>Linked_General_Preference__c</targetObject>
+    <targetParentField>Linked_General_Preference_From__c</targetParentField>
+    <type>Create</type>
+</QuickAction>

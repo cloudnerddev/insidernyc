@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Time_Log__c$LastModifiedDate</field>
+    </columns>
+    <columns>
+        <field>Time_Log__c$Date_Logged__c</field>
+    </columns>
+    <columns>
+        <field>Time_Log__c$Client__c</field>
+    </columns>
+    <columns>
+        <field>Time_Log__c$Comments__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Time_Log__c$Billable_Time__c</field>
+    </columns>
+    <columns>
+        <field>Time_Log__c$Case__c</field>
+    </columns>
+    <columns>
+        <field>Time_Log__c$Name</field>
+    </columns>
+    <filter>
+        <booleanFilter>(1 AND 2) OR (1 OR 2)</booleanFilter>
+        <criteriaItems>
+            <column>Time_Log__c$LastModifiedBy</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Carly Walter</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Time_Log__c$CreatedBy</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Carly Walter</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Carly&apos;s Time Logs</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Time_Logs__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Time_Log__c$LastModifiedDate</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Time_Log__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

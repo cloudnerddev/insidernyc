@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendor</fullName>
+    <fields>Name</fields>
+    <fields>Phone</fields>
+    <fields>Website</fields>
+    <fields>Neighbourhood__c</fields>
+    <fields>Commissionable__c</fields>
+    <fields>Vendor_Status__c</fields>
+    <fields>RecordTypeId</fields>
+    <fields>OwnerId</fields>
+    <label>Vendor</label>
+</CompactLayout>

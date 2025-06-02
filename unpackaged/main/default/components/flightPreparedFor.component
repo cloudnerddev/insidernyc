@@ -1,0 +1,8 @@
+<apex:component controller="flightBookingData" access="global">
+    <apex:attribute name="caseId" assignTo="{!csId}" type="String" description="Id of the case"/>
+    <p> PREPARED FOR <br/>
+        <b style="font-size: 20px;" >
+            {!passengerNames}
+        </b>
+    </p>
+</apex:component>

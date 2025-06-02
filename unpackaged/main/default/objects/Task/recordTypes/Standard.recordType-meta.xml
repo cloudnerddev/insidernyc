@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Standard</fullName>
+    <active>true</active>
+    <label>Standard</label>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reconfirmation_Status__c</picklist>
+        <values>
+            <fullName>Reconfirmed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconfirmed - Not Sending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>To be reconfirmed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sender__c</picklist>
+        <values>
+            <fullName>Carly Walter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Courtney Sider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daniela Nashawaty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Drew Kohl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emma Muller</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gia Scaduto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jaime Eisenberg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jill Diedrich</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jordan Story</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jordyn Bloom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Katie Couri</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lilly Wilbanks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lindsi Shine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Melinda Erickson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Natalie Biedron</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Samantha Silverman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sarah Tredwell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yana Romanova</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Quote</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,94 @@
+<messaging:emailTemplate subject="Confirmation Flight Book" recipientType="User" relatedToType="Case">
+
+<messaging:plainTextEmailBody >
+</messaging:plainTextEmailBody>
+
+<messaging:htmlEmailBody >
+
+   <div class="slds-scope slds-box" >
+
+   <b class="ex1" style="font-size: 13px; padding-right: 10px; font-family: monospace;">{!relatedTo.DateofBooking__c}<b>&#9654;</b> 
+   28 MAR 2018</b> <b style="font-size: 8px; font-family: monospace;">TRIP TO </b ><b style="font-family: monospace;">{!relatedTo.Destination_Airport__c}</b>
+   
+    <div class="borderline"  style="border-bottom-style:solid; border-bottom-width: 2px;"></div>
+    
+    <p style="font-size:13px; font-family: monospace;"> PREPARED FOR <br/>
+    <b>{!relatedTo.Contact.Name}</b> </p>
+    
+    <p style="margin: auto; font-size: 13px; font-family: monospace;">
+    AIRLINE CONFIRMATION NUMBER: <b>{!relatedTo.Order_Confirmation__c}</b></p>
+    
+    <div class="borderline" style="border-bottom-style:solid; border-bottom-width: 2px;"></div>
+     
+     
+    <div style="width: 100%; display: table; ">
+        <div style="display: table-row">
+        
+        <apex:image style="width:30px; height:30px;" url="https://insidernyc.my.salesforce.com/servlet/servlet.ImageServer?id=0150b000001v4YG&oid=00D0b000000R4TA"/>
+       
+            <div style="display: table-cell; padding-top: 1rem; padding-right: 5rem;"> 
+            <p style="margin: -18px 0; font-family: monospace;">DEPARTURE: <b class="ex1" style="font-size: 13px; padding-right: 10px; font-family: monospace;">{!relatedTo.Date_of_Departure__c} </b> 
+            <b>&#9654;</b> </p>
+            <p style="font-family: monospace; padding-top: 0.6rem; font-size: 10px;">Please verify the flight time prior to departure </p>
+           </div>
+        </div>
+    </div>
+  
+    <div style="display: flex;">
+       <div style="float: left;width: 33.33%; padding: 0px 0px 0px 20px; background: #ccc; border-bottom-left-radius: 40px;">
+       <p>
+            <h3 style="font-family: monospace;text-transform: uppercase; margin-top:0px;margin-bottom: 0px;">
+            {!relatedTo.Vendor__r.Name}<br/>
+            <b>{!relatedTo.Flight_Number__c}</b>&nbsp;<br/>
+            </h3>
+       </p>
+       <p>Duration:<br/>
+       {!relatedTo.Duration__c}</p>
+       <p>Class<br/>
+       {!relatedTo.Seat__c}</p>
+       <p>Refundable?<br/>
+       {!relatedTo.Refundable__c}</p>
+      </div>
+        
+        <div style="float: left;width: 66.33%; padding: 1px;">
+         <table class="table1" style="height: 50%; font-family: monospace; border: 1px solid #ddd;">
+          <tr>
+            <td colspan="2" style="text-align: center;  text-align: left; padding: 53px; border-bottom: 1px solid #ddd">{!relatedTo.Departure_City__c}  
+            <i class="ex1 fa fa-caret-right" style="font-size:15px"></i> {!relatedTo.Destination_City__c} </td>
+            <td rowspan="2" style="text-align: left; padding: 45px; border-left: 1px solid #ddd;">Price per Person:&nbsp;{!relatedTo.Price_per_person__c} <br/><br/> Total Price:&nbsp;{!relatedTo.Total_Price__c} <br/><br/> Special Requests:&nbsp;{!relatedTo.Special_Requests_Notes__c} </td>
+          </tr>
+          <tr>
+            <td style = "text-align: left; padding: 8px; border-right: 1px solid #ddd;">Departing At: {!relatedTo.Departure_Time__c} <br/><br/> Terminal: {!relatedTo.Departure_Terminal__c} <br/><br/></td>
+            <td style = "text-align: left; padding: 8px;">Arriving At: {!relatedTo.Destination_Arrival_Time__c} <br/><br/> Terminal: {!relatedTo.Destination_Terminal__c} <br/><br/></td>
+          </tr>
+        </table>
+        </div>
+    </div>
+    <br/>
+    <div>
+        <table class="table2" style=" font-family: monospace; border: 1px solid #ddd; width:100%;">
+          <tr style="background-color: #c1c1c1;">
+            <th style="border-right: 1px solid #ddd; text-align: left; padding: 8px;">Passenger Name:</th>
+            <th style="border-right: 1px solid #ddd; text-align: left; padding: 8px;">Seats:</th>
+            <th style=" border-right: 1px solid #ddd;text-align: left; padding: 8px;">Frequent Flyer #:</th>
+             <th style="text-align: left; padding: 8px;">Ticket #</th>
+          </tr>
+          <apex:repeat value="{!relatedTo.Passengers1__r}" var="pass">
+          <tr>
+          <td style="border-right: 1px solid #ddd; border-top: 1px solid #ddd; text-align: left; padding: 8px;"><apex:image style="width:7px; height:7px;" url="https://insidernyc.my.salesforce.com/servlet/servlet.ImageServer?id=0150b000001v4YL&oid=00D0b000000R4TA"/>
+            {!pass.Contact_Name__c}</td>
+            <td style="text-align: left; border-top: 1px solid #ddd; padding: 8px; border-right: 1px solid #ddd;">{!pass.Seat_Number__c}</td>
+            <td style="text-align: left; border-top: 1px solid #ddd; padding: 8px; border-right: 1px solid #ddd;">{!pass.Frequent_Flyer__c}</td>
+            <td style="text-align: left; border-top: 1px solid #ddd; padding: 8px;">Unknown</td>
+          </tr>
+         </apex:repeat>
+        </table>
+    </div> 
+    
+</div> 
+
+
+
+</messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

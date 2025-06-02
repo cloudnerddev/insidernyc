@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <label>Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Gym</fullName>
+                <default>false</default>
+                <label>Gym</label>
+            </value>
+            <value>
+                <fullName>Venue for Facials</fullName>
+                <default>false</default>
+                <label>Venue for Facials</label>
+            </value>
+            <value>
+                <fullName>Venue for Haircuts</fullName>
+                <default>false</default>
+                <label>Venue for Haircuts</label>
+            </value>
+            <value>
+                <fullName>Venue for Massages</fullName>
+                <default>false</default>
+                <label>Venue for Massages</label>
+            </value>
+            <value>
+                <fullName>Dermatologist</fullName>
+                <default>false</default>
+                <label>Dermatologist</label>
+            </value>
+            <value>
+                <fullName>Personal Trainer</fullName>
+                <default>false</default>
+                <label>Personal Trainer</label>
+            </value>
+            <value>
+                <fullName>PT/Acupuncture</fullName>
+                <default>false</default>
+                <label>PT/Acupuncture</label>
+            </value>
+            <value>
+                <fullName>Nutritionist</fullName>
+                <default>false</default>
+                <label>Nutritionist</label>
+            </value>
+            <value>
+                <fullName>Studio/Class</fullName>
+                <default>false</default>
+                <label>Studio/Class</label>
+            </value>
+            <value>
+                <fullName>Favorite Restaurant</fullName>
+                <default>false</default>
+                <label>Favorite Restaurant</label>
+            </value>
+            <value>
+                <fullName>Business Dinner</fullName>
+                <default>false</default>
+                <label>Business Dinner</label>
+            </value>
+            <value>
+                <fullName>Business Lunch</fullName>
+                <default>false</default>
+                <label>Business Lunch</label>
+            </value>
+            <value>
+                <fullName>Business Breakfast</fullName>
+                <default>false</default>
+                <label>Business Breakfast</label>
+            </value>
+            <value>
+                <fullName>Special Occasion</fullName>
+                <default>false</default>
+                <label>Special Occasion</label>
+            </value>
+            <value>
+                <fullName>Weekend Brunch</fullName>
+                <default>false</default>
+                <label>Weekend Brunch</label>
+            </value>
+            <value>
+                <fullName>Cuisine</fullName>
+                <default>false</default>
+                <label>Cuisine</label>
+            </value>
+            <value>
+                <fullName>Quiet Dinner</fullName>
+                <default>false</default>
+                <label>Quiet Dinner</label>
+            </value>
+            <value>
+                <fullName>Restaurant Investor In</fullName>
+                <default>false</default>
+                <label>Restaurant Investor In</label>
+            </value>
+            <value>
+                <fullName>Restaurant Client Doesn't Like</fullName>
+                <default>false</default>
+                <label>Restaurant Client Doesn't Like</label>
+            </value>
+            <value>
+                <fullName>Trendy/Fun Scene</fullName>
+                <default>false</default>
+                <label>Trendy/Fun Scene</label>
+            </value>
+            <value>
+                <fullName>Clothing Style</fullName>
+                <default>false</default>
+                <label>Clothing Style</label>
+            </value>
+            <value>
+                <fullName>Interests/Hobbies</fullName>
+                <default>false</default>
+                <label>Interests/Hobbies</label>
+            </value>
+            <value>
+                <fullName>Cocktail</fullName>
+                <default>false</default>
+                <label>Cocktail</label>
+            </value>
+            <value>
+                <fullName>Wine - RED</fullName>
+                <default>false</default>
+                <label>Wine - RED</label>
+            </value>
+            <value>
+                <fullName>Wine - WHITE</fullName>
+                <default>false</default>
+                <label>Wine - WHITE</label>
+            </value>
+            <value>
+                <fullName>Wine - other</fullName>
+                <default>false</default>
+                <label>Wine - other</label>
+            </value>
+            <value>
+                <fullName>Food</fullName>
+                <default>false</default>
+                <label>Food</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

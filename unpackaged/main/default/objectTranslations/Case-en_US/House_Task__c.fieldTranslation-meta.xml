@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- House Task --></label>
+        <name>House_Task__c</name>
+        <picklistValues>
+            <masterLabel>Building out / Data input into Spreadsheet</masterLabel>
+            <translation><!-- Building out / Data input into Spreadsheet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drafting Houses to Call For</masterLabel>
+            <translation><!-- Drafting Houses to Call For --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Holiday / Seasonal / Specia Events Preparation</masterLabel>
+            <translation><!-- Holiday / Seasonal / Specia Events Preparation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Making House Phones</masterLabel>
+            <translation><!-- Making House Phones --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

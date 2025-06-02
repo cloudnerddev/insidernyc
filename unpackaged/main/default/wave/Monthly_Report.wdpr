@@ -1,0 +1,283 @@
+{
+  "version" : "63.0",
+  "nodes" : {
+    "LOAD_DATASET0" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "Name", "Client_Account__c", "Actual_Overhours_to_Charge_Cash__c", "Actual_Overhours_to_Charge__c", "Billable_Time_Logged_MTD_hours__c", "Charged_Date__c", "Date_Warned__c", "End_Date__c", "Free_Hours_or_Credits__c", "Hours_per_Month__c", "Last_Day_of_Month__c", "Lindsi_Approved__c", "Monthly_Value__c", "Overhours_Charged_During_the_Month__c", "Overhours_Rate__c", "Remaining_Overhours_to_be_Charged__c", "Retainer__c", "Start_Date__c", "Team__c", "Time_Overhours_MTD__c", "Total_Hours__c", "Total_Overhour_Charge__c", "Value_per_Utilized_Hour__c", "Warning_Given_By__c", "Billable_Time_Logged_MTD_Minutes__c", "Account_Name__c", "Holding_Off__c", "Not_Warning__c", "Charged__c", "In_Case_of_Emergency_Overhours_Notes__c", "Not_Charged__c" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "Monthly_Billing__c",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "Monthly_Billing__c"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "FORMULA0" : {
+      "action" : "computeRelative",
+      "sources" : [ "LOAD_DATASET0" ],
+      "parameters" : {
+        "partitionBy" : [ "Id" ],
+        "orderBy" : [ {
+          "fieldName" : "Id",
+          "direction" : "ASC"
+        } ],
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "Id_formula",
+          "label" : "Regular Billable Hour",
+          "formulaExpression" : "case\r\nwhen Billable_Time_Logged_MTD_hours__c >= Hours_per_Month__c\r\nthen Hours_per_Month__c\r\nwhen Hours_per_Month__c >= Billable_Time_Logged_MTD_hours__c\r\nthen Billable_Time_Logged_MTD_hours__c\r\nelse\r\nBillable_Time_Logged_MTD_hours__c\r\nend\r\n",
+          "precision" : 18,
+          "scale" : 0,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA1" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA0" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "Id_formula1",
+          "label" : "Free_Hours_or_Credits__c",
+          "formulaExpression" : "Free_Hours_or_Credits__c*Overhours_Rate__c",
+          "precision" : 10,
+          "scale" : 0,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "JOIN0" : {
+      "action" : "join",
+      "sources" : [ "LOAD_DATASET0", "FORMULA1" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "Id" ],
+        "rightQualifier" : "HoursFormula",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "JOIN1" : {
+      "action" : "join",
+      "sources" : [ "JOIN0", "JOIN2" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "Client_Account__c" ],
+        "rightQualifier" : "Account",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "LOAD_DATASET2" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Insider_Team__c", "Id", "MasterRecordId", "Name", "LastName", "FirstName", "MiddleName", "Type", "Non_Billable_Account__c" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "Account",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "Account"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "FILTER0" : {
+      "action" : "filter",
+      "sources" : [ "JOIN1" ],
+      "parameters" : {
+        "filterExpressions" : [ {
+          "type" : "TEXT",
+          "field" : "Account.Non_Billable_Account__c",
+          "operator" : "EQUAL",
+          "operands" : [ "false" ]
+        } ]
+      }
+    },
+    "OUTPUT0" : {
+      "action" : "save",
+      "sources" : [ "FILTER0" ],
+      "parameters" : {
+        "fields" : [ ],
+        "dataset" : {
+          "type" : "analyticsDataset",
+          "label" : "Monthly_Report",
+          "name" : "Monthly_Report",
+          "folderName" : "SharedApp"
+        },
+        "measuresToCurrencies" : [ ]
+      }
+    },
+    "LOAD_DATASET3" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "Name" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "Insider_Team__c",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "Insider_Team__c"
+        },
+        "sampleDetails" : {
+          "type" : "TopN"
+        }
+      }
+    },
+    "JOIN2" : {
+      "action" : "join",
+      "sources" : [ "LOAD_DATASET2", "LOAD_DATASET3" ],
+      "schema" : {
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "Insider_Team__c" ],
+        "rightQualifier" : "Team",
+        "rightKeys" : [ "Id" ]
+      }
+    }
+  },
+  "ui" : {
+    "nodes" : {
+      "LOAD_DATASET0" : {
+        "label" : "Monthly_Billing__c",
+        "type" : "LOAD_DATASET",
+        "top" : 252,
+        "left" : 811.8,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "TRANSFORM0" : {
+        "label" : "Transform 0",
+        "type" : "TRANSFORM",
+        "top" : 252,
+        "left" : 532.1,
+        "graph" : {
+          "FORMULA0" : {
+            "label" : "Hours"
+          },
+          "FORMULA1" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Free Hours"
+          }
+        },
+        "connectors" : [ {
+          "source" : "FORMULA0",
+          "target" : "FORMULA1"
+        } ]
+      },
+      "JOIN0" : {
+        "label" : "Join 0",
+        "type" : "JOIN",
+        "top" : 112.1,
+        "left" : 672.6
+      },
+      "JOIN1" : {
+        "label" : "Join 1",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 392
+      },
+      "LOAD_DATASET2" : {
+        "label" : "Account",
+        "type" : "LOAD_DATASET",
+        "top" : 112,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "FILTER0" : {
+        "label" : "Filter 0",
+        "type" : "FILTER",
+        "top" : 392,
+        "left" : 672
+      },
+      "OUTPUT0" : {
+        "label" : "Output 0",
+        "type" : "OUTPUT",
+        "top" : 392,
+        "left" : 812
+      },
+      "LOAD_DATASET3" : {
+        "label" : "Insider_Team__c",
+        "type" : "LOAD_DATASET",
+        "top" : 251.89999999999998,
+        "left" : 112.19999999999999,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN2" : {
+        "label" : "Join 2",
+        "type" : "JOIN",
+        "top" : 111.9,
+        "left" : 252
+      }
+    },
+    "connectors" : [ {
+      "source" : "LOAD_DATASET0",
+      "target" : "TRANSFORM0"
+    }, {
+      "source" : "LOAD_DATASET0",
+      "target" : "JOIN0"
+    }, {
+      "source" : "TRANSFORM0",
+      "target" : "JOIN0"
+    }, {
+      "source" : "JOIN0",
+      "target" : "JOIN1"
+    }, {
+      "source" : "JOIN2",
+      "target" : "JOIN1"
+    }, {
+      "source" : "JOIN1",
+      "target" : "FILTER0"
+    }, {
+      "source" : "FILTER0",
+      "target" : "OUTPUT0"
+    }, {
+      "source" : "LOAD_DATASET2",
+      "target" : "JOIN2"
+    }, {
+      "source" : "LOAD_DATASET3",
+      "target" : "JOIN2"
+    } ],
+    "hiddenColumns" : [ ]
+  },
+  "runMode" : "full"
+}

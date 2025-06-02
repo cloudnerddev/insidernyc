@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Frequent_Flyer_Numbers</fullName>
+    <columns>NAME</columns>
+    <columns>Airline__c</columns>
+    <columns>Client_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Frequent Flyer Numbers</label>
+</ListView>

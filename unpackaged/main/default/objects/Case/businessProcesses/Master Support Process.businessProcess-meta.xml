@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Master Support Process</fullName>
+    <description>Support Process for Master Cases</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Beyond Control</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Cancelled</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Didn%27t Get</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>House</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>New</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>No Show</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

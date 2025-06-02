@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_97372515</developerName>
+        <masterLabel>Dining Reservations vs Other</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Case.Record_Type_Name__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Amenity Order</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Appointment/Service Booking</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Car Rental</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Car Service</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Charter</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Errand</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Event Booking</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Event Tickets</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Flight Booking</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Floral Booking</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>General Initial Request</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Hotel Booking</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>House</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>House/Villa Booking</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Messenger Service</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>New</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Nightclub/Lounge/Drinks Reservation</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Package Log</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Research/Suggestions</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Tour Booking</sourceValue>
+            </sourceValues>
+            <value>Other Types</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Dining Reservation</sourceValue>
+            </sourceValues>
+            <value>Dining Reservations</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Travel Planning/Trip Booking</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Travel Planning</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Train Booking</sourceValue>
+            </sourceValues>
+            <value>Other Types Two</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumnStacked</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>ACCOUNT.NAME</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <secondaryGroupingColumn>BucketField_97372515</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>ACCOUNT.TYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Insider Client</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Reference_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>3/1/2020</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATUS</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed,No Show,Beyond Control</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Reference_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Client,Active</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Month</dateGranularity>
+        <field>Case.Reference_Date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_97372515</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Clients using dining vs other services</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dynamic_Subject__c</fullName>
+    <externalId>false</externalId>
+    <formula>Record_Type_Name__c +IF( ISBLANK(Vendor__r.Name), '', ' | '+ Vendor__r.Name )+ IF(of_Nights__c &gt; 0, ' | '+   TEXT(of_Nights__c ) + ' Nights', '')</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Dynamic Subject</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

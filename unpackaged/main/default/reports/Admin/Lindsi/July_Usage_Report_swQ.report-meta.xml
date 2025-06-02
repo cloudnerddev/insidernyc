@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Cases.Time_Logs__r$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$Subject</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Cases.Time_Logs__r$Billable_Time__c</field>
+    </columns>
+    <columns>
+        <field>Account.Cases.Time_Logs__r$Comments__c</field>
+    </columns>
+    <columns>
+        <field>Account.Cases.Time_Logs__r$Date_Logged__c</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$Special_Requests_Notes__c</field>
+    </columns>
+    <description>July 2019 Usage Igor</description>
+    <filter>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <column>Account.Cases.Time_Logs__r$Billable_Time__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>IT Family Office</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>WorldQuant LLC</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Cases.Time_Logs__r$Contact__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>July Usage Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_without_Logbooks_and_Time_Logs__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account.Cases.Time_Logs__r$CreatedDate</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account.Cases.Time_Logs__r$Date_Logged__c</dateColumn>
+        <endDate>2019-07-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2019-07-01</startDate>
+    </timeFrameFilter>
+</Report>

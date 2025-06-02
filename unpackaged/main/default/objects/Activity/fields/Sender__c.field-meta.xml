@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sender__c</fullName>
+    <label>Sender</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Carly Walter</fullName>
+                <default>false</default>
+                <label>Carly Walter</label>
+            </value>
+            <value>
+                <fullName>Courtney Sider</fullName>
+                <default>false</default>
+                <label>Courtney Sider</label>
+            </value>
+            <value>
+                <fullName>Drew Kohl</fullName>
+                <default>false</default>
+                <label>Drew Kohl</label>
+            </value>
+            <value>
+                <fullName>Emma Muller</fullName>
+                <default>false</default>
+                <label>Emma Muller</label>
+            </value>
+            <value>
+                <fullName>Jaime Eisenberg</fullName>
+                <default>false</default>
+                <label>Jaime Eisenberg</label>
+            </value>
+            <value>
+                <fullName>Jill Diedrich</fullName>
+                <default>false</default>
+                <label>Jill Diedrich</label>
+            </value>
+            <value>
+                <fullName>Katie Couri</fullName>
+                <default>false</default>
+                <label>Katie Couri</label>
+            </value>
+            <value>
+                <fullName>Lilly Wilbanks</fullName>
+                <default>false</default>
+                <label>Lilly Wilbanks</label>
+            </value>
+            <value>
+                <fullName>Lindsi Shine</fullName>
+                <default>false</default>
+                <label>Lindsi Shine</label>
+            </value>
+            <value>
+                <fullName>Melinda Erickson</fullName>
+                <default>false</default>
+                <label>Melinda Erickson</label>
+            </value>
+            <value>
+                <fullName>Sarah Tredwell</fullName>
+                <default>false</default>
+                <label>Sarah Tredwell</label>
+            </value>
+            <value>
+                <fullName>Daniela Nashawaty</fullName>
+                <default>false</default>
+                <label>Daniela Nashawaty</label>
+            </value>
+            <value>
+                <fullName>Jordyn Bloom</fullName>
+                <default>false</default>
+                <label>Jordyn Bloom</label>
+            </value>
+            <value>
+                <fullName>Gia Scaduto</fullName>
+                <default>false</default>
+                <label>Gia Scaduto</label>
+            </value>
+            <value>
+                <fullName>Sarah Magrini</fullName>
+                <default>false</default>
+                <label>Sarah Magrini</label>
+            </value>
+            <value>
+                <fullName>Samantha Silverman</fullName>
+                <default>false</default>
+                <label>Samantha Silverman</label>
+            </value>
+            <value>
+                <fullName>Jordan Story</fullName>
+                <default>false</default>
+                <label>Jordan Story</label>
+            </value>
+            <value>
+                <fullName>Yana Romanova</fullName>
+                <default>false</default>
+                <label>Yana Romanova</label>
+            </value>
+            <value>
+                <fullName>Natalie Biedron</fullName>
+                <default>false</default>
+                <label>Natalie Biedron</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

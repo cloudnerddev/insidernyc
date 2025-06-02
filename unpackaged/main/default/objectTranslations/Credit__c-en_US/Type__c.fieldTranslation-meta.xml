@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Cash Value</masterLabel>
+            <translation><!-- Cash Value --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit</masterLabel>
+            <translation><!-- Credit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discount</masterLabel>
+            <translation><!-- Discount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Free Upgrade</masterLabel>
+            <translation><!-- Free Upgrade --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Voucher</masterLabel>
+            <translation><!-- Voucher --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

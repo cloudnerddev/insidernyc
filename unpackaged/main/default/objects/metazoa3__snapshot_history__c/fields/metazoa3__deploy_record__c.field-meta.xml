@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>metazoa3__deploy_record__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <label>Deployment Record</label>
+    <referenceTo>metazoa3__snapshot_push__c</referenceTo>
+    <relationshipLabel>Snapshot Histories</relationshipLabel>
+    <relationshipName>Snapshot_Histories</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

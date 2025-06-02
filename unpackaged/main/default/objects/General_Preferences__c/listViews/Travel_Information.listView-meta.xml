@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Travel_Information</fullName>
+    <columns>NAME</columns>
+    <columns>Preferred_Means_of_Air_Travel__c</columns>
+    <columns>Preferred_Seating_Class__c</columns>
+    <columns>Airline_Seat_Preference__c</columns>
+    <columns>Notes_Summary__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>General_Preferences__c.Airline_and_Flight_Preferences</value>
+    </filters>
+    <label>Travel Information</label>
+</ListView>

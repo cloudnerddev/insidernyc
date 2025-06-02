@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Method of Reimbursement --></label>
+        <name>Method_of_Reimbursement__c</name>
+        <picklistValues>
+            <masterLabel>Check</masterLabel>
+            <translation><!-- Check --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lindsi Cash</masterLabel>
+            <translation><!-- Lindsi Cash --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PayPal</masterLabel>
+            <translation><!-- PayPal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Petty Cash</masterLabel>
+            <translation><!-- Petty Cash --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Venmo</masterLabel>
+            <translation><!-- Venmo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zelle</masterLabel>
+            <translation><!-- Zelle --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

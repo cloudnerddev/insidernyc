@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Grease_Facetime_Trial__c</fullName>
+    <deleteConstraint>Cascade</deleteConstraint>
+    <label>Grease/Facetime/Trial</label>
+    <referenceTo>Grease__c</referenceTo>
+    <relationshipLabel>Team Members Attended</relationshipLabel>
+    <relationshipName>Team_Members_Attended</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

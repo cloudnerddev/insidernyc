@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Case$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Case$Vendor__c</field>
+    </columns>
+    <columns>
+        <field>Case$Person_Using__c</field>
+    </columns>
+    <columns>
+        <field>Case$Reference_Date__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Case$Person_Using__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Stephen Evans</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$RecordType</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Case.Hotel_Booking</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case$Vendor__c.BillingCountry</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Homework 3.26.20</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Logbooks_with_all_Vendor_Details__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Case$Reference_Date__c</dateColumn>
+        <interval>INTERVAL_PREVY</interval>
+    </timeFrameFilter>
+</Report>

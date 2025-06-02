@@ -1,0 +1,5 @@
+Hi!
+
+Please follow up with this client to let them know that their credit of ${!Credit__c.Credit_Value__c} is set to expire on {!Credit__c.Expiration_Date__c}.
+
+The expiring credit can be found here: {!Credit__c.Link}

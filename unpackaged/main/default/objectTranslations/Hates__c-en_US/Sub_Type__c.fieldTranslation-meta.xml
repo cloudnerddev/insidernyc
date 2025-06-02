@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Sub-Type --></label>
+        <name>Sub_Type__c</name>
+        <picklistValues>
+            <masterLabel>Amarone</masterLabel>
+            <translation><!-- Amarone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Asian Fusion</masterLabel>
+            <translation><!-- Asian Fusion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BBQ</masterLabel>
+            <translation><!-- BBQ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bagels</masterLabel>
+            <translation><!-- Bagels --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Barbaresco</masterLabel>
+            <translation><!-- Barbaresco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Barlool</masterLabel>
+            <translation><!-- Barlool --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Barolo</masterLabel>
+            <translation><!-- Barolo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beaujolais</masterLabel>
+            <translation><!-- Beaujolais --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beaujolais Nouveau</masterLabel>
+            <translation><!-- Beaujolais Nouveau --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bordeaux</masterLabel>
+            <translation><!-- Bordeaux --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bourbon</masterLabel>
+            <translation><!-- Bourbon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Burgers</masterLabel>
+            <translation><!-- Burgers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Burgundy</masterLabel>
+            <translation><!-- Burgundy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cabernet Franc</masterLabel>
+            <translation><!-- Cabernet Franc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cabernet Sauvignon</masterLabel>
+            <translation><!-- Cabernet Sauvignon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Champagne</masterLabel>
+            <translation><!-- Champagne --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chardonnay</masterLabel>
+            <translation><!-- Chardonnay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chenin Blanc</masterLabel>
+            <translation><!-- Chenin Blanc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chianti</masterLabel>
+            <translation><!-- Chianti --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chinese</masterLabel>
+            <translation><!-- Chinese --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cognac</masterLabel>
+            <translation><!-- Cognac --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cuban</masterLabel>
+            <translation><!-- Cuban --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dim Sum</masterLabel>
+            <translation><!-- Dim Sum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ethiopian</masterLabel>
+            <translation><!-- Ethiopian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Falanghina</masterLabel>
+            <translation><!-- Falanghina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fancy French</masterLabel>
+            <translation><!-- Fancy French --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Farm to Table</masterLabel>
+            <translation><!-- Farm to Table --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>French Bistro</masterLabel>
+            <translation><!-- French Bistro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fried Chicken</masterLabel>
+            <translation><!-- Fried Chicken --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gamay</masterLabel>
+            <translation><!-- Gamay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gastropub</masterLabel>
+            <translation><!-- Gastropub --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>German</masterLabel>
+            <translation><!-- German --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gewurtztraminer</masterLabel>
+            <translation><!-- Gewurtztraminer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gin</masterLabel>
+            <translation><!-- Gin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greek</masterLabel>
+            <translation><!-- Greek --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grenache</masterLabel>
+            <translation><!-- Grenache --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gruner</masterLabel>
+            <translation><!-- Gruner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ice Wine</masterLabel>
+            <translation><!-- Ice Wine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indian</masterLabel>
+            <translation><!-- Indian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Italian</masterLabel>
+            <translation><!-- Italian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Japanese</masterLabel>
+            <translation><!-- Japanese --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Korean</masterLabel>
+            <translation><!-- Korean --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kosher</masterLabel>
+            <translation><!-- Kosher --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Latin American</masterLabel>
+            <translation><!-- Latin American --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Malbec</masterLabel>
+            <translation><!-- Malbec --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mediterranean</masterLabel>
+            <translation><!-- Mediterranean --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merlot</masterLabel>
+            <translation><!-- Merlot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mexican</masterLabel>
+            <translation><!-- Mexican --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mezcal</masterLabel>
+            <translation><!-- Mezcal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Middle Eastern</masterLabel>
+            <translation><!-- Middle Eastern --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moschofilero</masterLabel>
+            <translation><!-- Moschofilero --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nebbiolo</masterLabel>
+            <translation><!-- Nebbiolo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Omakase</masterLabel>
+            <translation><!-- Omakase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peruvian</masterLabel>
+            <translation><!-- Peruvian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Petite Sirah</masterLabel>
+            <translation><!-- Petite Sirah --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pinot Grigio</masterLabel>
+            <translation><!-- Pinot Grigio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pinot Gris</masterLabel>
+            <translation><!-- Pinot Gris --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pinot Noir</masterLabel>
+            <translation><!-- Pinot Noir --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pizza</masterLabel>
+            <translation><!-- Pizza --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prosecco</masterLabel>
+            <translation><!-- Prosecco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ramen</masterLabel>
+            <translation><!-- Ramen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Riesling</masterLabel>
+            <translation><!-- Riesling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rioja</masterLabel>
+            <translation><!-- Rioja --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rioja Blanco</masterLabel>
+            <translation><!-- Rioja Blanco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rose</masterLabel>
+            <translation><!-- Rose --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rum</masterLabel>
+            <translation><!-- Rum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sancerre</masterLabel>
+            <translation><!-- Sancerre --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sangiovese</masterLabel>
+            <translation><!-- Sangiovese --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sauternes</masterLabel>
+            <translation><!-- Sauternes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sauvignon Blanc</masterLabel>
+            <translation><!-- Sauvignon Blanc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seafood</masterLabel>
+            <translation><!-- Seafood --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Semillon</masterLabel>
+            <translation><!-- Semillon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shiraz</masterLabel>
+            <translation><!-- Shiraz --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Soul Food</masterLabel>
+            <translation><!-- Soul Food --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spanish</masterLabel>
+            <translation><!-- Spanish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Steakhouse</masterLabel>
+            <translation><!-- Steakhouse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Super Tuscan</masterLabel>
+            <translation><!-- Super Tuscan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sushi</masterLabel>
+            <translation><!-- Sushi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Syrah</masterLabel>
+            <translation><!-- Syrah --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tapas</masterLabel>
+            <translation><!-- Tapas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tequila</masterLabel>
+            <translation><!-- Tequila --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Torrontes</masterLabel>
+            <translation><!-- Torrontes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vegan</masterLabel>
+            <translation><!-- Vegan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vegetarian</masterLabel>
+            <translation><!-- Vegetarian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Verdejo</masterLabel>
+            <translation><!-- Verdejo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vermentino</masterLabel>
+            <translation><!-- Vermentino --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vietnamese</masterLabel>
+            <translation><!-- Vietnamese --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Viognier</masterLabel>
+            <translation><!-- Viognier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vodka</masterLabel>
+            <translation><!-- Vodka --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Whiskey</masterLabel>
+            <translation><!-- Whiskey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zinfandel</masterLabel>
+            <translation><!-- Zinfandel --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

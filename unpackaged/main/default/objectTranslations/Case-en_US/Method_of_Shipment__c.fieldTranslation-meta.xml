@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Method of Shipment --></label>
+        <name>Method_of_Shipment__c</name>
+        <picklistValues>
+            <masterLabel>DHL</masterLabel>
+            <translation><!-- DHL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FedEx</masterLabel>
+            <translation><!-- FedEx --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insider Team Member</masterLabel>
+            <translation><!-- Insider Team Member --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Messenger</masterLabel>
+            <translation><!-- Messenger --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS</masterLabel>
+            <translation><!-- UPS --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

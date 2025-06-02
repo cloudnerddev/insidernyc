@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Team Member Name - DNU --></label>
+        <name>Team_Member_Name__c</name>
+        <picklistValues>
+            <masterLabel>Carly Walter</masterLabel>
+            <translation><!-- Carly Walter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chase Alifeld</masterLabel>
+            <translation><!-- Chase Alifeld --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Courtney Sider</masterLabel>
+            <translation><!-- Courtney Sider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hannah Udren</masterLabel>
+            <translation><!-- Hannah Udren --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Heather Ramin</masterLabel>
+            <translation><!-- Heather Ramin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jenna Thompson</masterLabel>
+            <translation><!-- Jenna Thompson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Katie Couri</masterLabel>
+            <translation><!-- Katie Couri --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kristen Doghramji</masterLabel>
+            <translation><!-- Kristen Doghramji --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lena Phillips</masterLabel>
+            <translation><!-- Lena Phillips --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lilly Wilbanks</masterLabel>
+            <translation><!-- Lilly Wilbanks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lindsi Shine</masterLabel>
+            <translation><!-- Lindsi Shine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nora Demilta</masterLabel>
+            <translation><!-- Nora Demilta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sarah Tredwell</masterLabel>
+            <translation><!-- Sarah Tredwell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sofia Evangelista</masterLabel>
+            <translation><!-- Sofia Evangelista --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

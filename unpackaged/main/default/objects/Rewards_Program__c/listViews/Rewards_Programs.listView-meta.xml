@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rewards_Programs</fullName>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>Vendor_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>Hotel</value>
+    </filters>
+    <label>Hotel Rewards Programs</label>
+</ListView>

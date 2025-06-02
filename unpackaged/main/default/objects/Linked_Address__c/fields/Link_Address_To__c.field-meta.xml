@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Link_Address_To__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is just used to initially do the cloning</description>
+    <label>Link Address To</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Linked Addresses</relationshipLabel>
+    <relationshipName>Linked_Addresses</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

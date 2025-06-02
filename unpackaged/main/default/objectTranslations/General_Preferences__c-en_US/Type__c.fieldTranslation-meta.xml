@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Business Breakfast</masterLabel>
+            <translation><!-- Business Breakfast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Dinner</masterLabel>
+            <translation><!-- Business Dinner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Lunch</masterLabel>
+            <translation><!-- Business Lunch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clothing Style</masterLabel>
+            <translation><!-- Clothing Style --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cocktail</masterLabel>
+            <translation><!-- Cocktail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cuisine</masterLabel>
+            <translation><!-- Cuisine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dermatologist</masterLabel>
+            <translation><!-- Dermatologist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Favorite Restaurant</masterLabel>
+            <translation><!-- Favorite Restaurant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food</masterLabel>
+            <translation><!-- Food --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gym</masterLabel>
+            <translation><!-- Gym --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Interests/Hobbies</masterLabel>
+            <translation><!-- Interests/Hobbies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nutritionist</masterLabel>
+            <translation><!-- Nutritionist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PT/Acupuncture</masterLabel>
+            <translation><!-- PT/Acupuncture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal Trainer</masterLabel>
+            <translation><!-- Personal Trainer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quiet Dinner</masterLabel>
+            <translation><!-- Quiet Dinner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Restaurant Client Doesn't Like</masterLabel>
+            <translation><!-- Restaurant Client Doesn&apos;t Like --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Restaurant Investor In</masterLabel>
+            <translation><!-- Restaurant Investor In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special Occasion</masterLabel>
+            <translation><!-- Special Occasion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Studio/Class</masterLabel>
+            <translation><!-- Studio/Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trendy/Fun Scene</masterLabel>
+            <translation><!-- Trendy/Fun Scene --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Venue for Facials</masterLabel>
+            <translation><!-- Venue for Facials --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Venue for Haircuts</masterLabel>
+            <translation><!-- Venue for Haircuts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Venue for Massages</masterLabel>
+            <translation><!-- Venue for Massages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekend Brunch</masterLabel>
+            <translation><!-- Weekend Brunch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wine - RED</masterLabel>
+            <translation><!-- Wine - RED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wine - WHITE</masterLabel>
+            <translation><!-- Wine - WHITE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wine - other</masterLabel>
+            <translation><!-- Wine - other --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

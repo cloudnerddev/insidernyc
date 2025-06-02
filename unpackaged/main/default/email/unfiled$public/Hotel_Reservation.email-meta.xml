@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Insider</letterhead>
+    <name>HTMLHotel Reservation</name>
+    <style>freeForm</style>
+    <subject>Hotel Reservation Confirmation</subject>
+    <textOnly>Hi,
+
+Please see below for your confirmation:
+
+Check-In Date &amp; Time: {!Case.Check_In_Date__c} {!Case.Check_In_Time__c}
+Check-Out Date &amp; Time: {!Case.Check_Out_Date__c} {!Case.Check_Out_Time__c}
+
+Room Rate per Night: {!Case.Room_Rate__c}
+
+Insider Amenities Include: {!Case.Insider_Amenities_Include__c}
+Membership Rewards #: {!Case.Membership_Number__c}
+
+Special Request: {!Case.Special_Requests_Notes__c}
+
+Should you need to alter or cancel your reservation after business hours, kindly notify the INsider Team at 800.840.1143 or 24@insidernyc.com.
+
+Please note that any no show of a reservation will incur a fee.
+
+Thank You!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

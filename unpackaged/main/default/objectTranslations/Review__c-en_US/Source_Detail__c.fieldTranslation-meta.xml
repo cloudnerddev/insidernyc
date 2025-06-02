@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- eg. Zagat, Trip Advisor, Insider experience. --></help>
+        <label><!-- Source Detail --></label>
+        <name>Source_Detail__c</name>
+    </CustomFieldTranslation>

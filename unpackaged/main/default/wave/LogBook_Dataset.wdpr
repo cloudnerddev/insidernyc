@@ -1,0 +1,1214 @@
+{
+  "version" : "60.0",
+  "nodes" : {
+    "LOAD_DATASET0" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "IsDeleted", "MasterRecordId", "CaseNumber", "ContactId", "AccountId", "ParentId", "SuppliedName", "SuppliedPhone", "SuppliedCompany", "Type", "RecordTypeId", "Status", "Origin", "Language", "Subject", "IsClosed", "ClosedDate", "IsEscalated", "OwnerId", "CreatedDate", "CreatedById", "LastModifiedDate", "LastModifiedById", "SystemModstamp", "ContactPhone", "ContactMobile", "ContactEmail", "ContactFax", "Comments", "LastViewedDate", "LastReferencedDate", "Account_Type__c", "Guest_Information_Special_Instructions__c", "Next_Steps__c", "Departure_FBO_Phone_Number_Formatted__c", "Table_Minimum_excluding_tax_gratuity__c", "Confirmed_With__c", "Reconfirmed_With__c", "DateofBooking__c", "Time_of_Booking__c", "Requested_Booking_Date__c", "Requested_Booking_Time__c", "Number_in_Party__c", "Vendor__c", "Coastline_Invoice_Number__c", "Hierarchical_Time_Logged__c", "Case_Time_Logged__c", "Pickup_Day__c", "Research__c", "Reconfirmation_Date_for_Email__c", "Confirmation_Date__c", "Confirmation_Date_for_Email__c", "Male_Female_Ratio__c", "Recipient_s_Phone_Formatted__c", "Reference_Date__c", "Pickup_Location_Phone_Formatted__c", "Vendor_Address__c", "Vendor_Phone__c", "Vendor_Cross_Streets__c", "Occasion__c", "Recipient__c", "Budget__c", "Description__c", "Seating_Chart__c", "Insider_Team__c", "Insider_Comments__c", "Flight_Number__c", "Logbook_Insider_Team_Is_My_Team__c", "Section__c", "Row__c", "Date_of_Departure__c", "Departure_Time__c", "Flow_Check_In_Date_Time__c", "Departure_City__c", "Departure_Airport__c", "Departure_Terminal__c", "Destination_City__c", "Destination_Airport__c", "Destination_Terminal__c", "Duration__c", "Flow_Check_Out_Date_Time__c", "Special_Occasion_With__c", "Cancellation_Date_and_Time__c", "Flow_Formula_1__c", "Cancellation_Notes__c", "Requested_By_Someone_Else__c", "Check_In_Time__c", "Check_Out_Time__c", "of_Nights__c", "Room_Type__c", "Room_Rate__c", "Date_of_Departure2__c", "Flow_Booking_Date_Time__c", "Flow_Departure_Date_Time__c", "Flow_Destination_Arrival_Date_Time__c", "Flow_Drop_Off_Date_Time__c", "Flow_Pick_Up_Date_Time__c", "Destination_City2__c", "Logbook_Bucket__c", "Logbook_Flag__c", "House_Status__c", "Owner__c", "Ticket_Status__c", "Using_a_House__c", "Event_Venue_Address__c", "Method_of_Reimbursement__c", "Insider_Gift_Wrapping__c", "Commissionable__c", "Time_Log_Type__c", "Total_Billable_Expenses__c", "Seat__c", "Total_Price__c", "Logbook_State__c", "Cancellation_Type__c", "Ticket__c", "Payment_Method__c", "Source_for_booking__c", "Price__c", "Recipient_Name__c", "Recipient_Phone__c", "Recipient_Address__c", "Note_Card__c", "Method_of_Shipment__c", "Tracking_Information__c", "Return_Policy__c", "Insider_Commission__c", "Pickup_Date__c", "Pickup_Time__c", "Drop_off_Date__c", "Drop_off_Time__c", "Price_per_Day__c", "Back_Up__c", "Cancellation_Policy__c", "Special_Requests_Notes__c", "Cancellation_Policy_Type__c", "Reconfirmation_Date__c", "Membership_Status__c", "Membership_Number__c", "Getting_Delivered_to_Insider__c", "Number_of_people__c", "Airline_Flight_Origin_City__c", "Wait_Return__c", "Payment_Details__c", "PreventClone__c", "Menu_Pricing_Minimum__c", "Villa_House_Details__c", "House_or_Villa_Name__c", "Confirmed_With_Contact__c", "Train_Line_Number__c", "Summary__c", "Delivery_Date__c", "Refundable__c", "Pickup_Location__c", "Drop_Off_Location__c", "Section_For_Email__c", "Row_for_Email__c", "Rewards_Program_Phone__c", "Destination_Arrival_Date__c", "Destination_Arrival_Time__c", "Monthly_Billing__c", "Drop_Off_Address__c", "ThreadId__c", "Guest_Cell__c", "Name_of_Boat_Yacht__c", "Person_Using__c", "Departure_FBO__c", "Type_of_Vessel__c", "Tail_Number__c", "Number_of_Passengers__c", "Original_Clone__c", "Details_and_weight_of_luggage__c", "Itinerary_Stops__c", "Catering_Details__c", "Departure_Location__c", "Arrival_Location__c", "Flight_Information__c", "Traveler_Information__c", "Arrival_FBO__c", "Trip_Information__c", "Override_Multiplier_Reason__c", "Within_30_Minutes_of_Requested_Time__c", "Dress_Code__c", "Delivery_Location__c", "Transportation_Type__c", "Contact_Person_at_Delivery__c", "Contact_on_Vendor__c", "Event__c", "Transportation_Vendor__c", "Total_Transportation_Price__c", "Number_of_Tickets__c", "Seat_Location__c", "Invoice_or_Confirmation_Number__c", "Transportation_Note__c", "Commission_Notes__c", "Notes_Pickup_Instructions__c", "Price_per_Ticket__c", "Commission_Amount_Received__c", "Event_Type__c", "Date__c", "On_Site_Contact__c", "Commission_Amount_Outstanding__c", "Pickup_Contact__c", "Delivery_Location_Account__c", "Delivery_Address_Account__c", "Special_Occasion_With_2__c", "Delivery_Instructions__c", "Address__c", "Cancellation_Policy_rich__c", "Delivery_Instructions_rich__c", "Description_rich__c", "Dynamic_Subject__c", "Insider_Amenities_Include__c", "Flight_information_rich__c", "Guest_Information_Special_rich__c", "House_or_villa_name_rich__c", "VIP_Client_Insider_Welcome_Amenity__c", "Insider_amenities_include_rich__c", "Tee_Time__c", "Club_Member__c", "Instructions_rich__c", "Items_Ordered_Type_of_Arrangements_rich__c", "Itinerary_Header__c", "Description_of_Arrangement__c", "Price_per_Person__c", "Check_In_Date__c", "Check_Out_Date__c", "Itinerary_Image__c", "Cancelled_With_TEXT__c", "Source_for_Booking_TEXT__c", "Itinerary_Middle__c", "Itinerary__c", "Itinerary_footer__c", "Location_Note_rich__c", "Source_for_Booking_Resto__c", "Menu_Pricing_Minimum_rich__c", "Date_Commission_Paid__c", "Commission_Type__c", "Number_of_Days_Rental__c", "Check_Memo__c", "Occasion_reason_rich__c", "Package_pass_details_rich__c", "Ground_Transportation_Details__c", "Departure_FBO_Phone_Number__c", "Person_Using_Name__c", "Refundable_Non_Refundable_rich__c", "Research_rich__c", "Rental_Address__c", "Vendor_Website__c", "Return_policy_rich__c", "SortTime__c", "Special_Requests_Notes_rich__c", "Reason__c", "Table_Minimum_rich__c", "Employee_Due_Commission__c", "Items_Being_Delivered__c", "Reference_Given_to_Messenger_Service__c", "Delivery_Method__c", "Charged__c", "Transaction_Date__c", "Traveler_information_rich__c", "Trip_information_rich__c", "Charge_Type__c", "Date_Entered_in_Quickbooks__c", "Credit_Card__c", "If_Marked_Up_Real_Price__c", "Villa_house_details_rich__c", "Enter_Time__c", "Time_Description__c", "Date_of_Return__c", "X24_hour_contact_rich__c", "Update__c", "Employee_Commission_Payment_Method__c", "Employee_Foreign_Currency__c", "Meeting_Location__c", "Meeting_Address_and_Cross_Streets__c", "Commission_Vendor__c", "Special_Occasion__c", "Record_Type_Name__c", "Recalc__c", "Number_of_Gifts__c", "Day_of_Week_Date__c", "YOLO__c", "Currency__c", "Total_Expenses__c", "Pick_Up_Location_and_Address__c", "Delivery_Location_and_Address_text__c", "Pickup_Location_Phone__c", "Delivery_Phone__c", "Recipient_s_Address__c", "Recipient_s_Phone__c", "Appointment_Address__c", "Date_Commission_Due__c", "Commission_Details__c", "Other_Currency__c", "Broker__c", "Final_Billable__c", "Pick_Up__c", "Expected_Commission__c", "Tracking__c", "Reference__c", "Multiplier_Reason__c", "Refund__c", "Amount_of_Refund__c", "Date_of_Refund__c", "Refund_Notes__c", "Client_Requires_Refund__c", "Refund_Received__c", "Client_Refunded__c", "Client_Refund_Date__c", "Multiplier__c", "Resy_Language__c", "Time_real__c", "Total_Room_Price__c", "Menu_Details__c", "Vendor_Phone_Formatted__c", "Date_and_Time__c", "Chargeback_Credit_Card__c", "DateTimeDST__c", "Day_of_Departure__c", "Day_of_Destination_Arrival__c", "Delivery_Day__c", "Comm_Ran__c", "Drop_Off_Day__c", "RT_Choice__c", "Day_of_Booking__c", "Check_In_Day__c", "Check_Out_Day__c", "Count__c", "ReferenceDateTime__c", "Commission_Entered__c", "Foreign_Currency_Amount__c", "Time__c", "VendorComm__c", "Requested_Time__c", "Type_of_Vehicle__c", "Amount_of_Check__c", "Beneficiary_Account_Name__c", "Beneficiary_Account_Number__c", "Beneficiary_Address__c", "Beneficiary_Bank_Address__c", "Beneficiary_Bank_Name__c", "Beneficiary_Routing_Number__c", "Beneficiary_SWIFT_Code__c", "Date_Check_is_Needed__c", "Date_Check_was_Sent__c", "Do_Not_Charge__c", "Destination_Location_and_Address__c", "Expected_Date_of_Receipt__c", "Foreign_Currency_Amount_Commissions__c", "Give_Check_To_Insider_Employee__c", "Insider_Commission_Markup_Due_This_Mnt__c", "Invoice_Description__c", "Invoice__c", "Items_Ordered__c", "Notes_on_How_Check_was_Distributed__c", "Destination_Phone__c", "Passenger_Cell__c", "Internal_ETA__c", "Venue_Address__c", "Venue_Cross_Streets__c", "Venue__c", "Write_Check_To_Vendor_Name__c", "Date_Text__c", "Date_Time_Need_to_Cancel_By__c", "Departure_Location_and_Address__c", "Departure_Phone__c", "Deposit_Due_Amounts__c", "Estimated_Price__c", "Hotel_Time__c", "Holiday__c", "House_Outcome__c", "House_Task_Other__c", "House_Task__c", "Method_of_Commission_Payment__c", "Name_of_Travelers__c", "Request_Details__c", "Trip_Insurance__c", "Time_Called__c", "Estimated_Time_of_Delivery__c", "X24_Hour_Contact__c", "Order_Confirmation__c", "Review_Date__c", "Reviewed_By__c", "Team_Member_Name_for_Reimbursement__c", "Vendor_Suggestion__c", "Employee_Comm_Amt_To_Be_Paid__c", "Foreign_Amt_Emp_Comm_Be_Paid__c", "Employee_Paid_Date__c" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "Case",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "Case"
+        },
+        "sampleDetails" : {
+          "type" : "TopN"
+        }
+      }
+    },
+    "OUTPUT0" : {
+      "action" : "save",
+      "sources" : [ "LOAD_DATASET0" ],
+      "parameters" : {
+        "fields" : [ ],
+        "dataset" : {
+          "type" : "analyticsDataset",
+          "label" : "LogBook Dataset",
+          "name" : "LogBook_Dataset"
+        }
+      }
+    }
+  },
+  "ui" : {
+    "nodes" : {
+      "LOAD_DATASET0" : {
+        "label" : "Case",
+        "type" : "LOAD_DATASET",
+        "top" : 112,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "OUTPUT0" : {
+        "label" : "Output 0",
+        "type" : "OUTPUT",
+        "top" : 112,
+        "left" : 252
+      }
+    },
+    "connectors" : [ {
+      "source" : "LOAD_DATASET0",
+      "target" : "OUTPUT0"
+    } ],
+    "hiddenColumns" : [ {
+      "fieldName" : "Logbook_Flag__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "House_Status__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Owner__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Ticket_Status__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Using_a_House__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Event_Venue_Address__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Method_of_Reimbursement__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Insider_Gift_Wrapping__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Commissionable__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Time_Log_Type__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Total_Billable_Expenses__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Seat__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Total_Price__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Logbook_State__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Cancellation_Type__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Ticket__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Payment_Method__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Source_for_booking__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Price__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Recipient_Name__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Recipient_Phone__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Recipient_Address__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Note_Card__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Method_of_Shipment__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Tracking_Information__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Return_Policy__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Insider_Commission__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Pickup_Date__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Pickup_Time__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Drop_off_Date__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Drop_off_Time__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Price_per_Day__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Back_Up__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Cancellation_Policy__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Special_Requests_Notes__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Cancellation_Policy_Type__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Reconfirmation_Date__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Membership_Status__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Membership_Number__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Getting_Delivered_to_Insider__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Number_of_people__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Airline_Flight_Origin_City__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Wait_Return__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Payment_Details__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "PreventClone__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Menu_Pricing_Minimum__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Villa_House_Details__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "House_or_Villa_Name__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Confirmed_With_Contact__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Train_Line_Number__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Summary__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Delivery_Date__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Refundable__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Pickup_Location__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Drop_Off_Location__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Section_For_Email__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Row_for_Email__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Rewards_Program_Phone__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Destination_Arrival_Date__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Destination_Arrival_Time__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Monthly_Billing__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Drop_Off_Address__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "ThreadId__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Guest_Cell__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Name_of_Boat_Yacht__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Person_Using__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Departure_FBO__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Type_of_Vessel__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Tail_Number__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Number_of_Passengers__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Original_Clone__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Details_and_weight_of_luggage__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Itinerary_Stops__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Catering_Details__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Departure_Location__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Arrival_Location__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Flight_Information__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Traveler_Information__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Arrival_FBO__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Trip_Information__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Override_Multiplier_Reason__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Within_30_Minutes_of_Requested_Time__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Dress_Code__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Delivery_Location__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Transportation_Type__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Contact_Person_at_Delivery__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Contact_on_Vendor__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Event__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Transportation_Vendor__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Total_Transportation_Price__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Number_of_Tickets__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Seat_Location__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Invoice_or_Confirmation_Number__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Transportation_Note__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Commission_Notes__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Notes_Pickup_Instructions__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Price_per_Ticket__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Commission_Amount_Received__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Event_Type__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Date__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "On_Site_Contact__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Commission_Amount_Outstanding__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Pickup_Contact__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Delivery_Location_Account__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Delivery_Address_Account__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Special_Occasion_With_2__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Delivery_Instructions__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Address__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Cancellation_Policy_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Delivery_Instructions_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Description_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Dynamic_Subject__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Insider_Amenities_Include__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Flight_information_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Guest_Information_Special_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "House_or_villa_name_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "VIP_Client_Insider_Welcome_Amenity__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Insider_amenities_include_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Tee_Time__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Club_Member__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Instructions_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Items_Ordered_Type_of_Arrangements_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Itinerary_Header__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Description_of_Arrangement__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Price_per_Person__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Check_In_Date__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Check_Out_Date__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Itinerary_Image__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Cancelled_With_TEXT__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Source_for_Booking_TEXT__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Itinerary_Middle__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Itinerary__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Itinerary_footer__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Location_Note_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Source_for_Booking_Resto__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Menu_Pricing_Minimum_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Date_Commission_Paid__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Commission_Type__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Number_of_Days_Rental__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Check_Memo__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Occasion_reason_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Package_pass_details_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Ground_Transportation_Details__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Departure_FBO_Phone_Number__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Person_Using_Name__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Refundable_Non_Refundable_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Research_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Rental_Address__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Vendor_Website__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Return_policy_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "SortTime__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Special_Requests_Notes_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Reason__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Table_Minimum_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Employee_Due_Commission__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Items_Being_Delivered__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Reference_Given_to_Messenger_Service__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Delivery_Method__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Charged__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Transaction_Date__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Traveler_information_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Trip_information_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Charge_Type__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Date_Entered_in_Quickbooks__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Credit_Card__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "If_Marked_Up_Real_Price__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Villa_house_details_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Enter_Time__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Time_Description__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Date_of_Return__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "X24_hour_contact_rich__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Update__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Employee_Commission_Payment_Method__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Employee_Foreign_Currency__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Meeting_Location__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Meeting_Address_and_Cross_Streets__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Commission_Vendor__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Special_Occasion__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Record_Type_Name__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Recalc__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Number_of_Gifts__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Day_of_Week_Date__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "YOLO__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Currency__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Total_Expenses__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Pick_Up_Location_and_Address__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Delivery_Location_and_Address_text__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Pickup_Location_Phone__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Delivery_Phone__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Recipient_s_Address__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Recipient_s_Phone__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Appointment_Address__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Date_Commission_Due__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Commission_Details__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Other_Currency__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Broker__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Final_Billable__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Pick_Up__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Expected_Commission__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Tracking__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Reference__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Multiplier_Reason__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Refund__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Amount_of_Refund__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Date_of_Refund__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Refund_Notes__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Client_Requires_Refund__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Refund_Received__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Client_Refunded__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Client_Refund_Date__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Multiplier__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Resy_Language__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Time_real__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Total_Room_Price__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Menu_Details__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Vendor_Phone_Formatted__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Date_and_Time__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Chargeback_Credit_Card__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "DateTimeDST__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Day_of_Departure__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Day_of_Destination_Arrival__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Delivery_Day__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Comm_Ran__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Drop_Off_Day__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "RT_Choice__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Day_of_Booking__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Check_In_Day__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Check_Out_Day__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Count__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "ReferenceDateTime__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Commission_Entered__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Foreign_Currency_Amount__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Time__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "VendorComm__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Requested_Time__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Type_of_Vehicle__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Amount_of_Check__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Beneficiary_Account_Name__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Beneficiary_Account_Number__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Beneficiary_Address__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Beneficiary_Bank_Address__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Beneficiary_Bank_Name__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Beneficiary_Routing_Number__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Beneficiary_SWIFT_Code__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Date_Check_is_Needed__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Date_Check_was_Sent__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Do_Not_Charge__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Destination_Location_and_Address__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Expected_Date_of_Receipt__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Foreign_Currency_Amount_Commissions__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Give_Check_To_Insider_Employee__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Insider_Commission_Markup_Due_This_Mnt__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Invoice_Description__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Invoice__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Items_Ordered__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Notes_on_How_Check_was_Distributed__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Destination_Phone__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Passenger_Cell__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Internal_ETA__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Venue_Address__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Venue_Cross_Streets__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Venue__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Write_Check_To_Vendor_Name__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Date_Text__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Date_Time_Need_to_Cancel_By__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Departure_Location_and_Address__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Departure_Phone__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Deposit_Due_Amounts__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Estimated_Price__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Hotel_Time__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Holiday__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "House_Outcome__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "House_Task_Other__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "House_Task__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Method_of_Commission_Payment__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Name_of_Travelers__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Request_Details__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Trip_Insurance__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Time_Called__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Estimated_Time_of_Delivery__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "X24_Hour_Contact__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Order_Confirmation__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Review_Date__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Reviewed_By__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Team_Member_Name_for_Reimbursement__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Vendor_Suggestion__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Employee_Comm_Amt_To_Be_Paid__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Foreign_Amt_Emp_Comm_Be_Paid__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    }, {
+      "fieldName" : "Employee_Paid_Date__c",
+      "objectType" : "connectedDataset",
+      "objectName" : "SFDC_LOCAL$Case"
+    } ]
+  },
+  "runMode" : "full"
+}

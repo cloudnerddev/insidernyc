@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Populate_Guest_info_field</fullName>
+        <field>Guest_Information_Special_Instructions__c</field>
+        <formula>Vendor__r.Guest_Information_Special_Instructions__c</formula>
+        <name>Populate Guest info field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_House_Status_to_Available</fullName>
+        <field>House_Status__c</field>
+        <literalValue>Available</literalValue>
+        <name>Set House Status to Available</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stamp_Cancellation_Date_Time</fullName>
+        <field>Cancellation_Date_and_Time__c</field>
+        <formula>NOW()</formula>
+        <name>Stamp Cancellation Date/Time</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stamp_Confirmation_Date_Time</fullName>
+        <field>Confirmation_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Stamp Confirmation Date/Time</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stamp_Reonfirmation_Date_Time</fullName>
+        <field>Reconfirmation_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Stamp Reonfirmation Date/Time</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>preventCloneTrue</fullName>
+        <field>PreventClone__c</field>
+        <literalValue>1</literalValue>
+        <name>preventCloneTrue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>setTimeRealField</fullName>
+        <field>Time_real__c</field>
+        <formula>IF( 
+DateTimeDST__c = true, 
+IF(Timevalue( Date_and_Time__c )= TIMEVALUE("04:00:00.000"), NULL, TIMEVALUE(Date_and_Time__c - (4/24))), 
+IF(Timevalue( Date_and_Time__c )= TIMEVALUE("05:00:00.000"), NULL, TIMEVALUE(Date_and_Time__c - (5/24)))
+)</formula>
+        <name>setTimeRealField</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Dining - pre-populate guest info field</fullName>
+        <actions>
+            <name>Populate_Guest_info_field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Dining Reservation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.ParentId</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>House Available</fullName>
+        <actions>
+            <name>Set_House_Status_to_Available</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>House</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.House_Status__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Stamp Cancellation Date%2FTime</fullName>
+        <actions>
+            <name>Stamp_Cancellation_Date_Time</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>!ISBLANK(Cancelled_With_TEXT__c) &amp;&amp;
+ ISBLANK(Cancellation_Date_and_Time__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Stamp Confirmation Date%2FTime</fullName>
+        <actions>
+            <name>Stamp_Confirmation_Date_Time</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>!ISBLANK(Confirmed_With__c) &amp;&amp;
+ ISBLANK(Confirmation_Date__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Stamp Reconfirmation Date%2FTime</fullName>
+        <actions>
+            <name>Stamp_Reonfirmation_Date_Time</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>!ISBLANK(Reconfirmed_With__c) &amp;&amp;
+ISBLANK(Reconfirmation_Date__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>dateTimeToTime</fullName>
+        <actions>
+            <name>setTimeRealField</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISCHANGED(Date_and_Time__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

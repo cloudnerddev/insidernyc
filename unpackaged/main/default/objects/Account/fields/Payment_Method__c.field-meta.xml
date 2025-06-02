@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Method__c</fullName>
+    <encryptionScheme>None</encryptionScheme>
+    <inlineHelpText>Please only add exceptions, meaning vendor does not take AMEX or vendor will only take cash.</inlineHelpText>
+    <label>Payment Method</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

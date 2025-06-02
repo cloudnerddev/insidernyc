@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ticket Option</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Ticket Options</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Ticket Option Layout - Package/Pass</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Package/Pass Details --></label>
+            <section>Package/Pass Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Ticket Option Layout - Standard</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Package/Pass --></label>
+        <name>Package_Pass</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Standard --></label>
+        <name>Standard</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You are not authorized to clone records --></errorMessage>
+        <name>preventClone</name>
+    </validationRules>
+</CustomObjectTranslation>

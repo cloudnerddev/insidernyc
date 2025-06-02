@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Special_Occasion_With__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Special Occasion With</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Logbooks (Special Occasion With)</relationshipLabel>
+    <relationshipName>Logbooks_Special_Occasion_With</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

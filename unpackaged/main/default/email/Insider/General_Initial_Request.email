@@ -1,0 +1,41 @@
+<messaging:emailTemplate subject="Amenity Order Confirmation" recipientType="Contact" relatedToType="Case">
+<messaging:HTMLEmailBody >
+
+<div style="background-color:#677eb0;">
+<center>
+
+<apex:image url="http://static1.squarespace.com/static/53d7f470e4b04f8fcf6fe4b8/t/59135d421b10e3b98b9c65ff/1544409204447/}" height="100"/>
+
+</center>
+</div>
+
+<span style='font-size:10.0pt;font-family:sans-serif;'> 
+<br/>
+Hi,<br/><br/>
+
+Please see below for your confirmation:<br/><br/>
+Type of Request: {!relatedTo.RecordType.Name}<br/>
+Subject: {!relatedTo.Subject}<br/>
+<apex:outputPanel rendered="{!relatedto.Account != ''}">Account Name: {!relatedto.Account.Name}<br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Contact != ''}">Contact Name: {!relatedto.Contact.FirstName}&nbsp;{!relatedto.Contact.LastName}<br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Person_Using__c != ''}">Person Using: {!relatedto.Person_Using__c}<br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Description != ''}">Description: {!relatedto.Description}<br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Special_Requests_Notes__c!= ''}"><b>Special Instructions:&nbsp;{!relatedto.Special_Requests_Notes__c}</b><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!relatedto.Cancellation_Policy__c != ''}"><b>Cancellation Policy:&nbsp;<apex:outputField value="{!relatedto.Cancellation_Policy__c}"/></b><br/></apex:outputPanel>
+<br/>
+Should you need to alter or cancel your request please contact Insider. If it is after business hours, kindly notify the INsider Team at 800.840.1143 or <a href="mailto:24@insidernyc.com">24@insidernyc.com</a>.<br/><br/>
+
+Thank You!
+</span>
+<br/><br/>
+<div style="background-color:#677eb0;">
+<center>
+<span style='font-size:10.0pt;color:white;font-family:"Arial Unicode MS"'>
+<br/>
+TEL: 212 685 4113 | 24 HR: 800 840 1143 | WWW.INSIDERNYC.COM
+<br/><br/>
+</span>
+</center>
+</div>
+</messaging:HTMLEmailBody>
+</messaging:emailTemplate>

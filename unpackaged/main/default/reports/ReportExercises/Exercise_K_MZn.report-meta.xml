@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Vendor_Suggested__c$Logbook__c</field>
+    </columns>
+    <columns>
+        <field>Vendor_Suggested__c$Name</field>
+    </columns>
+    <columns>
+        <field>Vendor_Suggested__c$Vendor_Name__c</field>
+    </columns>
+    <columns>
+        <field>Vendor_Suggested__c$Vendor_Name__c.RecordType</field>
+    </columns>
+    <columns>
+        <field>Vendor_Suggested__c$Vendor_Name__c.BillingState</field>
+    </columns>
+    <columns>
+        <field>Vendor_Suggested__c$CreatedDate</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Vendor_Suggested__c$Vendor_Name__c.BillingState</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>LA,Los Angelas</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Exercise K</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Vendor_Suggestions__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Vendor_Suggested__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

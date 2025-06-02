@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If the customer is paying directly, this is the total expense amount, otherwise it&apos;s total price + total expenses --></help>
+        <label><!-- Total Billable Item Cost --></label>
+        <name>Final_Billable__c</name>
+    </CustomFieldTranslation>

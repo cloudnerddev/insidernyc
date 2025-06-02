@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Source for Booking --></label>
+        <name>Source_for_Booking_Resto__c</name>
+        <picklistValues>
+            <masterLabel>Additional contact made to add special notes</masterLabel>
+            <translation><!-- Additional contact made to add special notes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Artemis</masterLabel>
+            <translation><!-- Artemis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>By calling (no insider mention/no favor)</masterLabel>
+            <translation><!-- By calling (no insider mention/no favor) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call with contact for favor</masterLabel>
+            <translation><!-- Call with contact for favor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Called &amp; mentioned insider to schmooze</masterLabel>
+            <translation><!-- Called &amp; mentioned insider to schmooze --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email with Reservations</masterLabel>
+            <translation><!-- Email with Reservations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email with contact for favor</masterLabel>
+            <translation><!-- Email with contact for favor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>House</masterLabel>
+            <translation><!-- House --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opentable</masterLabel>
+            <translation><!-- Opentable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other (with Txt Box)</masterLabel>
+            <translation><!-- Other (with Txt Box) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resy</masterLabel>
+            <translation><!-- Resy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resy Alert or Rezhound</masterLabel>
+            <translation><!-- Resy Alert or Rezhound --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seven Rooms</masterLabel>
+            <translation><!-- Seven Rooms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Text with contact for favor</masterLabel>
+            <translation><!-- Text with contact for favor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tock</masterLabel>
+            <translation><!-- Tock --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel Pro</masterLabel>
+            <translation><!-- Travel Pro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Website</masterLabel>
+            <translation><!-- Website --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yelp Reservations</masterLabel>
+            <translation><!-- Yelp Reservations --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

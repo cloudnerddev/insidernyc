@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- House Outcome --></label>
+        <name>House_Outcome__c</name>
+        <picklistValues>
+            <masterLabel>Closed for buyout</masterLabel>
+            <translation><!-- Closed for buyout --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Confirmed</masterLabel>
+            <translation><!-- Confirmed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Couldn't get by calling</masterLabel>
+            <translation><!-- Couldn&apos;t get by calling --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

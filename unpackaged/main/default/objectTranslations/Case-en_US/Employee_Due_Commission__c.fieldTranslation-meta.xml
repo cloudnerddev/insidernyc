@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Employee Due Commission --></label>
+        <name>Employee_Due_Commission__c</name>
+        <relationshipLabel><!-- Logbooks (Employee Due Commission) --></relationshipLabel>
+    </CustomFieldTranslation>

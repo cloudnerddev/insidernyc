@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X24_Hour_Contact__c</fullName>
+    <encryptionScheme>None</encryptionScheme>
+    <inlineHelpText>Name, Phone and Email of 24 Hour Contact to reach if any issue</inlineHelpText>
+    <label>24 Hour Contact</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

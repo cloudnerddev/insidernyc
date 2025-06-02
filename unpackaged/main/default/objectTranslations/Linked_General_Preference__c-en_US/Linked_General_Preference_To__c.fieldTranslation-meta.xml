@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- This general preference will initially be synced to the general preference selected here. Then they will be synced up whenever either general preference is updated. --></help>
+        <label><!-- Linked General Preference To --></label>
+        <name>Linked_General_Preference_To__c</name>
+        <relationshipLabel><!-- Linked General Preferences (To) --></relationshipLabel>
+    </CustomFieldTranslation>

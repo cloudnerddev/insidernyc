@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Messenger Service</label>
+    <protected>false</protected>
+    <values>
+        <field>Email_Template_ID__c</field>
+        <value xsi:type="xsd:string">00X0b000001Uu4pEAC</value>
+    </values>
+    <values>
+        <field>Record_Type_Id__c</field>
+        <value xsi:type="xsd:string">0120b000000Up20AAC</value>
+    </values>
+</CustomMetadata>

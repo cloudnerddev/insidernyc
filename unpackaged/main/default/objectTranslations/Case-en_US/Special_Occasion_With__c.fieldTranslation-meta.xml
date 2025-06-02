@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Special Occasion With --></label>
+        <name>Special_Occasion_With__c</name>
+        <relationshipLabel><!-- Logbooks (Special Occasion With) --></relationshipLabel>
+    </CustomFieldTranslation>

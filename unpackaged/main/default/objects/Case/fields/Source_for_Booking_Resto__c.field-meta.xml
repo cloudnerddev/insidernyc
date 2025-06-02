@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source_for_Booking_Resto__c</fullName>
+    <label>Source for Booking</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>By calling (no insider mention/no favor)</fullName>
+                <default>false</default>
+                <label>By calling (no insider mention/no favor)</label>
+            </value>
+            <value>
+                <fullName>Called &amp; mentioned insider to schmooze</fullName>
+                <default>false</default>
+                <label>Called &amp; mentioned insider to schmooze</label>
+            </value>
+            <value>
+                <fullName>Email with contact for favor</fullName>
+                <default>false</default>
+                <label>Email with contact for favor</label>
+            </value>
+            <value>
+                <fullName>Text with contact for favor</fullName>
+                <default>false</default>
+                <label>Text with contact for favor</label>
+            </value>
+            <value>
+                <fullName>Call with contact for favor</fullName>
+                <default>false</default>
+                <label>Call with contact for favor</label>
+            </value>
+            <value>
+                <fullName>House</fullName>
+                <default>false</default>
+                <label>House</label>
+            </value>
+            <value>
+                <fullName>Resy Alert or Rezhound</fullName>
+                <default>false</default>
+                <label>Resy Alert or Rezhound</label>
+            </value>
+            <value>
+                <fullName>Additional contact made to add special notes</fullName>
+                <default>false</default>
+                <label>Additional contact made to add special notes</label>
+            </value>
+            <value>
+                <fullName>Opentable</fullName>
+                <default>false</default>
+                <label>Opentable</label>
+            </value>
+            <value>
+                <fullName>Resy</fullName>
+                <default>false</default>
+                <label>Resy</label>
+            </value>
+            <value>
+                <fullName>Seven Rooms</fullName>
+                <default>false</default>
+                <label>Seven Rooms</label>
+            </value>
+            <value>
+                <fullName>Tock</fullName>
+                <default>false</default>
+                <label>Tock</label>
+            </value>
+            <value>
+                <fullName>Travel Pro</fullName>
+                <default>false</default>
+                <label>Travel Pro</label>
+            </value>
+            <value>
+                <fullName>Yelp Reservations</fullName>
+                <default>false</default>
+                <label>Yelp Reservations</label>
+            </value>
+            <value>
+                <fullName>Other (with Txt Box)</fullName>
+                <default>false</default>
+                <label>Other (with Txt Box)</label>
+            </value>
+            <value>
+                <fullName>Website</fullName>
+                <default>false</default>
+                <label>Website</label>
+            </value>
+            <value>
+                <fullName>Email with Reservations</fullName>
+                <default>false</default>
+                <label>Email with Reservations</label>
+            </value>
+            <value>
+                <fullName>Artemis</fullName>
+                <default>false</default>
+                <label>Artemis</label>
+            </value>
+            <value>
+                <fullName>Today’s Epicure</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Today’s Epicure</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

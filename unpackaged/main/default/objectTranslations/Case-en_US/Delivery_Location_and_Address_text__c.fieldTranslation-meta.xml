@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Drop Off Location and Address --></label>
+        <name>Delivery_Location_and_Address_text__c</name>
+    </CustomFieldTranslation>

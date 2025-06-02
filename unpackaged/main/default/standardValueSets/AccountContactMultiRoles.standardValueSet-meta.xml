@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Current Employee</fullName>
+        <default>false</default>
+        <label>Current Employee</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Previous Employee</fullName>
+        <default>false</default>
+        <label>Previous Employee</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Client</fullName>
+        <default>false</default>
+        <label>Client</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Primary Contact</fullName>
+        <default>false</default>
+        <label>Primary Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Questionnaire Completed By</fullName>
+        <default>false</default>
+        <label>Questionnaire Completed By</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Reports Sent</fullName>
+        <default>false</default>
+        <label>Reports Sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Warned By</fullName>
+        <default>false</default>
+        <label>Warned By</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hours Usage Warnings</fullName>
+        <default>false</default>
+        <label>Hours Usage Warnings</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Invoices Sent</fullName>
+        <default>false</default>
+        <label>Invoices Sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contact 1 at Insider</fullName>
+        <default>false</default>
+        <label>Contact 1 at Insider</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contact 2 at Insider</fullName>
+        <default>false</default>
+        <label>Contact 2 at Insider</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contact 3 at Insider</fullName>
+        <default>false</default>
+        <label>Contact 3 at Insider</label>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Insider Client</fullName>
+        <default>false</default>
+        <label>Insider Client</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Travel Client</fullName>
+        <default>false</default>
+        <label>Travel Client</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Event Client</fullName>
+        <default>false</default>
+        <label>Event Client</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Culture &amp; Sports</fullName>
+        <default>false</default>
+        <label>Culture &amp; Sports</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DMC / On-Site</fullName>
+        <default>false</default>
+        <label>DMC / On-Site</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fashion &amp; Other Retail</fullName>
+        <default>false</default>
+        <label>Fashion &amp; Other Retail</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Food &amp; Beverage Retail</fullName>
+        <default>false</default>
+        <label>Food &amp; Beverage Retail</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Health, Wellness &amp; Beauty</fullName>
+        <default>false</default>
+        <label>Health, Wellness &amp; Beauty</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Household Services</fullName>
+        <default>false</default>
+        <label>Household Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Party &amp; Event Entertainment</fullName>
+        <default>false</default>
+        <label>Party &amp; Event Entertainment</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pets</fullName>
+        <default>false</default>
+        <label>Pets</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Travel</fullName>
+        <default>false</default>
+        <label>Travel</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+</StandardValueSet>

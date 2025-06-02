@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Drop Off Location (Account) --></label>
+        <name>Drop_Off_Location__c</name>
+        <relationshipLabel><!-- Logbooks (Drop Off Location) --></relationshipLabel>
+    </CustomFieldTranslation>

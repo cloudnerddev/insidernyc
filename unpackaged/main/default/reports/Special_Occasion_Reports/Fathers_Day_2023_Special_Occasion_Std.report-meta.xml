@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>Case.Special_Occasion__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 AND (2 OR 2)</booleanFilter>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Case.Amenity_Order,Case.Service_Booking,Case.Car_Rental,Case.Car_Service,Case.Charter,Case.DMC_On_Site_trip_booking,Case.DiningReservation,Case.Errand,Case.Event_Booking,Case.Event_Tickets,Case.Flight_Booking_Single_Person,Case.Hotel_Booking,Case.House,Case.House_Villa_Booking,Case.Internal,Case.Messenger_Service,Case.New,Case.Nightclub_Lounge_Reservation,Case.Package_Log,Case.Research,Case.Tour_Booking,Case.Train_Booking,Case.Travel_Planning,Case.Trip_Booking</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Special_Occasion__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Father&apos;s Day</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case.Insider_Team__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Father&apos;s Day 2024 Special Occasion</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Case.Reference_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

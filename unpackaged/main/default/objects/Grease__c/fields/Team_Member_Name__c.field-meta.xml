@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Team_Member_Name__c</fullName>
+    <label>Team Member Name - DNU</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Lindsi Shine</fullName>
+                <default>false</default>
+                <label>Lindsi Shine</label>
+            </value>
+            <value>
+                <fullName>Sarah Tredwell</fullName>
+                <default>false</default>
+                <label>Sarah Tredwell</label>
+            </value>
+            <value>
+                <fullName>Kristen Doghramji</fullName>
+                <default>false</default>
+                <label>Kristen Doghramji</label>
+            </value>
+            <value>
+                <fullName>Courtney Sider</fullName>
+                <default>false</default>
+                <label>Courtney Sider</label>
+            </value>
+            <value>
+                <fullName>Lena Phillips</fullName>
+                <default>false</default>
+                <label>Lena Phillips</label>
+            </value>
+            <value>
+                <fullName>Katie Couri</fullName>
+                <default>false</default>
+                <label>Katie Couri</label>
+            </value>
+            <value>
+                <fullName>Jenna Thompson</fullName>
+                <default>false</default>
+                <label>Jenna Thompson</label>
+            </value>
+            <value>
+                <fullName>Chase Alifeld</fullName>
+                <default>false</default>
+                <label>Chase Alifeld</label>
+            </value>
+            <value>
+                <fullName>Sofia Evangelista</fullName>
+                <default>false</default>
+                <label>Sofia Evangelista</label>
+            </value>
+            <value>
+                <fullName>Hannah Udren</fullName>
+                <default>false</default>
+                <label>Hannah Udren</label>
+            </value>
+            <value>
+                <fullName>Nora Demilta</fullName>
+                <default>false</default>
+                <label>Nora Demilta</label>
+            </value>
+            <value>
+                <fullName>Heather Ramin</fullName>
+                <default>false</default>
+                <label>Heather Ramin</label>
+            </value>
+            <value>
+                <fullName>Lilly Wilbanks</fullName>
+                <default>false</default>
+                <label>Lilly Wilbanks</label>
+            </value>
+            <value>
+                <fullName>Carly Walter</fullName>
+                <default>false</default>
+                <label>Carly Walter</label>
+            </value>
+            <value>
+                <fullName>Brynne Baizer</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Brynne Baizer</label>
+            </value>
+            <value>
+                <fullName>Dru Richardson</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dru Richardson</label>
+            </value>
+            <value>
+                <fullName>Kate Kondas</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Kate Kondas</label>
+            </value>
+            <value>
+                <fullName>Mckenzie Scofes</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mckenzie Scofes</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

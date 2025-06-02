@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Linked_General_Preference_To__c</fullName>
+    <deleteConstraint>Cascade</deleteConstraint>
+    <inlineHelpText>This general preference will initially be synced to the general preference selected here. Then they will be synced up whenever either general preference is updated.</inlineHelpText>
+    <label>Linked General Preference To</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>$Source.Id</field>
+            <operation>notEqual</operation>
+            <valueField>$Source.Linked_General_Preference_From__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>General_Preferences__c</referenceTo>
+    <relationshipLabel>Linked General Preferences (To)</relationshipLabel>
+    <relationshipName>Linked_General_Preferences_To</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

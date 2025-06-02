@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_CL</fullName>
+    <fields>Name</fields>
+    <fields>Credit_Value__c</fields>
+    <fields>Status__c</fields>
+    <fields>Type__c</fields>
+    <fields>Days_Until_Expiration__c</fields>
+    <fields>Vendor_Type__c</fields>
+    <label>Credit CL</label>
+</CompactLayout>

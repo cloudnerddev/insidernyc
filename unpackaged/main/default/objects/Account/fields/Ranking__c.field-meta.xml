@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ranking__c</fullName>
+    <label>Ranking</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1st choice</fullName>
+                <default>false</default>
+                <label>1st choice</label>
+            </value>
+            <value>
+                <fullName>2nd choice</fullName>
+                <default>false</default>
+                <label>2nd choice</label>
+            </value>
+            <value>
+                <fullName>Suitable Vendor</fullName>
+                <default>false</default>
+                <label>Suitable Vendor</label>
+            </value>
+            <value>
+                <fullName>Haven't Vetted</fullName>
+                <default>false</default>
+                <label>Haven't Vetted</label>
+            </value>
+            <value>
+                <fullName>Don't Use</fullName>
+                <default>false</default>
+                <label>Don't Use</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

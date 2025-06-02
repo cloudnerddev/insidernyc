@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>preventClosingInFlow</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISNEW(),
+ISPICKVAL(Status, "Closed"),
+$Profile.Name != "System Administrator",
+$Profile.Name != "User Admin"
+)</errorConditionFormula>
+    <errorMessage>Please wait to close this logbook until after you have completed the setup flow.</errorMessage>
+</ValidationRule>

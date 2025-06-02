@@ -1,0 +1,219 @@
+<messaging:emailTemplate subject="Flight Booking Confirmation" recipientType="User" relatedToType="Case">
+<messaging:plainTextEmailBody >
+
+</messaging:plainTextEmailBody>
+
+<messaging:htmlEmailBody >
+<span style='font-size:10.0pt;font-family:"Century Gothic"'>
+<br/>
+Hi,<br/><br/>
+
+Please see the attached for details of your flight booking(s). As a reminder:<br/><br/>
+
+*As of May 7, 2025, U.S. travelers must be REAL ID compliant to board domestic flights. Find out if you are Real ID ready here: https://www.dhs.gov/real-id <br/>
+* If we have added your Global Entry/TSA numbers to your flight, this does not guarantee TSA Pre/Global Entry.  This is subject to the TSA.  For questions, please refer to the rules of the program.<br/>
+<br/><br/>
+Thank You! 
+</span>
+<br/><br/>
+<span style='font-size:10.0pt;color:#9f9f9f;font-family:"Arial Unicode MS"'>
+<b>{!$User.FirstName} {!$User.LastName}</b><br/>
+<apex:image url="https://insidernyc--c.na158.content.force.com/servlet/servlet.ImageServer?id=0150b000002NUy9&oid=00D0b000000R4TA&lastMod=1555333577000"/><br/>
+T: 212.685.4113<br/>
+<a href="mailto:{!$User.Email}">{!$User.Email}</a><br/>
+24 hr: 800.840.1143 | <a href="mailto:24@insidernyc.com">24@insidernyc.com</a><br/>
+<a href="www.insidernyc.com">www.insidernyc.com</a><br/>
+Follow us: @INsider_nyc
+</span>
+<br/><br/>
+<div style="background-color:#677eb0;">
+<center>
+<apex:image url="http://static1.squarespace.com/static/53d7f470e4b04f8fcf6fe4b8/t/59135d421b10e3b98b9c65ff/1544409204447/}" height="60"/>
+</center>
+</div>
+</messaging:htmlEmailBody>
+<messaging:attachment renderAs="pdf" filename="Flight Booking Confirmation"> 
+    <head>
+        <style>
+            @page {
+            size: letter;
+            margin-left: 0.8cm;
+            margin-right: 0.8cm;
+            margin-top: 0.8cm;
+            margin-bottom: 0.8cm;
+            
+            
+            @bottom-center {
+            content: "Page " counter(page) " of " counter(pages);
+            font-family: monospace;
+            font-size: 14px;
+            }
+            }
+            .page-break {
+            display:block;
+            page-break-after:always;
+            }
+            body {
+            font-family: sans-serif;
+            font-size: 14px;
+            text-align: left;
+            }
+            .colOne {
+            width: 40%;
+            }
+            .colTwo {
+            width: 40%;
+            }
+            .colThree {
+            width: 20%;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="borderline"  style="border-bottom-style:solid; border-bottom-width: 2px;"></div>
+        <c:flightPreparedFor caseId="{!relatedTo.Id}"/>
+        
+        <p style="margin: auto; ">
+            AIRLINE CONFIRMATION NUMBER: <b>{!relatedTo.Order_Confirmation__c}</b></p>
+        <apex:outputPanel rendered="{!relatedTo.Special_Requests_Notes__c!= ''}"> 
+        <p style="margin: auto; ">
+            SPECIAL REQUESTS: <b>{!relatedTo.Special_Requests_Notes__c}</b></p> 
+        </apex:outputPanel>           
+        <br/>
+        <apex:repeat var="flight" value="{!relatedTo.Flight_Bookings__r}">
+            <div class="borderline" style="border-bottom-style:solid; border-bottom-width: 2px;"></div>
+            <apex:panelGrid columns="2" width="100%">
+                <apex:outputPanel >
+                    <apex:image style="width:30px; height:30px;" value="{!$Resource.plane}"/>
+                </apex:outputPanel>
+                <apex:outputPanel >
+                    DEPARTURE: <b class="ex1" style="padding-right: 10px; "><apex:outputText value="{0, date,EEEE MMMM d yyyy}"><apex:param value="{!flight.DepartureTimeForEmail__c}"/></apex:outputText> </b> 
+                    <apex:image style="width:10px; height:10px;" value="{!$Resource.triangle}"/>
+                    ARRIVAL: <b class="ex1" style="padding-right: 10px; "><apex:outputText value="{0, date,EEEE MMMM d yyyy}"><apex:param value="{!flight.ArrivalDateforEmail__c}"/></apex:outputText></b>
+                    <p style="padding-top: -1rem; font-size: 10px;">
+                        Please verify the flight time prior to departure 
+                    </p>
+                </apex:outputPanel>
+            </apex:panelGrid>
+            
+            <div class="slds-scope slds-box" >                
+                <div style="display: flex;">
+                    <div style="width: 100%; padding: 1px;">
+                        <table class="table1" style="height: 50%;  border: 1px solid #ddd;">
+                            <tr>
+                                <td width="30%" rowspan="2" style="width: 33.33%; padding: 0px 0px 0px 20px; background: #ccc; border-bottom-left-radius: 40px;">
+                                    <p><b style="font-size: 17px;">{!flight.Airline__r.Name}</b><br/>
+                                        <b style="font-size: 20px;">{!flight.Name}</b>
+                                    </p>
+                                    <p><b>Duration:</b><br/>
+                                        {!flight.Duration__c}
+                                    </p>
+                                    <p>
+                                        <apex:outputField rendered="{!flight.Refundable__c == NULL}" value="{!relatedTo.Refundable__c}" />
+                                        <apex:outputField rendered="{!flight.Refundable__c != NULL}" value="{!flight.Refundable__c}" />
+                                    </p>
+                                </td>
+                                <td width="70%" colspan="2" style="text-align: center; padding: 10px; border-bottom: 1px solid #ddd">
+                                    {!flight.Departure_City__c}&nbsp;<b><apex:outputText style="font-size: 15px;" rendered="{!flight.Departure_Airport__c != NULL}">({!flight.Departure_Airport__c})&nbsp;</apex:outputText></b>
+                                    <apex:image style="width:10px; height:10px;" value="{!$Resource.triangle}"/>
+                                    {!flight.Arrival_City__c}&nbsp;<b><apex:outputText style="font-size: 15px;" rendered="{!flight.Arrival_Airport__c != NULL}">({!flight.Arrival_Airport__c})&nbsp;</apex:outputText></b>
+                                </td>
+                                <!--td width="25%" rowspan="2" style=" padding: 10px; border-left: 1px solid #ddd; border-bottom: 1px solid #ddd">
+                                    <!apex:outputPanel rendered="{!relatedTo.Price_per_Person__c != NULL || flight.Price_Per_Person__c != NULL}">
+                                        Price per Person:<br/>
+                                        <apex:outputText rendered="{!flight.Price_Per_Person__c == NULL}" value="{0, number, currency}"><apex:param value="{!relatedTo.Price_per_Person__c}" /></apex:outputText>
+                                        <apex:outputText rendered="{!flight.Price_Per_Person__c != NULL}" value="{0, number, currency}"><apex:param value="{!flight.Price_Per_Person__c}" /></apex:outputText>
+                                        <br/><br/><br/>
+                                    </apex:outputPanel>
+                                    <apex:outputPanel rendered="{!relatedTo.Total_Price__c != NULL || flight.Total_Price__c != NULL}">
+                                        Total Price:<br/>
+                                        <apex:outputText rendered="{!flight.Total_Price__c == NULL}" value="{0, number, currency}"><apex:param value="{!relatedTo.Total_Price__c}" /></apex:outputText>
+                                        <apex:outputText rendered="{!flight.Total_Price__c != NULL}" value="{0, number, currency}"><apex:param value="{!flight.Total_Price__c}" /></apex:outputText>
+                                    </apex:outputPanel>
+                                </td-->
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd">
+                                    Departing At: <br/>
+                                    <apex:outputText style="font-size: 17px;" value="{0, date,h:mm a}"><apex:param value="{!flight.DepartureTimeForEmail__c}"/></apex:outputText>
+                                    <apex:outputPanel style="font-size: 16px; font-weight: bold;">
+                                        <br/>( <apex:outputText value="{0, date,dd MMM}"><apex:param value="{!flight.DepartureTimeForEmail__c}"/></apex:outputText>)
+                                    </apex:outputPanel>
+                                    <br/><br/><br/>
+                                    Terminal: <apex:outputText rendered="{!flight.Departure_Terminal__c!=NULL}">{!flight.Departure_Terminal__c}</apex:outputText>
+                                    <!-- <apex:outputText rendered="{!flight.Departure_Terminal__c==NULL}">NOT AVAILABLE</apex:outputText><br/><br/> -->
+                                    <apex:outputText rendered="{!flight.Departure_Terminal__c==NULL}">&nbsp;</apex:outputText><br/><br/>
+                                </td>
+                                <td style="padding: 8px; border-bottom: 1px solid #ddd">
+                                    Arriving At: <br/>
+                                    <apex:outputText style="font-size: 17px;" value="{0, date,h:mm a}"><apex:param value="{!flight.ArrivalDateforEmail__c}"/></apex:outputText>
+                                    <apex:outputPanel style="font-size: 16px; font-weight: bold;">
+                                        <br/>( <apex:outputText value="{0, date,dd MMM}"><apex:param value="{!flight.ArrivalDateforEmail__c}"/></apex:outputText>)
+                                    </apex:outputPanel>
+                                    <br/><br/><br/>
+                                    Terminal: <apex:outputText rendered="{!flight.Arrival_Terminal__c!=NULL}">{!flight.Arrival_Terminal__c}</apex:outputText><apex:outputText rendered="{!flight.Arrival_Terminal__c==NULL}"></apex:outputText><br/><br/>
+                                </td>
+                            </tr>
+                            <apex:outputText rendered="{!flight.Notes__c!=NULL}">
+                                <tr>
+                                    <td colspan="4" style=" padding: 10px;">
+                                        Notes: {!flight.Notes__c}
+                                    </td>
+                                </tr>
+                            </apex:outputText>
+                            <tr>
+                                <td colspan="4">
+                                    <table class="table2" style="border: 1px solid #ddd; width:100%; table-layout:fixed; font-size:12px;">
+                                        <tr style="background-color: #c1c1c1;">
+                                            <th width="22%" style="border-right: 1px solid #ddd; padding: 3px;">Passenger Name</th>
+                                            <th width="8%" style="border-right: 1px solid #ddd; padding: 3px;">Seats</th>
+                                            <th width="10%" style="border-right: 1px solid #ddd; padding: 3px;">Class</th>
+                                            <th width="20%" style="border-right: 1px solid #ddd; padding: 3px;">Ticket #</th>
+                                            <th width="20%" style="border-right: 1px solid #ddd; padding: 3px;">Frequent Flyer #</th>
+                                            <th width="20%" style="border-right: 1px solid #ddd; padding: 3px;">Global Entry/TSA #</th>
+                                        </tr>
+                                        <apex:repeat value="{!relatedTo.Passengers__r}" var="pass">
+                                            <apex:outputText rendered="{!pass.Flight__c == flight.Id}">
+                                                <tr>
+                                                    <td style="border-top: 1px solid #ddd; padding: 3px; border-right: 1px solid #ddd;">
+                                                        » {!pass.Contact_Name__c}
+                                                    </td>
+                                                    <td style="border-top: 1px solid #ddd; padding: 3px; border-right: 1px solid #ddd;">
+                                                        {!pass.Seat__c}
+                                                    </td>
+                                                    <td style="border-top: 1px solid #ddd; padding: 3px; border-right: 1px solid #ddd;">
+                                                        {!pass.Class__c}
+                                                    </td>
+                                                    <td style="border-top: 1px solid #ddd; padding: 3px; border-right: 1px solid #ddd;">
+                                                        {!pass.Ticket_Number__c}
+                                                    </td>
+                                                    <td style="border-top: 1px solid #ddd; padding: 3px; border-right: 1px solid #ddd;">
+                                                        {!pass.Frequent_Flyer_Number__r.Name}
+                                                    </td>
+                                                    <td style="border-top: 1px solid #ddd; padding: 3px;">
+                                                        {!pass.Global_Entry_TSA__c}
+                                                    </td>
+                                                </tr>
+                                                <apex:outputText rendered="{!pass.Notes__c!=NULL}" >
+                                                    <tr >
+                                                        <td colspan="6" style=" border-top: 1px solid #ddd; padding: 3px;">
+                                                            Notes: {!pass.Notes__c}
+                                                        </td>
+                                                    </tr>
+                                                </apex:outputText>
+                                            </apex:outputText>
+                                        </apex:repeat>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+            </div> 
+            <br/>
+        </apex:repeat>
+    </body>
+</messaging:attachment>    
+</messaging:emailTemplate>

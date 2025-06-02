@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Cancellation/No Show</masterLabel>
+            <translation><!-- Cancellation/No Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Facetime</masterLabel>
+            <translation><!-- Facetime --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grease</masterLabel>
+            <translation><!-- Grease --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trial</masterLabel>
+            <translation><!-- Trial --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

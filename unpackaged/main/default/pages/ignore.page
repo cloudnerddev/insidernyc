@@ -1,0 +1,75 @@
+<apex:page standardController="Case">
+<style>
+div.a {
+  line-height: normal;
+}
+div.c 
+  p {
+    display: block !improtant;
+    margin: 0px !important;
+    border: 0px !important;
+    padding: 0px !important;
+}
+
+</style>
+<span style='font-size:10.0pt;font-family:"Century Gothic"'>
+<br/>
+Hi,<br/><br/>
+
+Please see formal confirmation below noting guest information, special instructions and cancellation policy. Please note that this reservation will appear in your resy account. If for any reason you do not see it, please alert the Insider team. Please also note if your reservation is outside it is weather dependent per the restaurant’s discretion.<br/><br/>
+
+Your Request:&nbsp;Dining Reservation<br/></span>
+<span style='font-size:10.0pt;font-family:"Century Gothic"'>
+Confirmation For:&nbsp;<apex:outputField value="{!Case.Person_Using__r.FirstName}"/>&nbsp;<apex:outputField value="{!Case.Person_Using__r.LastName}"/><br/>
+<!-- Person Using:&nbsp;<apex:outputField value="{!Case.Person_Using__r.FirstName}"/>&nbsp;<apex:outputField value="{!Case.Person_Using__r.LastName}"/><br/> -->
+<apex:outputPanel rendered="{!Case.Date__c != null}">Date:&nbsp;<apex:outputField value="{!Case.Day_of_Week_Date__c}"/>,<apex:outputText value="{0, date, MMMM d',' yyyy}"><apex:param value="{!Case.Date__c}"/></apex:outputText><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!Case.Vendor__c != ''}">Vendor Name:&nbsp;<apex:outputField value="{!Case.Vendor__r.Name}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!Case.Time__c != null}">Confirmed Time:&nbsp;<apex:outputField value="{!Case.Time__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!Case.Number_in_Party__c != null}">Number in Party:&nbsp;<apex:outputField value="{!Case.Number_in_Party__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!Case.Vendor__c != ''}">Address:&nbsp;<apex:outputField value="{!Case.Vendor_Address__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!Case.Vendor_Cross_Streets__c != ''}">Cross Streets:&nbsp;<apex:outputField value="{!Case.Vendor_Cross_Streets__c}"/><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!Case.Vendor_Phone__c != ''}">Vendor Telephone:&nbsp;<apex:outputField value="{!Case.Vendor_Phone_Formatted__c}"/></apex:outputPanel>
+</span>
+<div class="c">
+<apex:outputPanel rendered="{!Case.Guest_Information_Special_rich__c != ''}">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td width="20%"> <span style='font-size:10.0pt;font-family:"Century Gothic"'> <b>Guest Information:&nbsp;</b> </span></td>
+<td width="80%"> <span style='font-size:10.0pt;font-family:"Century Gothic"'> <b><apex:outputText escape="false" value="{!Case.Guest_Information_Special_rich__c}"/></b></span></td>
+</tr>
+</table>
+</apex:outputPanel>
+<apex:outputPanel rendered="{!Case.Guest_Information_Special_rich__c = ''}"><br/></apex:outputPanel>
+</div>
+<span style='font-size:10.0pt;font-family:"Century Gothic"'>
+<apex:outputPanel rendered="{!Case.Special_Requests_Notes_rich__c!= ''}"><b>Special Instructions:&nbsp;<apex:outputText escape="false" value="{!Case.Special_Requests_Notes_rich__c}"/></b><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!Case.Cancellation_Policy__c != ''}"><b>Cancellation Policy:&nbsp;<apex:outputField value="{!Case.Cancellation_Policy__c}"/></b><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!Case.Confirmed_With__c != ''}">Confirmed With and Confirmation Date:&nbsp;<apex:outputField value="{!Case.Confirmed_With__c}"/>, <apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!Case.Confirmation_Date_for_Email__c}"/></apex:outputText><br/></apex:outputPanel>
+<apex:outputPanel rendered="{!Case.Reconfirmed_With__c != ''}">Reconfirmed with and Reconfirmation Date:&nbsp;<apex:outputField value="{!Case.Reconfirmed_With__c}"/>, <apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!Case.Reconfirmation_Date_for_Email__c}"/></apex:outputText><br/></apex:outputPanel>
+<br/>
+<apex:outputPanel rendered="{!Case.Resy_Language__c == True}">Please note this will appear in your resy account.  If for any reason you do not see it, please alert the Insider team.<br/><br/></apex:outputPanel>
+</span>
+<span style='font-size:10.0pt;font-family:"Century Gothic"'>
+Please note that any no show of a reservation will incur a fee.<br/><br/>
+
+Should you need to alter or cancel your reservation please contact Insider. If it is after business hours and you need to make a change or have an emergency regarding the reservation, kindly notify the INsider Team at 800.840.1143 or <a href="mailto:24@insidernyc.com">24@insidernyc.com</a>.<br/><br/>
+
+Thank You!
+</span>
+<br/><br/>
+<span style='font-size:10.0pt;color:#9f9f9f;font-family:"Arial Unicode MS"'>
+<b>{!$User.FirstName} {!$User.LastName}</b><br/>
+<apex:image url="https://insidernyc--c.na158.content.force.com/servlet/servlet.ImageServer?id=0150b000002NUy9&oid=00D0b000000R4TA&lastMod=1555333577000"/><br/>
+T: 212.685.4113<br/>
+<a href="mailto:{!$User.Email}">{!$User.Email}</a><br/>
+24 hr: 800.840.1143 | <a href="mailto:24@insidernyc.com">24@insidernyc.com</a><br/>
+<a href="www.insidernyc.com">www.insidernyc.com</a><br/>
+Follow us: @INsider_nyc
+</span>
+<br/><br/>
+<div style="background-color:#677eb0;">
+<center>
+<!--<apex:image url="http://static1.squarespace.com/static/53d7f470e4b04f8fcf6fe4b8/t/59135d421b10e3b98b9c65ff/1544409204447/}" height="60"/>-->
+</center>
+</div>
+</apex:page>

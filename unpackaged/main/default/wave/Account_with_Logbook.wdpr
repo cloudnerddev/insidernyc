@@ -1,0 +1,113 @@
+{
+  "version" : "62.0",
+  "nodes" : {
+    "LOAD_DATASET0" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "MasterRecordId", "Name", "LastName", "FirstName", "MiddleName", "Type", "Non_Billable_Account__c" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "Account",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "Account"
+        },
+        "sampleDetails" : {
+          "type" : "TopN"
+        }
+      }
+    },
+    "LOAD_DATASET1" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "IsDeleted", "MasterRecordId", "CaseNumber", "ContactId", "AccountId", "ParentId", "SuppliedName", "SuppliedPhone", "SuppliedCompany", "Type", "RecordTypeId", "Status", "Origin", "Language", "Subject", "IsClosed", "ClosedDate", "IsEscalated", "OwnerId", "CreatedDate", "CreatedById", "LastModifiedDate", "LastModifiedById", "SystemModstamp", "ContactPhone", "ContactMobile", "ContactEmail", "ContactFax", "Comments", "LastViewedDate", "LastReferencedDate", "Account_Type__c", "Guest_Information_Special_Instructions__c", "Next_Steps__c", "Departure_FBO_Phone_Number_Formatted__c", "Table_Minimum_excluding_tax_gratuity__c", "Confirmed_With__c", "Reconfirmed_With__c", "DateofBooking__c", "Time_of_Booking__c", "Requested_Booking_Date__c", "Requested_Booking_Time__c", "Number_in_Party__c", "Vendor__c", "Coastline_Invoice_Number__c", "Hierarchical_Time_Logged__c", "Case_Time_Logged__c", "Pickup_Day__c", "Research__c" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "Case",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "Case"
+        },
+        "sampleDetails" : {
+          "type" : "TopN"
+        }
+      }
+    },
+    "JOIN0" : {
+      "action" : "join",
+      "sources" : [ "LOAD_DATASET1", "LOAD_DATASET0" ],
+      "schema" : {
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "AccountId" ],
+        "rightQualifier" : "Account",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "OUTPUT0" : {
+      "action" : "save",
+      "sources" : [ "JOIN0" ],
+      "parameters" : {
+        "fields" : [ ],
+        "dataset" : {
+          "type" : "analyticsDataset",
+          "label" : "Account with logbook",
+          "folderName" : "SharedApp",
+          "name" : "Account_with_logbook"
+        }
+      }
+    }
+  },
+  "ui" : {
+    "nodes" : {
+      "LOAD_DATASET0" : {
+        "label" : "Account",
+        "type" : "LOAD_DATASET",
+        "top" : 112,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "LOAD_DATASET1" : {
+        "label" : "Case",
+        "type" : "LOAD_DATASET",
+        "top" : 252,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN0" : {
+        "label" : "Join 0",
+        "type" : "JOIN",
+        "top" : 252,
+        "left" : 252
+      },
+      "OUTPUT0" : {
+        "label" : "Output 0",
+        "type" : "OUTPUT",
+        "top" : 252,
+        "left" : 392
+      }
+    },
+    "connectors" : [ {
+      "source" : "LOAD_DATASET1",
+      "target" : "JOIN0"
+    }, {
+      "source" : "LOAD_DATASET0",
+      "target" : "JOIN0"
+    }, {
+      "source" : "JOIN0",
+      "target" : "OUTPUT0"
+    } ],
+    "hiddenColumns" : [ ]
+  },
+  "runMode" : "full"
+}

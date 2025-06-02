@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Grease/Facetime/Trial</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Greases/Facetime/Trials</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Grease Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Link Logbook --></label>
+        <name>Link_Logbook</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Team Member Attended --></label>
+        <name>New_Team_Member_Attended</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Additional Payment Notes required --></errorMessage>
+        <name>Payment_Details_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not authorized to clone records --></errorMessage>
+        <name>preventClone</name>
+    </validationRules>
+</CustomObjectTranslation>

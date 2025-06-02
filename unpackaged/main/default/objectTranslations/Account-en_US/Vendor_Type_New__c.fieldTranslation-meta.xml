@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Vendor Type - OLD --></label>
+        <name>Vendor_Type_New__c</name>
+        <picklistValues>
+            <masterLabel>Airline</masterLabel>
+            <translation><!-- Airline --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Art</masterLabel>
+            <translation><!-- Art --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Baby</masterLabel>
+            <translation><!-- Baby --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beverage Retail</masterLabel>
+            <translation><!-- Beverage Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Car Service</masterLabel>
+            <translation><!-- Car Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Caretakers</masterLabel>
+            <translation><!-- Caretakers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commerce</masterLabel>
+            <translation><!-- Commerce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DMC</masterLabel>
+            <translation><!-- DMC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doctors</masterLabel>
+            <translation><!-- Doctors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Entertainment</masterLabel>
+            <translation><!-- Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Events/Party</masterLabel>
+            <translation><!-- Events/Party --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Events/Party Entertainment</masterLabel>
+            <translation><!-- Events/Party Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fashion Retail</masterLabel>
+            <translation><!-- Fashion Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fashion Stylist</masterLabel>
+            <translation><!-- Fashion Stylist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Floral</masterLabel>
+            <translation><!-- Floral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food Retail</masterLabel>
+            <translation><!-- Food Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grade School</masterLabel>
+            <translation><!-- Grade School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hair Stylist</masterLabel>
+            <translation><!-- Hair Stylist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Retail</masterLabel>
+            <translation><!-- Home Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Household</masterLabel>
+            <translation><!-- Household --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Household Staffing</masterLabel>
+            <translation><!-- Household Staffing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Instructors</masterLabel>
+            <translation><!-- Instructors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lawyer</masterLabel>
+            <translation><!-- Lawyer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal Counsel/Attorney</masterLabel>
+            <translation><!-- Legal Counsel/Attorney --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre- School</masterLabel>
+            <translation><!-- Pre- School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rentals</masterLabel>
+            <translation><!-- Rentals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security</masterLabel>
+            <translation><!-- Security --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spa/Health/Wellness</masterLabel>
+            <translation><!-- Spa/Health/Wellness --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sports</masterLabel>
+            <translation><!-- Sports --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Staffing</masterLabel>
+            <translation><!-- Staffing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Theater</masterLabel>
+            <translation><!-- Theater --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Therapist (emotional)</masterLabel>
+            <translation><!-- Therapist (emotional) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Therapist (massage/physical)</masterLabel>
+            <translation><!-- Therapist (massage/physical) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ticket Brokers</masterLabel>
+            <translation><!-- Ticket Brokers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Toddler</masterLabel>
+            <translation><!-- Toddler --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transportation</masterLabel>
+            <translation><!-- Transportation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel &amp; Tours</masterLabel>
+            <translation><!-- Travel &amp; Tours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tutors</masterLabel>
+            <translation><!-- Tutors --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

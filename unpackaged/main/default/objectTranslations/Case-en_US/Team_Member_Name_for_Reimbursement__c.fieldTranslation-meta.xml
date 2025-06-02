@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Team Member Name for Reimbursement --></label>
+        <name>Team_Member_Name_for_Reimbursement__c</name>
+        <relationshipLabel><!-- Logbooks (Team Member Name for Reimbursement) --></relationshipLabel>
+    </CustomFieldTranslation>

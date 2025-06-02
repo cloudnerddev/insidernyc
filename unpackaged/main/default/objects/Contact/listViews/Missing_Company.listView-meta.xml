@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_Company</fullName>
+    <booleanFilter>1 AND 2 AND 3</booleanFilter>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>FULL_NAME</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>Company__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account.Account_Status__c</field>
+        <operation>equals</operation>
+        <value>Client,Active</value>
+    </filters>
+    <filters>
+        <field>CONTACT.CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2021 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.TYPE</field>
+        <operation>equals</operation>
+        <value>Insider Client</value>
+    </filters>
+    <label>Missing Company</label>
+</ListView>

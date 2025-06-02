@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Vendors_Restaurant</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>Cuisine__c</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>Owner__c</columns>
+    <columns>Cancellation_Policy__c</columns>
+    <columns>Reconfirmation_Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Vendor_Account</value>
+    </filters>
+    <filters>
+        <field>Neighbourhood__c</field>
+        <operation>equals</operation>
+        <value>Los Angeles</value>
+    </filters>
+    <label>All Vendors - Restaurant</label>
+</ListView>

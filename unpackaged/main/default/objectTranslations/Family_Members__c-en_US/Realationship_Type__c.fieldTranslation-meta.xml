@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Relationship Type --></label>
+        <name>Realationship_Type__c</name>
+        <picklistValues>
+            <masterLabel>Aunt</masterLabel>
+            <translation><!-- Aunt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Boyfriend</masterLabel>
+            <translation><!-- Boyfriend --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brother</masterLabel>
+            <translation><!-- Brother --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brother-in-law</masterLabel>
+            <translation><!-- Brother-in-law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Child</masterLabel>
+            <translation><!-- Child --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cousin</masterLabel>
+            <translation><!-- Cousin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Daughter-in-law</masterLabel>
+            <translation><!-- Daughter-in-law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ex-Spouse</masterLabel>
+            <translation><!-- Ex-Spouse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Family Staff</masterLabel>
+            <translation><!-- Family Staff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Father</masterLabel>
+            <translation><!-- Father --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Father-in-law</masterLabel>
+            <translation><!-- Father-in-law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fiance</masterLabel>
+            <translation><!-- Fiance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Friend</masterLabel>
+            <translation><!-- Friend --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Girlfriend</masterLabel>
+            <translation><!-- Girlfriend --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Godchild</masterLabel>
+            <translation><!-- Godchild --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Godparent</masterLabel>
+            <translation><!-- Godparent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grandchild</masterLabel>
+            <translation><!-- Grandchild --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grandparent</masterLabel>
+            <translation><!-- Grandparent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Half-sibling</masterLabel>
+            <translation><!-- Half-sibling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mother</masterLabel>
+            <translation><!-- Mother --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mother-in-law</masterLabel>
+            <translation><!-- Mother-in-law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nephew</masterLabel>
+            <translation><!-- Nephew --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Niece</masterLabel>
+            <translation><!-- Niece --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sister</masterLabel>
+            <translation><!-- Sister --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sister-in-law</masterLabel>
+            <translation><!-- Sister-in-law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Son-in-law</masterLabel>
+            <translation><!-- Son-in-law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spouse</masterLabel>
+            <translation><!-- Spouse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Step-child</masterLabel>
+            <translation><!-- Step-child --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Step-parent</masterLabel>
+            <translation><!-- Step-parent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Step-sibling</masterLabel>
+            <translation><!-- Step-sibling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Uncle</masterLabel>
+            <translation><!-- Uncle --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <fieldSets>
+        <label><!-- View Social Security Number --></label>
+        <name>View_Social_Security_Number</name>
+    </fieldSets>
+    <layouts>
+        <layout>Client Contact</layout>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Personal Information --></label>
+            <section>Personal Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Vendor Contact</layout>
+        <sections>
+            <label><!-- Contact Informaiton --></label>
+            <section>Contact Informaiton</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Create SMS User --></label>
+        <name>Create_SMS_User</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Payment Notes --></label>
+        <name>Payment_Notes</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Reviewed --></label>
+        <name>Reviewed</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Update Travel Details --></label>
+        <name>Update_Travel_Details</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Contacts that relate to clients or prospects --></description>
+        <label><!-- Client Contact --></label>
+        <name>Client_Contact</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Other Contacts --></description>
+        <label><!-- Other Contact --></label>
+        <name>Other_Contact</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please enter a reason --></errorMessage>
+        <name>Inactive_Deceased_Reason_Required</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Contact_Usage_Last_Month --></label>
+        <name>Contact_Usage_Last_Month</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Contact_Usage_Last_Month_Excl_zeros --></label>
+        <name>Contact_Usage_Last_Month_Excl_zeros</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Contact_Usage_This_Month --></label>
+        <name>Contact_Usage_This_Month</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Contact_Usage_This_Month_Excl_zeros --></label>
+        <name>Contact_Usage_This_Month_Excl_zeros</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Contact_Usage_This_Year --></label>
+        <name>Contact_Usage_This_Year</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Contact_Usage_This_Year_Excl_zeros --></label>
+        <name>Contact_Usage_This_Year_Excl_zeros</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Tasks_Contacts --></label>
+        <name>activities__Create_Tasks_Contacts</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Special_Occasion__c</fullName>
+    <label>Special Occasion</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Anniversary</fullName>
+                <default>false</default>
+                <label>Anniversary</label>
+            </value>
+            <value>
+                <fullName>Art Basel</fullName>
+                <default>false</default>
+                <label>Art Basel</label>
+            </value>
+            <value>
+                <fullName>Assistant’s Day</fullName>
+                <default>false</default>
+                <label>Assistant’s Day</label>
+            </value>
+            <value>
+                <fullName>Birthday</fullName>
+                <default>false</default>
+                <label>Birthday</label>
+            </value>
+            <value>
+                <fullName>December Festive</fullName>
+                <default>false</default>
+                <label>Christmas / December Festive</label>
+            </value>
+            <value>
+                <fullName>Cinco de Mayo</fullName>
+                <default>false</default>
+                <label>Cinco de Mayo</label>
+            </value>
+            <value>
+                <fullName>Easter</fullName>
+                <default>false</default>
+                <label>Easter</label>
+            </value>
+            <value>
+                <fullName>Father's Day</fullName>
+                <default>false</default>
+                <label>Father's Day</label>
+            </value>
+            <value>
+                <fullName>Formula 1</fullName>
+                <default>false</default>
+                <label>Formula 1</label>
+            </value>
+            <value>
+                <fullName>Hanukkah</fullName>
+                <default>false</default>
+                <label>Hanukkah</label>
+            </value>
+            <value>
+                <fullName>Holiday Party</fullName>
+                <default>false</default>
+                <label>Holiday Party</label>
+            </value>
+            <value>
+                <fullName>International Women’s Day</fullName>
+                <default>false</default>
+                <label>International Women’s Day</label>
+            </value>
+            <value>
+                <fullName>July 4th</fullName>
+                <default>false</default>
+                <label>July 4th</label>
+            </value>
+            <value>
+                <fullName>Kentucky Derby</fullName>
+                <default>false</default>
+                <label>Kentucky Derby</label>
+            </value>
+            <value>
+                <fullName>Labor Day</fullName>
+                <default>false</default>
+                <label>Labor Day</label>
+            </value>
+            <value>
+                <fullName>Masters</fullName>
+                <default>false</default>
+                <label>Masters</label>
+            </value>
+            <value>
+                <fullName>Memorial Day</fullName>
+                <default>false</default>
+                <label>Memorial Day</label>
+            </value>
+            <value>
+                <fullName>MLK Weekend</fullName>
+                <default>false</default>
+                <label>MLK Weekend</label>
+            </value>
+            <value>
+                <fullName>Mother’s Day</fullName>
+                <default>false</default>
+                <label>Mother’s Day</label>
+            </value>
+            <value>
+                <fullName>New Year’s Eve</fullName>
+                <default>false</default>
+                <label>New Year’s Eve</label>
+            </value>
+            <value>
+                <fullName>NYFW</fullName>
+                <default>false</default>
+                <label>NYFW</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Parent's Weekend</fullName>
+                <default>false</default>
+                <label>Parent's Weekend</label>
+            </value>
+            <value>
+                <fullName>Passover</fullName>
+                <default>false</default>
+                <label>Passover</label>
+            </value>
+            <value>
+                <fullName>Presidents' Day</fullName>
+                <default>false</default>
+                <label>Presidents' Day</label>
+            </value>
+            <value>
+                <fullName>Purim</fullName>
+                <default>false</default>
+                <label>Purim</label>
+            </value>
+            <value>
+                <fullName>Spring Break</fullName>
+                <default>false</default>
+                <label>Spring Break</label>
+            </value>
+            <value>
+                <fullName>Superbowl</fullName>
+                <default>false</default>
+                <label>Superbowl</label>
+            </value>
+            <value>
+                <fullName>Thanksgiving</fullName>
+                <default>false</default>
+                <label>Thanksgiving</label>
+            </value>
+            <value>
+                <fullName>US Open Tennis</fullName>
+                <default>false</default>
+                <label>US Open Tennis</label>
+            </value>
+            <value>
+                <fullName>Valentines Day</fullName>
+                <default>false</default>
+                <label>Valentines Day</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

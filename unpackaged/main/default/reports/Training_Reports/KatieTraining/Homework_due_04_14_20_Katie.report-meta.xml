@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.Account_Status__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_RECORDTYPE</field>
+    </columns>
+    <columns>
+        <field>Contact.Contact_Type__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>ACCOUNT_RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Account.Client_Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>INDUSTRY</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Agriculture,Apparel,Banking,Biotechnology,Chemicals,Communications,Construction,Consulting,Education,Electronics,Energy,Engineering,Entertainment,Environmental,Finance,Food &amp; Beverage,Government,Healthcare,Hospitality,Insurance,Legal,Machinery,Manufacturing,Media,Not For Profit,Other,Real Estate,Recreation,Retail,Shipping,Technology,Telecommunications,Transportation,Utilities</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Contact_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Insider Client</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Account_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Past,Frozen,Prospect</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>INDUSTRY</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Homework due 04.14.20 Katie</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2019-04-01</startDate>
+    </timeFrameFilter>
+</Report>

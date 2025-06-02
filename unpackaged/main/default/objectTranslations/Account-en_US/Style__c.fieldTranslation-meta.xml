@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Key Factors --></label>
+        <name>Style__c</name>
+        <picklistValues>
+            <masterLabel>Afternoon Tea</masterLabel>
+            <translation><!-- Afternoon Tea --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beach Club</masterLabel>
+            <translation><!-- Beach Club --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>British</masterLabel>
+            <translation><!-- British --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Catering</masterLabel>
+            <translation><!-- Catering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chef’s Table</masterLabel>
+            <translation><!-- Chef’s Table --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Counter Seating</masterLabel>
+            <translation><!-- Counter Seating --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distillery/Brewery</masterLabel>
+            <translation><!-- Distillery/Brewery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gastronomic</masterLabel>
+            <translation><!-- Gastronomic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gluten-free</masterLabel>
+            <translation><!-- Gluten-free --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Karaoke</masterLabel>
+            <translation><!-- Karaoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kid Friendly</masterLabel>
+            <translation><!-- Kid Friendly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Live Entertainment</masterLabel>
+            <translation><!-- Live Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lounge/Nightclub</masterLabel>
+            <translation><!-- Lounge/Nightclub --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outdoor Dining</masterLabel>
+            <translation><!-- Outdoor Dining --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rooftop</masterLabel>
+            <translation><!-- Rooftop --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shiva Platters</masterLabel>
+            <translation><!-- Shiva Platters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sports Bar</masterLabel>
+            <translation><!-- Sports Bar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TVs</masterLabel>
+            <translation><!-- TVs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tasting Menu</masterLabel>
+            <translation><!-- Tasting Menu --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waterfront</masterLabel>
+            <translation><!-- Waterfront --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wine Bar</masterLabel>
+            <translation><!-- Wine Bar --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Car Rental Preferences - DNU --></label>
+        <name>Car_Rental_Preferences__c</name>
+        <picklistValues>
+            <masterLabel>Alamo</masterLabel>
+            <translation><!-- Alamo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Avis</masterLabel>
+            <translation><!-- Avis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Budget</masterLabel>
+            <translation><!-- Budget --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dollar</masterLabel>
+            <translation><!-- Dollar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enterprise</masterLabel>
+            <translation><!-- Enterprise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hertz</masterLabel>
+            <translation><!-- Hertz --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National</masterLabel>
+            <translation><!-- National --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sixt</masterLabel>
+            <translation><!-- Sixt --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

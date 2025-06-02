@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Insider</letterhead>
+    <name>HTMLRestaurant</name>
+    <style>freeForm</style>
+    <subject>Restaurant Confirmation</subject>
+    <textOnly>Hi,
+
+Please see below for your confirmation:
+
+Restaurant name: {!Case.Vendor__c}
+Confirmed time: {!Case.Date__c} - {!Case.Time__c}
+Number in party: {!Case.Number_in_Party__c}
+Address: {!Case.Vendor_Address__c}
+Cross streets: {!Case.Vendor_Cross_Streets__c}
+Telephone: {!Case.Vendor_Phone__c}
+Confirmed with: {!Case.Confirmed_With__c}
+Reconfirmed with: {!Case.Reconfirmed_With__c}
+Directions: DO WE NEED TO ADD?
+Notes/Special Requests:
+
+Should you need to alter or cancel your reservation after business hours, kindly notify the INsider Team at 800.840.1143 or 24@insidernyc.com.
+
+Please note that any no show of a reservation will incur a fee.
+
+Thank You!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

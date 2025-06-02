@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Some Vendors avoid calls from Concierge services.  Calling from a Cell, or unlisted number, will improve chances of answer. --></help>
+        <label><!-- ALWAYS Call from Cell --></label>
+        <name>ALWAYS_Call_from_Cell__c</name>
+    </CustomFieldTranslation>

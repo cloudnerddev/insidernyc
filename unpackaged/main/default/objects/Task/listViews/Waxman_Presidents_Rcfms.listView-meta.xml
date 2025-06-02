@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Waxman_Presidents_Rcfms</fullName>
+    <booleanFilter>1 AND 2 AND 3 and 4</booleanFilter>
+    <columns>SUBJECT</columns>
+    <columns>WHO_NAME</columns>
+    <columns>WHAT_NAME</columns>
+    <columns>Vendor__c</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>Reconfirmation_Date__c</columns>
+    <columns>Reconfirmation_Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Reconfirmation_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Complete</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Task.Reconfirmation</value>
+    </filters>
+    <filters>
+        <field>WHO_NAME</field>
+        <operation>contains</operation>
+        <value>Waxman</value>
+    </filters>
+    <filters>
+        <field>Reconfirmation_Date__c</field>
+        <operation>greaterThan</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Waxman Presidents Rcfms</label>
+</ListView>

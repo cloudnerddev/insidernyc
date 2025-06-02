@@ -1,0 +1,2433 @@
+<apex:page controller="ItineraryTemplateController" renderAs="pdf" showChat="false" showHeader="false" applyHtmlTag="false" applyBodyTag="false">
+    
+    <head>
+        
+        <style> 
+                body {
+                    font-family: Arial, Helvetica, sans-serif;
+                } 
+                
+                .mainHead{
+                    text-align: center;
+                }
+                .col2{
+                    text-align: right;
+                }
+                table {
+                    text-items: center;
+                    width: 100%
+                }
+                .logDate{
+                    text-align: right;
+                    width:30%;
+                    position: relative;
+                    padding-top:10px;
+                    font-size: 9.7pt;
+                }
+                .logmid{
+                    width:5%;
+                    padding-top:10px;
+                }
+                .tableHr{
+                    
+                    padding-top:10px;
+                    font-size: 9pt;
+                    /* height: 70px;  */
+                    /* text-align: left; */
+                }
+                .logHeading{
+                    background: #267797;
+                    color: white;
+                    width: 100%;
+                    padding: 1%;
+                    margin-bottom: 2px;
+                }
+                .MainHeading{
+                    background: #267797;
+                    color: white;
+                    width: 100%;
+                    padding: 1%;
+                    text-align: center;
+                }
+                .logFirst{
+                    padding: 16px;
+                    text-align: center;
+                    
+                    border-bottom: 1px solid #ddd;
+                    border-top: 1px solid #ddd;
+                    color:#267797;
+                }
+                .logSecond{
+                    padding: 16px;
+                    text-align: center;
+                    border: 1px solid #ddd;
+                    color:#267797;
+                }
+                .logThird{
+                    padding: 16px;
+                    valign: top;
+                    text-align: center;
+                    border-bottom: 1px solid #ddd;
+                    border-top: 1px solid #ddd;
+                    color:#267797;
+                }
+                .container {
+                    position: relative;
+                    color: white;
+                    width: 100%;
+                }
+                .imgSize{
+                    width: 800px;
+                    height: 350px;
+                    page-break-inside: avoid;
+                }
+                .logosize{
+                    width: 160px;
+                    height: 80px;
+                }
+                .spaceadd{
+                    margin-bottom: 100px;
+                }
+                .column2{
+                    width:65%;
+                }
+                .sfdc_richtext img {
+                    margin-top: -18px;
+                    height: 350px;
+                    width: 800px;
+                }
+                .bottom-left {
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0px;
+                    background-color: black;
+                    width: 100%;
+                    padding-left: 16px;
+                    /* font-weight: bold; */
+                    opacity: 0.5;
+                    text-align: left;
+                }
+                .bottom-new {
+                    bottom: 0px;
+                    left: 0px;
+                    background-color: black;
+                    width: 100%;
+                    padding-top: 5px;
+                    padding-left: 16px;
+                    padding-bottom: 5px;
+                    /* font-weight: bold; */
+                    text-align: left;
+                }
+                
+                .line{
+                    color:#267797;
+                }
+                .thikLine{
+                    background-color: #267797;
+                    width: 20%;
+                    height: 4px;
+                    margin-left: 40%;
+                }
+                .fontSize{
+                    font-size: 9pt;
+                }
+                .imagesize{
+                    width: 500px;
+                    height: 200px;
+                }
+                .print:last-child {
+                    page-break-after: auto;
+                }
+                .flightBooking {
+                    size: letter;                    
+                    font-family: monospace;
+                    font-size: 14px;
+                    text-align: left;
+                }
+                .page-break {
+                    display:block;
+                    page-break-after:always;
+                }
+                .colOne {
+                    width: 40%;
+                }
+                .colTwo {
+                    width: 40%;
+                }
+                .colThree {
+                    width: 20%;
+                }
+                @media print {  
+                  div.dontbreak {
+                    display: grid;
+                    page-break-inside: avoid;
+                  }
+                }
+                .new-page-section {
+                    page-break-before: always;
+                }
+        </style>
+      </head>  
+    <div>
+        <table class="row">
+            <tr>
+                <td>
+                    <div class="col1">
+                        <apex:image styleClass="logosize" url="{!$Resource.LogoForItinerary}"/>
+                    </div>
+                </td>
+                <td>
+                    <div class="col2">
+                        <pre>212.685.4113
+                            24 hr:800.840.1143
+                             24@insidernyc.com
+                        </pre>
+                    </div> 
+                </td>
+            </tr>
+        </table>
+    </div>
+    <apex:outputpanel styleClass="imagesize" >
+        <apex:outputField value="{!thisItinerary.Intro_Picture__c}" />
+    </apex:outputpanel>
+    <div class="MainHeading">
+        <apex:outputtext value="{0, date, EEEE} · {0, date, MMMM d}, {0, date, yyyy}">
+            <apex:param value="{!thisItinerary.Start_Date__c}"></apex:param>
+        </apex:outputtext> - 
+        <apex:outputtext value="{0, date, EEEE} · {0, date, MMMM d}, {0, date, yyyy}">
+            <apex:param value="{!thisItinerary.End_Date__c}"></apex:param>
+        </apex:outputtext>
+    </div>
+    <h2 class="mainHead">{!thisItinerary.name}</h2>
+    <div  class="thikLine"></div>
+    <table class="row">
+        <apex:repeat value="{!headerList}" var="logs" id="theRepeat">
+            <tr class="row">
+                <td class="logDate">
+                    <b>
+                        <apex:outputtext value="{0, date, EEEE · MMMM d}">
+                            <apex:param value="{!logs.Reference_Date}"></apex:param>
+                        </apex:outputtext>
+                    </b>
+                </td>
+                <td class="logmid"><p>  </p>
+                </td>
+                <td class="tableHr" >{!logs.subject}</td>
+            </tr>
+        </apex:repeat>
+    </table>
+    <div class="spaceadd"></div>
+    <apex:repeat value="{!imgWrapper}" var="logs">
+        <div class="dontbreak">
+            <!--apex:outputPanel rendered="{!logs.isPageBreak == true}">
+             <!--div style="page-break-after: always;"></div>
+            </apex:outputPanel-->
+            <!-- HEADER -->
+            <apex:outputText rendered="{!logs.relatedLog.Itinerary_Header__c != ''}" value="{!logs.relatedLog.Itinerary_Header__c}" escape="false"></apex:outputText>
+            <div class="logHeading">
+                <apex:outputtext value="{0, date, EEEE · MMMM d}">
+                    <apex:param value="{!logs.relatedLog.Reference_Date__c}"></apex:param>
+                </apex:outputtext>
+            </div>
+             <div class="container" >
+                <apex:outputPanel rendered="{!AND(logs.isStaticResource == true,logs.isParentImage  == false,logs.isChildImage == false)}">
+                    <apex:image styleClass="imgSize" url="{!$Resource.CarRental}" rendered="{! logs.relatedLog.RecordTypeId == Car_Rental_RI }"/><!--Car Rental-->
+                    <apex:image styleClass="imgSize" url="{!$Resource.CarService}" rendered="{!logs.relatedLog.RecordTypeId == Car_Service_RI}"/><!--Car Service-->
+                    <apex:image styleClass="imgSize" url="{!$Resource.Charter}" rendered="{!logs.relatedLog.RecordTypeId == Charter_RI}"/><!--Charter-->
+                    <apex:image styleClass="imgSize" url="{!$Resource.ItineraryDocTestImage}" rendered="{!logs.relatedLog.RecordTypeId == Event_Tickets_RI}"/><!--Event Tickets-->
+                    <apex:outputPanel rendered="{!logs.relatedLog.RecordTypeId != Charter_RI}">
+                        <div class="bottom-left">
+                            <p>{!logs.relatedLog.Dynamic_Subject__c}<br />{!logs.relatedLog.Vendor_Phone__c}<br />{!logs.relatedLog.Vendor_Address__c}</p>
+                        </div>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.RecordTypeId == Charter_RI}">
+                        <div class="bottom-left">
+                            <p>{!logs.relatedLog.Dynamic_Subject__c}<br />{!logs.relatedLog.Vendor_Phone__c}<br />{!logs.relatedLog.Departure_Location_and_Address__c}</p>
+                        </div>
+                    </apex:outputPanel>
+                    
+                </apex:outputPanel>
+
+                <apex:outputPanel rendered="{!AND(logs.isStaticResource == false,logs.isParentImage  == false,logs.isChildImage == true)}">
+                    <apex:outputField value="{!logs.relatedLog.Itinerary_Image__c}" />
+                    <apex:outputPanel rendered="{!logs.relatedLog.RecordTypeId != Tour_Booking_RI}"> 
+                        <div class="bottom-left">
+                            <p>{!logs.relatedLog.Dynamic_Subject__c}<br />{!logs.relatedLog.Vendor_Phone__c}<br />{!logs.relatedLog.Vendor_Address__c}</p>
+                        </div>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.RecordTypeId == Tour_Booking_RI}">
+                        <div class="bottom-left">
+                            <p>{!logs.relatedLog.Dynamic_Subject__c}<br />{!logs.relatedLog.Vendor_Phone__c}<br />{!logs.relatedLog.Meeting_Location__c}</p>
+                        </div>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!AND(logs.isStaticResource == false,logs.isParentImage  == true,logs.isChildImage == false)}">
+                    <apex:outputField value="{!logs.relatedLog.Vendor__r.Itinerary_Image__c}"/>
+                    <apex:outputPanel rendered="{!logs.relatedLog.RecordTypeId != Tour_Booking_RI}"> 
+                        <div class="bottom-left">
+                            <p>{!logs.relatedLog.Dynamic_Subject__c}<br />{!logs.relatedLog.Vendor_Phone__c}<br />{!logs.relatedLog.Vendor_Address__c}</p>
+                        </div>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.RecordTypeId == Tour_Booking_RI}">
+                        <div class="bottom-left">
+                            <p>{!logs.relatedLog.Dynamic_Subject__c}<br />{!logs.relatedLog.Vendor_Phone__c}<br />{!logs.relatedLog.Meeting_Location__c}</p>
+                        </div>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!AND(logs.isStaticResource == false,logs.isParentImage  == false,logs.isChildImage == false)}">
+                    <div class="bottom-new">
+                        <p>{!logs.relatedLog.Dynamic_Subject__c}<br />{!logs.relatedLog.Vendor_Phone__c}<br />{!logs.relatedLog.Vendor_Address__c}</p>
+                    </div>
+                </apex:outputPanel>
+            </div>
+        </div>
+         
+        <!-- <apex:OutputPanel rendered="{!logs.relatedFlight == Null}"> -->
+            <div>
+            <apex:OutputPanel rendered="{!IF(OR(logs.relatedLog.RecordTypeId == Hotel_Booking_RI,logs.relatedLog.RecordTypeId == House_Villa_Booking_RI),true,false)}">
+                <table class="row" >
+                    <tr>
+                        <td class="logFirst">
+                            <apex:outputtext value="{0, date, MMM d}">
+                                <apex:param value="{!logs.relatedLog.Check_In_Date__c}"></apex:param>
+                            </apex:outputtext> ·&nbsp;
+                            <apex:outputField value="{!logs.relatedLog.Check_In_Time__c}">
+                                <apex:param value="h:mm a" />
+                            </apex:outputField> 
+                            <pre>Check In</pre>
+                        </td>
+                        <td class="logSecond">
+                            <apex:outputtext value="{0, date, MMM d}">
+                                <apex:param value="{!logs.relatedLog.Check_Out_Date__c}"></apex:param>
+                            </apex:outputtext> ·&nbsp;<apex:outputField value="{!logs.relatedLog.Check_Out_Time__c}">
+                                <apex:param value="h:mm a" />
+                            </apex:outputField>
+                            <pre>Check Out</pre>
+                        </td>
+                        <td class="logThird">
+                            <p>{!logs.relatedLog.of_Nights__c} Nights</p>
+                        </td>
+                    </tr>
+                </table>
+            </apex:outputPanel>  
+            </div>
+        <!-- </apex:OutputPanel> -->
+        <!-- MIDDDLE -->
+        <apex:outputText rendered="{!logs.relatedLog.Itinerary_Middle__c != ''}" value="{!logs.relatedLog.Itinerary_Middle__c}" escape="false"></apex:outputText>
+        
+        <div class="fontSize">
+            <!-- Amenity Order -->
+            <hr class="line"/>
+            <apex:OutputPanel rendered="{!logs.relatedLog.RecordTypeId == Amenity_Order_RI}"> 
+            <table class="row">
+            <!--
+                <tr>
+                    <td valign="top">Confirmation For:</td>
+                    <td class="column2" valign="top">
+                        <apex:outputField value="{!logs.relatedLog.Contact.FirstName}"/>&nbsp;<apex:outputField value="{!logs.relatedLog.Contact.LastName}"/>
+                    </td>
+                </tr>
+            -->    
+                <tr>
+                    <td valign="top">Confirmation For:</td>
+                    <td class="column2" valign="top">
+                        <apex:outputField value="{!logs.relatedLog.Person_Using__r.FirstName}"/>&nbsp;<apex:outputField value="{!logs.relatedLog.Person_Using__r.LastName}"/>
+                    </td>
+                </tr>
+                <apex:outputPanel rendered="{!logs.relatedLog.Items_Ordered__c != ''}">
+                    <tr>
+                        <td valign="top">Items Ordered:&nbsp;</td>
+                        <td class="column2" valign="top">
+                            <apex:outputField rendered="{!logs.relatedLog.Items_Ordered__c != ''}" value="{!logs.relatedLog.Items_Ordered__c}"/>
+                        </td>
+                    </tr>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!logs.relatedLog.Recipient_Name__c != ''}">
+                    <tr>
+                        <td valign="top">Recipient Name:&nbsp;</td>
+                        <td class="column2" valign="top">
+                            <apex:outputField rendered="{!logs.relatedLog.Recipient_Name__c != ''}" value="{!logs.relatedLog.Recipient_Name__r.FirstName}"/>&nbsp;{!logs.relatedLog.Recipient_Name__r.LastName}
+                        </td>
+                    </tr>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!logs.relatedLog.Recipient_s_Address__c != ''}">
+                    <tr>
+                        <td valign="top">Recipient Address and Telephone:&nbsp;</td>
+                        <td class="column2" valign="top">
+                            <apex:outputField rendered="{!logs.relatedLog.Recipient_s_Address__c != ''}" value="{!logs.relatedLog.Recipient_s_Address__c}"/>, {!logs.relatedLog.Recipient_s_Phone_Formatted__c}
+                        </td>
+                    </tr>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!logs.relatedLog.Note_Card__c != ''}">
+                    <tr>
+                        <td valign="top">Note Card:&nbsp;</td>
+                        <td class="column2" valign="top">
+                            <apex:outputField rendered="{!logs.relatedLog.Note_Card__c != ''}" value="{!logs.relatedLog.Note_Card__c}"/>
+                        </td>
+                    </tr>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!logs.relatedLog.Total_Price__c != null}">
+                    <tr>
+                        <td valign="top">Price:&nbsp;</td>
+                        <td class="column2" valign="top">
+                            <apex:outputText rendered="{!logs.relatedLog.Total_Price__c != null}" value="{0, Number, Currency}"> 
+                                <apex:param value="{!logs.relatedLog.Total_Price__c}"/> 
+                            </apex:outputText>&nbsp;<apex:outputText rendered="{!logs.relatedLog.Currency__c != null}" > <apex:param value="{!logs.relatedLog.Currency__c}"/> </apex:outputText>
+                        </td>
+                    </tr>
+                </apex:outputPanel>
+<!--
+                <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}">
+                    <tr>
+                        <td valign="top">Special Instructions:&nbsp;</td>
+                        <td class="column2" valign="top">
+                            <apex:outputField rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}" value="{!logs.relatedLog.Special_Requests_Notes__c}"/>
+                        </td>
+                    </tr>
+                </apex:outputPanel>
+-->    
+                <apex:outputPanel rendered="{!logs.relatedLog.Delivery_Date__c != null}">
+                    <tr>
+                        <td valign="top">Delivery Date:&nbsp;</td>
+                        <td class="column2" valign="top">
+                            <apex:outputField rendered="{!logs.relatedLog.Delivery_Date__c != null}" value="{!logs.relatedLog.Delivery_Day__c}"/>,&nbsp;
+                                <apex:outputText value="{0, date, MMMM d',' yyyy}">
+                                    <apex:param value="{!logs.relatedLog.Delivery_Date__c}"/>
+                                </apex:outputText>
+                        </td>
+                    </tr>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!logs.relatedLog.Return_Policy__c != ''}">
+                    <tr>
+                        <td valign="top">Return Policy:&nbsp;</td>
+                        <td class="column2" valign="top">
+                            <apex:outputField rendered="{!logs.relatedLog.Return_Policy__c != ''}" value="{!logs.relatedLog.Return_Policy__c}"/>
+                        </td>
+                    </tr>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!logs.relatedLog.Order_Confirmation__c != ''}">
+                    <tr>
+                        <td valign="top">Confirmation #:&nbsp;</td>
+                        <td class="column2" valign="top">
+                            <apex:outputField rendered="{!logs.relatedLog.Order_Confirmation__c != ''}" value="{!logs.relatedLog.Order_Confirmation__c}"/>
+                        </td>
+                    </tr>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!logs.relatedLog.Confirmed_With__c != ''}">
+                    <tr>
+                        <td valign="top">Confirmed With and Confirmation Date:&nbsp;</td>
+                        <td class="column2" valign="top">
+                            <apex:outputField rendered="{!logs.relatedLog.Confirmed_With__c != ''}" value="{!logs.relatedLog.Confirmed_With__c}"/><apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Confirmation_Date_for_Email__c}"/></apex:outputText>
+                        </td>
+                    </tr>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}">
+                    <tr>
+                        <td valign="top">Reconfirmed with and Reconfirmation Date:&nbsp;</td>
+                        <td class="column2" valign="top">
+                            <apex:outputField rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}" value="{!logs.relatedLog.Reconfirmed_With__c}"/>
+                                <apex:outputText value="{0, date, MMMM d','  yyyy}">
+                                    <apex:param value="{!logs.relatedLog.Reconfirmation_Date_for_Email__c}"/>
+                                </apex:outputText>
+                        </td>
+                    </tr>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!logs.relatedLog.Items_Ordered_Type_of_Arrangements_rich__c != ''}">
+                    <tr>
+                        <td valign="top">Items Ordered/Type of Arrangements:&nbsp;</td>
+                        <td class="column2" valign="top">
+                            <apex:outputText rendered="{!logs.relatedLog.Items_Ordered_Type_of_Arrangements_rich__c != ''}" value="{!logs.relatedLog.Items_Ordered_Type_of_Arrangements_rich__c}" escape="false"></apex:outputText>
+                        </td>
+                    </tr>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!logs.relatedLog.Return_Policy__c != ''}">
+                    <tr>
+                        <td valign="top">Return policy:&nbsp;</td>
+                        <td class="column2" valign="top">
+                            <apex:outputText rendered="{!logs.relatedLog.Return_Policy__c != ''}" value="{!logs.relatedLog.Return_Policy__c}" escape="false"></apex:outputText>
+                        </td>
+                    </tr>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}">
+                    <tr>
+                        <td valign="top">Special Requests/Notes:&nbsp;</td>
+                        <td class="column2" valign="top">
+                            <apex:outputText rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}" value="{!logs.relatedLog.Special_Requests_Notes_rich__c}" escape="false"></apex:outputText>
+                        </td>
+                    </tr>
+                </apex:outputPanel>
+                
+                
+            </table>
+            </apex:outputPanel>
+            <!-- Appointment/Service Booking -->
+            <apex:OutputPanel rendered="{!logs.relatedLog.RecordTypeId == Service_Booking_RI}">
+                <table class="row">
+                    <apex:outputPanel rendered="{!logs.relatedLog.Time__c != null}">
+                        <tr>
+                            <td valign="top">Time:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Time__c != null}" value="{!logs.relatedLog.Time__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <!--
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Contact.FirstName} &nbsp; {!logs.relatedLog.Contact.LastName}
+                        </td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Person_Using__r.FirstName} &nbsp; {!logs.relatedLog.Person_Using__r.LastName}
+                        </td>
+                    </tr>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Date__c != null}">
+                        <tr>
+                            <td valign="top">For This Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Date__c != null}" value="{!logs.relatedLog.Day_of_Week_Date__c}"/>,&nbsp;<apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Date__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Description__c != null}">
+                        <tr>
+                            <td valign="top">Description:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Description__c != null}" value="{!logs.relatedLog.Description__c }"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Appointment_Address__c != ''}">
+                        <tr>
+                            <td valign="top">Address:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField value="{!logs.relatedLog.Appointment_Address__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Total_Price__c != null}">
+                        <tr>
+                            <td valign="top">Price:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText value="{0, Number, Currency}"><apex:param value="{!logs.relatedLog.Total_Price__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+<!--
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}">
+                        <tr>
+                            <td valign="top">Special Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}" value="{!logs.relatedLog.Special_Requests_Notes__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+—->
+                    <apex:outputPanel rendered="{!logs.relatedLog.Confirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Confirmed With and Confirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Confirmed_With__c != ''}" value="{!logs.relatedLog.Confirmed_With__c}"/><apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Confirmation_Date_for_Email__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Reconfirmed with and Reconfirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}" value="{!logs.relatedLog.Reconfirmed_With__c}"/>
+                                    <apex:outputText value="{0, date, MMMM d','  yyyy}">
+                                        <apex:param value="{!logs.relatedLog.Reconfirmation_Date_for_Email__c}"/>
+                                    </apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <!--
+                    <apex:outputPanel rendered="{!logs.relatedLog.Description_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Description:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Description_rich__c != ''}" value="{!logs.relatedLog.Description_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    -->
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Special Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}" value="{!logs.relatedLog.Special_Requests_Notes_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Cancellation_Policy__c = '010101010'}">
+                        <tr>
+                            <td valign="top">Cancellation Policy:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Cancellation_Policy__c != ''}" value="{!logs.relatedLog.Cancellation_Policy__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr> 
+                    </apex:outputPanel>
+                    
+                </table>
+            </apex:outputPanel>
+            <!--Car Rental  -->
+            <apex:OutputPanel rendered="{!logs.relatedLog.RecordTypeId == Car_Rental_RI}"> 
+                <table class="row">
+                <!--
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Contact.FirstName} &nbsp; {!logs.relatedLog.Contact.LastName}
+                        </td>
+                    </tr>
+                 -->   
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Person_Using__r.FirstName} &nbsp; {!logs.relatedLog.Person_Using__r.LastName}
+                        </td>
+                    </tr>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Type_of_Vehicle__c!= ''}">
+                        <tr>
+                            <td valign="top">Type of Vehicle:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Type_of_Vehicle__c!= ''}" value="{!logs.relatedLog.Type_of_Vehicle__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Pickup_Date__c != null}">
+                        <tr>
+                            <td valign="top">Pick Up Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Pickup_Date__c != null}" value="{!logs.relatedLog.Pickup_Day__c}"/>,&nbsp;<apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Pickup_Date__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Pickup_Time__c != null}">
+                        <tr>
+                            <td valign="top">Pick up Time:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Pickup_Time__c != null}" value="{!logs.relatedLog.Pickup_Time__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Pick_Up_Location_and_Address__c != ''}">
+                        <tr>
+                            <td valign="top">Pick up Location:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Pick_Up_Location_and_Address__c != ''}" value="{!logs.relatedLog.Pick_Up_Location_and_Address__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Pickup_Location_Phone__c!= ''}">
+                        <tr>
+                            <td valign="top">Pick up Location Phone:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Pickup_Location_Phone__c!= ''}" value="{!logs.relatedLog.Pickup_Location_Phone_Formatted__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Number_of_Days_Rental__c!= null}">
+                        <tr>
+                            <td valign="top">Number of Days of Rental:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Number_of_Days_Rental__c!= null}" value="{!logs.relatedLog.Number_of_Days_Rental__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Drop_off_Date__c != null}">
+                        <tr>
+                            <td valign="top">Drop off Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Drop_off_Date__c != null}" value="{!logs.relatedLog.Drop_Off_Day__c}"/>,&nbsp;<apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Drop_off_Date__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Drop_off_Time__c!= null}">
+                        <tr>
+                            <td valign="top">Drop off Time:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Drop_off_Time__c!= null}" value="{!logs.relatedLog.Drop_off_Time__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Delivery_Location_and_Address_text__c!= ''}">
+                        <tr>
+                            <td valign="top">Drop off Location:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Delivery_Location_and_Address_text__c!= ''}" value="{!logs.relatedLog.Delivery_Location_and_Address_text__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Price_per_Day__c != null}">
+                        <tr>
+                            <td valign="top">Price per day:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Price_per_Day__c != null}" value="{!logs.relatedLog.Price_per_Day__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Total_Price__c != null}">
+                        <tr>
+                            <td valign="top">Total Price:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Total_Price__c != null}" value="{0, Number, Currency}"><apex:param value="{!logs.relatedLog.Total_Price__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+<!--
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}">
+                        <tr>
+                            <td valign="top">Special Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}" value="{!logs.relatedLog.Special_Requests_Notes__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+-->
+                    <apex:outputPanel rendered="{!logs.relatedLog.Membership_Number__c!= ''}">
+                        <tr>
+                            <td valign="top">Membership Number:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Membership_Number__c!= ''}" value="{!logs.relatedLog.Membership_Number__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Membership_Status__c!= ''}">
+                        <tr>
+                            <td valign="top">Membership Status:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Membership_Status__c!= ''}" value="{!logs.relatedLog.Membership_Status__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Rewards_Program_Phone__c!= ''}">
+                        <tr>
+                            <td valign="top">Rewards Program Phone:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Rewards_Program_Phone__c!= ''}" value="{!logs.relatedLog.Rewards_Program_Phone__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Order_Confirmation__c != ''}">
+                        <tr>
+                            <td valign="top">Confirmation #:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Order_Confirmation__c != ''}" value="{!logs.relatedLog.Order_Confirmation__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Confirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Confirmed With and Confirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Confirmed_With__c != ''}" value="{!logs.relatedLog.Confirmed_With__c}"/><apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Confirmation_Date_for_Email__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Reconfirmed with and Reconfirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}" value="{!logs.relatedLog.Reconfirmed_With__c}"/>
+                                    <apex:outputText value="{0, date, MMMM d','  yyyy}">
+                                        <apex:param value="{!logs.relatedLog.Reconfirmation_Date_for_Email__c}"/>
+                                    </apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Special Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}" value="{!logs.relatedLog.Special_Requests_Notes_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    
+                    <apex:outputPanel rendered="{!logs.relatedLog.Cancellation_Policy__c = '010101010'}">
+                        <tr>
+                            <td valign="top">Cancellation Policy:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Cancellation_Policy__c != ''}" value="{!logs.relatedLog.Cancellation_Policy__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                </table>
+            </apex:outputPanel>
+            <!-- Car Service -->
+            <apex:OutputPanel rendered="{!logs.relatedLog.RecordTypeId == Car_Service_RI}"> 
+                <table class="row">
+                <!--
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Contact.FirstName} &nbsp; {!logs.relatedLog.Contact.LastName}
+                        </td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Person_Using__r.FirstName} &nbsp; {!logs.relatedLog.Person_Using__r.LastName}
+                        </td>
+                    </tr>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Number_of_Passengers__c != null}">
+                        <tr>
+                            <td valign="top">Number of Passengers:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Number_of_Passengers__c != null}" value="{!logs.relatedLog.Number_of_Passengers__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Passenger_Cell__c != null}">
+                        <tr>
+                            <td valign="top">Passenger Cell:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Passenger_Cell__c != null}" value="{!logs.relatedLog.Passenger_Cell__c }"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Pickup_Date__c != null}">
+                        <tr>
+                            <td valign="top">For This Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Pickup_Date__c != null}" value="{!logs.relatedLog.Pickup_Day__c}"/>,&nbsp;<apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Pickup_Date__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Pickup_Time__c != null}">
+                        <tr>
+                            <td valign="top">Pick up Time:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Pickup_Time__c != null}" value="{!logs.relatedLog.Pickup_Time__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Pick_Up_Location_and_Address__c != ''}">
+                        <tr>
+                            <td valign="top">Pick up Location and Address:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Pick_Up_Location_and_Address__c != ''}" value="{!logs.relatedLog.Pick_Up_Location_and_Address__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Wait_Return__c != ''}">
+                        <tr>
+                            <td valign="top">Wait/ Return:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Wait_Return__c != ''}" value="{!logs.relatedLog.Wait_Return__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Delivery_Location_and_Address_text__c != ''}">
+                        <tr>
+                            <td valign="top">Drop off Location and Address:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Delivery_Location_and_Address_text__c != ''}" value="{!logs.relatedLog.Delivery_Location_and_Address_text__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Airline_Flight_Origin_City__c != ''}">
+                        <tr>
+                            <td valign="top">Airline/Flight #/Origin City:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Airline_Flight_Origin_City__c != ''}" value="{!logs.relatedLog.Airline_Flight_Origin_City__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <!--
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}">
+                        <tr>
+                            <td valign="top">Special Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}" value="{!logs.relatedLog.Special_Requests_Notes__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    -->
+                    <apex:outputPanel rendered="{!logs.relatedLog.Order_Confirmation__c != ''}">
+                        <tr>
+                            <td valign="top">Confirmation #:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Order_Confirmation__c != ''}" value="{!logs.relatedLog.Order_Confirmation__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Confirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Confirmed With and Confirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Confirmed_With__c != ''}" value="{!logs.relatedLog.Confirmed_With__c}"/><apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Confirmation_Date_for_Email__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Reconfirmed with and Reconfirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}" value="{!logs.relatedLog.Reconfirmed_With__c}"/>
+                                    <apex:outputText value="{0, date, MMMM d','  yyyy}">
+                                        <apex:param value="{!logs.relatedLog.Reconfirmation_Date_for_Email__c}"/>
+                                    </apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Special Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}" value="{!logs.relatedLog.Special_Requests_Notes_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Cancellation_Policy__c = '010101010'}">
+                        <tr>
+                            <td valign="top">Cancellation Policy:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Cancellation_Policy__c != ''}" value="{!logs.relatedLog.Cancellation_Policy__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                </table>
+            </apex:outputPanel>
+            <!-- Charter -->
+            <apex:OutputPanel rendered="{!logs.relatedLog.RecordTypeId == Charter_RI}">
+                <table class="row">
+                    <!--
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Contact.FirstName} &nbsp; {!logs.relatedLog.Contact.LastName}
+                        </td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Person_Using__r.FirstName} &nbsp; {!logs.relatedLog.Person_Using__r.LastName}
+                        </td>
+                    </tr>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Name_of_Boat_Yacht__c!= ''}">
+                        <tr>
+                            <td valign="top">Name of Boat/Yacht:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Name_of_Boat_Yacht__c!= ''}" value="{!logs.relatedLog.Name_of_Boat_Yacht__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Date_of_Departure__c != null}">
+                        <tr>
+                            <td valign="top">Date of Departure:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Date_of_Departure__c != null}" value="{!logs.relatedLog.Day_of_Departure__c}"/>,&nbsp;<apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Date_of_Departure__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Departure_Time__c != null}">
+                        <tr>
+                            <td valign="top">Departure Time:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Departure_Time__c != null}" value="{!logs.relatedLog.Departure_Time__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Departure_Location__c != ''}">
+                        <tr>
+                            <td valign="top">Departure Location:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Departure_Location__c != ''}" value="{!logs.relatedLog.Departure_Location__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    
+                    <apex:outputPanel rendered="{!logs.relatedLog.Itinerary_Stops__c != ''}">
+                        <tr>
+                            <td valign="top">Details of Charter:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Itinerary_Stops__c != ''}" value="{!logs.relatedLog.Itinerary_Stops__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Destination_Arrival_Date__c != null}">
+                        <tr>
+                            <td valign="top">Destination Arrival Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Destination_Arrival_Date__c != null}" value="{!logs.relatedLog.Destination_Arrival_Date__c}"/>&nbsp;<apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Destination_Arrival_Date__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Destination_Arrival_Time__c != null}">
+                        <tr>
+                            <td valign="top">Destination Arrival Time:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Destination_Arrival_Time__c != null}" value="{!logs.relatedLog.Destination_Arrival_Time__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Arrival_Location__c != ''}">
+                        <tr>
+                            <td valign="top">Arrival Location:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Arrival_Location__c != ''}" value="{!logs.relatedLog.Arrival_Location__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Type_of_Vessel__c  != ''}">
+                        <tr>
+                            <td valign="top">Type of Vessel:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Type_of_Vessel__c  != ''}" value="{!logs.relatedLog.Type_of_Vessel__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Number_of_Passengers__c!= null}">
+                        <tr>
+                            <td valign="top">Number of Passengers:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Number_of_Passengers__c!= null}" value="{!logs.relatedLog.Number_of_Passengers__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Total_Price__c != null}">
+                        <tr>
+                            <td valign="top">Price:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Total_Price__c != null}" value="{0, Number, Currency}"><apex:param value="{!logs.relatedLog.Total_Price__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <!--
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}">
+                        <tr>
+                            <td valign="top">Special Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}" value="{!logs.relatedLog.Special_Requests_Notes__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    -->
+                    <apex:outputPanel rendered="{!logs.relatedLog.Confirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Confirmed With and Confirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Confirmed_With__c != ''}" value="{!logs.relatedLog.Confirmed_With__c}"/><apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Confirmation_Date_for_Email__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Reconfirmed with and Reconfirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}" value="{!logs.relatedLog.Reconfirmed_With__c}"/>
+                                    <apex:outputText value="{0, date, MMMM d','  yyyy}">
+                                        <apex:param value="{!logs.relatedLog.Reconfirmation_Date_for_Email__c}"/>
+                                    </apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Special Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}" value="{!logs.relatedLog.Special_Requests_Notes_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Cancellation_Policy__c = '010101010'}">
+                        <tr>
+                            <td valign="top">Cancellation Policy:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Cancellation_Policy__c != ''}" value="{!logs.relatedLog.Cancellation_Policy__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                </table>
+            </apex:outputPanel>
+            <!--Dining Reservation-->
+            <apex:OutputPanel rendered="{!logs.relatedLog.RecordTypeId == DiningReservation_RI}">
+                <table class="row">
+                    <!--
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Contact.FirstName} &nbsp; {!logs.relatedLog.Contact.LastName}
+                        </td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Person_Using__r.FirstName} &nbsp; {!logs.relatedLog.Person_Using__r.LastName}
+                        </td>
+                    </tr>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Date__c != null}">
+                        <tr>
+                            <td valign="top">Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Date__c != null}" value="{!logs.relatedLog.Day_of_Week_Date__c}"/>,<apex:outputText value="{0, date, MMMM d',' yyyy}"><apex:param value="{!logs.relatedLog.Date__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Time__c != null}">
+                        <tr>
+                            <td valign="top">Confirmed Time:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Time__c != null}" value="{!logs.relatedLog.Time__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Number_in_Party__c != null}">
+                        <tr>
+                            <td valign="top">Number in Party:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Number_in_Party__c != null}" value="{!logs.relatedLog.Number_in_Party__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <!--
+                    <apex:outputPanel rendered="{!logs.relatedLog.Guest_Information_Special_Instructions__c != ''}">
+                        <tr>
+                            <td valign="top">Guest Information:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Guest_Information_Special_Instructions__c != ''}" value="{!logs.relatedLog.Guest_Information_Special_Instructions__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}">
+                        <tr>
+                            <td valign="top">Special Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}" value="{!logs.relatedLog.Special_Requests_Notes__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    -->
+                    <apex:outputPanel rendered="{!logs.relatedLog.Confirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Confirmed With and Confirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Confirmed_With__c != ''}" value="{!logs.relatedLog.Confirmed_With__c}"/><apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Confirmation_Date_for_Email__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Reconfirmed with and Reconfirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}" value="{!logs.relatedLog.Reconfirmed_With__c}"/>
+                                    <apex:outputText value="{0, date, MMMM d','  yyyy}">
+                                        <apex:param value="{!logs.relatedLog.Reconfirmation_Date_for_Email__c}"/>
+                                    </apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Special Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}" value="{!logs.relatedLog.Special_Requests_Notes_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Guest_Information_Special_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Guest Information:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Guest_Information_Special_rich__c != ''}" value="{!logs.relatedLog.Guest_Information_Special_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Cancellation_Policy__c = '010101010'}">
+                        <tr>
+                            <td valign="top">Cancellation Policy:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Cancellation_Policy__c != ''}" value="{!logs.relatedLog.Cancellation_Policy__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                </table>
+            </apex:outputPanel>
+            <!-- Event Booking  -->
+            <apex:OutputPanel rendered="{!logs.relatedLog.RecordTypeId == Event_Booking_RI}">
+                <table class="row">
+                    <apex:outputPanel rendered="{!logs.relatedLog.Time__c != null}">
+                        <tr>
+                            <td valign="top">Time:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Time__c != null}" value="{!logs.relatedLog.Time__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <!--
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Contact.FirstName} &nbsp; {!logs.relatedLog.Contact.LastName}
+                        </td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Person_Using__r.FirstName} &nbsp; {!logs.relatedLog.Person_Using__r.LastName}
+                        </td>
+                    </tr>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Date__c != null}">
+                        <tr>
+                            <td valign="top">Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Date__c != null}" value="{!logs.relatedLog.Day_of_Week_Date__c}"/>,<apex:outputText value="{0, date, MMMM d',' yyyy}"><apex:param value="{!logs.relatedLog.Date__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Number_in_Party__c != null}">
+                        <tr>
+                            <td valign="top">Number in Party:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Number_in_Party__c != null}" value="{!logs.relatedLog.Number_in_Party__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Menu_Pricing_Minimum__c != ''}">
+                        <tr>
+                            <td valign="top">Menu Pricing / Minimum:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Menu_Pricing_Minimum__c != ''}" value="{!logs.relatedLog.Menu_Pricing_Minimum__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.On_Site_Contact__c != ''}">
+                        <tr>
+                            <td valign="top">On-Site Contact:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.On_Site_Contact__c != ''}" value="{!logs.relatedLog.On_Site_Contact__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <!--
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}">
+                        <tr>
+                            <td valign="top">Special Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}" value="{!logs.relatedLog.Special_Requests_Notes__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    -->
+                    <apex:outputPanel rendered="{!logs.relatedLog.Order_Confirmation__c != ''}">
+                        <tr>
+                            <td valign="top">Confirmation #:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Order_Confirmation__c != ''}" value="{!logs.relatedLog.Order_Confirmation__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Confirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Confirmed With and Confirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Confirmed_With__c != ''}" value="{!logs.relatedLog.Confirmed_With__c}"/><apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Confirmation_Date_for_Email__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Reconfirmed with and Reconfirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}" value="{!logs.relatedLog.Reconfirmed_With__c}"/>
+                                    <apex:outputText value="{0, date, MMMM d','  yyyy}">
+                                        <apex:param value="{!logs.relatedLog.Reconfirmation_Date_for_Email__c}"/>
+                                    </apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Special Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}" value="{!logs.relatedLog.Special_Requests_Notes_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Cancellation_Policy__c = '010101010'}">
+                        <tr>
+                            <td valign="top">Cancellation Policy:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Cancellation_Policy__c != ''}" value="{!logs.relatedLog.Cancellation_Policy__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Menu_Pricing_Minimum_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Menu Pricing / Minimum:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Menu_Pricing_Minimum_rich__c != ''}" value="{!logs.relatedLog.Menu_Pricing_Minimum_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                </table>
+            </apex:outputPanel>
+            <!--Event Tickets  -->
+            <apex:OutputPanel rendered="{!logs.relatedLog.RecordTypeId == Event_Tickets_RI}">
+                <table class="row">
+                    <apex:outputPanel rendered="{!logs.relatedLog.Time__c != null}">
+                        <tr>
+                            <td valign="top">Time:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField value="{!logs.relatedLog.Time__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <!--
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Contact.FirstName} &nbsp; {!logs.relatedLog.Contact.LastName}
+                        </td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Person_Using__r.FirstName} &nbsp; {!logs.relatedLog.Person_Using__r.LastName}
+                        </td>
+                    </tr>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Event__c != ''}">
+                        <tr>
+                            <td valign="top">Event:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField value="{!logs.relatedLog.Event__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Date__c != null}">
+                        <tr>
+                            <td valign="top">Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField value="{!logs.relatedLog.Day_of_Week_Date__c}"/>,&nbsp;<apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Date__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Venue__c != ''}">
+                        <tr>
+                            <td valign="top">Event Venue:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField value="{!logs.relatedLog.Venue__r.Name}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Number_of_Tickets__c != null}">
+                        <tr>
+                            <td valign="top">Number of Tickets:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField value="{!logs.relatedLog.Number_of_Tickets__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Package_Pass_Name__c!= NULL}">
+                        <tr>
+                            <td valign="top">Package/Pass:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Package_Pass_Name__c!= NULL}" value="{!logs.relatedLog.Package_Pass_Name__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Package_Pass_Details__c!= NULL}">
+                        <tr>
+                            <td valign="top">Package/Pass Details:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Package_Pass_Details__c!= NULL}" value="{!logs.relatedLog.Package_Pass_Details__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Section__c!= NULL || logs.relatedLog.Row__c!= NULL}">
+                        <tr>
+                            <td valign="top">Seat Location:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Section__c!= NULL}" value="{!logs.relatedLog.Section_For_Email__c}"/><apex:outputText rendered="{!logs.relatedLog.Section__c!= NULL && logs.relatedLog.Row__c!= NULL}" value=", " />
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Seat_Location__c != NULL}">
+                        <tr>
+                            <td valign="top">Location Note:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Seat_Location__c != NULL}" value="{!logs.relatedLog.Seat_Location__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Notes_Pickup_Instructions__c != ''}">
+                        <tr>
+                            <td valign="top">Notes/Pickup Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Notes_Pickup_Instructions__c != ''}" value="{!logs.relatedLog.Notes_Pickup_Instructions__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Price_per_Ticket__c != null}">
+                        <tr>
+                            <td valign="top">Price per Ticket:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Price_per_Ticket__c != null}" value="{0, Number, Currency}"><apex:param value="{!logs.relatedLog.Price_per_Ticket__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Total_Price__c != null}">
+                        <tr>
+                            <td valign="top">Total Price:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Total_Price__c != null}" value="{0, Number, Currency}"><apex:param value="{!logs.relatedLog.Total_Price__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}">
+                        <tr>
+                            <td valign="top">Special Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}" value="{!logs.relatedLog.Special_Requests_Notes__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Confirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Confirmed With and Confirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Confirmed_With__c != ''}" value="{!logs.relatedLog.Confirmed_With__c}"/><apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Confirmation_Date_for_Email__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Reconfirmed with and Reconfirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}" value="{!logs.relatedLog.Reconfirmed_With__c}"/>
+                                    <apex:outputText value="{0, date, MMMM d','  yyyy}">
+                                        <apex:param value="{!logs.relatedLog.Reconfirmation_Date_for_Email__c}"/>
+                                    </apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Instructions_rich__c != '010101010'}">
+                        <tr>
+                            <td valign="top">Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Instructions_rich__c != ''}" value="{!logs.relatedLog.Instructions_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Location_Note_rich__c != '010101010'}">
+                        <tr>
+                            <td valign="top">Location Note:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Location_Note_rich__c != ''}" value="{!logs.relatedLog.Location_Note_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Cancellation_Policy__c = '010101010'}">
+                        <tr>
+                            <td valign="top">Cancellation Policy:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Cancellation_Policy__c != ''}" value="{!logs.relatedLog.Cancellation_Policy__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Package_pass_details_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Package/pass details:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Package_pass_details_rich__c != ''}" value="{!logs.relatedLog.Package_pass_details_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    
+                </table>
+            </apex:outputPanel>
+            <!-- Flight Booking -->
+            <apex:OutputPanel rendered="{!logs.relatedFlight != Null}">        
+                <div class="flightBooking">
+                    <div class="borderline"  style="border-bottom-style:solid; border-bottom-width: 2px;"></div>
+                    <c:flightPreparedFor caseId="{!logs.relatedLog.Id}"/>
+                    
+                    <p style="margin: auto; ">
+                        AIRLINE CONFIRMATION NUMBER: <b>{!logs.relatedLog.Order_Confirmation__c}</b></p>
+                    <p style="margin: auto; ">
+                        SPECIAL REQUESTS: <b>{!logs.relatedLog.Special_Requests_Notes__c}</b></p>        
+                    <br/>
+                    <div class="borderline" style="border-bottom-style:solid; border-bottom-width: 2px;"></div>
+                    <apex:panelGrid columns="2" width="100%">
+                        <apex:outputPanel >
+                            <apex:image style="width:30px; height:30px;" value="{!$Resource.plane}"/>
+                        </apex:outputPanel>
+                        <apex:outputPanel >
+                            DEPARTURE: <b class="ex1" style="padding-right: 10px; "><apex:outputText value="{0, date,EEEE MMMM d yyyy}"><apex:param value="{!logs.relatedFlight.Departure_Date__c}"/></apex:outputText> </b> 
+                            <apex:image style="width:10px; height:10px;" value="{!$Resource.triangle}"/>
+                            ARRIVAL: <b class="ex1" style="padding-right: 10px; "><apex:outputText value="{0, date,EEEE MMMM d yyyy}"><apex:param value="{!logs.relatedFlight.Arrival_Date__c}"/></apex:outputText></b>
+                            <p style="padding-top: -1rem; font-size: 10px;">
+                                Please verify the flight time prior to departure 
+                            </p>
+                        </apex:outputPanel>
+                    </apex:panelGrid>
+                    
+                    <div class="slds-scope slds-box" >                
+                        <div style="display: flex;">
+                            <div style="width: 100%; padding: 1px;">
+                                <table class="table1" style="height: 50%;  border: 1px solid #ddd;">
+                                    <tr>
+                                        <td width="30%" rowspan="2" style="width: 33.33%; padding: 0px 0px 0px 20px; background: #ccc; border-bottom-left-radius: 40px;">
+                                            <p><b style="font-size: 17px;">{!logs.relatedFlight.Airline__r.Name}</b><br/>
+                                                <b style="font-size: 20px;">{!logs.relatedFlight.Name}</b>
+                                            </p>
+                                            <p><b>Duration:</b><br/>
+                                                {!logs.relatedFlight.Duration__c}
+                                            </p>
+                                            <p>
+                                                <apex:outputText rendered="{!logs.relatedFlight.Refundable__c == NULL}" value="{!logs.relatedLog.Refundable__c}" />
+                                                <apex:outputText rendered="{!logs.relatedFlight.Refundable__c != NULL}" value="{!logs.relatedFlight.Refundable__c}" />
+                                            </p>
+                                        </td>
+                                        <td width="70%" colspan="2" style="text-align: center; padding: 10px; border-bottom: 1px solid #ddd">
+                                            {!logs.relatedFlight.Departure_City__c}&nbsp;<b><apex:outputText style="font-size: 15px;" rendered="{!logs.relatedFlight.Departure_Airport__c != NULL}">({!logs.relatedFlight.Departure_Airport__c})&nbsp;</apex:outputText></b>
+                                            <apex:image style="width:10px; height:10px;page-break-inside: avoid;" value="{!$Resource.triangle}"/>
+                                            {!logs.relatedFlight.Arrival_City__c}&nbsp;<b><apex:outputText style="font-size: 15px;" rendered="{!logs.relatedFlight.Arrival_Airport__c != NULL}">({!logs.relatedFlight.Arrival_Airport__c})&nbsp;</apex:outputText></b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd">
+                                            Departing At: <br/>
+                                            <apex:outputText style="font-size: 17px;" value="{0, date,h:mm a}"><apex:param value="{!logs.relatedFlight.DepartureTimeForEmail__c}"/></apex:outputText>
+                                            <apex:outputPanel style="font-size: 16px; font-weight: bold;">
+                                                <br/>( <apex:outputText value="{0, date,dd MMM}"><apex:param value="{!logs.relatedFlight.DepartureTimeForEmail__c}"/></apex:outputText>)
+                                            </apex:outputPanel>
+                                            <br/><br/><br/>
+                                            Terminal: <apex:outputText rendered="{!logs.relatedFlight.Departure_Terminal__c!=NULL}">{!logs.relatedFlight.Departure_Terminal__c}</apex:outputText>
+                                            <apex:outputText rendered="{!logs.relatedFlight.Departure_Terminal__c==NULL}">&nbsp;</apex:outputText><br/><br/>
+                                        </td>
+                                        <td style="padding: 8px; border-bottom: 1px solid #ddd">
+                                            Arriving At: <br/>
+                                            <apex:outputText style="font-size: 17px;" value="{0, date,h:mm a}"><apex:param value="{!logs.relatedFlight.ArrivalDateforEmail__c}"/></apex:outputText>
+                                            <apex:outputPanel style="font-size: 16px; font-weight: bold;">
+                                                <br/>( <apex:outputText value="{0, date,dd MMM}"><apex:param value="{!logs.relatedFlight.ArrivalDateforEmail__c}"/></apex:outputText>)
+                                            </apex:outputPanel>
+                                            <br/><br/><br/>
+                                            Terminal: <apex:outputText rendered="{!logs.relatedFlight.Arrival_Terminal__c!=NULL}">{!logs.relatedFlight.Arrival_Terminal__c}</apex:outputText><apex:outputText rendered="{!logs.relatedFlight.Arrival_Terminal__c==NULL}">&nbsp;</apex:outputText><br/><br/>
+                                        </td>
+                                    </tr>
+                                    <apex:outputText rendered="{!logs.relatedFlight.Notes__c!=NULL}">
+                                        <tr>
+                                            <td colspan="4" style=" padding: 10px;">
+                                                Notes: {!logs.relatedFlight.Notes__c}
+                                            </td>
+                                        </tr>
+                                    </apex:outputText>
+                                    <tr>
+                                        <td colspan="4">
+                                            <table class="table2" style="border: 1px solid #ddd; width:100%; table-layout:fixed; font-size:12px;">
+                                                <tr style="background-color: #c1c1c1;">
+                                                    <th width="22%" style="border-right: 1px solid #ddd; padding: 3px;">Passenger Name</th>
+                                                    <th width="8%" style="border-right: 1px solid #ddd; padding: 3px;">Seats</th>
+                                                    <th width="10%" style="border-right: 1px solid #ddd; padding: 3px;">Class</th>
+                                                    <th width="20%" style="border-right: 1px solid #ddd; padding: 3px;">Ticket #</th>
+                                                    <th width="20%" style="border-right: 1px solid #ddd; padding: 3px;">Frequent Flyer #</th>
+                                                    <th width="20%" style="border-right: 1px solid #ddd; padding: 3px;">Global Entry/TSA #</th>
+                                                </tr>
+                                                <apex:repeat value="{!logs.relatedLog.Passengers__r}" var="pass">
+                                                    <apex:outputText rendered="{!pass.Flight__c == logs.relatedFlight.Id}">
+                                                        <tr>
+                                                            <td style="border-top: 1px solid #ddd; padding: 3px; border-right: 1px solid #ddd;">
+                                                                » {!pass.Contact_Name__c}
+                                                            </td>
+                                                            <td style="border-top: 1px solid #ddd; padding: 3px; border-right: 1px solid #ddd;">
+                                                                {!pass.Seat__c}
+                                                            </td>
+                                                            <td style="border-top: 1px solid #ddd; padding: 3px; border-right: 1px solid #ddd;">
+                                                                {!pass.Class__c}
+                                                            </td>
+                                                            <td style="border-top: 1px solid #ddd; padding: 3px; border-right: 1px solid #ddd;">
+                                                                {!pass.Ticket_Number__c}
+                                                            </td>
+                                                            <td style="border-top: 1px solid #ddd; padding: 3px; border-right: 1px solid #ddd;">
+                                                                {!pass.Frequent_Flyer_Number__r.Name}
+                                                            </td>
+                                                            <td style="border-top: 1px solid #ddd; padding: 3px;">
+                                                                {!pass.Global_Entry_TSA__c}
+                                                            </td>
+                                                        </tr>
+                                                        <apex:outputText rendered="{!pass.Notes__c!=NULL}" >
+                                                            <tr >
+                                                                <td colspan="6" style=" border-top: 1px solid #ddd; padding: 3px;">
+                                                                    Notes: {!pass.Notes__c}
+                                                                </td>
+                                                            </tr>
+                                                        </apex:outputText>
+                                                    </apex:outputText>
+                                                </apex:repeat>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div> 
+                    <br/>
+                </div>
+            </apex:outputPanel>
+            <!--Hotel Booking-->
+            <apex:OutputPanel rendered="{!logs.relatedLog.RecordTypeId == Hotel_Booking_RI}">
+                <table class="row">
+                    <!--
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Contact.FirstName} &nbsp; {!logs.relatedLog.Contact.LastName}
+                        </td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Person_Using__r.FirstName} &nbsp; {!logs.relatedLog.Person_Using__r.LastName}
+                        </td>
+                    </tr>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Check_In_Date__c!= null}">
+                        <tr>
+                            <td valign="top">Check-In Date and Time:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Check_In_Date__c!= null}" value="{!logs.relatedLog.Check_In_Day__c}"/>,&nbsp;<apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Check_In_Date__c}"/></apex:outputText>,&nbsp;<apex:outputField value="{!logs.relatedLog.Check_In_Time__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Check_Out_Date__c!= null}">
+                        <tr>
+                            <td valign="top">Check-Out Date and Time:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Check_Out_Date__c!= null}" value="{!logs.relatedLog.Check_Out_Day__c}"/>,&nbsp;<apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Check_Out_Date__c}"/></apex:outputText>,&nbsp;<apex:outputField value="{!logs.relatedLog.Check_Out_Time__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.of_Nights__c != null}">
+                        <tr>
+                            <td valign="top">Number of Nights:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.of_Nights__c != null}" value="{!logs.relatedLog.of_Nights__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Room_Type__c!= ''}">
+                        <tr>
+                            <td valign="top">Room Type:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Room_Type__c!= ''}" value="{!logs.relatedLog.Room_Type__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Room_Rate__c!= null}">
+                        <tr>
+                            <td valign="top">Room Rate per Night:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Room_Rate__c!= null}" value="{!logs.relatedLog.Room_Rate__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Total_Price__c != null}">
+                        <tr>
+                            <td valign="top">Total Price:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Total_Price__c != null}" value="{0, Number, Currency}"><apex:param value="{!logs.relatedLog.Total_Price__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <!--
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}">
+                        <tr>
+                            <td valign="top">Special Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}" value="{!logs.relatedLog.Special_Requests_Notes__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    -->
+                    <apex:outputPanel rendered="{!logs.relatedLog.Insider_Amenities_Include__c!= ''}">
+                        <tr>
+                            <td valign="top">Insider Amenities Include:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Insider_Amenities_Include__c!= ''}" value="{!logs.relatedLog.Insider_Amenities_Include__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Membership_Number__c!= ''}">
+                        <tr>
+                            <td valign="top">Membership Rewards Number:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Membership_Number__c!= ''}" value="{!logs.relatedLog.Membership_Number__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Order_Confirmation__c != ''}">
+                        <tr>
+                            <td valign="top">Confirmation #:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Order_Confirmation__c != ''}" value="{!logs.relatedLog.Order_Confirmation__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Confirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Confirmed With and Confirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Confirmed_With__c != ''}" value="{!logs.relatedLog.Confirmed_With__c}"/><apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Confirmation_Date_for_Email__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Reconfirmed with and Reconfirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}" value="{!logs.relatedLog.Reconfirmed_With__c}"/>
+                                    <apex:outputText value="{0, date, MMMM d','  yyyy}">
+                                        <apex:param value="{!logs.relatedLog.Reconfirmation_Date_for_Email__c}"/>
+                                    </apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Special Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}" value="{!logs.relatedLog.Special_Requests_Notes_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Cancellation_Policy__c = '010101010'}">
+                        <tr>
+                            <td valign="top">Cancellation Policy:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Cancellation_Policy__c != ''}" value="{!logs.relatedLog.Cancellation_Policy__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    
+                    </apex:outputPanel>
+                    <!--
+                    <apex:outputPanel rendered="{!logs.relatedLog.Insider_amenities_include_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Insider amenities include:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Insider_amenities_include_rich__c != ''}" value="{!logs.relatedLog.Insider_amenities_include_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    -->
+                </table>
+            </apex:outputPanel>
+            <!-- House/Villa Booking -->
+            <apex:OutputPanel rendered="{!logs.relatedLog.RecordTypeId == House_Villa_Booking_RI}">
+                <table class="row">
+                    <!--
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Contact.FirstName} &nbsp; {!logs.relatedLog.Contact.LastName}
+                        </td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Person_Using__r.FirstName} &nbsp; {!logs.relatedLog.Person_Using__r.LastName}
+                        </td>
+                    </tr>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Villa_House_Details__c != ''}">
+                        <tr>
+                            <td valign="top">House/Villa Name:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField value="{!logs.relatedLog.Villa_House_Details__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Rental_Address__c != ''}">
+                        <tr>
+                            <td valign="top">Address:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField value="{!logs.relatedLog.Rental_Address__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Check_In_Date__c!= null}">
+                        <tr>
+                            <td valign="top">Check-In Date and Time:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Check_In_Date__c!= null}" value="{!logs.relatedLog.Check_In_Day__c}"/>,&nbsp;<apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Check_In_Date__c}"/></apex:outputText>,&nbsp;<apex:outputField value="{!logs.relatedLog.Check_In_Time__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Check_Out_Date__c!= null}">
+                        <tr>
+                            <td valign="top">Check-Out Date and Time:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Check_Out_Date__c!= null}" value="{!logs.relatedLog.Check_Out_Day__c}"/>,&nbsp;<apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Check_Out_Date__c}"/></apex:outputText>,&nbsp;<apex:outputField value="{!logs.relatedLog.Check_Out_Time__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.of_Nights__c != null}">
+                        <tr>
+                            <td valign="top">Number of Nights:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField value="{!logs.relatedLog.of_Nights__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Total_Price__c != null}">
+                        <tr>
+                            <td valign="top">Price:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText value="{0, Number, Currency}"><apex:param value="{!logs.relatedLog.Total_Price__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <!--
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}">
+                        <tr>
+                            <td valign="top">Special Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}" value="{!logs.relatedLog.Special_Requests_Notes__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    -->
+                    <apex:outputPanel rendered="{!logs.relatedLog.Insider_Amenities_Include__c != ''}">
+                        <tr>
+                            <td valign="top">Insider Amenities Include:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField value="{!logs.relatedLog.Insider_Amenities_Include__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Confirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Confirmed With and Confirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Confirmed_With__c != ''}" value="{!logs.relatedLog.Confirmed_With__c}"/><apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Confirmation_Date_for_Email__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Reconfirmed with and Reconfirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}" value="{!logs.relatedLog.Reconfirmed_With__c}"/>
+                                    <apex:outputText value="{0, date, MMMM d','  yyyy}">
+                                        <apex:param value="{!logs.relatedLog.Reconfirmation_Date_for_Email__c}"/>
+                                    </apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.House_or_villa_name_rich__c != ''}">
+                        <tr>
+                            <td valign="top">House or villa name:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.House_or_villa_name_rich__c != ''}" value="{!logs.relatedLog.House_or_villa_name_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                   <!--
+                    <apex:outputPanel rendered="{!logs.relatedLog.Villa_house_details_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Villa house details:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Villa_house_details_rich__c != ''}" value="{!logs.relatedLog.Villa_house_details_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    -->
+                    <!--
+                    <apex:outputPanel rendered="{!logs.relatedLog.Insider_amenities_include_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Insider amenities include:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Insider_amenities_include_rich__c != ''}" value="{!logs.relatedLog.Insider_amenities_include_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Special Requests Notes:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}" value="{!logs.relatedLog.Special_Requests_Notes_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    -->
+                    <apex:outputPanel rendered="{!logs.relatedLog.Cancellation_Policy__c = '010101010'}">
+                        <tr>
+                            <td valign="top">Cancellation Policy:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Cancellation_Policy__c != ''}" value="{!logs.relatedLog.Cancellation_Policy__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                </table>
+            </apex:outputPanel>
+            <!-- Messenger Service -->
+            <apex:OutputPanel rendered="{!logs.relatedLog.RecordTypeId == Messenger_Service_RI}">
+                <table class="row">
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Special Requests Notes:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}" value="{!logs.relatedLog.Special_Requests_Notes_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Delivery_Instructions__c != ''}">
+                        <tr>
+                            <td valign="top">Delivery Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Delivery_Instructions__c != ''}" value="{!logs.relatedLog.Delivery_Instructions__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                </table>
+            </apex:outputPanel>
+            <!--Nightclub/Lounge/Drinks Reservation       -->
+            <apex:OutputPanel rendered="{!logs.relatedLog.RecordTypeId == Nightclub_Lounge_Reservation_RI}">
+                <table class="row">
+                    <apex:outputPanel rendered="{!logs.relatedLog.Time__c != null}">
+                        <tr>
+                            <td valign="top">Time:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Time__c != null}" value="{!logs.relatedLog.Time__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <!--
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Contact.FirstName} &nbsp; {!logs.relatedLog.Contact.LastName}
+                        </td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Person_Using__r.FirstName} &nbsp; {!logs.relatedLog.Person_Using__r.LastName}
+                        </td>
+                    </tr>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Date__c != null}">
+                        <tr>
+                            <td valign="top">Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Date__c != null}" value="{!logs.relatedLog.Day_of_Week_Date__c}"/>,&nbsp;<apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Date__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Number_in_Party__c != null}">
+                        <tr>
+                            <td valign="top">Number in Party:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Number_in_Party__c != null}" value="{!logs.relatedLog.Number_in_Party__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Male_Female_Ratio__c!= ''}">
+                        <tr>
+                            <td valign="top">Male/Female Ratio:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Male_Female_Ratio__c!= ''}" value="{!logs.relatedLog.Male_Female_Ratio__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Table_Minimum_excluding_tax_gratuity__c != null}">
+                        <tr>
+                            <td valign="top">Table Minimum (Excluding Tax and Gratuity):&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Table_Minimum_excluding_tax_gratuity__c != null}" value="{!logs.relatedLog.Table_Minimum_excluding_tax_gratuity__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <!--
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}">
+                        <tr>
+                            <td valign="top">Special Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}" value="{!logs.relatedLog.Special_Requests_Notes__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    -->
+                    <apex:outputPanel rendered="{!logs.relatedLog.Confirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Confirmed With and Confirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Confirmed_With__c != ''}" value="{!logs.relatedLog.Confirmed_With__c}"/><apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Confirmation_Date_for_Email__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Reconfirmed with and Reconfirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}" value="{!logs.relatedLog.Reconfirmed_With__c}"/>
+                                    <apex:outputText value="{0, date, MMMM d','  yyyy}">
+                                        <apex:param value="{!logs.relatedLog.Reconfirmation_Date_for_Email__c}"/>
+                                    </apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Special Requests Notes:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}" value="{!logs.relatedLog.Special_Requests_Notes_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <!--<apex:outputPanel rendered="{!logs.relatedLog.Table_Minimum_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Table Minimum:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Table_Minimum_rich__c != ''}" value="{!logs.relatedLog.Table_Minimum_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel> -->
+                    <apex:outputPanel rendered="{!logs.relatedLog.Cancellation_Policy__c = '010101010'}">
+                        <tr>
+                            <td valign="top">Cancellation Policy:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Cancellation_Policy__c != ''}" value="{!logs.relatedLog.Cancellation_Policy__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                </table>
+            </apex:outputPanel>
+            <!-- Research/Suggestions -->
+            <apex:OutputPanel rendered="{!logs.relatedLog.RecordTypeId == Research_RI}">
+                <table class="row">
+                    <apex:outputPanel rendered="{!logs.relatedLog.Occasion__c != ''}">
+                        <tr>
+                            <td valign="top">Occasion reason:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Occasion__c != ''}" value="{!logs.relatedLog.Occasion__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Research_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Research:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Research_rich__c != ''}" value="{!logs.relatedLog.Research_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Special Requests Notes:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}" value="{!logs.relatedLog.Special_Requests_Notes_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                </table>
+            </apex:outputPanel>
+            <!-- Tour Booking  -->
+            <apex:OutputPanel rendered="{!logs.relatedLog.RecordTypeId == Tour_Booking_RI}"> <!--Tour Booking-->
+                <table class="row">
+                    <!--
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Contact.FirstName} &nbsp; {!logs.relatedLog.Contact.LastName}
+                        </td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Person_Using__r.FirstName} &nbsp; {!logs.relatedLog.Person_Using__r.LastName}
+                        </td>
+                    </tr>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Meeting_Location__c != ''}">
+                        <tr>
+                            <td valign="top">Meeting Location:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Meeting_Location__c != ''}" value="{!logs.relatedLog.Meeting_Location__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Meeting_Address_and_Cross_Streets__c != ''}">
+                        <tr>
+                            <td valign="top">Meeting Address and Cross Streets:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Meeting_Address_and_Cross_Streets__c != ''}" value="{!logs.relatedLog.Meeting_Address_and_Cross_Streets__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.DateofBooking__c != null}">
+                        <tr>
+                            <td valign="top">Date of Booking:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.DateofBooking__c != null}" value="{!logs.relatedLog.Day_of_Booking__c}"/>,&nbsp;<apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.DateofBooking__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Time_of_Booking__c != null}">
+                        <tr>
+                            <td valign="top">Time of Booking:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Time_of_Booking__c != null}" value="{!logs.relatedLog.Time_of_Booking__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Duration__c != ''}">
+                        <tr>
+                            <td valign="top">Duration of Tour:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Duration__c != ''}" value="{!logs.relatedLog.Duration__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Number_of_people__c!= null}">
+                        <tr>
+                            <td valign="top">Number of People:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Number_of_people__c!= null}" value="{!logs.relatedLog.Number_of_people__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Price_per_Person__c != null}">
+                        <tr>
+                            <td valign="top">Price per Person:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Price_per_Person__c != null}" value="{0, Number, Currency}"><apex:param value="{!logs.relatedLog.Price_per_Person__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Total_Price__c != null}">
+                        <tr>
+                            <td valign="top">Total Price:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Total_Price__c != null}" value="{0, Number, Currency}"><apex:param value="{!logs.relatedLog.Total_Price__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Description__c != ''}">
+                        <tr>
+                            <td valign="top">Description:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Description__c != ''}" value="{!logs.relatedLog.Description__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <!--
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}">
+                        <tr>
+                            <td valign="top">Special Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}" value="{!logs.relatedLog.Special_Requests_Notes__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    -->
+                    <apex:outputPanel rendered="{!logs.relatedLog.Confirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Confirmed With and Confirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Confirmed_With__c != ''}" value="{!logs.relatedLog.Confirmed_With__c}"/><apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Confirmation_Date_for_Email__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Reconfirmed with and Reconfirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}" value="{!logs.relatedLog.Reconfirmed_With__c}"/>
+                                    <apex:outputText value="{0, date, MMMM d','  yyyy}">
+                                        <apex:param value="{!logs.relatedLog.Reconfirmation_Date_for_Email__c}"/>
+                                    </apex:outputText>
+                            </td>
+                        </tr> 
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Special Requests Notes:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}" value="{!logs.relatedLog.Special_Requests_Notes_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Cancellation_Policy__c = '010101010'}">
+                        <tr>
+                            <td valign="top">Cancellation Policy:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Cancellation_Policy__c != ''}" value="{!logs.relatedLog.Cancellation_Policy__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <!--
+                    <apex:outputPanel rendered="{!logs.relatedLog.Description_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Description:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Description_rich__c != ''}" value="{!logs.relatedLog.Description_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    -->
+                    <apex:outputPanel rendered="{!logs.relatedLog.X24_hour_contact_rich__c != ''}">
+                        <tr>
+                            <td valign="top">24 hour contact:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.X24_hour_contact_rich__c != ''}" value="{!logs.relatedLog.X24_hour_contact_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                </table>
+            </apex:outputPanel>
+            <!-- Train Booking  -->
+            <apex:OutputPanel rendered="{!logs.relatedLog.RecordTypeId == Train_Booking_RI}"> <!--Train Booking-->
+                <table class="row">
+                    <!--
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Contact.FirstName} &nbsp; {!logs.relatedLog.Contact.LastName}
+                        </td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td valign="top">Confirmation For:</td>
+                        <td class="column2" valign="top">
+                            {!logs.relatedLog.Person_Using__r.FirstName} &nbsp; {!logs.relatedLog.Person_Using__r.LastName}
+                        </td>
+                    </tr>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Departure_City__c != ''}">
+                        <tr>
+                            <td valign="top">Departure City:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Departure_City__c != ''}" value="{!logs.relatedLog.Departure_City__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Date_of_Departure__c != null}">
+                        <tr>
+                            <td valign="top">Date of Departure:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Date_of_Departure__c != null}" value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Date_of_Departure__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Departure_Time__c != null}">
+                        <tr>
+                            <td valign="top">Departure Time:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Departure_Time__c != null}" value="{!logs.relatedLog.Departure_Time__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Train_Line_Number__c != ''}">
+                        <tr>
+                            <td valign="top">Train Line and Number:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Train_Line_Number__c != ''}" value="{!logs.relatedLog.Train_Line_Number__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Number_of_Tickets__c != null}">
+                        <tr>
+                            <td valign="top">Number of Tickets:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Number_of_Tickets__c != null}" value="{!logs.relatedLog.Number_of_Tickets__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Seat__c != ''}">
+                        <tr>
+                            <td valign="top">Seat(s):&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Seat__c != ''}" value="{!logs.relatedLog.Seat__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Ticket__c != ''}">
+                        <tr>
+                            <td valign="top">Ticket #:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Ticket__c != ''}" value="{!logs.relatedLog.Ticket__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Destination_City__c != ''}">
+                        <tr>
+                            <td valign="top">Destination City:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Destination_City__c != ''}" value="{!logs.relatedLog.Destination_City__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Destination_Arrival_Date__c != null}">
+                        <tr>
+                            <td valign="top">Destination Arrival Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Destination_Arrival_Date__c != null}" value="{!logs.relatedLog.Day_of_Destination_Arrival__c}"/>,&nbsp;<apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Destination_Arrival_Date__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Destination_Arrival_Time__c != null}">
+                        <tr>
+                            <td valign="top">Destination Arrival Time:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Destination_Arrival_Time__c != null}" value="{!logs.relatedLog.Destination_Arrival_Time__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Price_per_Ticket__c != null}">
+                        <tr>
+                            <td valign="top">Price per Ticket:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Price_per_Ticket__c != null}" value="{0, Number, Currency}"><apex:param value="{!logs.relatedLog.Price_per_Ticket__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Total_Price__c != null}">
+                        <tr>
+                            <td valign="top">Total Price:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Total_Price__c != null}" value="{0, Number, Currency}"><apex:param value="{!logs.relatedLog.Total_Price__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Refundable__c != ''}">
+                        <tr>
+                            <td valign="top">Refundable or Non Refundable:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Refundable__c != ''}" value="{!logs.relatedLog.Refundable__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Membership_Number__c != ''}">
+                        <tr>
+                            <td valign="top">Membership Number:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Membership_Number__c != ''}" value="{!logs.relatedLog.Membership_Number__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Membership_Status__c != ''}">
+                        <tr>
+                            <td valign="top">Membership Status:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Membership_Status__c != ''}" value="{!logs.relatedLog.Membership_Status__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <!--
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}">
+                        <tr>
+                            <td valign="top">Special Instructions:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Special_Requests_Notes__c!= ''}" value="{!logs.relatedLog.Special_Requests_Notes__c}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    -->
+                    <apex:outputPanel rendered="{!logs.relatedLog.Confirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Confirmed With and Confirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Confirmed_With__c != ''}" value="{!logs.relatedLog.Confirmed_With__c}"/><apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!logs.relatedLog.Confirmation_Date_for_Email__c}"/></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}">
+                        <tr>
+                            <td valign="top">Reconfirmed with and Reconfirmation Date:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputField rendered="{!logs.relatedLog.Reconfirmed_With__c != ''}" value="{!logs.relatedLog.Reconfirmed_With__c}"/>
+                                    <apex:outputText value="{0, date, MMMM d','  yyyy}">
+                                        <apex:param value="{!logs.relatedLog.Reconfirmation_Date_for_Email__c}"/>
+                                    </apex:outputText>
+                            </td>
+                        </tr> 
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Special Requests Notes:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}" value="{!logs.relatedLog.Special_Requests_Notes_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Cancellation_Policy__c = '010101010'}">
+                    
+                        <tr>
+                            <td valign="top">Cancellation Policy:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Cancellation_Policy__c != ''}" value="{!logs.relatedLog.Cancellation_Policy__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                </table>
+            </apex:outputPanel>
+            <!-- Travel Planning -->
+            <apex:OutputPanel rendered="{!logs.relatedLog.RecordTypeId == Travel_Planning_RI}"> <!--Travel Planning-->
+                <table class="row">
+                    <apex:outputPanel rendered="{!logs.relatedLog.Trip_Information__c != ''}">
+                        <tr>
+                            <td valign="top">Trip information:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Trip_Information__c != ''}" value="{!logs.relatedLog.Trip_Information__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Flight_Information__c != ''}">
+                        <tr>
+                            <td valign="top">Flight information:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Flight_Information__c != ''}" value="{!logs.relatedLog.Flight_Information__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Traveler_Information__c != ''}">
+                        <tr>
+                            <td valign="top">Traveler information:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Traveler_Information__c != ''}" value="{!logs.relatedLog.Traveler_Information__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Special Requests Notes:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Special_Requests_Notes_rich__c != ''}" value="{!logs.relatedLog.Special_Requests_Notes_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!logs.relatedLog.Description_rich__c != ''}">
+                        <tr>
+                            <td valign="top">Description:&nbsp;</td>
+                            <td class="column2" valign="top">
+                                <apex:outputText rendered="{!logs.relatedLog.Description_rich__c != ''}" value="{!logs.relatedLog.Description_rich__c}" escape="false"></apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                </table>
+            </apex:outputPanel>
+            <hr class="line"/>
+            <h4>Cancellation Policy</h4>
+            <p>{!logs.relatedLog.Cancellation_Policy__c} </p>
+        </div>
+        <hr class="line"/>
+        <!-- FOOTER -->
+        <apex:outputText rendered="{!logs.relatedLog.Itinerary_footer__c != ''}" value="{!logs.relatedLog.Itinerary_footer__c}" escape="false"></apex:outputText>
+                            
+    </apex:repeat>
+</apex:page>

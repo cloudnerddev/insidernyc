@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Style__c</fullName>
+    <label>Key Factors</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Beach Club</fullName>
+                <default>false</default>
+                <label>Beach Club</label>
+            </value>
+            <value>
+                <fullName>Catering</fullName>
+                <default>false</default>
+                <label>Catering</label>
+            </value>
+            <value>
+                <fullName>Chef’s Table</fullName>
+                <default>false</default>
+                <label>Chef’s Table</label>
+            </value>
+            <value>
+                <fullName>Counter Seating</fullName>
+                <default>false</default>
+                <label>Counter Seating</label>
+            </value>
+            <value>
+                <fullName>Distillery/Brewery</fullName>
+                <default>false</default>
+                <label>Distillery/Brewery</label>
+            </value>
+            <value>
+                <fullName>Gluten-free</fullName>
+                <default>false</default>
+                <label>Gluten-free</label>
+            </value>
+            <value>
+                <fullName>Karaoke</fullName>
+                <default>false</default>
+                <label>Karaoke</label>
+            </value>
+            <value>
+                <fullName>Kid Friendly</fullName>
+                <default>false</default>
+                <label>Kid Friendly</label>
+            </value>
+            <value>
+                <fullName>Live Entertainment</fullName>
+                <default>false</default>
+                <label>Live Entertainment</label>
+            </value>
+            <value>
+                <fullName>Lounge/Nightclub</fullName>
+                <default>false</default>
+                <label>Lounge/Nightclub</label>
+            </value>
+            <value>
+                <fullName>Outdoor Dining</fullName>
+                <default>false</default>
+                <label>Outdoor Dining</label>
+            </value>
+            <value>
+                <fullName>Rooftop</fullName>
+                <default>false</default>
+                <label>Rooftop</label>
+            </value>
+            <value>
+                <fullName>Shiva Platters</fullName>
+                <default>false</default>
+                <label>Shiva Platters</label>
+            </value>
+            <value>
+                <fullName>Sports Bar</fullName>
+                <default>false</default>
+                <label>Sports Bar</label>
+            </value>
+            <value>
+                <fullName>Tasting Menu</fullName>
+                <default>false</default>
+                <label>Tasting Menu</label>
+            </value>
+            <value>
+                <fullName>TVs</fullName>
+                <default>false</default>
+                <label>TVs</label>
+            </value>
+            <value>
+                <fullName>Waterfront</fullName>
+                <default>false</default>
+                <label>Waterfront</label>
+            </value>
+            <value>
+                <fullName>Wine Bar</fullName>
+                <default>false</default>
+                <label>Wine Bar</label>
+            </value>
+            <value>
+                <fullName>British</fullName>
+                <default>false</default>
+                <label>British</label>
+            </value>
+            <value>
+                <fullName>Gastronomic</fullName>
+                <default>false</default>
+                <label>Gastronomic</label>
+            </value>
+            <value>
+                <fullName>Afternoon Tea</fullName>
+                <default>false</default>
+                <label>Afternoon Tea</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

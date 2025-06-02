@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Payment Method --></label>
+        <name>Payment_Method__c</name>
+        <picklistValues>
+            <masterLabel>Check</masterLabel>
+            <translation><!-- Check --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Paying Directly</masterLabel>
+            <translation><!-- Client Paying Directly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insider Inventory</masterLabel>
+            <translation><!-- Insider Inventory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insider Paid</masterLabel>
+            <translation><!-- Insider Paid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lindsi Cash</masterLabel>
+            <translation><!-- Lindsi Cash --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PayPal</masterLabel>
+            <translation><!-- PayPal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Petty Cash</masterLabel>
+            <translation><!-- Petty Cash --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Team Member's Personal Card</masterLabel>
+            <translation><!-- Team Member&apos;s Personal Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Venmo</masterLabel>
+            <translation><!-- Venmo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wire</masterLabel>
+            <translation><!-- Wire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zelle</masterLabel>
+            <translation><!-- Zelle --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

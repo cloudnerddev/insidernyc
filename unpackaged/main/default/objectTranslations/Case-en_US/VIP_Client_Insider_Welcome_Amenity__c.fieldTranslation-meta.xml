@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- VIP Client &amp; Personal Insider Welcome Amenity Arranged - INTERNAL --></help>
+        <label><!-- VIP Client &amp; Insider Welcome Amenity --></label>
+        <name>VIP_Client_Insider_Welcome_Amenity__c</name>
+    </CustomFieldTranslation>

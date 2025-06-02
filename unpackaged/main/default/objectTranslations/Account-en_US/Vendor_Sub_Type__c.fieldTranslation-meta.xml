@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Vendor Sub-Type - OLD --></label>
+        <name>Vendor_Sub_Type__c</name>
+        <picklistValues>
+            <masterLabel>24 hours</masterLabel>
+            <translation><!-- 24 hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Accountant</masterLabel>
+            <translation><!-- Accountant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Acupuncturist</masterLabel>
+            <translation><!-- Acupuncturist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Airport</masterLabel>
+            <translation><!-- Airport --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Airport Escort</masterLabel>
+            <translation><!-- Airport Escort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>All-Inclusive</masterLabel>
+            <translation><!-- All-Inclusive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alternative Medicine</masterLabel>
+            <translation><!-- Alternative Medicine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Appliance Repair</masterLabel>
+            <translation><!-- Appliance Repair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Appraiser</masterLabel>
+            <translation><!-- Appraiser --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Art Mover</masterLabel>
+            <translation><!-- Art Mover --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Art Tour</masterLabel>
+            <translation><!-- Art Tour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Audio/Visual</masterLabel>
+            <translation><!-- Audio/Visual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Auto Body Shop</masterLabel>
+            <translation><!-- Auto Body Shop --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Baby</masterLabel>
+            <translation><!-- Baby --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Baby Gear Rentals</masterLabel>
+            <translation><!-- Baby Gear Rentals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Baby Proofing</masterLabel>
+            <translation><!-- Baby Proofing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Baby/Kids Store</masterLabel>
+            <translation><!-- Baby/Kids Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Babysitter</masterLabel>
+            <translation><!-- Babysitter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bag Repair</masterLabel>
+            <translation><!-- Bag Repair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bag/Shoe Repair</masterLabel>
+            <translation><!-- Bag/Shoe Repair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bakery</masterLabel>
+            <translation><!-- Bakery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Balloon Vendor</masterLabel>
+            <translation><!-- Balloon Vendor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Band</masterLabel>
+            <translation><!-- Band --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Band / String Quartet / Singer</masterLabel>
+            <translation><!-- Band / String Quartet / Singer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bed &amp; Breakfast</masterLabel>
+            <translation><!-- Bed &amp; Breakfast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bike Tour</masterLabel>
+            <translation><!-- Bike Tour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Boat Captain</masterLabel>
+            <translation><!-- Boat Captain --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cake Maker/Bakery</masterLabel>
+            <translation><!-- Cake Maker/Bakery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Car Dealership</masterLabel>
+            <translation><!-- Car Dealership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Car Rental</masterLabel>
+            <translation><!-- Car Rental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Car service</masterLabel>
+            <translation><!-- Car service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Caretaker</masterLabel>
+            <translation><!-- Caretaker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Caterer</masterLabel>
+            <translation><!-- Caterer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chauffeur/Driver</masterLabel>
+            <translation><!-- Chauffeur/Driver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chef</masterLabel>
+            <translation><!-- Chef --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chocolates</masterLabel>
+            <translation><!-- Chocolates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cleaning Service</masterLabel>
+            <translation><!-- Cleaning Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coastline Recommends</masterLabel>
+            <translation><!-- Coastline Recommends --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contractor</masterLabel>
+            <translation><!-- Contractor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cooking/Baking Class</masterLabel>
+            <translation><!-- Cooking/Baking Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cosmetics/Beauty</masterLabel>
+            <translation><!-- Cosmetics/Beauty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Crib Rental</masterLabel>
+            <translation><!-- Crib Rental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom Clothing/Shoes</masterLabel>
+            <translation><!-- Custom Clothing/Shoes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom Dessert</masterLabel>
+            <translation><!-- Custom Dessert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DJ</masterLabel>
+            <translation><!-- DJ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DMC/On-Site</masterLabel>
+            <translation><!-- DMC/On-Site --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dancers</masterLabel>
+            <translation><!-- Dancers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Daycare / Boarding</masterLabel>
+            <translation><!-- Daycare / Boarding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dentist</masterLabel>
+            <translation><!-- Dentist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dermatologist</masterLabel>
+            <translation><!-- Dermatologist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disney / Universal / Orlando Tours</masterLabel>
+            <translation><!-- Disney / Universal / Orlando Tours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dog Daycare / Dog Boarding</masterLabel>
+            <translation><!-- Dog Daycare / Dog Boarding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dog Groomer</masterLabel>
+            <translation><!-- Dog Groomer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dog Trainer</masterLabel>
+            <translation><!-- Dog Trainer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dog Walker</masterLabel>
+            <translation><!-- Dog Walker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Donuts</masterLabel>
+            <translation><!-- Donuts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engraver / Embroidery</masterLabel>
+            <translation><!-- Engraver / Embroidery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Event Venue</masterLabel>
+            <translation><!-- Event Venue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Face Painting</masterLabel>
+            <translation><!-- Face Painting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fishing Charter</masterLabel>
+            <translation><!-- Fishing Charter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florist</masterLabel>
+            <translation><!-- Florist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food Tour</masterLabel>
+            <translation><!-- Food Tour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Furniture Rental</masterLabel>
+            <translation><!-- Furniture Rental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gifts</masterLabel>
+            <translation><!-- Gifts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gluten Free Bakery</masterLabel>
+            <translation><!-- Gluten Free Bakery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Golf (miniature)</masterLabel>
+            <translation><!-- Golf (miniature) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Golf Course</masterLabel>
+            <translation><!-- Golf Course --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Golf Instructor/Lessons</masterLabel>
+            <translation><!-- Golf Instructor/Lessons --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Golf Store</masterLabel>
+            <translation><!-- Golf Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grade School</masterLabel>
+            <translation><!-- Grade School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gym / Workout Studio / Sports Facility</masterLabel>
+            <translation><!-- Gym / Workout Studio / Sports Facility --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hair Colorist</masterLabel>
+            <translation><!-- Hair Colorist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hair Stylist / Barber</masterLabel>
+            <translation><!-- Hair Stylist / Barber --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hamptons</masterLabel>
+            <translation><!-- Hamptons --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Handyman</masterLabel>
+            <translation><!-- Handyman --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Helicopter Charter</masterLabel>
+            <translation><!-- Helicopter Charter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Healthcare</masterLabel>
+            <translation><!-- Home Healthcare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Household Staffing Agency</masterLabel>
+            <translation><!-- Household Staffing Agency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Interior Designer</masterLabel>
+            <translation><!-- Interior Designer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internist/GP</masterLabel>
+            <translation><!-- Internist/GP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invitations/Stationary Supplier</masterLabel>
+            <translation><!-- Invitations/Stationary Supplier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jeweler</masterLabel>
+            <translation><!-- Jeweler --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kids Birthday Party Venues</masterLabel>
+            <translation><!-- Kids Birthday Party Venues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limousine/Sprinter service</masterLabel>
+            <translation><!-- Limousine/Sprinter service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Luggage Shipping</masterLabel>
+            <translation><!-- Luggage Shipping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Magician</masterLabel>
+            <translation><!-- Magician --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Makeup Artist</masterLabel>
+            <translation><!-- Makeup Artist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manicure/Pedicure</masterLabel>
+            <translation><!-- Manicure/Pedicure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Massage Therapist</masterLabel>
+            <translation><!-- Massage Therapist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Memorabilia</masterLabel>
+            <translation><!-- Memorabilia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Men's Clothing/Shoe Store</masterLabel>
+            <translation><!-- Men&apos;s Clothing/Shoe Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mentalist</masterLabel>
+            <translation><!-- Mentalist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mixologist</masterLabel>
+            <translation><!-- Mixologist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Movers</masterLabel>
+            <translation><!-- Movers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Museum</masterLabel>
+            <translation><!-- Museum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Music Lessons</masterLabel>
+            <translation><!-- Music Lessons --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nanny</masterLabel>
+            <translation><!-- Nanny --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nightnurse</masterLabel>
+            <translation><!-- Nightnurse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nurse</masterLabel>
+            <translation><!-- Nurse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nut Free Facility</masterLabel>
+            <translation><!-- Nut Free Facility --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nutritionist</masterLabel>
+            <translation><!-- Nutritionist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oral Surgeon</masterLabel>
+            <translation><!-- Oral Surgeon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Organizer</masterLabel>
+            <translation><!-- Organizer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Painter</masterLabel>
+            <translation><!-- Painter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Painter / Wallpaper</masterLabel>
+            <translation><!-- Painter / Wallpaper --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Party Favors / Supplies</masterLabel>
+            <translation><!-- Party Favors / Supplies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Party Rental Company</masterLabel>
+            <translation><!-- Party Rental Company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Party Rentals (Furniture, Tents, Glassware, Games)</masterLabel>
+            <translation><!-- Party Rentals (Furniture, Tents, Glassware, Games) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Passport / Visa Expediter</masterLabel>
+            <translation><!-- Passport / Visa Expediter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal Shopper/Stylist</masterLabel>
+            <translation><!-- Personal Shopper/Stylist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal Trainer</masterLabel>
+            <translation><!-- Personal Trainer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pet Store</masterLabel>
+            <translation><!-- Pet Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Photo Services / Framer / Albums</masterLabel>
+            <translation><!-- Photo Services / Framer / Albums --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Photographer</masterLabel>
+            <translation><!-- Photographer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Physical Therapist</masterLabel>
+            <translation><!-- Physical Therapist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Podiatrist</masterLabel>
+            <translation><!-- Podiatrist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre- School</masterLabel>
+            <translation><!-- Pre- School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Printer</masterLabel>
+            <translation><!-- Printer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Private Jet Charter</masterLabel>
+            <translation><!-- Private Jet Charter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Private investigator</masterLabel>
+            <translation><!-- Private investigator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Psychiatrist</masterLabel>
+            <translation><!-- Psychiatrist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Realtor</masterLabel>
+            <translation><!-- Realtor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seaplane Charter</masterLabel>
+            <translation><!-- Seaplane Charter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security</masterLabel>
+            <translation><!-- Security --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Self Defense Instructor/Class</masterLabel>
+            <translation><!-- Self Defense Instructor/Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Selling / Donating Furniture</masterLabel>
+            <translation><!-- Selling / Donating Furniture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Servers/Bartenders</masterLabel>
+            <translation><!-- Servers/Bartenders --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shoe Repair</masterLabel>
+            <translation><!-- Shoe Repair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Short Term /Furnished Apartment Rentals</masterLabel>
+            <translation><!-- Short Term /Furnished Apartment Rentals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ski Instructor</masterLabel>
+            <translation><!-- Ski Instructor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sleep Training Coach</masterLabel>
+            <translation><!-- Sleep Training Coach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sommelier</masterLabel>
+            <translation><!-- Sommelier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spa</masterLabel>
+            <translation><!-- Spa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Speech writer</masterLabel>
+            <translation><!-- Speech writer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Speed Reading Instructor</masterLabel>
+            <translation><!-- Speed Reading Instructor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spray Tan</masterLabel>
+            <translation><!-- Spray Tan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stadium</masterLabel>
+            <translation><!-- Stadium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Staffing Agency-Servers/Bartenders/Chefs</masterLabel>
+            <translation><!-- Staffing Agency-Servers/Bartenders/Chefs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stroller Cleaner</masterLabel>
+            <translation><!-- Stroller Cleaner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Swimming Instructor/Lessons</masterLabel>
+            <translation><!-- Swimming Instructor/Lessons --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Swimming Lessons</masterLabel>
+            <translation><!-- Swimming Lessons --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tailor</masterLabel>
+            <translation><!-- Tailor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tarot Reader</masterLabel>
+            <translation><!-- Tarot Reader --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tattoo Artist</masterLabel>
+            <translation><!-- Tattoo Artist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tattoo Removal</masterLabel>
+            <translation><!-- Tattoo Removal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taxidermist</masterLabel>
+            <translation><!-- Taxidermist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Team Building Activities</masterLabel>
+            <translation><!-- Team Building Activities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Teen</masterLabel>
+            <translation><!-- Teen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennis Instructor/lessons</masterLabel>
+            <translation><!-- Tennis Instructor/lessons --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Therapist (Emotional)</masterLabel>
+            <translation><!-- Therapist (Emotional) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Therapist (Mental Health)</masterLabel>
+            <translation><!-- Therapist (Mental Health) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Toddler</masterLabel>
+            <translation><!-- Toddler --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Toy Store</masterLabel>
+            <translation><!-- Toy Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Traffic Ticket Lawyer</masterLabel>
+            <translation><!-- Traffic Ticket Lawyer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trainer</masterLabel>
+            <translation><!-- Trainer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel Doctor</masterLabel>
+            <translation><!-- Travel Doctor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel Security</masterLabel>
+            <translation><!-- Travel Security --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tutor</masterLabel>
+            <translation><!-- Tutor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unique culinary / wine experience</masterLabel>
+            <translation><!-- Unique culinary / wine experience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Veterinarian</masterLabel>
+            <translation><!-- Veterinarian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Videographer</masterLabel>
+            <translation><!-- Videographer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Villa Rental</masterLabel>
+            <translation><!-- Villa Rental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Window Cleaner</masterLabel>
+            <translation><!-- Window Cleaner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wine Storage</masterLabel>
+            <translation><!-- Wine Storage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Winery</masterLabel>
+            <translation><!-- Winery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Women's Clothing/Shoe Store</masterLabel>
+            <translation><!-- Women&apos;s Clothing/Shoe Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yoga Instructor</masterLabel>
+            <translation><!-- Yoga Instructor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zoo</masterLabel>
+            <translation><!-- Zoo --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

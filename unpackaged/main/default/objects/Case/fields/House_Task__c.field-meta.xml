@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>House_Task__c</fullName>
+    <label>House Task</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Drafting Houses to Call For</fullName>
+                <default>false</default>
+                <label>Drafting Houses to Call For</label>
+            </value>
+            <value>
+                <fullName>Building out / Data input into Spreadsheet</fullName>
+                <default>false</default>
+                <label>Building out / Data input into Spreadsheet</label>
+            </value>
+            <value>
+                <fullName>Making House Phones</fullName>
+                <default>false</default>
+                <label>Making House Phones</label>
+            </value>
+            <value>
+                <fullName>Holiday / Seasonal / Specia Events Preparation</fullName>
+                <default>false</default>
+                <label>Holiday / Seasonal / Specia Events Preparation</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

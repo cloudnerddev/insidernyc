@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Payment_Notes_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>(ISCHANGED(Payment_Method__c) || ISCHANGED(Method_of_Reimbursement__c)) &amp;&amp;
+
+OR(ISPICKVAL(Payment_Method__c, 'Check'),
+ISPICKVAL(Payment_Method__c, 'PayPal'),
+ISPICKVAL(Payment_Method__c, 'Venmo'),
+ISPICKVAL(Payment_Method__c, 'Wire'),
+ISPICKVAL(Method_of_Reimbursement__c, 'Check'),
+ISPICKVAL(Method_of_Reimbursement__c, 'PayPal'),
+ISPICKVAL(Method_of_Reimbursement__c, 'Venmo'),
+ISPICKVAL(Method_of_Reimbursement__c, 'Wire')) &amp;&amp;
+
+ISBLANK(Payment_Details__c)</errorConditionFormula>
+    <errorDisplayField>Payment_Details__c</errorDisplayField>
+    <errorMessage>Additional Payment Notes required</errorMessage>
+</ValidationRule>

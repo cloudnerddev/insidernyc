@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Car_Rental_Preferences</fullName>
+    <columns>NAME</columns>
+    <columns>Car_Rental_Preferences__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>General_Preferences__c.Car_Rental_Preferences</value>
+    </filters>
+    <label>Car Rental Preferences</label>
+</ListView>

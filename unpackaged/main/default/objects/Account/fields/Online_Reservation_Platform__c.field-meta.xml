@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Online_Reservation_Platform__c</fullName>
+    <label>Online Reservation Platform</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Opentable</fullName>
+                <default>false</default>
+                <label>Opentable</label>
+            </value>
+            <value>
+                <fullName>Reserve</fullName>
+                <default>false</default>
+                <label>Reserve</label>
+            </value>
+            <value>
+                <fullName>Resy</fullName>
+                <default>false</default>
+                <label>Resy</label>
+            </value>
+            <value>
+                <fullName>Seven Rooms</fullName>
+                <default>false</default>
+                <label>Seven Rooms</label>
+            </value>
+            <value>
+                <fullName>Tock</fullName>
+                <default>false</default>
+                <label>Tock</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

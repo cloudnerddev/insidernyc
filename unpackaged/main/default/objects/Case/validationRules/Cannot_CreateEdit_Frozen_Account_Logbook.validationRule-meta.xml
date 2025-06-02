@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_CreateEdit_Frozen_Account_Logbook</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(Account.Account_Status__c, 'Frozen') &amp;&amp;
+$User.CommunityNickname != 'CDNA' &amp;&amp;
+ $User.Edit_Locked_Accounts_Logbooks__c = FALSE</errorConditionFormula>
+    <errorMessage>You cannot create/edit a logbook or related data for a Frozen account.</errorMessage>
+</ValidationRule>

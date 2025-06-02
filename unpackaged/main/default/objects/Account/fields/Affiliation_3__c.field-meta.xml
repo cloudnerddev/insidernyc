@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Affiliation_3__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>Affiliated Accounts (Affiliation 1)</inlineHelpText>
+    <label>Affiliation 3</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Affiliated Accounts (Affiliation 3)</relationshipLabel>
+    <relationshipName>Accounts_Affiliation_3</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>
