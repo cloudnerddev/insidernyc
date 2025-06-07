@@ -163,6 +163,6 @@
 		</apex:pageBlock>
 	</apex:form>
 	<script Language="JavaScript">
-		function openCMLaunchVFPage() { window.open('{!VFPageLaunchString}', '','scrollbars=yes, menubar=no, height=600, width=800, resizable=yes, toolbar=no, location=no, status=yes'); }
+		function openCMLaunchVFPage() { window.open('{!JSENCODE(VFPageLaunchString)}', '','scrollbars=yes, menubar=no, height=600, width=800, resizable=yes, toolbar=no, location=no, status=yes'); }
 	</script>
 </apex:page>

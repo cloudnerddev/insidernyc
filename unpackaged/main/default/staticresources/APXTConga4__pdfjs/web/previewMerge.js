@@ -6,7 +6,10 @@ var composerDownloadIcon = "";
 var composerUniqueIdForLC = "";
 
     function handleMessage(evt){
-        var postObj = JSON.parse(evt.data);
+        var postObj = evt.data;
+        if (typeof evt.data === 'string') {
+            postObj = JSON.parse(evt.data);
+        }
         composerFileIcon = findFileIconForContentType(postObj.contentType);
         composerDocTitle = adjustDocTitleForFileIcon(postObj.filename, composerFileIcon);
         composerMergeButtonTitle = postObj.mergeButtonTitle;

@@ -329,7 +329,7 @@
 						</apex:panelGrid>
 					</apex:pageBlockSectionItem>
 				</apex:pageBlockSection>
-				<apex:commandButton onclick="window.open('/{!queryPrefix}/e?retURL={!APXTConga4__Conga_Solution__c.Id}','_blank','location=no,resizable=no,toolbar=no,status=no,menubar=no,width=1100,height=800', 1)" value="Create New Conga Query Record" title="Click to create a new Conga Query record in a new window." />
+				<apex:commandButton onclick="window.open('/{!JSENCODE(queryPrefix)}/e?retURL={!JSENCODE(APXTConga4__Conga_Solution__c.Id)}','_blank','location=no,resizable=no,toolbar=no,status=no,menubar=no,width=1100,height=800', 1)" value="Create New Conga Query Record" title="Click to create a new Conga Query record in a new window." />
 			</apex:pageBlockSection>
 		</apex:pageBlock>
 		<apex:pageBlock id="EXTMergeFieldBlock" title="Advanced Filter Configuration" rendered="{!IF(JSENCODE(MergeFieldSwitchValue) = 'true', 'false', 'true')}">

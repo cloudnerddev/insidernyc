@@ -154,6 +154,7 @@
                     , congaAuthAccessType: '{!JSENCODE($CurrentPage.parameters.congaAuthAccessType)}'
                     , congaAuthAccessKey: '{!JSENCODE($CurrentPage.parameters.congaAuthAccessKey)}'
                     , congaAuthAccessToken: '{!JSENCODE($CurrentPage.parameters.congaAuthAccessToken)}'
+                    , isPlatformComposer: '{!JSENCODE($CurrentPage.parameters.isPlatformComposer)}'
                     , hideAttachments: '{!JSENCODE($CurrentPage.parameters.hideAttachments)}'
                 };
             </script>

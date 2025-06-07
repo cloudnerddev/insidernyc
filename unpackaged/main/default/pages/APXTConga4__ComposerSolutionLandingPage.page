@@ -66,7 +66,7 @@
 			<apex:outputPanel id="buttonDataPanel">
 				<apex:pageBlockTable value="{!Button}" var="item" rendered="{!display}">
 					<apex:column headerValue="Button Data">
-						<apex:outputText value="{!SUBSTITUTE(item, 'LBGoesHere!', '<br/>')}" style="white-space:pre;" escape="false" />
+						<apex:outputText value="{!SUBSTITUTE(item, 'LBGoesHere!', '<br/>')}" style="white-space:pre;"/>
 					</apex:column>
 				</apex:pageBlockTable>
 			</apex:outputPanel>

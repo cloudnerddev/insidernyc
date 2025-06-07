@@ -3,12 +3,20 @@
     <label>EU Production</label>
     <protected>false</protected>
     <values>
+        <field>APXTConga4__Connected_App_Name_Platform__c</field>
+        <value xsi:type="xsd:string">Conga_Platform_Composer_EU</value>
+    </values>
+    <values>
         <field>APXTConga4__Connected_App_Name_SF1__c</field>
         <value xsi:type="xsd:string">Conga_Composer_SF1_EU</value>
     </values>
     <values>
         <field>APXTConga4__Connected_App_Name__c</field>
         <value xsi:type="xsd:string">Conga_Composer_EU</value>
+    </values>
+    <values>
+        <field>APXTConga4__Hostname_Platform__c</field>
+        <value xsi:type="xsd:string">rlsprodeu-composer.congacloud.eu</value>
     </values>
     <values>
         <field>APXTConga4__Hostname__c</field>

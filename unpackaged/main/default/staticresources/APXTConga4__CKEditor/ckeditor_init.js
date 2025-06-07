@@ -160,7 +160,7 @@
 
   // Get the metaHost from the Composer config. Used to call web services directly to add additional Attachments. 
   let metaHost;
-  APXTConga4.EmailPreviewController.getMetaHost(function(result, event) {
+  APXTConga4.EmailPreviewController.getMetaHost(APP_CONGA_CKEDITOR.isPlatformComposer, function(result, event) {
       metaHost = result;
   });
 
@@ -173,6 +173,7 @@
     APP_CONGA_CKEDITOR.congaAuthAccessType,
     APP_CONGA_CKEDITOR.congaAuthAccessKey,
     APP_CONGA_CKEDITOR.congaAuthAccessToken,
+    APP_CONGA_CKEDITOR.isPlatformComposer,
     function(result, event) {
       if (event.type === "exception") {
         showErrorMessage(event.message);
@@ -384,6 +385,7 @@
       APP_CONGA_CKEDITOR.congaAuthAccessType,
       APP_CONGA_CKEDITOR.congaAuthAccessKey,
       APP_CONGA_CKEDITOR.congaAuthAccessToken,
+      APP_CONGA_CKEDITOR.isPlatformComposer,
       function(result, event) {
         if (event.type === "exception") {
           showErrorMessage(event.message);

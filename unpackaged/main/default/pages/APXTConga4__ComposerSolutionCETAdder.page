@@ -175,7 +175,7 @@
 						<apex:inputTextarea value="{!commentString}" id="commentStringBox" rows="5" cols="30" />
 					</apex:pageBlockSectionItem>
 				</apex:pageBlockSection>
-				<apex:commandButton onclick="window.open('/{!CETPrefix}/e?retURL={!APXTConga4__Conga_Solution__c.Id}','_blank','location=no,resizable=no,toolbar=no,status=no,menubar=no,width=1100,height=800', 1)" value="Create New Conga Email Template Record" title="Click to create a new Conga Email Template record in a new window." />
+				<apex:commandButton onclick="window.open('/{!JSENCODE(CETPrefix)}/e?retURL={!JSENCODE(APXTConga4__Conga_Solution__c.Id)}','_blank','location=no,resizable=no,toolbar=no,status=no,menubar=no,width=1100,height=800', 1)" value="Create New Conga Email Template Record" title="Click to create a new Conga Email Template record in a new window." />
 			</apex:pageBlockSection>
 		</apex:pageBlock>
 	</apex:form>
