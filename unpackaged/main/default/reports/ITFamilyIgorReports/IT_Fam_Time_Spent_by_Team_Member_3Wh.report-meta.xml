@@ -46,13 +46,6 @@
             <operator>equals</operator>
             <value>It Family Office</value>
         </criteriaItems>
-        <criteriaItems>
-            <column>Account.Cases.Time_Logs__r$Date_Logged__c</column>
-            <columnToColumn>false</columnToColumn>
-            <isUnlocked>true</isUnlocked>
-            <operator>greaterOrEqual</operator>
-            <value>12/1/2023</value>
-        </criteriaItems>
     </filter>
     <format>Summary</format>
     <groupingsDown>
@@ -76,7 +69,9 @@
     <showGrandTotal>false</showGrandTotal>
     <showSubTotals>true</showSubTotals>
     <timeFrameFilter>
-        <dateColumn>Account$CreatedDate</dateColumn>
+        <dateColumn>Account.Cases.Time_Logs__r$Date_Logged__c</dateColumn>
+        <endDate>2025-06-09</endDate>
         <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2024-06-01</startDate>
     </timeFrameFilter>
 </Report>
