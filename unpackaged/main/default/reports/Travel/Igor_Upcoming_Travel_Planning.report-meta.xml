@@ -31,7 +31,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
-            <value>Cancelled,No Show,Beyond Control,House,Didn&apos;t Get,Need to Book</value>
+            <value>Cancelled,No Show,Beyond Control,House,Didn&apos;t Get</value>
         </criteriaItems>
         <criteriaItems>
             <column>SUBJECT</column>
@@ -40,9 +40,16 @@
             <operator>startsWith</operator>
             <value>Travel</value>
         </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT.NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>IT Family Office</value>
+        </criteriaItems>
     </filter>
     <format>Tabular</format>
-    <name>Travel Planning Logbook List</name>
+    <name>Igor - Upcoming Travel Planning</name>
     <params>
         <name>units</name>
         <value>h</value>

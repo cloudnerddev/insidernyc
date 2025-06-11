@@ -23,7 +23,7 @@
             <column>Case.Reference_Date__c</column>
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
-            <operator>greaterOrEqual</operator>
+            <operator>lessThan</operator>
             <value>TODAY</value>
         </criteriaItems>
         <criteriaItems>
@@ -40,9 +40,16 @@
             <operator>startsWith</operator>
             <value>Travel</value>
         </criteriaItems>
+        <criteriaItems>
+            <column>Case.Reference_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>1/1/2025</value>
+        </criteriaItems>
     </filter>
     <format>Tabular</format>
-    <name>Travel Planning Logbook List</name>
+    <name>ENDED - Travel Planning Logbook List</name>
     <params>
         <name>units</name>
         <value>h</value>

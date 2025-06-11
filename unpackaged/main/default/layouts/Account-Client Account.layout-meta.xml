@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
     <excludeButtons>ChangeRecordType</excludeButtons>
     <excludeButtons>DataDotComCompanyHierarchy</excludeButtons>
@@ -61,7 +61,7 @@
                 <field>Date_Joined__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>Time_Logged_MTD__c</field>
             </layoutItems>
             <layoutItems>
@@ -123,7 +123,8 @@
                 <field>Invoices_Sent_To_Text__c</field>
             </layoutItems>
             <layoutItems>
-                <emptySpace>true</emptySpace>
+                <behavior>Edit</behavior>
+                <field>Hours_Usage_Warnings_Sent_to__c</field>
             </layoutItems>
             <layoutItems>
                 <emptySpace>true</emptySpace>
@@ -136,8 +137,8 @@
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
         <label>Questionnaire Details</label>
-        <layoutColumns/>
-        <layoutColumns/>
+        <layoutColumns />
+        <layoutColumns />
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
@@ -294,10 +295,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>X3_Contact_at_Insider__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Hours_Usage_Warnings_Sent_to__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
