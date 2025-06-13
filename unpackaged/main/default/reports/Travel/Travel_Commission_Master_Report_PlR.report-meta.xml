@@ -57,10 +57,17 @@
             <operator>greaterOrEqual</operator>
             <value>1/1/2023</value>
         </criteriaItems>
+        <criteriaItems>
+            <column>Case.Date_Commission_Due__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>TODAY</value>
+        </criteriaItems>
     </filter>
     <format>Summary</format>
     <groupingsDown>
-        <dateGranularity>Year</dateGranularity>
+        <dateGranularity>Month</dateGranularity>
         <field>Case.Reference_Date__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
