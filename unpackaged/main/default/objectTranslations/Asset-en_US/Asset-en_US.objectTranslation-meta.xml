@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <recordTypes>
         <description><!-- Membership Account for Car Rental/Service --></description>
         <label><!-- Car Rental Account --></label>
@@ -44,4 +30,18 @@
         <label><!-- Restaurant Account --></label>
         <name>Restaurant_Account</name>
     </recordTypes>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>
