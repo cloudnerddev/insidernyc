@@ -24,13 +24,6 @@
         <field>Case.Total_Price__c</field>
     </columns>
     <columns>
-        <aggregateTypes>Sum</aggregateTypes>
-        <field>Case.Charged__c</field>
-    </columns>
-    <columns>
-        <field>Case.Date_Entered_in_Quickbooks__c</field>
-    </columns>
-    <columns>
         <field>Case.Commission_Type__c</field>
     </columns>
     <columns>
@@ -53,7 +46,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>material good</value>
+            <value>malakov</value>
         </criteriaItems>
         <criteriaItems>
             <column>STATUS</column>
@@ -64,7 +57,7 @@
         </criteriaItems>
     </filter>
     <format>Tabular</format>
-    <name>Material Good Commission Report</name>
+    <name>Roman Malakov Commission Report</name>
     <params>
         <name>units</name>
         <value>h</value>
@@ -80,8 +73,8 @@
     <showSubTotals>true</showSubTotals>
     <timeFrameFilter>
         <dateColumn>CREATED_DATEONLY</dateColumn>
-        <endDate>2025-06-18</endDate>
+        <endDate>2024-12-31</endDate>
         <interval>INTERVAL_CUSTOM</interval>
-        <startDate>2025-04-01</startDate>
+        <startDate>2024-01-01</startDate>
     </timeFrameFilter>
 </Report>

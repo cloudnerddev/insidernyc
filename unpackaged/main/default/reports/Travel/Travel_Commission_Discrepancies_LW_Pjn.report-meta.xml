@@ -75,7 +75,7 @@
         <field>Case.Reference_Date__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Travel Commission Discrepancies - LW</name>
+    <name>Travel Commission Discrepancies</name>
     <params>
         <name>units</name>
         <value>h</value>
