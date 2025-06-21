@@ -131,6 +131,11 @@
             <field>LastModifiedDateTime__c</field>
             <table>Time_Log__c</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Client_Name__c</field>
+            <table>Time_Log__c</table>
+        </columns>
         <masterLabel>Time Logs</masterLabel>
     </sections>
     <sections>

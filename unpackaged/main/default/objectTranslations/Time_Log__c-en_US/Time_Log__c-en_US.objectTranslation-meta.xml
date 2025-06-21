@@ -8,26 +8,6 @@
         <plural>true</plural>
         <value>Time Logs</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Time Log Layout</layout>
         <sections>
@@ -44,4 +24,25 @@
         <errorMessage><!-- You are not authorized to clone records --></errorMessage>
         <name>preventClone</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

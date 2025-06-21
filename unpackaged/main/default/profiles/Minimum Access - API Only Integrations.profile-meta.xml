@@ -854,6 +854,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Time_Log__c.Client_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>metazoa3__snapshot_asset__c.metazoa3__asset_name__c</field>
         <readable>true</readable>

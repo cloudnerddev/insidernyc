@@ -2420,6 +2420,11 @@
             <field>LastModifiedDateTime__c</field>
             <table>Account.Cases.Time_Logs__r</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Client_Name__c</field>
+            <table>Account.Cases.Time_Logs__r</table>
+        </columns>
         <masterLabel>Time Logs</masterLabel>
     </sections>
     <sections>

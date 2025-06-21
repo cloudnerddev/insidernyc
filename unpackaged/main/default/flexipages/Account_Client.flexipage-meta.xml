@@ -883,7 +883,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>filter</name>
-                    <value>{&quot;datasets&quot;:{&quot;Account_Logbook_Analytics&quot;:[{&quot;fields&quot;:[&quot;AccountId&quot;],&quot;filter&quot;:{&quot;operator&quot;:&quot;in&quot;,&quot;values&quot;:[&quot;$Id&quot;]},&quot;locked&quot;:null,&quot;hidden&quot;:null}]}}</value>
+                    <value>{&quot;datasets&quot;:{&quot;Account_Logbook_Analytics&quot;:[{&quot;fields&quot;:[&quot;AccountId&quot;],&quot;filter&quot;:{&quot;operator&quot;:&quot;in&quot;,&quot;values&quot;:[&quot;$Id&quot;]},&quot;locked&quot;:null,&quot;hidden&quot;:null},{&quot;fields&quot;:[&quot;Account.Name&quot;],&quot;filter&quot;:{&quot;operator&quot;:&quot;in&quot;,&quot;values&quot;:[&quot;$Name&quot;]},&quot;locked&quot;:null,&quot;hidden&quot;:null}]}}</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>height</name>

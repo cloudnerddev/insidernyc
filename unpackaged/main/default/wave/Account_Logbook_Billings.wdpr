@@ -1,5 +1,5 @@
 {
-  "version" : "63.0",
+  "version" : "64.0",
   "nodes" : {
     "LOAD_ACCOUNT" : {
       "action" : "load",
@@ -54,7 +54,7 @@
     },
     "JOIN_CASE_ACCOUNT" : {
       "action" : "join",
-      "sources" : [ "JOIN0", "LOAD_ACCOUNT" ],
+      "sources" : [ "JOIN_TIME_LOG", "LOAD_ACCOUNT" ],
       "schema" : {
         "fields" : [ ],
         "slice" : {
@@ -64,7 +64,7 @@
         }
       },
       "parameters" : {
-        "joinType" : "LOOKUP",
+        "joinType" : "MULTI_VALUE_LOOKUP",
         "leftKeys" : [ "AccountId" ],
         "rightQualifier" : "Account",
         "rightKeys" : [ "Id" ]
@@ -72,7 +72,7 @@
     },
     "JOIN_TIME_LOG" : {
       "action" : "join",
-      "sources" : [ "JOIN1", "LOAD_TIME_LOG" ],
+      "sources" : [ "JOIN0", "LOAD_TIME_LOG" ],
       "schema" : {
         "fields" : [ ],
         "slice" : {
@@ -82,8 +82,8 @@
         }
       },
       "parameters" : {
-        "joinType" : "LOOKUP",
-        "leftKeys" : [ "Account.Id", "Id" ],
+        "joinType" : "MULTI_VALUE_LOOKUP",
+        "leftKeys" : [ "AccountId", "Id" ],
         "rightQualifier" : "TimeLog",
         "rightKeys" : [ "Client__c", "Case__c" ]
       }
@@ -104,7 +104,7 @@
     },
     "FORMULA0" : {
       "action" : "formula",
-      "sources" : [ "JOIN_TIME_LOG" ],
+      "sources" : [ "JOIN1" ],
       "parameters" : {
         "expressionType" : "SQL",
         "fields" : [ {
@@ -214,7 +214,6 @@
       "action" : "join",
       "sources" : [ "LOAD_CASE", "LOAD_DATASET1" ],
       "schema" : {
-        "fields" : [ ],
         "slice" : {
           "mode" : "DROP",
           "ignoreMissingFields" : true,
@@ -222,7 +221,7 @@
         }
       },
       "parameters" : {
-        "joinType" : "LOOKUP",
+        "joinType" : "OUTER",
         "leftKeys" : [ "RecordTypeId" ],
         "rightQualifier" : "RecordType",
         "rightKeys" : [ "Id" ]
@@ -274,7 +273,7 @@
         }
       },
       "parameters" : {
-        "joinType" : "LOOKUP",
+        "joinType" : "OUTER",
         "leftKeys" : [ "Vendor__c" ],
         "rightQualifier" : "Vendor",
         "rightKeys" : [ "Id" ]
@@ -286,8 +285,8 @@
       "LOAD_ACCOUNT" : {
         "label" : "Account",
         "type" : "LOAD_DATASET",
-        "top" : 251.89999999999998,
-        "left" : 392.1,
+        "top" : 252,
+        "left" : 532,
         "parameters" : {
           "sampleSize" : 2000
         }
@@ -304,8 +303,8 @@
       "LOAD_TIME_LOG" : {
         "label" : "Time_Log__c",
         "type" : "LOAD_DATASET",
-        "top" : 252.2,
-        "left" : 672,
+        "top" : 252,
+        "left" : 392.1,
         "parameters" : {
           "sampleSize" : 2000
         }
@@ -313,14 +312,14 @@
       "JOIN_CASE_ACCOUNT" : {
         "label" : "Join Case-Account",
         "type" : "JOIN",
-        "top" : 112,
-        "left" : 392
+        "top" : 112.19999999999999,
+        "left" : 532
       },
       "JOIN_TIME_LOG" : {
         "label" : "Join Time Log",
         "type" : "JOIN",
         "top" : 112.1,
-        "left" : 672.1
+        "left" : 391.8
       },
       "OUTPUT" : {
         "label" : "Output",
@@ -415,8 +414,8 @@
       "LOAD_DATASET2" : {
         "label" : "Account",
         "type" : "LOAD_DATASET",
-        "top" : 252,
-        "left" : 532,
+        "top" : 252.2,
+        "left" : 672,
         "parameters" : {
           "sampleSize" : 2000
         }
@@ -424,25 +423,22 @@
       "JOIN1" : {
         "label" : "Join 1",
         "type" : "JOIN",
-        "top" : 112,
-        "left" : 532
+        "top" : 112.4,
+        "left" : 672
       }
     },
     "connectors" : [ {
-      "source" : "JOIN1",
-      "target" : "JOIN_TIME_LOG"
+      "source" : "JOIN_TIME_LOG",
+      "target" : "JOIN_CASE_ACCOUNT"
     }, {
       "source" : "JOIN0",
-      "target" : "JOIN_CASE_ACCOUNT"
+      "target" : "JOIN_TIME_LOG"
     }, {
       "source" : "LOAD_ACCOUNT",
       "target" : "JOIN_CASE_ACCOUNT"
     }, {
       "source" : "LOAD_TIME_LOG",
       "target" : "JOIN_TIME_LOG"
-    }, {
-      "source" : "JOIN_TIME_LOG",
-      "target" : "TRANSFORM0"
     }, {
       "source" : "TRANSFORM0",
       "target" : "OUTPUT"
@@ -458,6 +454,9 @@
     }, {
       "source" : "LOAD_DATASET2",
       "target" : "JOIN1"
+    }, {
+      "source" : "JOIN1",
+      "target" : "TRANSFORM0"
     } ],
     "hiddenColumns" : [ ]
   },

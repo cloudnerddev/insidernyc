@@ -1,0 +1,224 @@
+{
+  "version" : "64.0",
+  "nodes" : {
+    "LOAD_DATASET0" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "IsDeleted", "Name", "CreatedDate", "CreatedById", "LastModifiedDate", "LastModifiedById", "SystemModstamp", "LastActivityDate", "LastViewedDate", "LastReferencedDate", "Client__c", "Contact__c", "Case__c", "Type_of_Billing__c", "ThisMonth__c", "Duration_Minutes__c", "Multiplier__c", "Billable_Time__c", "Date_Logged__c", "Comments__c", "Multiplier_Reason__c", "ParentLogbookId__c", "Team_Member_Is_Me__c", "Type__c", "Contact_Account_Name__c", "Client_Name__c", "LastModifiedDateTime__c", "Override_Multiplier_Reason__c" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "Time_Log__c",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "Time_Log__c"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN0" : {
+      "action" : "join",
+      "sources" : [ "LOAD_DATASET0", "LOAD_DATASET1" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "Client__c" ],
+        "rightQualifier" : "Account",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "LOAD_DATASET1" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "MasterRecordId", "Name", "LastName", "FirstName", "MiddleName", "Type", "Non_Billable_Account__c", "X24_Hour_Access__c", "Insider_Team__c" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "Account",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "Account"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "OUTPUT0" : {
+      "action" : "save",
+      "sources" : [ "FORMULA3" ],
+      "parameters" : {
+        "fields" : [ ],
+        "dataset" : {
+          "type" : "analyticsDataset",
+          "label" : "Time Logs Dataset",
+          "name" : "Time_Logs_Dataset",
+          "folderName" : "SharedApp"
+        },
+        "measuresToCurrencies" : [ ]
+      }
+    },
+    "FORMULA0" : {
+      "action" : "formula",
+      "sources" : [ "JOIN0" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "TimeLog.Date_Logged__c_month",
+          "label" : "Month",
+          "formulaExpression" : "MONTH(\"Date_Logged__c\")",
+          "precision" : 2,
+          "scale" : 0,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA1" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA0" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "TEXT",
+          "name" : "TimeLog.Date_Logged__c_month_name",
+          "label" : "Month Name",
+          "formulaExpression" : "CASE\r\nWHEN MONTH(\"Date_Logged__c\") = 1 THEN 'January'\r\nWHEN MONTH(\"Date_Logged__c\") = 2 THEN 'February'\r\nWHEN MONTH(\"Date_Logged__c\") = 3 THEN 'March'\r\nWHEN MONTH(\"Date_Logged__c\") = 4 THEN 'April'\r\nWHEN MONTH(\"Date_Logged__c\") = 5 THEN 'May'\r\nWHEN MONTH(\"Date_Logged__c\") = 6 THEN 'June'\r\nWHEN MONTH(\"Date_Logged__c\") = 7 THEN 'July'\r\nWHEN MONTH(\"Date_Logged__c\") = 8 THEN 'August'\r\nWHEN MONTH(\"Date_Logged__c\") = 9 THEN 'September'\r\nWHEN MONTH(\"Date_Logged__c\") = 10 THEN 'October'\r\nWHEN MONTH(\"Date_Logged__c\") = 11 THEN 'November'\r\nWHEN MONTH(\"Date_Logged__c\") = 12 THEN 'December'\r\nELSE 'Unknown'\r\nEND",
+          "precision" : 20,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA2" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA1" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "TimeLog.Date_Logged__c_year",
+          "label" : "Year",
+          "formulaExpression" : "YEAR(\"Date_Logged__c\")",
+          "precision" : 4,
+          "scale" : 0,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA3" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA2" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "TEXT",
+          "name" : "TimeLog.Date_Logged__c_month_year",
+          "label" : "Month-Year",
+          "formulaExpression" : "CONCAT(\r\n  CASE\r\n    WHEN MONTH(\"Date_Logged__c\") = 1 THEN 'January'\r\n    WHEN MONTH(\"Date_Logged__c\") = 2 THEN 'February'\r\n    WHEN MONTH(\"Date_Logged__c\") = 3 THEN 'March'\r\n    WHEN MONTH(\"Date_Logged__c\") = 4 THEN 'April'\r\n    WHEN MONTH(\"Date_Logged__c\") = 5 THEN 'May'\r\n    WHEN MONTH(\"Date_Logged__c\") = 6 THEN 'June'\r\n    WHEN MONTH(\"Date_Logged__c\") = 7 THEN 'July'\r\n    WHEN MONTH(\"Date_Logged__c\") = 8 THEN 'August'\r\n    WHEN MONTH(\"Date_Logged__c\") = 9 THEN 'September'\r\n    WHEN MONTH(\"Date_Logged__c\") = 10 THEN 'October'\r\n    WHEN MONTH(\"Date_Logged__c\") = 11 THEN 'November'\r\n    WHEN MONTH(\"Date_Logged__c\") = 12 THEN 'December'\r\n    ELSE 'Unknown'\r\n  END,\r\n  ' ',\r\n  STRING(YEAR(\"Date_Logged__c\"))\r\n)\r\n",
+          "precision" : 40,
+          "defaultValue" : ""
+        } ]
+      }
+    }
+  },
+  "ui" : {
+    "nodes" : {
+      "LOAD_DATASET0" : {
+        "label" : "Time_Log__c",
+        "type" : "LOAD_DATASET",
+        "top" : 250.5,
+        "left" : 533.4,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN0" : {
+        "label" : "Join 0",
+        "type" : "JOIN",
+        "top" : 252,
+        "left" : 672
+      },
+      "LOAD_DATASET1" : {
+        "label" : "Account",
+        "type" : "LOAD_DATASET",
+        "top" : 112,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "OUTPUT0" : {
+        "label" : "Output 0",
+        "type" : "OUTPUT",
+        "top" : 252,
+        "left" : 952
+      },
+      "TRANSFORM0" : {
+        "label" : "Transform 0",
+        "type" : "TRANSFORM",
+        "top" : 252,
+        "left" : 812,
+        "graph" : {
+          "FORMULA0" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA1" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA2" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA3" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          }
+        },
+        "connectors" : [ {
+          "source" : "FORMULA0",
+          "target" : "FORMULA1"
+        }, {
+          "source" : "FORMULA1",
+          "target" : "FORMULA2"
+        }, {
+          "source" : "FORMULA2",
+          "target" : "FORMULA3"
+        } ]
+      }
+    },
+    "connectors" : [ {
+      "source" : "LOAD_DATASET0",
+      "target" : "JOIN0"
+    }, {
+      "source" : "LOAD_DATASET1",
+      "target" : "JOIN0"
+    }, {
+      "source" : "TRANSFORM0",
+      "target" : "OUTPUT0"
+    }, {
+      "source" : "JOIN0",
+      "target" : "TRANSFORM0"
+    } ],
+    "hiddenColumns" : [ ]
+  },
+  "runMode" : "full"
+}
