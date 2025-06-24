@@ -2,5 +2,5 @@
 <SearchCustomization xmlns="http://soap.sforce.com/2006/04/metadata">
     <channel>GlobalSearch</channel>
     <masterLabel>FrequentFlyer</masterLabel>
-    <profile>admin</profile>
+    <profile>Admin</profile>
 </SearchCustomization>
