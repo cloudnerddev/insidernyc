@@ -40,7 +40,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>John Khoury Account</value>
+            <value>Coventure LLC/Treville Cap</value>
         </criteriaItems>
         <criteriaItems>
             <column>RECORDTYPE</column>
