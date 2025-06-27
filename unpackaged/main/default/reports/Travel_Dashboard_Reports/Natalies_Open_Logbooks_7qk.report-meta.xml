@@ -12,9 +12,6 @@
     <columns>
         <field>ACCOUNT.NAME</field>
     </columns>
-    <columns>
-        <field>Case.Reference_Date__c</field>
-    </columns>
     <filter>
         <criteriaItems>
             <column>STATUS</column>
@@ -33,13 +30,7 @@
     </filter>
     <format>Summary</format>
     <groupingsDown>
-        <dateGranularity>Day</dateGranularity>
-        <field>Contact.Account_Status__c</field>
-        <sortOrder>Asc</sortOrder>
-    </groupingsDown>
-    <groupingsDown>
-        <dateGranularity>Day</dateGranularity>
-        <field>RECORDTYPE</field>
+        <field>Case.Reference_Date__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Natalie&apos;s Open Logbooks</name>
@@ -56,8 +47,6 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
-    <sortColumn>Case.Reference_Date__c</sortColumn>
-    <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>CREATED_DATEONLY</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>
