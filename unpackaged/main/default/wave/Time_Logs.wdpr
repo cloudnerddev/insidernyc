@@ -55,7 +55,7 @@
     },
     "OUTPUT0" : {
       "action" : "save",
-      "sources" : [ "FORMULA3" ],
+      "sources" : [ "TO_DIMENSION0" ],
       "parameters" : {
         "fields" : [ ],
         "dataset" : {
@@ -128,6 +128,23 @@
           "defaultValue" : ""
         } ]
       }
+    },
+    "TO_DIMENSION0" : {
+      "action" : "typeCast",
+      "sources" : [ "FORMULA3" ],
+      "parameters" : {
+        "fields" : [ {
+          "name" : "TimeLog.Date_Logged__c_month",
+          "newProperties" : {
+            "label" : "Month To Text",
+            "name" : "TimeLog.Date_Logged__c_month_to_dimension",
+            "typeProperties" : {
+              "type" : "TEXT",
+              "length" : 255
+            }
+          }
+        } ]
+      }
     }
   },
   "ui" : {
@@ -160,7 +177,7 @@
         "label" : "Output 0",
         "type" : "OUTPUT",
         "top" : 252,
-        "left" : 952
+        "left" : 1092
       },
       "TRANSFORM0" : {
         "label" : "Transform 0",
@@ -203,6 +220,18 @@
           "source" : "FORMULA2",
           "target" : "FORMULA3"
         } ]
+      },
+      "TRANSFORM1" : {
+        "label" : "Transform 1",
+        "type" : "TRANSFORM",
+        "top" : 252,
+        "left" : 952,
+        "graph" : {
+          "TO_DIMENSION0" : {
+            "label" : "To Text"
+          }
+        },
+        "connectors" : [ ]
       }
     },
     "connectors" : [ {
@@ -212,11 +241,14 @@
       "source" : "LOAD_DATASET1",
       "target" : "JOIN0"
     }, {
-      "source" : "TRANSFORM0",
+      "source" : "TRANSFORM1",
       "target" : "OUTPUT0"
     }, {
       "source" : "JOIN0",
       "target" : "TRANSFORM0"
+    }, {
+      "source" : "TRANSFORM0",
+      "target" : "TRANSFORM1"
     } ],
     "hiddenColumns" : [ ]
   },
