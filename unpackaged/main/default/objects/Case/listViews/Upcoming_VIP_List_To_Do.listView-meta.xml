@@ -6,6 +6,7 @@
     <columns>NAME</columns>
     <columns>CASES.SUBJECT</columns>
     <columns>VIP_Client_Insider_Welcome_Amenity__c</columns>
+    <columns>Special_Requests_Notes__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>CASES.RECORDTYPE</field>
