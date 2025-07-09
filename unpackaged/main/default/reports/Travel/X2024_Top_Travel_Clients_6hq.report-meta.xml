@@ -46,14 +46,14 @@
         <field>Account.Cases$RecordType</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Top Travel Clients - LW</name>
+    <name>2024 Top Travel Clients</name>
     <params>
         <name>co</name>
         <value>1</value>
     </params>
     <reportType>Accounts_with_Logbooks_and_Time_Logs__c</reportType>
     <scope>organization</scope>
-    <showDetails>true</showDetails>
+    <showDetails>false</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
     <timeFrameFilter>

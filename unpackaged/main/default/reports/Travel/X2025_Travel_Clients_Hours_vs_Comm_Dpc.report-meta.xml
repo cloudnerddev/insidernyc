@@ -49,7 +49,7 @@
         <field>Account.Cases$Subject</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>2025 Travel Clients Hours vs Commissions</name>
+    <name>2024 Travel Clients Hours vs Comm</name>
     <params>
         <name>co</name>
         <value>1</value>
@@ -61,6 +61,6 @@
     <showSubTotals>true</showSubTotals>
     <timeFrameFilter>
         <dateColumn>Account.Cases$Date_Commission_Due__c</dateColumn>
-        <interval>INTERVAL_CURFY</interval>
+        <interval>INTERVAL_PREVFY</interval>
     </timeFrameFilter>
 </Report>
