@@ -163,6 +163,16 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
+                    <name>fieldSetName</name>
+                    <value>Day_Conversion_Date_Fields</value>
+                </componentInstanceProperties>
+                <componentName>dateFieldDayViewer</componentName>
+                <identifier>c_dateFieldDayViewer</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
                     <name>tabs</name>
                     <value>Facet-f8fd4d6d-27fc-489a-a376-e4d3145a4e8e</value>
                 </componentInstanceProperties>

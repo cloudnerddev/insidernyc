@@ -215,6 +215,22 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>bmpyrckt__TimelineParentPicklist</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>bmpyrckt__TimelineParentPicklist_Test</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>bmpyrckt__TimelineService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>bmpyrckt__TimelineService_Test</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>flightBookingData</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -750,6 +766,10 @@
         <enabled>true</enabled>
         <name>LogBook_Record__mdt</name>
     </customMetadataTypeAccesses>
+    <customMetadataTypeAccesses>
+        <enabled>true</enabled>
+        <name>bmpyrckt__Timeline_Configuration__mdt</name>
+    </customMetadataTypeAccesses>
     <externalDataSourceAccesses>
         <enabled>false</enabled>
         <externalDataSource>Quip</externalDataSource>
@@ -1027,6 +1047,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Email_General_Business__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Free_Credit_Notice_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3385,6 +3410,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Formula_field_for_Time_Warp__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Case.Getting_Delivered_to_Insider__c</field>
         <readable>true</readable>
@@ -4282,6 +4312,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Case.Time_real__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Timeline_Icon_Color__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -10438,6 +10473,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>WorkThanks-Thanks Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>bmpyrckt__Timeline_Configuration__mdt-bmpyrckt__Timeline Configuration Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>footprint__All_Reports__c-footprint__All Reports Layout</layout>

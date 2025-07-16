@@ -1,0 +1,44 @@
+<!--template>
+    <lightning-card title={title}>
+        <template if:true={dateFields}>
+            <template for:each={dateFields} for:item="field">
+                <div key={field.label} class="slds-m-around_small">
+                    <p><strong>{field.label} : </strong> <lightning-formatted-date-time value={field.value} year="numeric" month="long" day="2-digit" weekday="long"> </lightning-formatted-date-time></p>
+                   
+                </div>
+            </template>
+        </template>
+
+        <template if:true={error}>
+            <p class="slds-text-color_error">Error: {error}</p>
+        </template>
+    </lightning-card>
+</template-->
+
+<template>
+    <lightning-card title={title} icon-name="utility:date_input">
+        <template if:true={dateFields}>
+            <div class="slds-p-horizontal_medium slds-p-vertical_small">
+                <template for:each={dateFields} for:item="field">
+                    <div key={field.label} class="slds-m-bottom_xx-small">
+                        <div class="slds-text-title slds-text-color_weak slds-p-bottom_xx-small">{field.label}</div>
+                        <div class="slds-text-body_regular">
+                            <lightning-formatted-date-time
+                                value={field.value}
+                                year="numeric"
+                                month="short"
+                                day="2-digit"
+                                weekday="long">
+                            </lightning-formatted-date-time>
+                        </div>
+                        <hr class="slds-m-top_x-small"/>
+                    </div>
+                </template>
+            </div>
+        </template>
+
+        <template if:true={error}>
+            <p class="slds-text-color_error slds-p-around_medium">Error: {error}</p>
+        </template>
+    </lightning-card>
+</template>

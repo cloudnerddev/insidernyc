@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Day_Conversion_Date_Fields</fullName>
+    <description>DateFieldDayViewer</description>
+    <displayedFields>
+        <field>Check_In_Date__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Check_Out_Date__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>Day Conversion Date Fields</label>
+</FieldSet>

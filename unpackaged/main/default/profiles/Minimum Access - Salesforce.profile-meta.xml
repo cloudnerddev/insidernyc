@@ -51,6 +51,22 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>bmpyrckt__TimelineParentPicklist</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>bmpyrckt__TimelineParentPicklist_Test</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>bmpyrckt__TimelineService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>bmpyrckt__TimelineService_Test</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>lwcc__ChartBuilderController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -356,6 +372,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Dog_House__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Free_Credit_Notice_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1104,6 +1125,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Formula_field_for_Time_Warp__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Case.Getting_Delivered_to_Insider__c</field>
         <readable>true</readable>
@@ -1316,6 +1342,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Case.Time_real__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Timeline_Icon_Color__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3382,6 +3413,9 @@
     <layoutAssignments>
         <layout>ThreatDetectionFeedback-Threat Detection Feedback Layout</layout>
     </layoutAssignments>
+    <layoutAssignments>
+        <layout>bmpyrckt__Timeline_Configuration__mdt-bmpyrckt__Timeline Configuration Layout</layout>
+    </layoutAssignments>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Account.Client_Account</recordType>
@@ -4207,4 +4241,8 @@
         <enabled>true</enabled>
         <name>ViewHelpLink</name>
     </userPermissions>
+    <customMetadataTypeAccesses>
+        <enabled>true</enabled>
+        <name>bmpyrckt__Timeline_Configuration__mdt</name>
+    </customMetadataTypeAccesses>
 </Profile>

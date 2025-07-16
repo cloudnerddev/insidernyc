@@ -71,6 +71,22 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>bmpyrckt__TimelineParentPicklist</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>bmpyrckt__TimelineParentPicklist_Test</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>bmpyrckt__TimelineService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>bmpyrckt__TimelineService_Test</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>l_lookup__IconHelper</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -657,6 +673,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Email_General_Business__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Free_Credit_Notice_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7434,6 +7455,9 @@
         <layout>WorkThanks-Thanks Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>bmpyrckt__Timeline_Configuration__mdt-bmpyrckt__Timeline Configuration Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>footprint__All_Reports__c-footprint__All Reports Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -8319,4 +8343,8 @@
         <enabled>true</enabled>
         <name>UseWebLink</name>
     </userPermissions>
+    <customMetadataTypeAccesses>
+        <enabled>true</enabled>
+        <name>bmpyrckt__Timeline_Configuration__mdt</name>
+    </customMetadataTypeAccesses>
 </Profile>

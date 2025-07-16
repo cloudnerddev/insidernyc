@@ -1642,4 +1642,10 @@
     
     
     
+    
+    
+    <fieldSets>
+        <label><!-- Day Conversion Date Fields --></label>
+        <name>Day_Conversion_Date_Fields</name>
+    </fieldSets>
 </CustomObjectTranslation>

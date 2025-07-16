@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Timeline Icon Color --></label>
+        <name>Timeline_Icon_Color__c</name>
+    </CustomFieldTranslation>

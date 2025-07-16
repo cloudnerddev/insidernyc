@@ -906,6 +906,16 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
+                    <name>fieldSetName</name>
+                    <value>Day_Conversion_Date_Fields</value>
+                </componentInstanceProperties>
+                <componentName>dateFieldDayViewer</componentName>
+                <identifier>c_dateFieldDayViewer</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
                     <name>createQuickActionName</name>
                     <value>footprint__NewCase</value>
                 </componentInstanceProperties>
