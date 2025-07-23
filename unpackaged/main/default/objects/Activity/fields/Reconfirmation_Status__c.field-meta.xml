@@ -39,6 +39,11 @@
                 <label>Reconfirmed - Not Sending</label>
             </value>
             <value>
+                <fullName>Reconfirmed Do Not Extract</fullName>
+                <default>false</default>
+                <label>Reconfirmed Do Not Extract</label>
+            </value>
+            <value>
                 <fullName>Complete</fullName>
                 <default>false</default>
                 <isActive>false</isActive>

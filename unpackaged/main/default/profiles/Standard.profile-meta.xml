@@ -5169,6 +5169,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Event.Itinerary__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Event.Location</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -7495,6 +7500,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Task.Internal__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Task.Itinerary__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
