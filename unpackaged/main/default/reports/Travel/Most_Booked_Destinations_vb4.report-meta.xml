@@ -14,6 +14,10 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>Case$Total_Price__c</field>
     </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case$Insider_Commission__c</field>
+    </columns>
     <filter>
         <criteriaItems>
             <column>Case$RecordType</column>
@@ -34,7 +38,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>greaterOrEqual</operator>
-            <value>1/1/2021</value>
+            <value>1/1/2025</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
@@ -53,7 +57,7 @@
     </params>
     <reportType>Logbooks_with_all_Vendor_Details__c</reportType>
     <scope>organization</scope>
-    <showDetails>true</showDetails>
+    <showDetails>false</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
     <timeFrameFilter>
