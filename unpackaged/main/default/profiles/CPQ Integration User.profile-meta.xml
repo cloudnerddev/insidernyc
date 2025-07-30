@@ -2516,6 +2516,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Hotel_Check_In_Details__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Contact.Hours_Status__c</field>
         <readable>true</readable>
@@ -7384,6 +7389,10 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Staff_Members__c-Staff Members Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Task-Task Layout</layout>
+        <recordType>Task.Credit_Reminder</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Task-Reconfirmation Task Layout</layout>

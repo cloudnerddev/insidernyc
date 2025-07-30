@@ -3,4 +3,12 @@
         <help><!-- VIP Client &amp; Personal Insider Welcome Amenity Arranged - INTERNAL --></help>
         <label><!-- VIP Client &amp; Insider Welcome Amenity --></label>
         <name>VIP_Client_Insider_Welcome_Amenity__c</name>
+        <picklistValues>
+            <masterLabel>Done</masterLabel>
+            <translation><!-- Done --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Applicable</masterLabel>
+            <translation><!-- Not Applicable --></translation>
+        </picklistValues>
     </CustomFieldTranslation>

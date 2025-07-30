@@ -33,11 +33,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Reconfirmed Do Not Extract</fullName>
+            <fullName>Sent</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Sent</fullName>
+            <fullName>To Be Reconfirmed Do Not Extract</fullName>
             <default>false</default>
         </values>
         <values>

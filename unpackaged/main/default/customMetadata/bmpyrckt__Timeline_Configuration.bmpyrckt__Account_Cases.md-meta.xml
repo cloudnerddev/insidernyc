@@ -36,7 +36,7 @@
     </values>
     <values>
         <field>bmpyrckt__Inclusion_Field__c</field>
-        <value xsi:nil="true"/>
+        <value xsi:type="xsd:string">Timeline_Show__c</value>
     </values>
     <values>
         <field>bmpyrckt__Object_Name__c</field>

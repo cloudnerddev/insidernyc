@@ -1140,6 +1140,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.Hotel_Check_In_Details__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Case.Hotel_Time__c</field>
         <readable>true</readable>
@@ -1350,6 +1355,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Timeline_Show__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Case.Total_Billable_Expenses__c</field>
         <readable>true</readable>
@@ -1421,6 +1431,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Case.Welcome_Amenity_Notes__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Case.X24_hour_contact_rich__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1467,6 +1482,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.HTML_Email_Distribution_List__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Hotel_Check_In_Details__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

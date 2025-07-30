@@ -28,7 +28,6 @@
         <field>Account.Cases$Vendor_Address__c</field>
     </columns>
     <columns>
-        <aggregateTypes>Sum</aggregateTypes>
         <field>Account.Cases$VIP_Client_Insider_Welcome_Amenity__c</field>
     </columns>
     <columns>

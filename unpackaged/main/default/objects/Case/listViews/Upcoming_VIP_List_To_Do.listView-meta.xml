@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Upcoming_VIP_List_To_Do</fullName>
-    <columns>Reference_Date__c</columns>
-    <columns>CASES.CASE_NUMBER</columns>
-    <columns>NAME</columns>
-    <columns>CASES.SUBJECT</columns>
     <columns>VIP_Client_Insider_Welcome_Amenity__c</columns>
+    <columns>NAME</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Check_In_Date__c</columns>
+    <columns>Check_Out_Date__c</columns>
+    <columns>Vendor__c</columns>
+    <columns>Room_Type__c</columns>
+    <columns>Order_Confirmation__c</columns>
+    <columns>Hotel_Check_In_Details__c</columns>
+    <columns>Welcome_Amenity_Notes__c</columns>
     <columns>Special_Requests_Notes__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
@@ -22,11 +27,6 @@
         <field>CASES.STATUS</field>
         <operation>notEqual</operation>
         <value>Cancelled</value>
-    </filters>
-    <filters>
-        <field>VIP_Client_Insider_Welcome_Amenity__c</field>
-        <operation>equals</operation>
-        <value>0</value>
     </filters>
     <label>Upcoming VIP List To Do</label>
 </ListView>

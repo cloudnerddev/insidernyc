@@ -12,7 +12,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>0</value>
+            <value></value>
         </criteriaItems>
         <criteriaItems>
             <column>Case.Reference_Date__c</column>

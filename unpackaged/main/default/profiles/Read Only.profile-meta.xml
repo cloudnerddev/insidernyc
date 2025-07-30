@@ -2956,6 +2956,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.Hotel_Check_In_Details__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Case.Hotel_Time__c</field>
         <readable>true</readable>
@@ -3736,6 +3741,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Timeline_Show__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Case.Total_Billable_Expenses__c</field>
         <readable>true</readable>
@@ -3908,6 +3918,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Case.Wait_Return__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.Welcome_Amenity_Notes__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4138,6 +4153,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.Hometown__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Hotel_Check_In_Details__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9039,6 +9059,10 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Staff_Members__c-Staff Members Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Task-Task Layout</layout>
+        <recordType>Task.Credit_Reminder</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Task-Reconfirmation Task Layout</layout>

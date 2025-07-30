@@ -8335,6 +8335,10 @@
         <layout>Staff_Members__c-Staff Members Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Task-Task Layout</layout>
+        <recordType>Task.Credit_Reminder</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Task-Reconfirmation Task Layout</layout>
         <recordType>Task.Reconfirmation</recordType>
     </layoutAssignments>
