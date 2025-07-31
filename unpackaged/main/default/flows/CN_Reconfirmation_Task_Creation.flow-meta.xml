@@ -142,6 +142,15 @@
         <label>Create Reconfirmation Task</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>successMsg</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>Reconfirmation_Date</elementReference>
+            </value>
+        </inputAssignments>
         <inputAssignments>
             <field>Description</field>
             <value>
@@ -152,12 +161,6 @@
             <field>Internal__c</field>
             <value>
                 <elementReference>Internal</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>IsReminderSet</field>
-            <value>
-                <elementReference>Reminder_Set</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -180,9 +183,6 @@
         </inputAssignments>
         <inputAssignments>
             <field>Reconfirmation_Date__c</field>
-            <value>
-                <elementReference>Reconfirmation_Date</elementReference>
-            </value>
         </inputAssignments>
         <inputAssignments>
             <field>Reconfirmation_Notes__c</field>
@@ -200,12 +200,6 @@
             <field>RecordTypeId</field>
             <value>
                 <elementReference>Record_T</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>ReminderDateTime</field>
-            <value>
-                <elementReference>Reminder</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -375,6 +369,22 @@
         <showHeader>false</showHeader>
     </screens>
     <screens>
+        <name>successMsg</name>
+        <label>successMsg</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>msg</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;Task Created Successfully, Please choose which record you would like to view:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;/lightning/r/Case/{!Create_Reconfirmation_Task}/view/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Reconfirmation Task Record&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;/lightning/r/Case/{!recordId}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Logbook Record (where you started)&lt;/a&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>false</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
         <name>Task_Creation</name>
         <label>Task Creation</label>
         <locationX>0</locationX>
@@ -487,6 +497,9 @@
                 </fields>
                 <fields>
                     <name>Reconfirmation_Notes</name>
+                    <defaultValue>
+                        <stringValue>{!Get_Case_Detasils.Vendor__r.Reconfirmation_Notes__c}</stringValue>
+                    </defaultValue>
                     <fieldText>Reconfirmation Notes</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -507,6 +520,14 @@
                     <name>Internal</name>
                     <dataType>Boolean</dataType>
                     <fieldText>Internal</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Itinerary</name>
+                    <dataType>Boolean</dataType>
+                    <fieldText>Itinerary</fieldText>
                     <fieldType>InputField</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
@@ -554,6 +575,9 @@
                     <name>Priority</name>
                     <choiceReferences>Priority1</choiceReferences>
                     <dataType>String</dataType>
+                    <defaultValue>
+                        <stringValue>Normal</stringValue>
+                    </defaultValue>
                     <fieldText>Priority</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -563,6 +587,9 @@
                     <name>Status</name>
                     <choiceReferences>Status1</choiceReferences>
                     <dataType>String</dataType>
+                    <defaultValue>
+                        <stringValue>Open</stringValue>
+                    </defaultValue>
                     <fieldText>Status</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -578,72 +605,6 @@
             </fields>
             <fields>
                 <name>Additional_Information_Column2</name>
-                <fieldType>Region</fieldType>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-            <regionContainerType>SectionWithHeader</regionContainerType>
-        </fields>
-        <fields>
-            <name>Other_Information</name>
-            <fieldText>Other Information</fieldText>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>Other_Information_Column1</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>Reminder_Set</name>
-                    <dataType>Boolean</dataType>
-                    <defaultValue>
-                        <booleanValue>true</booleanValue>
-                    </defaultValue>
-                    <fieldText>Reminder Set</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>Reminder</name>
-                    <dataType>DateTime</dataType>
-                    <fieldText>Reminder</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>false</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Reminder_Set</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <booleanValue>true</booleanValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>Due_Date</name>
-                    <dataType>Date</dataType>
-                    <fieldText>Due Date</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>false</isRequired>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>Other_Information_Column2</name>
                 <fieldType>Region</fieldType>
                 <inputParameters>
                     <name>width</name>

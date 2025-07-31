@@ -9111,7 +9111,7 @@
         <recordType>Task.Credit_Reminder</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Task-Reconfirmation Task Layout</layout>
+        <layout>Task-Reconfirmation Task</layout>
         <recordType>Task.Reconfirmation</recordType>
     </layoutAssignments>
     <layoutAssignments>

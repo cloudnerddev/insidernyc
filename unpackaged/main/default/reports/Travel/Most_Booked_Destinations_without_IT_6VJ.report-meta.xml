@@ -18,6 +18,9 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>Case$Insider_Commission__c</field>
     </columns>
+    <columns>
+        <field>Case$Contact</field>
+    </columns>
     <filter>
         <criteriaItems>
             <column>Case$RecordType</column>
@@ -40,6 +43,13 @@
             <operator>greaterOrEqual</operator>
             <value>1/1/2025</value>
         </criteriaItems>
+        <criteriaItems>
+            <column>Case$Contact</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Igor Tulchinsky</value>
+        </criteriaItems>
     </filter>
     <format>Summary</format>
     <groupingsDown>
@@ -47,14 +57,14 @@
         <field>Case$Vendor__c.BillingCountry</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Most Booked Destinations</name>
+    <name>Most Booked Destinations (without IT)</name>
     <params>
         <name>co</name>
         <value>1</value>
     </params>
     <reportType>Logbooks_with_all_Vendor_Details__c</reportType>
     <scope>organization</scope>
-    <showDetails>false</showDetails>
+    <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
     <timeFrameFilter>

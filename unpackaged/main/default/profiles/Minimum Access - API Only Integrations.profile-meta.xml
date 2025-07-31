@@ -2003,6 +2003,10 @@
         <layout>FlowRecord-Flow Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Task-Reconfirmation Task</layout>
+        <recordType>Task.Reconfirmation</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>bmpyrckt__Timeline_Configuration__mdt-bmpyrckt__Timeline Configuration Layout</layout>
     </layoutAssignments>
     <recordTypeVisibilities>

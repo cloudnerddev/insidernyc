@@ -3433,7 +3433,7 @@
         <layout>SessionHijackingEventStore-Session Hijacking Event Store Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Task-Reconfirmation Task Layout</layout>
+        <layout>Task-Reconfirmation Task</layout>
         <recordType>Task.Reconfirmation</recordType>
     </layoutAssignments>
     <layoutAssignments>
