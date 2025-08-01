@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <caseValues>
+            <plural>false</plural>
+            <value>Logbook Team</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Logbook Teams</value>
+        </caseValues>
+        <name>case_team</name>
+        <startsWith>Consonant</startsWith>
+    </CustomFieldTranslation>
