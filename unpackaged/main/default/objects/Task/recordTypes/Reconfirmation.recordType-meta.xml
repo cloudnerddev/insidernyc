@@ -48,10 +48,6 @@
     <picklistValues>
         <picklist>Sender__c</picklist>
         <values>
-            <fullName>Carly Walter</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Courtney Sider</fullName>
             <default>false</default>
         </values>
@@ -92,10 +88,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Lilly Wilbanks</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Lindsi Shine</fullName>
             <default>false</default>
         </values>
@@ -113,10 +105,6 @@
         </values>
         <values>
             <fullName>Sarah Magrini</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Sarah Tredwell</fullName>
             <default>false</default>
         </values>
         <values>

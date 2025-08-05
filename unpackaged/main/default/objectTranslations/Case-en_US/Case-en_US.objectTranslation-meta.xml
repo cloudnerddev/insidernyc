@@ -968,6 +968,10 @@
         <name>New_Related_Logbook</name>
     </quickActions>
     <quickActions>
+        <label><!-- Reconfirmation Task --></label>
+        <name>Reconfirmation_Task</name>
+    </quickActions>
+    <quickActions>
         <label><!-- Refund --></label>
         <name>Refund</name>
     </quickActions>

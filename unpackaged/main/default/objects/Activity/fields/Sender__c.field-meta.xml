@@ -8,11 +8,6 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Carly Walter</fullName>
-                <default>false</default>
-                <label>Carly Walter</label>
-            </value>
-            <value>
                 <fullName>Courtney Sider</fullName>
                 <default>false</default>
                 <label>Courtney Sider</label>
@@ -43,11 +38,6 @@
                 <label>Katie Couri</label>
             </value>
             <value>
-                <fullName>Lilly Wilbanks</fullName>
-                <default>false</default>
-                <label>Lilly Wilbanks</label>
-            </value>
-            <value>
                 <fullName>Lindsi Shine</fullName>
                 <default>false</default>
                 <label>Lindsi Shine</label>
@@ -56,11 +46,6 @@
                 <fullName>Melinda Erickson</fullName>
                 <default>false</default>
                 <label>Melinda Erickson</label>
-            </value>
-            <value>
-                <fullName>Sarah Tredwell</fullName>
-                <default>false</default>
-                <label>Sarah Tredwell</label>
             </value>
             <value>
                 <fullName>Daniela Nashawaty</fullName>
@@ -101,6 +86,11 @@
                 <fullName>Natalie Biedron</fullName>
                 <default>false</default>
                 <label>Natalie Biedron</label>
+            </value>
+            <value>
+                <fullName>Maggie Kearns</fullName>
+                <default>false</default>
+                <label>Maggie Kearns</label>
             </value>
         </valueSetDefinition>
     </valueSet>
