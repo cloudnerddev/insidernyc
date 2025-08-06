@@ -5,6 +5,8 @@
     <columns>CASES.SUBJECT</columns>
     <columns>CASES.CASE_NUMBER</columns>
     <columns>Record_Type_Name__c</columns>
+    <columns>Reference_Date__c</columns>
+    <columns>Confirmation_Date__c</columns>
     <filterScope>Everything</filterScope>
     <label>All Logbooks</label>
 </ListView>

@@ -157,9 +157,16 @@
         <label>Create Reconfirmation Task</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <assignRecordIdToReference>taskId</assignRecordIdToReference>
         <connector>
             <targetReference>success_msg</targetReference>
         </connector>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>Reconfirmation_Date</elementReference>
+            </value>
+        </inputAssignments>
         <inputAssignments>
             <field>Description</field>
             <value>
@@ -176,6 +183,12 @@
             <field>IsReminderSet</field>
             <value>
                 <elementReference>Reminder_Set</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Itinerary__c</field>
+            <value>
+                <elementReference>Itinerary</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -263,7 +276,6 @@
             </value>
         </inputAssignments>
         <object>Task</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
         <name>Get_Account_Records</name>
@@ -407,13 +419,13 @@
             <inputParameters>
                 <name>objectApiName</name>
                 <value>
-                    <stringValue>Case</stringValue>
+                    <stringValue>Task</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
                 <name>recordId</name>
                 <value>
-                    <elementReference>recordId</elementReference>
+                    <elementReference>taskId</elementReference>
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -518,7 +530,7 @@
                     <choiceReferences>currentuser</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>$User.Full_Name__c</elementReference>
+                        <elementReference>Get_User_Details.Name</elementReference>
                     </defaultValue>
                     <fieldText>Sender</fieldText>
                     <fieldType>DropdownBox</fieldType>
@@ -565,6 +577,22 @@
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
+                    <name>Itinerary</name>
+                    <dataType>Boolean</dataType>
+                    <fieldText>Itinerary</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Reconfirmation_Date</name>
+                    <dataType>Date</dataType>
+                    <fieldText>Reconfirmation Date</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
                     <name>Related_To2</name>
                     <choiceReferences>selectedCase</choiceReferences>
                     <defaultValue>
@@ -576,14 +604,6 @@
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
-                </fields>
-                <fields>
-                    <name>Reconfirmation_Date</name>
-                    <dataType>Date</dataType>
-                    <fieldText>Reconfirmation Date</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>true</isRequired>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -607,6 +627,9 @@
                     <name>Priority</name>
                     <choiceReferences>Priority1</choiceReferences>
                     <dataType>String</dataType>
+                    <defaultValue>
+                        <stringValue>Normal</stringValue>
+                    </defaultValue>
                     <fieldText>Priority</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -616,6 +639,9 @@
                     <name>Status</name>
                     <choiceReferences>Status1</choiceReferences>
                     <dataType>String</dataType>
+                    <defaultValue>
+                        <stringValue>Open</stringValue>
+                    </defaultValue>
                     <fieldText>Status</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -727,5 +753,13 @@
         <isCollection>false</isCollection>
         <isInput>true</isInput>
         <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Task record Id.</description>
+        <name>taskId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
     </variables>
 </Flow>

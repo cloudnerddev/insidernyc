@@ -10,6 +10,7 @@
     <columns>CORE.USERS.ALIAS</columns>
     <columns>Reconfirmation_Status__c</columns>
     <columns>Reconfirmation_Date__c</columns>
+    <columns>CREATED_DATE</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>RECORDTYPE</field>
