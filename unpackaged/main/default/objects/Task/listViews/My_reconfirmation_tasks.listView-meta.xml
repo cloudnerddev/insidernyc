@@ -29,7 +29,7 @@
     <filters>
         <field>Reconfirmation_Status__c</field>
         <operation>equals</operation>
-        <value>To be reconfirmed,Reconfirmed,LOD - Change Date</value>
+        <value>To be reconfirmed,Reconfirmed,LOD - Change Date,To Be Reconfirmed Do Not Extract</value>
     </filters>
     <label>My reconfirmation tasks</label>
 </ListView>

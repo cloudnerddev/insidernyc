@@ -18,6 +18,13 @@
     <columns>
         <field>Case$Room_Rate__c</field>
     </columns>
+    <columns>
+        <field>Case$Reference_Date__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case$Insider_Commission__c</field>
+    </columns>
     <filter>
         <booleanFilter>(1 OR 2 OR 6) AND 3 AND 4 AND 5</booleanFilter>
         <criteriaItems>
@@ -39,7 +46,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>greaterOrEqual</operator>
-            <value>4/1/2021</value>
+            <value>THIS_YEAR</value>
         </criteriaItems>
         <criteriaItems>
             <column>Case$RecordType</column>
@@ -63,12 +70,7 @@
             <value>four seasons</value>
         </criteriaItems>
     </filter>
-    <format>Summary</format>
-    <groupingsDown>
-        <dateGranularity>Month</dateGranularity>
-        <field>Case$Reference_Date__c</field>
-        <sortOrder>Asc</sortOrder>
-    </groupingsDown>
+    <format>Tabular</format>
     <name>Four Seasons bookings</name>
     <params>
         <name>co</name>
