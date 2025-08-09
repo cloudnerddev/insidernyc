@@ -3,6 +3,10 @@
         <label><!-- Type --></label>
         <name>Type__c</name>
         <picklistValues>
+            <masterLabel>Flight Booking Fee</masterLabel>
+            <translation><!-- Flight Booking Fee --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Gift Wrapping</masterLabel>
             <translation><!-- Gift Wrapping --></translation>
         </picklistValues>

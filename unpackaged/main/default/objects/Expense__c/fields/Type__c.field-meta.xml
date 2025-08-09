@@ -19,6 +19,11 @@
                 <default>false</default>
                 <label>Gift Wrapping</label>
             </value>
+            <value>
+                <fullName>Flight Booking Fee</fullName>
+                <default>false</default>
+                <label>Flight Booking Fee</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

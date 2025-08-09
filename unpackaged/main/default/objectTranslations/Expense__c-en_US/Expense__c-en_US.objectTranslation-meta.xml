@@ -8,18 +8,6 @@
         <plural>true</plural>
         <value>Expenses</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Expense Layout</layout>
         <sections>
@@ -32,4 +20,16 @@
         <errorMessage><!-- You are not authorized to clone records --></errorMessage>
         <name>preventClone</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>
