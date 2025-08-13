@@ -38,14 +38,14 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>Four Seasons</value>
+            <value>Maybourne</value>
         </criteriaItems>
         <criteriaItems>
             <column>Case$Vendor__c.Parent</column>
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>Four Seasons</value>
+            <value>Maybourne</value>
         </criteriaItems>
         <criteriaItems>
             <column>Case$Reference_Date__c</column>
@@ -73,11 +73,11 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>four seasons</value>
+            <value>Maybourne</value>
         </criteriaItems>
     </filter>
     <format>Tabular</format>
-    <name>Four Seasons bookings</name>
+    <name>Maybourne hotel bookings</name>
     <params>
         <name>co</name>
         <value>1</value>
@@ -87,8 +87,8 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
-    <sortColumn>Case$Subject</sortColumn>
-    <sortOrder>Desc</sortOrder>
+    <sortColumn>Case$Check_In_Date__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Case$Date__c</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

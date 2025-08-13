@@ -17,7 +17,7 @@ private class DateFieldDayViewerControllerTest {
 
         // Call the method
         Test.startTest();
-        List<Map<String, String>> result = DateFieldDayViewerController.getDateFields(objectApiName, recordId, fieldSetName);
+        List<Map<String, String>> result = DateFieldDayViewerController.getDateFields(objectApiName, recordId);
         Test.stopTest();
 
         // Validate results

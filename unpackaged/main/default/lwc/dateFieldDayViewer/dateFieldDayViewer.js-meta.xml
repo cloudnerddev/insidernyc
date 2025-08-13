@@ -7,7 +7,7 @@
     </targets>
     <targetConfigs>
         <targetConfig targets="lightning__RecordPage">
-            <property name="fieldSetName" type="String" label="Field Set API Name" required="true"/>
+            <property name="fieldSetName" type="String" label="Field Set API Name (deprecated)" required="false"/>
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

@@ -47,6 +47,11 @@
         <field>Case$Vendor__c.BillingCountry</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case$Vendor__c.BillingCity</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
     <name>Most Booked Destinations</name>
     <params>
         <name>co</name>
