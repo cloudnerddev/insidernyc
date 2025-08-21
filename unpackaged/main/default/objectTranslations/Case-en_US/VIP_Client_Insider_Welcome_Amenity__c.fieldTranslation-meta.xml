@@ -11,4 +11,8 @@
             <masterLabel>Not Applicable</masterLabel>
             <translation><!-- Not Applicable --></translation>
         </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent Pending Receipt</masterLabel>
+            <translation><!-- Sent Pending Receipt --></translation>
+        </picklistValues>
     </CustomFieldTranslation>

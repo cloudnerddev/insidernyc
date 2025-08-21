@@ -13,8 +13,13 @@
             <sorted>false</sorted>
             <value>
                 <fullName>Not Applicable</fullName>
-                <default>true</default>
+                <default>false</default>
                 <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Sent Pending Receipt</fullName>
+                <default>false</default>
+                <label>Sent Pending Receipt</label>
             </value>
             <value>
                 <fullName>Done</fullName>

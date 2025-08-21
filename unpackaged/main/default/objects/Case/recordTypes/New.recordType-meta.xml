@@ -923,5 +923,9 @@
             <fullName>Not Applicable</fullName>
             <default>true</default>
         </values>
+        <values>
+            <fullName>Sent Pending Receipt</fullName>
+            <default>false</default>
+        </values>
     </picklistValues>
 </RecordType>
