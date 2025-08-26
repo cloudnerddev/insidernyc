@@ -39,7 +39,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>greaterOrEqual</operator>
-            <value>THIS_MONTH</value>
+            <value>6/1/2025</value>
         </criteriaItems>
         <criteriaItems>
             <column>Case.Coastline_Invoice_Number__c</column>
