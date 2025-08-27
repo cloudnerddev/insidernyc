@@ -33,7 +33,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notContain</operator>
-            <value>Bulldogs,Insider</value>
+            <value>Bulldogs,Insider,practice,disney</value>
         </criteriaItems>
         <criteriaItems>
             <column>RECORDTYPE</column>
