@@ -47,27 +47,24 @@ public with sharing class DateFieldDayViewerController {
             if (val != null) {
                 Schema.DescribeFieldResult fieldDesc = fieldMap.get(fieldName).getDescribe();
                 String dateValue;
+                Boolean isDateTime = fieldDesc.getType() == Schema.DisplayType.DateTime;
                 
-                if (fieldDesc.getType() == Schema.DisplayType.DateTime) {
-                    // For DateTime fields, extract date and format as simple date string
+                if (isDateTime) {
+                    // For DateTime fields, return the full ISO string and let frontend handle timezone
                     DateTime dt = (DateTime) val;
-                    Date d = dt.date(); // Get the date part in user's timezone
-                    dateValue = String.valueOf(d.year()) + '-' + 
-                               String.valueOf(d.month()).leftPad(2, '0') + '-' + 
-                               String.valueOf(d.day()).leftPad(2, '0');
-
+                    dateValue = dt.format('yyyy-MM-dd\'T\'HH:mm:ss.SSS\'Z\'', 'GMT');
                 } else {
                     // For Date fields, format as simple date string  
                     Date d = (Date) val;
                     dateValue = String.valueOf(d.year()) + '-' + 
                                String.valueOf(d.month()).leftPad(2, '0') + '-' + 
                                String.valueOf(d.day()).leftPad(2, '0');
-
                 }
                 
                 result.add(new Map<String, String>{
                     'label' => fieldDesc.getLabel(),
-                    'value' => dateValue
+                    'value' => dateValue,
+                    'isDateTime' => String.valueOf(isDateTime)
                 });
             }
         }
@@ -79,7 +76,8 @@ public with sharing class DateFieldDayViewerController {
         if (hasRecordType && record.getSobject('RecordType') != null) {
             result.add(new Map<String, String>{
                 'label' => 'RecordType',
-                'value' => String.valueOf(record.getSobject('RecordType').get('Name'))
+                'value' => String.valueOf(record.getSobject('RecordType').get('Name')),
+                'isDateTime' => 'false'
             });
         }
 

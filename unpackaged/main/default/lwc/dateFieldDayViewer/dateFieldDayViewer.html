@@ -6,13 +6,12 @@
                     <div key={field.label} class="slds-m-bottom_xx-small">
                         <div class="slds-text-title slds-text-color_weak slds-p-bottom_xx-small">{field.label}</div>
                         <div class="slds-text-body_regular">
-                            <lightning-formatted-date-time
-                                value={field.value}
-                                year="numeric"
-                                month="short"
-                                day="2-digit"
-                                weekday="long">
-                            </lightning-formatted-date-time>
+                            <template if:true={field.dayName}>
+                                <strong>{field.dayName}</strong> - {field.value}
+                            </template>
+                            <template if:false={field.dayName}>
+                                {field.value}
+                            </template>
                         </div>
                         <hr class="slds-m-top_x-small"/>
                     </div>
