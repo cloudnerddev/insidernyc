@@ -80,7 +80,7 @@
     <showSubTotals>true</showSubTotals>
     <timeFrameFilter>
         <dateColumn>CREATED_DATEONLY</dateColumn>
-        <endDate>2025-06-18</endDate>
+        <endDate>2025-06-30</endDate>
         <interval>INTERVAL_CUSTOM</interval>
         <startDate>2025-04-01</startDate>
     </timeFrameFilter>
