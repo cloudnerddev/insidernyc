@@ -91,10 +91,6 @@
             <fullName>Samantha Silverman</fullName>
             <default>false</default>
         </values>
-        <values>
-            <fullName>Yana Romanova</fullName>
-            <default>false</default>
-        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Status</picklist>

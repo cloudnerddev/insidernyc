@@ -15,10 +15,5 @@
         <sharedTo>sarah@insidernyc.com</sharedTo>
         <sharedToType>User</sharedToType>
     </folderShares>
-    <folderShares>
-        <accessLevel>EditAllContents</accessLevel>
-        <sharedTo>yromanova@insidernyc.com</sharedTo>
-        <sharedToType>User</sharedToType>
-    </folderShares>
     <name>Team Dashboards</name>
 </DashboardFolder>
