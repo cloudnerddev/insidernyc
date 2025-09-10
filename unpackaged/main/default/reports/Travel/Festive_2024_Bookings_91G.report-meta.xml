@@ -51,6 +51,11 @@
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
+        <field>Case.Insider_Team__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
         <field>ACCOUNT.NAME</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>

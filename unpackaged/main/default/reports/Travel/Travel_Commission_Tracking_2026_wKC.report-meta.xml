@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Report xmlns="http://soap.sforce.com/2006/04/metadata">
     <columns>
-        <field>CONTACT.NAME</field>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>RECORDTYPE</field>
     </columns>
     <columns>
         <field>Case.Reference_Date__c</field>
     </columns>
     <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Insider_Commission__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.Commission_Amount_Received__c</field>
+    </columns>
+    <columns>
         <field>SUBJECT</field>
-    </columns>
-    <columns>
-        <field>Case.Vendor__c</field>
-    </columns>
-    <columns>
-        <field>Case.Check_In_Date__c</field>
-    </columns>
-    <columns>
-        <field>Case.Check_Out_Date__c</field>
     </columns>
     <filter>
         <criteriaItems>
@@ -24,42 +26,25 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>Case.Hotel_Booking,Case.Travel_Planning,Case.House_Villa_Booking,Case.Charter</value>
+            <value>Case.Flight_Booking_Single_Person,Case.Hotel_Booking,Case.Tour_Booking,Case.Charter,Case.DMC_On_Site_trip_booking</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Reference_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>NEXT_YEAR</value>
         </criteriaItems>
         <criteriaItems>
             <column>STATUS</column>
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
-            <value>Cancelled,Beyond Control</value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>Case.Reference_Date__c</column>
-            <columnToColumn>false</columnToColumn>
-            <isUnlocked>true</isUnlocked>
-            <operator>greaterThan</operator>
-            <value>12/15/2023</value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>Case.Reference_Date__c</column>
-            <columnToColumn>false</columnToColumn>
-            <isUnlocked>true</isUnlocked>
-            <operator>lessThan</operator>
-            <value>1/8/2024</value>
+            <value>Cancelled,Didn&apos;t Get</value>
         </criteriaItems>
     </filter>
-    <format>Summary</format>
-    <groupingsDown>
-        <dateGranularity>Day</dateGranularity>
-        <field>Case.Insider_Team__c</field>
-        <sortOrder>Asc</sortOrder>
-    </groupingsDown>
-    <groupingsDown>
-        <dateGranularity>Day</dateGranularity>
-        <field>ACCOUNT.NAME</field>
-        <sortOrder>Asc</sortOrder>
-    </groupingsDown>
-    <name>Festive 2023 Bookings</name>
+    <format>Tabular</format>
+    <name>Travel Commission Tracking - 2026</name>
     <params>
         <name>units</name>
         <value>h</value>
