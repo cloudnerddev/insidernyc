@@ -15,11 +15,11 @@
             <value>Case.DiningReservation</value>
         </criteriaItems>
         <criteriaItems>
-            <column>Case$Vendor__c.Neighbourhood__c</column>
+            <column>Case$Vendor_Address__c</column>
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>hamptons</value>
+            <value>London</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
@@ -36,7 +36,7 @@
         <field>Case$Status</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Copy of Hamptons Dining 2024</name>
+    <name>London Dining 2024-2025</name>
     <params>
         <name>co</name>
         <value>1</value>
@@ -48,8 +48,8 @@
     <showSubTotals>true</showSubTotals>
     <timeFrameFilter>
         <dateColumn>Case$Reference_Date__c</dateColumn>
-        <endDate>2024-09-30</endDate>
+        <endDate>2025-09-19</endDate>
         <interval>INTERVAL_CUSTOM</interval>
-        <startDate>2024-05-01</startDate>
+        <startDate>2024-08-01</startDate>
     </timeFrameFilter>
 </Report>
