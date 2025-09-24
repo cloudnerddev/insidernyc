@@ -27,6 +27,10 @@
             <translation><!-- Cinco de Mayo --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Diwali</masterLabel>
+            <translation><!-- Diwali --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Easter</masterLabel>
             <translation><!-- Easter --></translation>
         </picklistValues>

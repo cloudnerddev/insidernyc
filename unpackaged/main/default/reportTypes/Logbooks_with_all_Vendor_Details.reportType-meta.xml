@@ -2532,6 +2532,11 @@
             <field>Hotel_Time__c</field>
             <table>Case</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Quoted_Price__c</field>
+            <table>Case</table>
+        </columns>
         <masterLabel>Logbooks</masterLabel>
     </sections>
 </ReportType>

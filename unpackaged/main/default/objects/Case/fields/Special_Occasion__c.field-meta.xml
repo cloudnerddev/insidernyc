@@ -166,6 +166,11 @@
                 <default>false</default>
                 <label>Valentines Day</label>
             </value>
+            <value>
+                <fullName>Diwali</fullName>
+                <default>false</default>
+                <label>Diwali</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

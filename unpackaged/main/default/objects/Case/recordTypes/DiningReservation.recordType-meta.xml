@@ -725,6 +725,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Diwali</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Easter</fullName>
             <default>false</default>
         </values>

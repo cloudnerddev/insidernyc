@@ -2719,6 +2719,11 @@
             <field>Hotel_Time__c</field>
             <table>Contact.Cases</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Quoted_Price__c</field>
+            <table>Contact.Cases</table>
+        </columns>
         <masterLabel>Logbooks</masterLabel>
     </sections>
 </ReportType>
