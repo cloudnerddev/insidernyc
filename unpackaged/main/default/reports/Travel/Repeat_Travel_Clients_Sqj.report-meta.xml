@@ -15,12 +15,6 @@
     <columns>
         <field>Case.Date_of_Return__c</field>
     </columns>
-    <columns>
-        <field>STATUS</field>
-    </columns>
-    <columns>
-        <field>OWNER</field>
-    </columns>
     <filter>
         <criteriaItems>
             <column>Case.Reference_Date__c</column>
@@ -48,7 +42,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>lessThan</operator>
-            <value>12/31/2025</value>
+            <value>1/31/2027</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
@@ -57,7 +51,7 @@
         <field>ACCOUNT.NAME</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Travel Planning Logbook List</name>
+    <name>Repeat Travel Clients</name>
     <params>
         <name>units</name>
         <value>h</value>
