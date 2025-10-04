@@ -87,10 +87,6 @@
             <fullName>Natalie Biedron</fullName>
             <default>false</default>
         </values>
-        <values>
-            <fullName>Samantha Silverman</fullName>
-            <default>false</default>
-        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Status</picklist>
