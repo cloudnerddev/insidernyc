@@ -27,7 +27,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>greaterOrEqual</operator>
-            <value>LAST_MONTH</value>
+            <value>LAST_YEAR</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
