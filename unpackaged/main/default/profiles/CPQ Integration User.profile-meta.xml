@@ -467,6 +467,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Available_Credit_Hours__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.Available_Online_Before_Phone__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -513,6 +518,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Check_Out_Time__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Client_Level__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3017,6 +3027,21 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Credit_Usage__c.Hours_Used__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Credit_Usage__c.Monthly_Billing__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Credit_Usage__c.Notes__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Credit__c.Case__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -3028,6 +3053,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Credit__c.Contact__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Credit__c.Credit_Hours_Left__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3056,6 +3086,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Credit__c.Hours_Value__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Credit__c.Insider_Team__c</field>
         <readable>true</readable>
@@ -3063,6 +3098,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Credit__c.Months_Until_Expiration__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Credit__c.Original_Credit_Hours__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7057,6 +7097,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>CredentialStuffingEventStore-Credential Stuffing Event Store Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Credit_Usage__c-Credit Usage Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Credit__c-Credit Layout</layout>

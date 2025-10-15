@@ -1,0 +1,125 @@
+<!-- caseCloneWithDuplicateCheck.html -->
+<template>
+    <!-- Loading Spinner -->
+    <template if:true={isLoading}>
+        <div class="slds-spinner_container">
+            <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                <span class="slds-assistive-text">Loading...</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Error Message -->
+    <template if:true={error}>
+        <div class="slds-notify slds-notify_alert slds-theme_error" role="alert">
+            <span class="slds-assistive-text">Error</span>
+            <h2>{error}</h2>
+        </div>
+    </template>
+
+    <!-- Duplicate Cases Modal -->
+    <template if:true={showDuplicateModal}>
+        <section role="dialog" tabindex="-1" aria-modal="true" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal Header -->
+                <header class="slds-modal__header">
+                    <h2 class="slds-modal__title slds-hyphenate" id="modal-heading-01">
+                        <lightning-icon icon-name="utility:warning" size="small" class="slds-m-right_x-small"></lightning-icon>
+                        Duplicate Cases Found
+                    </h2>
+                </header>
+
+                <!-- Modal Body -->
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <div class="slds-notify slds-notify_alert slds-theme_warning" role="alert">
+                        <span class="slds-assistive-text">Warning</span>
+                        <h2>
+                            We found {duplicateCount} potential duplicate case(s) that might match the case you're trying to clone. 
+                            Please review them before proceeding.
+                        </h2>
+                    </div>
+
+                    <div class="slds-m-top_medium">
+                        <h3 class="slds-text-heading_small slds-m-bottom_small">Potential Duplicates:</h3>
+                        
+                        <div class="slds-scrollable_y" style="height: 300px;">
+                            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                                <thead>
+                                    <tr class="slds-line-height_reset">
+                                        <th class="slds-text-title_caps" scope="col">
+                                            <div class="slds-truncate" title="Case Number">Case Number</div>
+                                        </th>
+                                        <th class="slds-text-title_caps" scope="col">
+                                            <div class="slds-truncate" title="Vendor">Vendor</div>
+                                        </th>
+                                        <th class="slds-text-title_caps" scope="col">
+                                            <div class="slds-truncate" title="Number In Party">Number In Party</div>
+                                        </th>
+                                        <th class="slds-text-title_caps" scope="col">
+                                            <div class="slds-truncate" title="Date">Date</div>
+                                        </th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <template for:each={duplicateCases} for:item="caseRecord">
+                                        <tr key={caseRecord.Id} class="slds-hint-parent">
+                                            <td data-label="Case Number">
+                                                <div class="slds-truncate" title={caseRecord.CaseNumber}>
+                                                    <a href="#" data-case-id={caseRecord.Id} onclick={handleViewDuplicate}>
+                                                        {caseRecord.CaseNumber}
+                                                    </a>
+                                                </div>
+                                            </td>
+                                            <td data-label="Subject">
+                                                <div class="slds-truncate" title={caseRecord.Vendor__r.Name}>
+                                                    {caseRecord.Vendor__r.Name}
+                                                </div>
+                                            </td>
+                                            <td data-label="Status">
+                                                <div class="slds-truncate" title={caseRecord.Number_in_Party__c}>
+                                                    <span class="slds-badge">
+                                                        {caseRecord.Number_in_Party__c}
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td data-label="Date">
+                                                <div class="slds-truncate" title={caseRecord.Date__c}>
+                                                    <lightning-formatted-date-time 
+                                                        value={caseRecord.Date__c}
+                                                        year="numeric"
+                                                        month="short"
+                                                        day="2-digit">
+                                                    </lightning-formatted-date-time>
+                                                </div>
+                                            </td>
+                                           
+                                        </tr>
+                                    </template>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Footer -->
+                <footer class="slds-modal__footer">
+                    <lightning-button 
+                        variant="neutral" 
+                        label="Cancel" 
+                        onclick={handleCancel}>
+                    </lightning-button>
+                    <lightning-button 
+                        variant="brand" 
+                        label="Proceed to Clone" 
+                        onclick={handleProceedToClone}
+                        class="slds-m-left_x-small">
+                    </lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

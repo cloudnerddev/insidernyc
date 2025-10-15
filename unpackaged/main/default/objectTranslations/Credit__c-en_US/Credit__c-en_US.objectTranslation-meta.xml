@@ -8,21 +8,6 @@
         <plural>true</plural>
         <value>Credits</value>
     </caseValues>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <layouts>
         <layout>Credit Layout</layout>
         <sections>
@@ -47,4 +32,22 @@
         <errorMessage><!-- You are not authorized to clone records --></errorMessage>
         <name>preventClone</name>
     </validationRules>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </CustomObjectTranslation>

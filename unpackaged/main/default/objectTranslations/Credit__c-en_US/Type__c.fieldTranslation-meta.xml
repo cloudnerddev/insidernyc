@@ -19,6 +19,10 @@
             <translation><!-- Free Upgrade --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Hours</masterLabel>
+            <translation><!-- Hours --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Other</masterLabel>
             <translation><!-- Other --></translation>
         </picklistValues>

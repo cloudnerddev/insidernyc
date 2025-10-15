@@ -41,6 +41,11 @@
                 <default>false</default>
                 <label>Other</label>
             </value>
+            <value>
+                <fullName>Hours</fullName>
+                <default>false</default>
+                <label>Hours</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

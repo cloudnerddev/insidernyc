@@ -8775,6 +8775,9 @@
         <layout>CredentialStuffingEventStore-Credential Stuffing Event Store Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Credit_Usage__c-Credit Usage Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Credit__c-Credit Layout</layout>
     </layoutAssignments>
     <layoutAssignments>

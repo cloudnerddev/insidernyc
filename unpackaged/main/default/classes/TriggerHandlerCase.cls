@@ -9,9 +9,7 @@ public class TriggerHandlerCase extends TriggerHandler {
     public TriggerHandlerCase() {}
     
     /* Trigger context overrides */
-    public override void beforeInsert() {
-        PreventDuplicateDiningReservations(Trigger.new);
-    }
+    public override void beforeInsert() {}
     public override void beforeUpdate() {
         //createTimeEntry(Trigger.new);
         setTime(Trigger.new, Trigger.oldMap);
@@ -236,53 +234,6 @@ public class TriggerHandlerCase extends TriggerHandler {
             
             if (accountIds.size() > 0) {
                 Util.recalcAccounts(accountIds);
-            }
-        }
-    }
-    private void PreventDuplicateDiningReservations (List<Case> newCaseList){
-        Id recordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByDeveloperName().get('DiningReservation').getRecordTypeId();
-        String baseUrl = System.URL.getOrgDomainUrl().toExternalForm();
-        //List<Case> newCaseList = (List<Case>) newCases;
-        Set<Id> accountIds = new Set<Id>();
-        Set<Date> reservationDates = new Set<Date>();
-        Map<String, Case> newCombinations = new Map<String, Case>();
-        System.debug('****** '+ 'Indide Before Insert');
-        System.debug('******' + newCaseList);
-        System.debug('******' + newCaseList.size());
-        System.debug('******' + recordTypeId);
-        for (Case cs : newCaseList) {
-            
-            if (cs.RecordTypeId == recordTypeId && cs.AccountId != null && cs.Date__c != null) {
-                 System.debug('****** '+ cs.AccountId + '|' + cs.Date__c);
-                String key = cs.AccountId + '|' + cs.Date__c;
-                newCombinations.put(key, cs);
-                accountIds.add(cs.AccountId);
-                reservationDates.add(cs.Date__c);
-            }
-        }
-        
-        if (!newCombinations.isEmpty()) {
-            System.debug('****** '+ accountIds);
-            System.debug('****** '+ reservationDates);
-                
-            List<Case> existingReservations = [
-                
-                SELECT Id, AccountId, Date__c , CaseNumber, Vendor__r.Name
-                FROM CAse 
-                WHERE AccountId IN :accountIds 
-                AND Date__c IN :reservationDates
-                AND RecordType.Name = 'Dining Reservation' Order by CreatedDate Desc Limit 1
-            ];
-            
-            for (Case existing : existingReservations) {
-                String key = existing.AccountId + '|' + existing.Date__c;
-                if (newCombinations.containsKey(key)) {
-                    Case conflicting = newCombinations.get(key);
-                    System.debug('***** ' + existing.CaseNumber);
-                    System.debug('***** ' + existing.Vendor__r.Name);
-                    
-                    conflicting.addError('A Dining Reservation already exists for this Account and Date.');
-                } 
             }
         }
     }

@@ -26,6 +26,15 @@ IF(MONTH({!$Flow.CurrentDate})=12, &quot;December &quot; &amp; TEXT(YEAR({!$Flow
         <dataType>Date</dataType>
         <expression>DATE(YEAR(Today()), MONTH(Today()), 1)</expression>
     </formulas>
+    <formulas>
+        <name>lastDayofTheMonth</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+  YEAR(TODAY()),
+  MONTH(TODAY()) + 1,
+  1
+) - 1</expression>
+    </formulas>
     <interviewLabel>MonthlyBilling {!$Flow.CurrentDateTime}</interviewLabel>
     <label>MonthlyBilling</label>
     <processMetadataValues>
@@ -74,6 +83,12 @@ IF(MONTH({!$Flow.CurrentDate})=12, &quot;December &quot; &amp; TEXT(YEAR({!$Flow
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>End_Date__c</field>
+            <value>
+                <elementReference>lastDayofTheMonth</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Free_Hours_or_Credits__c</field>
             <value>
                 <elementReference>$Record.Free_Hours_or_Credits__c</elementReference>
@@ -94,7 +109,13 @@ IF(MONTH({!$Flow.CurrentDate})=12, &quot;December &quot; &amp; TEXT(YEAR({!$Flow
         <inputAssignments>
             <field>In_Case_of_Emergency_Overhours_Notes__c</field>
             <value>
-                <stringValue>$Record.In_Case_of_Emergency_Overhours_Notes__c</stringValue>
+                <elementReference>$Record.In_Case_of_Emergency_Overhours_Notes__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Last_Day_of_Month__c</field>
+            <value>
+                <elementReference>lastDayofTheMonth</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>

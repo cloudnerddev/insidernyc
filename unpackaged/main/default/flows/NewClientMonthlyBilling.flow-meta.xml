@@ -33,9 +33,28 @@
     <formulas>
         <name>firstRecordName</name>
         <dataType>String</dataType>
-        <expression>IF(MONTH({!$Flow.CurrentDate})=1, 
-LEFT({!$Record.Name} &amp; &quot; - &quot; &amp; TEXT(MONTH({!$Flow.CurrentDate})-1) &amp; &quot;/&quot; &amp; TEXT(Year({!$Flow.CurrentDate})-1), 80),
-LEFT({!$Record.Name} &amp; &quot; - &quot; &amp; TEXT(MONTH({!$Flow.CurrentDate})-1) &amp; &quot;/&quot; &amp; TEXT(Year({!$Flow.CurrentDate})), 80))</expression>
+        <expression>IF(MONTH({!$Flow.CurrentDate})=1, &quot;January &quot; &amp; TEXT(YEAR({!$Flow.CurrentDate})), 
+IF(MONTH({!$Flow.CurrentDate})=2, &quot;February &quot; &amp; TEXT(YEAR({!$Flow.CurrentDate})), 
+IF(MONTH({!$Flow.CurrentDate})=3, &quot;March &quot; &amp; TEXT(YEAR({!$Flow.CurrentDate})), 
+IF(MONTH({!$Flow.CurrentDate})=4, &quot;April &quot; &amp; TEXT(YEAR({!$Flow.CurrentDate})), 
+IF(MONTH({!$Flow.CurrentDate})=5, &quot;May &quot; &amp; TEXT(YEAR({!$Flow.CurrentDate})), 
+IF(MONTH({!$Flow.CurrentDate})=6, &quot;June &quot; &amp; TEXT(YEAR({!$Flow.CurrentDate})), 
+IF(MONTH({!$Flow.CurrentDate})=7, &quot;July &quot; &amp; TEXT(YEAR({!$Flow.CurrentDate})), 
+IF(MONTH({!$Flow.CurrentDate})=8, &quot;August &quot; &amp; TEXT(YEAR({!$Flow.CurrentDate})), 
+IF(MONTH({!$Flow.CurrentDate})=9, &quot;September &quot; &amp; TEXT(YEAR({!$Flow.CurrentDate})), 
+IF(MONTH({!$Flow.CurrentDate})=10, &quot;October &quot; &amp; TEXT(YEAR({!$Flow.CurrentDate})), 
+IF(MONTH({!$Flow.CurrentDate})=11, &quot;November &quot; &amp; TEXT(YEAR({!$Flow.CurrentDate})), 
+IF(MONTH({!$Flow.CurrentDate})=12, &quot;December &quot; &amp; TEXT(YEAR({!$Flow.CurrentDate})), 
+&quot;This Month&quot;))))))))))))</expression>
+    </formulas>
+    <formulas>
+        <name>lastDayofTheMonth</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+  YEAR(TODAY()),
+  MONTH(TODAY()) + 1,
+  1
+) - 1</expression>
     </formulas>
     <interviewLabel>NewClientMonthlyBilling {!$Flow.CurrentDateTime}</interviewLabel>
     <label>NewClientMonthlyBilling</label>
@@ -70,9 +89,27 @@ LEFT({!$Record.Name} &amp; &quot; - &quot; &amp; TEXT(MONTH({!$Flow.CurrentDate}
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>End_Date__c</field>
+            <value>
+                <elementReference>lastDayofTheMonth</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Hours_per_Month__c</field>
             <value>
                 <elementReference>$Record.Hours_per_Month__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>In_Case_of_Emergency_Overhours_Notes__c</field>
+            <value>
+                <elementReference>$Record.In_Case_of_Emergency_Overhours_Notes__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Last_Day_of_Month__c</field>
+            <value>
+                <elementReference>lastDayofTheMonth</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>

@@ -940,6 +940,10 @@
         <name>Check_Request</name>
     </quickActions>
     <quickActions>
+        <label><!-- Clone --></label>
+        <name>Clone</name>
+    </quickActions>
+    <quickActions>
         <label><!-- CloseCaseLightning --></label>
         <name>CloseCaseLightning</name>
     </quickActions>

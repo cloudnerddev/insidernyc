@@ -1,0 +1,45 @@
+/* caseCloneWithDuplicateCheck.css */
+.slds-modal__container {
+    max-width: 80rem;
+    width: 90%;
+}
+
+.slds-table_bordered {
+    border: 1px solid #dddbda;
+}
+
+.slds-table_bordered th,
+.slds-table_bordered td {
+    border-right: 1px solid #dddbda;
+}
+
+.slds-table_bordered th:last-child,
+.slds-table_bordered td:last-child {
+    border-right: none;
+}
+
+.slds-spinner_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.duplicate-warning {
+    background-color: #fef7e0;
+    border: 1px solid #fe9339;
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 16px;
+}
+
+.duplicate-count {
+    font-weight: bold;
+    color: #fe9339;
+}

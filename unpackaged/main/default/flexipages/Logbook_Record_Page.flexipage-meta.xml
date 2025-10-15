@@ -16,7 +16,20 @@
                             <value>ChangeOwnerOne</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>Clone</value>
+                            <value>Case.Clone</value>
+                            <visibilityRule>
+                                <booleanFilter>1 OR 2</booleanFilter>
+                                <criteria>
+                                    <leftValue>{!Record.RecordType.Name}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Dining Reservation</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.RecordType.Name}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Nightclub/Lounge/Drinks Reservation</rightValue>
+                                </criteria>
+                            </visibilityRule>
                         </valueListItems>
                         <valueListItems>
                             <value>Delete</value>
