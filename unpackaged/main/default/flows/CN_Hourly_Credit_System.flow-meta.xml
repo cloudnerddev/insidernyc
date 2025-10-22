@@ -123,7 +123,7 @@
             <assignToReference>creditRecord.Hours_Value__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>selectedDeductHrs</elementReference>
+                <elementReference>leftHrs</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -188,7 +188,7 @@
             <assignToReference>creditRecord.Hours_Value__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>selectedDeductHrs</elementReference>
+                <numberValue>0.0</numberValue>
             </value>
         </assignmentItems>
         <connector>
@@ -224,7 +224,13 @@
     <formulas>
         <name>calHrs</name>
         <dataType>Number</dataType>
-        <expression>{!Get_Billing_Details.Free_Hours_or_Credits__c} +  VALUE({!Deduct_Hours})</expression>
+        <expression>IF(ISBLANK({!Get_Billing_Details.Free_Hours_or_Credits__c}), VALUE({!Deduct_Hours}) , {!Get_Billing_Details.Free_Hours_or_Credits__c} + VALUE({!Deduct_Hours}))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>leftHrs</name>
+        <dataType>Number</dataType>
+        <expression>{!Copy_1_of_Loop_Through_Credits_Selected.Hours_Value__c} - IF({!finalDeductHrs} = 0, Value({!Deduct_Hours}), (Value({!Deduct_Hours})-{!finalDeductHrs} ))</expression>
         <scale>0</scale>
     </formulas>
     <formulas>

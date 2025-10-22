@@ -181,37 +181,16 @@ IF(MONTH({!$Flow.CurrentDate})=12, &quot;December &quot; &amp; TEXT(YEAR({!$Flow
         <locationX>176</locationX>
         <locationY>431</locationY>
         <inputAssignments>
-            <field>Date_Warned__c</field>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Free_Hours_or_Credits__c</field>
-        </inputAssignments>
-        <inputAssignments>
             <field>Holding_Off__c</field>
             <value>
                 <booleanValue>false</booleanValue>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>In_Case_of_Emergency_Overhours_Notes__c</field>
-        </inputAssignments>
-        <inputAssignments>
             <field>Next_Billing_Scheduled__c</field>
             <value>
                 <booleanValue>false</booleanValue>
             </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Not_Warning__c</field>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Overhours_Notes__c</field>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Warned_By__c</field>
         </inputAssignments>
         <inputReference>$Record</inputReference>
     </recordUpdates>
