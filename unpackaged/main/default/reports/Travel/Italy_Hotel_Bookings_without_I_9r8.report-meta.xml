@@ -41,28 +41,21 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>greaterOrEqual</operator>
-            <value>1/1/2024</value>
+            <value>1/1/2023</value>
         </criteriaItems>
         <criteriaItems>
             <column>Case$Reference_Date__c</column>
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>lessThan</operator>
-            <value>12/31/2024</value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>Case$Contact</column>
-            <columnToColumn>false</columnToColumn>
-            <isUnlocked>true</isUnlocked>
-            <operator>notContain</operator>
-            <value>igor</value>
+            <value>12/31/2026</value>
         </criteriaItems>
         <criteriaItems>
             <column>Case$Vendor__c.BillingCountry</column>
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
-            <operator>contains</operator>
-            <value>united states</value>
+            <operator>equals</operator>
+            <value>Italy</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
@@ -73,17 +66,17 @@
     </groupingsDown>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>Case$Vendor__c.BillingState</field>
+        <field>Case$Vendor__c.BillingCity</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>United States Travel (without IT)</name>
+    <name>Italy Hotel Bookings (without IT)</name>
     <params>
         <name>co</name>
         <value>1</value>
     </params>
     <reportType>Logbooks_with_all_Vendor_Details__c</reportType>
     <scope>organization</scope>
-    <showDetails>true</showDetails>
+    <showDetails>false</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
     <timeFrameFilter>
