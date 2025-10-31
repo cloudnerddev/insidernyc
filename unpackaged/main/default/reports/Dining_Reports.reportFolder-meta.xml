@@ -10,10 +10,5 @@
         <sharedTo>lindsi2@insidernyc.com</sharedTo>
         <sharedToType>User</sharedToType>
     </folderShares>
-    <folderShares>
-        <accessLevel>View</accessLevel>
-        <sharedTo>sarah@insidernyc.com</sharedTo>
-        <sharedToType>User</sharedToType>
-    </folderShares>
     <name>Dining Reports</name>
 </ReportFolder>

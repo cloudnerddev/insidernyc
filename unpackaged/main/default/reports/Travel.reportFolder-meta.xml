@@ -5,10 +5,5 @@
         <sharedTo>insider@cloudna.io</sharedTo>
         <sharedToType>User</sharedToType>
     </folderShares>
-    <folderShares>
-        <accessLevel>Manage</accessLevel>
-        <sharedTo>lilly@insidernyc.com</sharedTo>
-        <sharedToType>User</sharedToType>
-    </folderShares>
     <name>Travel</name>
 </ReportFolder>
