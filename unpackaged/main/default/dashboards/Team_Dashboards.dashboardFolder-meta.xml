@@ -5,5 +5,10 @@
         <sharedTo>lindsi2@insidernyc.com</sharedTo>
         <sharedToType>User</sharedToType>
     </folderShares>
+    <folderShares>
+        <accessLevel>EditAllContents</accessLevel>
+        <sharedTo>nbiedron@insidernyc.com</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
     <name>Team Dashboards</name>
 </DashboardFolder>

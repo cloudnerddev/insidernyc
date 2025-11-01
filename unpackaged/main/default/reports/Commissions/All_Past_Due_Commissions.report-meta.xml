@@ -18,14 +18,6 @@
     </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
-        <field>Case.If_Marked_Up_Real_Price__c</field>
-    </columns>
-    <columns>
-        <aggregateTypes>Sum</aggregateTypes>
-        <field>Case.Price__c</field>
-    </columns>
-    <columns>
-        <aggregateTypes>Sum</aggregateTypes>
         <field>Case.Total_Price__c</field>
     </columns>
     <columns>
@@ -35,7 +27,7 @@
         <field>Case.Commission_Details__c</field>
     </columns>
     <filter>
-        <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
+        <booleanFilter>1 AND 2 AND 3</booleanFilter>
         <criteriaItems>
             <column>Case.Date_Commission_Paid__c</column>
             <columnToColumn>false</columnToColumn>
@@ -48,7 +40,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>Regular Commission,Travel Commission - Other</value>
+            <value>Coastline</value>
         </criteriaItems>
         <criteriaItems>
             <column>Case.Date_Commission_Due__c</column>
@@ -57,20 +49,8 @@
             <operator>equals</operator>
             <value></value>
         </criteriaItems>
-        <criteriaItems>
-            <column>Case.Date_Commission_Due__c</column>
-            <columnToColumn>false</columnToColumn>
-            <isUnlocked>true</isUnlocked>
-            <operator>equals</operator>
-            <value>LAST_N_YEARS:5</value>
-        </criteriaItems>
     </filter>
     <format>Summary</format>
-    <groupingsDown>
-        <dateGranularity>Day</dateGranularity>
-        <field>Case.Commission_Type__c</field>
-        <sortOrder>Asc</sortOrder>
-    </groupingsDown>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
         <field>Case.Vendor__c</field>
@@ -87,7 +67,7 @@
     </params>
     <reportType>CaseList</reportType>
     <scope>organization</scope>
-    <showDetails>true</showDetails>
+    <showDetails>false</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
     <timeFrameFilter>
