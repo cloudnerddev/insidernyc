@@ -39,7 +39,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>11/1/2025</value>
+            <value>TODAY</value>
         </criteriaItems>
     </filter>
     <format>Tabular</format>
