@@ -1919,6 +1919,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>UpdateMonthlyBillingTotalsBatch</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>UpdateMonthlyBillingTotalsBatchTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>UpdatePrevMonthBillingTotalsBatch</apexClass>
         <enabled>true</enabled>
     </classAccesses>
