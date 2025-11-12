@@ -77,39 +77,15 @@ IF(MONTH({!$Flow.CurrentDate})=12, &quot;December &quot; &amp; TEXT(YEAR({!$Flow
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Date_Warned__c</field>
-            <value>
-                <elementReference>$Record.Date_Warned__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>End_Date__c</field>
             <value>
                 <elementReference>lastDayofTheMonth</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Free_Hours_or_Credits__c</field>
-            <value>
-                <elementReference>$Record.Free_Hours_or_Credits__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Holding_Off__c</field>
-            <value>
-                <elementReference>$Record.Holding_Off__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Hours_per_Month__c</field>
             <value>
                 <elementReference>$Record.Hours_per_Month__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>In_Case_of_Emergency_Overhours_Notes__c</field>
-            <value>
-                <elementReference>$Record.In_Case_of_Emergency_Overhours_Notes__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -122,24 +98,6 @@ IF(MONTH({!$Flow.CurrentDate})=12, &quot;December &quot; &amp; TEXT(YEAR({!$Flow
             <field>Name</field>
             <value>
                 <elementReference>billingName</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Not_Warning__c</field>
-            <value>
-                <elementReference>$Record.Not_Warning__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Overhours_Charged_During_the_Month__c</field>
-            <value>
-                <elementReference>$Record.Overhours_Charged_During_the_Month__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Overhours_Notes__c</field>
-            <value>
-                <elementReference>$Record.Overhours_Notes__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -164,12 +122,6 @@ IF(MONTH({!$Flow.CurrentDate})=12, &quot;December &quot; &amp; TEXT(YEAR({!$Flow
             <field>Team__c</field>
             <value>
                 <elementReference>$Record.Insider_Team__r.Name</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Warning_Given_By__c</field>
-            <value>
-                <elementReference>$Record.Warned_By__c</elementReference>
             </value>
         </inputAssignments>
         <object>Monthly_Billing__c</object>
