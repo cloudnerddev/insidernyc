@@ -67,7 +67,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>Carbone,Carbone Miami,Torrisi Bar &amp; Restaurant,The Grill,The Lobster Club,ZZ&apos;s Miami,Carbone Privato at ZZ&apos;s Club New York,ZZ&apos;s Restaurant at ZZ&apos;s Club New York,Contessa Boston,Contessa Miami,Dirty French,Sadelle&apos;s,Sadelle&apos;s - Coconut Grove,Dirty French Steakhouse - Miami</value>
+            <value>Carbone,Carbone Miami,Torrisi Bar &amp; Restaurant,The Grill,The Lobster Club,ZZ&apos;s Miami,Carbone Privato at ZZ&apos;s Club New York,ZZ&apos;s Restaurant at ZZ&apos;s Club New York,Contessa Boston,Contessa Miami,Dirty French,Sadelle&apos;s,Sadelle&apos;s - Coconut Grove,Dirty French Steakhouse - Miami,Carbone London,Carbone Vegas</value>
         </criteriaItems>
         <criteriaItems>
             <column>Account$Name</column>
