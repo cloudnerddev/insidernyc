@@ -4,9 +4,6 @@
         <field>Case$Contact</field>
     </columns>
     <columns>
-        <field>Case$Vendor__c</field>
-    </columns>
-    <columns>
         <field>Case$Subject</field>
     </columns>
     <columns>
@@ -17,9 +14,6 @@
     </columns>
     <columns>
         <field>Case$Order_Confirmation__c</field>
-    </columns>
-    <columns>
-        <field>Case$Room_Rate__c</field>
     </columns>
     <columns>
         <field>Case$Reference_Date__c</field>
@@ -38,14 +32,14 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>Maybourne</value>
+            <value>four seasons</value>
         </criteriaItems>
         <criteriaItems>
             <column>Case$Vendor__c.Parent</column>
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>Maybourne</value>
+            <value>four seasons</value>
         </criteriaItems>
         <criteriaItems>
             <column>Case$Reference_Date__c</column>
@@ -73,10 +67,15 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>Maybourne</value>
+            <value>four seasons</value>
         </criteriaItems>
     </filter>
-    <format>Tabular</format>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case$Vendor__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
     <name>Maybourne hotel bookings</name>
     <params>
         <name>co</name>
