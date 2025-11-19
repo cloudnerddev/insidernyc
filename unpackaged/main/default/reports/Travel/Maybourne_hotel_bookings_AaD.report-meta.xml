@@ -13,10 +13,10 @@
         <field>Case$Check_In_Date__c</field>
     </columns>
     <columns>
-        <field>Case$Order_Confirmation__c</field>
+        <field>Case$Check_Out_Date__c</field>
     </columns>
     <columns>
-        <field>Case$Reference_Date__c</field>
+        <field>Case$Order_Confirmation__c</field>
     </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
@@ -26,7 +26,7 @@
         <field>Case$Vendor__c.BillingCity</field>
     </columns>
     <filter>
-        <booleanFilter>(1 OR 2 OR 6) AND 3 AND 4 AND 5</booleanFilter>
+        <booleanFilter>(1 OR 2 OR 5) AND 3 AND 4 AND 6 AND 7 AND 8</booleanFilter>
         <criteriaItems>
             <column>Case$Vendor__c.Rep_By__c</column>
             <columnToColumn>false</columnToColumn>
@@ -40,13 +40,6 @@
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
             <value>four seasons</value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>Case$Reference_Date__c</column>
-            <columnToColumn>false</columnToColumn>
-            <isUnlocked>true</isUnlocked>
-            <operator>greaterOrEqual</operator>
-            <value>THIS_YEAR</value>
         </criteriaItems>
         <criteriaItems>
             <column>Case$RecordType</column>
@@ -69,6 +62,27 @@
             <operator>contains</operator>
             <value>four seasons</value>
         </criteriaItems>
+        <criteriaItems>
+            <column>Case$Check_In_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>1/1/2025</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$Check_Out_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>12/31/2025</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$Subject</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>four seasons</value>
+        </criteriaItems>
     </filter>
     <format>Summary</format>
     <groupingsDown>
@@ -76,7 +90,7 @@
         <field>Case$Vendor__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Maybourne hotel bookings</name>
+    <name>Four Seasons hotel bookings</name>
     <params>
         <name>co</name>
         <value>1</value>
