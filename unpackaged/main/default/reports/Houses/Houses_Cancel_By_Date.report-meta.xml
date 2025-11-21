@@ -38,7 +38,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>Available,Held</value>
+            <value>Available,Held,Taken</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
