@@ -1,5 +1,6 @@
 trigger AccountTrigger on Account ( before insert,
-                              		before update ) {
+                              		before update,
+                              		after update ) {
 
     new TriggerHandlerAccount().run();
                                         
